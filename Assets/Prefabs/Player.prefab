@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2550269764230832752}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,8 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aedca81adde67884484586599a9a545d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  targetPosition: {x: 0, y: 0}
+  rb: {fileID: 2550269764230832753}
+  W: 119
+  A: 97
+  S: 115
+  D: 100
+  Shift: 304
+  speed: 5
 --- !u!212 &2550269764230832758
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -147,4 +152,4 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 2}
-  m_EdgeRadius: 0.3
+  m_EdgeRadius: 0.15

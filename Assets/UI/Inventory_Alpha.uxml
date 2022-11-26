@@ -1,6 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="width: 50%; height: 15%; left: 25%; top: 25%; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.21); align-items: center; border-top-left-radius: 16px; border-bottom-left-radius: 16px; border-top-right-radius: 16px; border-bottom-right-radius: 16px;">
-        <ui:Label text="Count: 0" display-tooltip-when-elided="true" name="Headline" style="font-size: 27px; margin-bottom: 5px; color: rgba(255, 255, 255, 255);" />
-        <ui:Button text="Click Me!!!" display-tooltip-when-elided="true" style="background-color: rgb(89, 140, 20); color: rgb(255, 255, 255); -unity-text-outline-width: 0; -unity-text-align: middle-center; border-top-left-radius: 9px; border-bottom-left-radius: 9px; border-top-right-radius: 9px; border-bottom-right-radius: 9px;" />
-    </ui:VisualElement>
-</ui:UXML>

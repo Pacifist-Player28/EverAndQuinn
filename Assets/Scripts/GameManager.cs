@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
             if (rayHit)
             {
-                Debug.Log("We hit " + rayHit.collider.name);
+                //Debug.Log("We hit " + rayHit.collider.name);
             }
         }
     }

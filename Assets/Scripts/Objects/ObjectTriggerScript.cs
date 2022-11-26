@@ -8,4 +8,13 @@ public class ObjectTriggerScript : MonoBehaviour
     {
         GameManager.current.PlayerEnter();
     }
+
+    void OnMouseOver()
+    {
+        Debug.Log("Hovering");
+        if (Input.GetMouseButtonDown(0))
+        {
+            this.enabled = false;
+        }
+    }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovementKeyboard : MonoBehaviour
@@ -27,13 +25,13 @@ public class PlayerMovementKeyboard : MonoBehaviour
         if (Input.GetKey(D)) dir.x += 1;
 
         transform.position += dir.normalized * speed * Time.deltaTime;
-        
+
     }
 
     public void Update()
     {
         if (Input.GetKeyDown(Shift)) speed = 10;
-        
+
         if (Input.GetKeyUp(Shift)) speed = 5;
     }
 }

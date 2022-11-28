@@ -1,12 +1,14 @@
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 using System.Collections.Generic;
 
 public class DialogueManager : MonoBehaviour
 {
-    private Queue<string> sentences;
     public TMP_Text dialogueText;
     public GameObject dialogueUi;
+
+    private Queue<string> sentences;
     private PlayerMovementKeyboard playerMovement;
 
     private void Start()
@@ -37,14 +39,15 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        Debug.Log(sentence);
+        //Debug.Log(sentence);
         dialogueText.text = sentence.ToString();
     }
 
-    void EndDialogue()
+    public void EndDialogue()
     {
         dialogueUi.SetActive(false);
+
         playerMovement.enabled = true;
-        Debug.Log("--End of conversation--");
+        //send an Event to DialogueTrigger!
     }
 }

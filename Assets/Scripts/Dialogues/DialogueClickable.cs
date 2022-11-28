@@ -5,10 +5,12 @@ using UnityEngine;
 public class DialogueClickable : MonoBehaviour
 {
     DialogueTrigger dialogueTrigger;
+    private Collider2D colliderOfObject;
 
     void Start()
     {
         dialogueTrigger = GetComponentInParent<DialogueTrigger>();
+        colliderOfObject = GetComponent<Collider2D>();
     }
 
     void OnMouseOver()
@@ -18,7 +20,7 @@ public class DialogueClickable : MonoBehaviour
         {
             dialogueTrigger.TriggerDialogue();
 
-            dialogueTrigger.talkingRange.enabled = false;
+            colliderOfObject.enabled = false;
 
             Debug.Log("clicked on NPC");
             //change color to white

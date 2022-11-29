@@ -1,25 +1,24 @@
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    [HideInInspector] public bool canBeClicked = false;
-    public float triggerDistance = 1f;
-    public Dialogue dialogue;
+    [HideInInspector] public bool canBeClicked = true;
+    public float triggerDistance = 10f;
+    public Dialogue dialogue;   
+
 
     private GameObject player;
-    private Collider2D colliderOfThisObject;
 
     void Start()
     {
         player = GameObject.Find("Player");
-        colliderOfThisObject = GetComponentInChildren<Collider2D>();
     }
 
     public void Update()
     {
-        Debug.Log("CanBeclickes is " + canBeClicked);
         OnDistanceShorter(triggerDistance);
+        Debug.Log("CanBeclickes is " + canBeClicked);
     }
 
     public void TriggerDialogue()
@@ -27,15 +26,9 @@ public class DialogueTrigger : MonoBehaviour
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 
-  /*public void OnTriggerEnter2D(Collider2D other)
-    {
-        //player is inside the trigger and the player can click the NPC
-        if (other.CompareTag("Player")) canBeClicked = true;
-    } */
-
     public void OnDistanceShorter(float distance)
     {
-        if (Vector2.Distance(GetComponent<Transform>().position, player.transform.position) <= distance)
+        if (Vector2.Distance(GetComponent<Transform>().position, player.transform.position) < distance)
         {
             Debug.Log("Distance is short enough");
             canBeClicked = true;
@@ -43,10 +36,13 @@ public class DialogueTrigger : MonoBehaviour
         else canBeClicked = false;
     }
 
-    /* public void OnTriggerExit2D(Collider2D other)
+    void OnMouseOver()
     {
-        if (other.CompareTag("Player")) canBeClicked = false;
-    } */
-
-
+        //Debug.Log("Hovering");
+        if (Input.GetMouseButtonDown(0) && canBeClicked)
+        {
+            TriggerDialogue();
+            GetComponent<Collider2D>().enabled = false;
+        }
+    }
 }

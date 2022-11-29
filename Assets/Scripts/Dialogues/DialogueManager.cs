@@ -7,6 +7,7 @@ public class DialogueManager : MonoBehaviour
 {
     public TMP_Text dialogueText;
     public GameObject dialogueUi;
+    public UnityEvent enableCollider;
 
     private Queue<string> sentences;
     private PlayerMovementKeyboard playerMovement;
@@ -19,14 +20,13 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        dialogueUi.SetActive(true);
-        playerMovement.enabled = false;
-        Debug.Log("starting conversation with " + dialogue.name);
-
         sentences.Clear();
+        //enable UI
+        dialogueUi.SetActive(true);
+        //disable Player movement
+        playerMovement.enabled = false;
 
         foreach (string sentence in dialogue.sentences) sentences.Enqueue(sentence);
-
         DisplayNextSentence();
     }
 
@@ -39,15 +39,17 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        //Debug.Log(sentence);
         dialogueText.text = sentence.ToString();
     }
 
     public void EndDialogue()
     {
+        //disable UI
         dialogueUi.SetActive(false);
 
+        enableCollider.Invoke();
+
+        //enable Player movement
         playerMovement.enabled = true;
-        //send an Event to DialogueTrigger!
     }
 }

@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogueClickable : MonoBehaviour
 {
     DialogueTrigger dialogueTrigger;
     private Collider2D colliderOfObject;
+
+    public UnityEvent aNewEventIGuess;
 
     void Start()
     {
@@ -21,6 +22,8 @@ public class DialogueClickable : MonoBehaviour
             dialogueTrigger.TriggerDialogue();
 
             colliderOfObject.enabled = false;
+
+            aNewEventIGuess.Invoke();
 
             Debug.Log("clicked on NPC");
             //change color to white

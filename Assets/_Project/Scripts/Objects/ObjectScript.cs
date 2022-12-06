@@ -4,7 +4,7 @@ public class ObjectScript : MonoBehaviour
 {
     void Start()
     {
-        GameManager.current.onPlayerEnter += movingPlayer;
+        GameManager.current.OnPlayerEnter += movingPlayer;
     }
 
     private void movingPlayer()

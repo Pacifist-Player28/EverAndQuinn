@@ -3,8 +3,12 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
+    public int solutionSlotsSolved;
+    public int solution;
+    public bool puzzleSolved = false;
+
     public static GameManager current;
-    public event Action onPlayerEnter;
+    public event Action OnPlayerEnter;
 
     void Awake()
     {
@@ -19,15 +23,31 @@ public class GameManager : MonoBehaviour
             Vector2 ray = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D rayHit = Physics2D.Raycast(ray, Vector2.zero);
         }
+
+        CompareSolution();
     }
 
     //
 
     public void PlayerEnter()
     {
-        if (onPlayerEnter != null)
+        if (OnPlayerEnter != null)
         {
-            onPlayerEnter();
+            OnPlayerEnter();
+        }
+    }
+
+    public void AddSolutionPuzzle()
+    {
+        solutionSlotsSolved++;
+    }
+
+    public void CompareSolution()
+    {
+        if(solutionSlotsSolved == solution)
+        {
+            Debug.Log("Solution found");
+            puzzleSolved = true;
         }
     }
 }

@@ -39,7 +39,7 @@ public class DialogueTrigger : MonoBehaviour
     void OnMouseOver()
     {
         //Debug.Log("Hovering");
-        if (Input.GetMouseButtonDown(0) && canBeClicked)
+        if (Input.GetMouseButton(0) && canBeClicked)
         {
             TriggerDialogue();
             GetComponent<Collider2D>().enabled = false;

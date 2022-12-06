@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class DialogueManager : MonoBehaviour
 {
+    [Header("Dialogues")]
     public TMP_Text dialogueText;
     public GameObject dialogueUi;
     public UnityEvent enableCollider;

@@ -6,6 +6,11 @@ TagManager:
   tags:
   - NPC-Range
   - Object
+  - Puzzle1
+  - Puzzle2
+  - Puzzle3
+  - Puzzle4
+  - Puzzle5
   layers:
   - Default
   - TransparentFX

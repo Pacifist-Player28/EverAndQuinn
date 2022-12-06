@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovementKeyboard : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    //public Rigidbody2D rb;
 
+    [Header("Controls")]
     public KeyCode W;
     public KeyCode A;
     public KeyCode S;
@@ -11,7 +13,13 @@ public class PlayerMovementKeyboard : MonoBehaviour
 
     public KeyCode Shift;
 
+    [Header("Speed")]
     public float speed;
+
+    [Header("Open Inventory")]
+    public KeyCode openInventory;
+    public UnityEvent OpenInventory;
+    public UnityEvent CloseInventory;
 
     //
 
@@ -26,6 +34,7 @@ public class PlayerMovementKeyboard : MonoBehaviour
 
         transform.position += dir.normalized * speed * Time.deltaTime;
 
+
     }
 
     public void Update()
@@ -33,5 +42,17 @@ public class PlayerMovementKeyboard : MonoBehaviour
         if (Input.GetKeyDown(Shift)) speed = 10;
 
         if (Input.GetKeyUp(Shift)) speed = 5;
+
+        if (Input.GetKeyDown(openInventory))
+        {
+            OpenInventory.Invoke();
+            Debug.Log("Open Inventory");
+        }
+
+        if (Input.GetKeyUp(openInventory))
+        {
+            CloseInventory.Invoke();
+            Debug.Log("Close Inventory");
+        }
     }
 }

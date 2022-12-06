@@ -6,7 +6,7 @@ public class DialogueClickable : MonoBehaviour
     DialogueTrigger dialogueTrigger;
     private Collider2D colliderOfObject;
 
-    public UnityEvent aNewEventIGuess;
+    public UnityEvent clicked;
 
     void Start()
     {
@@ -16,14 +16,14 @@ public class DialogueClickable : MonoBehaviour
 
     void OnMouseOver()
     {
-        Debug.Log("Hovering");
+        //Debug.Log("Hovering");
         if (Input.GetMouseButtonDown(0) && dialogueTrigger.canBeClicked)
         {
             dialogueTrigger.TriggerDialogue();
 
             colliderOfObject.enabled = false;
 
-            aNewEventIGuess.Invoke();
+            clicked.Invoke();
 
             Debug.Log("clicked on NPC");
             //change color to white

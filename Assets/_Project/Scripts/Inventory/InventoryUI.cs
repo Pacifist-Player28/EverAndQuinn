@@ -12,9 +12,9 @@ namespace Inventory
 
         public void Update()
         {
+            Refresh();
             if (Input.GetKeyDown(openInventory))
             {
-                Refresh();
                 inventory.SetActive(!inventory.activeSelf);
             }
         }

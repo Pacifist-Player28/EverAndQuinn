@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e95c66731284ab4ba632e08ca870520, type: 3}
-  m_Name: Bruh 1
+  m_Name: ItemSettingRandom4
   m_EditorClassIdentifier: 
-  itemName: Bruh Apfel
+  itemName: Stuff2
   pickupDistance: 2
   game: {fileID: 21300000, guid: 6a7ac9e8c26b12440bf2b1da2ca97794, type: 3}
-  inventory: {fileID: 21300000, guid: 0e5ae7fe3a07e88429a3e90897c6ab82, type: 3}
-  collected: 1
+  inventory: {fileID: 21300000, guid: 5b7f664b515582d458717c354f6be292, type: 3}
+  collected: 0

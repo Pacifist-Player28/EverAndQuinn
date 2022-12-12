@@ -17,7 +17,7 @@ public class PuzzleSlot : MonoBehaviour, IDropHandler
         }
 
         GameObject droppedItem = eventData.pointerDrag;
-        if (droppedItem.transform.tag == solution)
+        if (droppedItem.GetComponent<DragableItem>().solution == solution)
         {
             Debug.Log("Solution puzzle " + droppedItem.tag);
             AddToSolution.Invoke();

@@ -6,20 +6,22 @@ public class PuzzleSlot : MonoBehaviour, IDropHandler
 {
     public string solution;
     public UnityEvent AddToSolution;
+    public UnityEvent OnDropItem;
 
     public void OnDrop(PointerEventData eventData)
     {
-        if(transform.childCount == 0) 
-        { 
         GameObject dropped = eventData.pointerDrag;
         DragableItem dragableItem = dropped.GetComponent<DragableItem>();
-        dragableItem.parentAfterDrag = transform;
+
+        if (transform.childCount == 0)
+        {
+            dragableItem.parentAfterDrag = transform;
+            OnDropItem.Invoke();
         }
 
-        GameObject droppedItem = eventData.pointerDrag;
-        if (droppedItem.GetComponent<DragableItem>().solution == solution)
+        if (dragableItem.solution == solution)
         {
-            Debug.Log("Solution puzzle " + droppedItem.tag);
+            Debug.Log("Solution puzzle " + dropped.tag);
             AddToSolution.Invoke();
         }
     }

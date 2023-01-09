@@ -21,7 +21,7 @@ public class ObjectTriggerScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        GameManager.current.PlayerEnter();
+        GameSettings.current.PlayerEnter();
     }
 
     void OnMouseOver()

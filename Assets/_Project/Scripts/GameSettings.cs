@@ -1,13 +1,13 @@
 using UnityEngine;
 using System;
 
-public class GameManager : MonoBehaviour
+public class GameSettings : MonoBehaviour
 {
     public int solutionSlotsSolved;
     public int solution;
     public bool puzzleSolved = false;
 
-    public static GameManager current;
+    public static GameSettings current;
     public event Action OnPlayerEnter;
 
     void Awake()

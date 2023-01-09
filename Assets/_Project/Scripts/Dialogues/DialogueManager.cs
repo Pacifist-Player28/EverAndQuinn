@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using System.Collections.Generic;
+using Inventory;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -52,5 +53,10 @@ public class DialogueManager : MonoBehaviour
 
         //enable Player movement
         playerMovement.enabled = true;
+    }
+
+    public void AddItemToInventory(ItemSetting item)
+    {
+        item.collected = true;
     }
 }

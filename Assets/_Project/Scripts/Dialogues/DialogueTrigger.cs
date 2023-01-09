@@ -4,11 +4,14 @@ using UnityEngine.Events;
 public class DialogueTrigger : MonoBehaviour
 {
     [HideInInspector] public bool canBeClicked = true;
-    public float triggerDistance = 10f;
-    public Dialogue dialogue;   
+    public float triggerDistance = 2.45f;
+    [Space]
+    public Dialogue dialogue;
+    public UnityEvent clicked;
 
 
     private GameObject player;
+    private Collider2D colliderOfObject;
 
     void Start()
     {
@@ -30,7 +33,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (Vector2.Distance(GetComponent<Transform>().position, player.transform.position) < distance)
         {
-            Debug.Log("Distance is short enough");
+            //Debug.Log("Distance is short enough");
             canBeClicked = true;
         }
         else canBeClicked = false;
@@ -38,11 +41,17 @@ public class DialogueTrigger : MonoBehaviour
 
     void OnMouseOver()
     {
-        //Debug.Log("Hovering");
-        if (Input.GetMouseButton(0) && canBeClicked)
+        Debug.Log("Hovering");
+        if (Input.GetMouseButtonDown(0) && canBeClicked)
         {
             TriggerDialogue();
-            GetComponent<Collider2D>().enabled = false;
+
+            colliderOfObject.enabled = false;
+
+            clicked.Invoke();
+
+            Debug.Log("clicked on dialogue object");
+            //change color to white
         }
     }
 }

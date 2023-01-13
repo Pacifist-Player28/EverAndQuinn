@@ -11,6 +11,8 @@ TagManager:
   - Puzzle3
   - Puzzle4
   - Puzzle5
+  - DialogueSprites
+  - Interactable
   layers:
   - Default
   - TransparentFX

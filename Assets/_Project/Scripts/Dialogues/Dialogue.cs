@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class Dialogue
@@ -7,4 +8,6 @@ public class Dialogue
 
     [TextArea]
     public string[] sentences;
+
+    public Sprite[] sprites;
 }

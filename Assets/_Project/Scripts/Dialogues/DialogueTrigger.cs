@@ -39,6 +39,26 @@ public class DialogueTrigger : MonoBehaviour
         else canBeClicked = false;
     }
 
+    void DeactivateTriggerDialogue()
+    {
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Interactable");
+        foreach (GameObject gameObject in gameObjects)
+        {
+            if (gameObject.name != name)
+                gameObject.GetComponent<DialogueTrigger>().enabled = false;
+        }
+    }
+
+    void ActivateTriggerDialogue()
+    {
+        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Interactable");
+        foreach (GameObject gameObject in gameObjects)
+        {
+            if (gameObject.name != name)
+                gameObject.GetComponent<DialogueTrigger>().enabled = true;
+        }
+    }
+
     void OnMouseOver()
     {
         Debug.Log("Hovering");
@@ -46,7 +66,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             TriggerDialogue();
 
-            colliderOfObject.enabled = false;
+            //colliderOfObject.enabled = false;
 
             clicked.Invoke();
 
@@ -54,4 +74,12 @@ public class DialogueTrigger : MonoBehaviour
             //change color to white
         }
     }
+
+    private void OnMouseDown()
+    {
+        DeactivateTriggerDialogue();
+    }
+
+
+
 }

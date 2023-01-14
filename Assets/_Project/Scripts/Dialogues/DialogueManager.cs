@@ -15,14 +15,14 @@ public class DialogueManager : MonoBehaviour
     public GameObject spriteLeft, spriteRight;
     [Space]
     public float animationSpeed;
+    public float textDelay = 0.01f;
     public GameObject[] interactables;
     public Vector2[] distanceToInteractables;
-    public Sprite[] dialogueSprites;
 
     private Queue<string> sentences;
     private PlayerMovementKeyboard playerMovement;
+    private DialogueTrigger activeDialogueTrigger;
     private int spriteCount = 0;
-    private DialogueTrigger activeDialogue;
 
     private void Start()
     {
@@ -34,10 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log("Rounds: " + spriteCount);
-
-        MeasureDistanceToInteractables();
-        DeactivateComponents();
+        MeasureAndActivate();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -64,17 +61,17 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        string sentence = sentences.Dequeue();
-        dialogueText.text = sentence.ToString();
-        //IT DOES NOT WORK WHYY??????
-        DisplayNextSprites(activeDialogue.dialogue);
+        //string sentence = sentences.Dequeue();
+        //dialogueText.text = sentences.Dequeue().ToString();
+        StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
+        DisplayNextSprites(activeDialogueTrigger.dialogue);
 
         Debug.Log("Script: " + FindObjectOfType<DialogueTrigger>().name);
     }
 
     public void DisplayNextSprites(Dialogue dialogue)
     {
-        if (spriteCount < dialogue.sprites.Length)
+        if (spriteCount < dialogue.spritesRight.Length)
         {
             StartCoroutine(SwitchSprites(dialogue));
         }
@@ -98,8 +95,9 @@ public class DialogueManager : MonoBehaviour
         item.collected = true;
     }
 
-    public void MeasureDistanceToInteractables()
+    public void MeasureAndActivate()
     {
+        //this method activates the nearest interactable and disables every other inside the scene.
         distanceToInteractables = new Vector2[interactables.Length];
         Vector2 smallestVector = new Vector2(float.MaxValue, float.MaxValue);
         GameObject nearestInteractable = null;
@@ -124,6 +122,7 @@ public class DialogueManager : MonoBehaviour
         if(nearestIndex != -1)
         {
             nearestInteractable = interactables[nearestIndex];
+            Debug.Log("Nearest: " + nearestInteractable.name);
         }
 
         for (int i = 0; i < interactables.Length; i++)
@@ -136,15 +135,8 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        activeDialogue = nearestInteractable.GetComponent<DialogueTrigger>();
-        activeDialogue.enabled = true;
-
-        //Debug.Log("Nearest GameObject: " + nearestInteractable);
-
-    }
-
-    public void DeactivateComponents()
-    {
+        activeDialogueTrigger = nearestInteractable.GetComponent<DialogueTrigger>();
+        activeDialogueTrigger.enabled = true;
     }
 
     IEnumerator SwitchSprites(Dialogue dialogue)
@@ -152,10 +144,24 @@ public class DialogueManager : MonoBehaviour
         int index = spriteCount;
         while (index <= spriteCount)
         {
-            spriteRight.GetComponent<Image>().sprite = dialogue.sprites[spriteCount - 1];
+            spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[spriteCount - 1];
+            spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[spriteCount - 1];
             yield return new WaitForSeconds(animationSpeed);
-            spriteRight.GetComponent<Image>().sprite = dialogue.sprites[spriteCount - 2];
+            spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[spriteCount - 2];
+            spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[spriteCount - 2];
             yield return new WaitForSeconds(animationSpeed);
+        }
+    }
+
+    IEnumerator TextAnimation(string text)
+    {
+        //dialogueText.text = sentences.Dequeue().ToString();
+        dialogueText.text = "";
+
+        foreach (char letter in text.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(textDelay);
         }
     }
 }

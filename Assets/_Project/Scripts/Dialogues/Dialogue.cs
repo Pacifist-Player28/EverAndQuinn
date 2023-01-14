@@ -9,5 +9,6 @@ public class Dialogue
     [TextArea]
     public string[] sentences;
 
-    public Sprite[] sprites;
+    public Sprite[] spritesRight;
+    public Sprite[] spritesLeft;
 }

@@ -21,11 +21,12 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
     private PlayerMovementKeyboard playerMovement;
-    private int sentenceCount = 0;
+    private int spriteCount = 0;
+    private DialogueTrigger activeDialogue;
 
     private void Start()
     {
-        sentenceCount = 0;
+        spriteCount = 0;
         sentences = new Queue<string>();
         playerMovement = FindObjectOfType<PlayerMovementKeyboard>();
         interactables = GameObject.FindGameObjectsWithTag("Interactable");
@@ -33,7 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Rounds: " + sentenceCount);
+        //Debug.Log("Rounds: " + spriteCount);
 
         MeasureDistanceToInteractables();
         DeactivateComponents();
@@ -56,7 +57,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        sentenceCount += 2;
+        spriteCount += 2;
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -65,14 +66,15 @@ public class DialogueManager : MonoBehaviour
 
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence.ToString();
-        DisplayNextSprites(FindObjectOfType<DialogueTrigger>().dialogue);
+        //IT DOES NOT WORK WHYY??????
+        DisplayNextSprites(activeDialogue.dialogue);
 
         Debug.Log("Script: " + FindObjectOfType<DialogueTrigger>().name);
     }
 
     public void DisplayNextSprites(Dialogue dialogue)
     {
-        if (sentenceCount < dialogue.sprites.Length)
+        if (spriteCount < dialogue.sprites.Length)
         {
             StartCoroutine(SwitchSprites(dialogue));
         }
@@ -88,7 +90,7 @@ public class DialogueManager : MonoBehaviour
         //enable Player movement
         playerMovement.enabled = true;
 
-        sentenceCount -= sentenceCount;
+        spriteCount -= spriteCount;
     }
 
     public void AddItemToInventory(ItemSetting item)
@@ -134,7 +136,8 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        nearestInteractable.GetComponent<DialogueTrigger>().enabled = true;
+        activeDialogue = nearestInteractable.GetComponent<DialogueTrigger>();
+        activeDialogue.enabled = true;
 
         //Debug.Log("Nearest GameObject: " + nearestInteractable);
 
@@ -146,12 +149,12 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator SwitchSprites(Dialogue dialogue)
     {
-        int index = sentenceCount;
-        while (index <= sentenceCount)
+        int index = spriteCount;
+        while (index <= spriteCount)
         {
-            spriteRight.GetComponent<Image>().sprite = dialogue.sprites[sentenceCount - 1];
+            spriteRight.GetComponent<Image>().sprite = dialogue.sprites[spriteCount - 1];
             yield return new WaitForSeconds(animationSpeed);
-            spriteRight.GetComponent<Image>().sprite = dialogue.sprites[sentenceCount - 2];
+            spriteRight.GetComponent<Image>().sprite = dialogue.sprites[spriteCount - 2];
             yield return new WaitForSeconds(animationSpeed);
         }
     }

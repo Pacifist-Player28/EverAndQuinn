@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.Events;
-using TMPro;
-using System.Collections.Generic;
-using Inventory;
 using UnityEngine.UI;
+using System.Collections.Generic;
 using System.Collections;
+using TMPro;
+using Inventory;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -15,21 +15,28 @@ public class DialogueManager : MonoBehaviour
     public GameObject spriteLeft, spriteRight;
     [Space]
     public float animationSpeed;
+    public GameObject[] interactables;
+    public Vector2[] distanceToInteractables;
+    public Sprite[] dialogueSprites;
 
     private Queue<string> sentences;
     private PlayerMovementKeyboard playerMovement;
-    private int sentenceCount;
-
+    private int sentenceCount = 0;
 
     private void Start()
     {
+        sentenceCount = 0;
         sentences = new Queue<string>();
         playerMovement = FindObjectOfType<PlayerMovementKeyboard>();
+        interactables = GameObject.FindGameObjectsWithTag("Interactable");
     }
 
     private void Update()
     {
         Debug.Log("Rounds: " + sentenceCount);
+
+        MeasureDistanceToInteractables();
+        DeactivateComponents();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -49,7 +56,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        sentenceCount = sentenceCount + 2;
+        sentenceCount += 2;
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -58,20 +65,15 @@ public class DialogueManager : MonoBehaviour
 
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence.ToString();
-        DisplayNextSprite(FindObjectOfType<DialogueTrigger>().dialogue);
+        DisplayNextSprites(FindObjectOfType<DialogueTrigger>().dialogue);
+
+        Debug.Log("Script: " + FindObjectOfType<DialogueTrigger>().name);
     }
 
-    public void DisplayNextSprite(Dialogue dialogue)
+    public void DisplayNextSprites(Dialogue dialogue)
     {
-
-        if (sentences.Count == 0)
-        {
-            return;
-        }
-
         if (sentenceCount < dialogue.sprites.Length)
         {
-            //spriteRight.GetComponent<Image>().sprite = dialogue.sprites[sentenceCount + 1];
             StartCoroutine(SwitchSprites(dialogue));
         }
     }
@@ -86,7 +88,7 @@ public class DialogueManager : MonoBehaviour
         //enable Player movement
         playerMovement.enabled = true;
 
-        sentenceCount = 0;
+        sentenceCount -= sentenceCount;
     }
 
     public void AddItemToInventory(ItemSetting item)
@@ -94,10 +96,58 @@ public class DialogueManager : MonoBehaviour
         item.collected = true;
     }
 
+    public void MeasureDistanceToInteractables()
+    {
+        distanceToInteractables = new Vector2[interactables.Length];
+        Vector2 smallestVector = new Vector2(float.MaxValue, float.MaxValue);
+        GameObject nearestInteractable = null;
+        GameObject[] otherInteractables = new GameObject[interactables.Length - 1];
+        int nearestIndex = -1;
+        int index = 0;
+
+        for (int i = 0; i < interactables.Length; i++)
+        {
+            distanceToInteractables[i] = interactables[i].transform.position - playerMovement.transform.position;
+        }
+
+        for (int i = 0; i < distanceToInteractables.Length; i++)
+        {
+            if (distanceToInteractables[i].magnitude < smallestVector.magnitude)
+            {
+                smallestVector = distanceToInteractables[i];
+                nearestIndex = i;
+            }
+        }
+
+        if(nearestIndex != -1)
+        {
+            nearestInteractable = interactables[nearestIndex];
+        }
+
+        for (int i = 0; i < interactables.Length; i++)
+        {
+            if (i != nearestIndex)
+            {
+                otherInteractables[index] = interactables[i];
+                otherInteractables[index].GetComponent<DialogueTrigger>().enabled = false;
+                index++;
+            }
+        }
+
+        nearestInteractable.GetComponent<DialogueTrigger>().enabled = true;
+
+        //Debug.Log("Nearest GameObject: " + nearestInteractable);
+
+    }
+
+    public void DeactivateComponents()
+    {
+    }
+
     IEnumerator SwitchSprites(Dialogue dialogue)
     {
         int index = sentenceCount;
-        while (sentenceCount == index)
+        while (index <= sentenceCount)
         {
             spriteRight.GetComponent<Image>().sprite = dialogue.sprites[sentenceCount - 1];
             yield return new WaitForSeconds(animationSpeed);

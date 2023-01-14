@@ -9,19 +9,19 @@ public class DialogueTrigger : MonoBehaviour
     public Dialogue dialogue;
     public UnityEvent clicked;
 
-
     private GameObject player;
-    private Collider2D colliderOfObject;
+    private DialogueManager dialogueManager;
 
     void Start()
     {
         player = GameObject.Find("Player");
+        dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     public void Update()
     {
         OnDistanceShorter(triggerDistance);
-        Debug.Log("CanBeclickes is " + canBeClicked);
+        //Debug.Log("CanBeclickes is " + canBeClicked);
     }
 
     public void TriggerDialogue()
@@ -39,47 +39,13 @@ public class DialogueTrigger : MonoBehaviour
         else canBeClicked = false;
     }
 
-    void DeactivateTriggerDialogue()
-    {
-        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Interactable");
-        foreach (GameObject gameObject in gameObjects)
-        {
-            if (gameObject.name != name)
-                gameObject.GetComponent<DialogueTrigger>().enabled = false;
-        }
-    }
-
-    void ActivateTriggerDialogue()
-    {
-        GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Interactable");
-        foreach (GameObject gameObject in gameObjects)
-        {
-            if (gameObject.name != name)
-                gameObject.GetComponent<DialogueTrigger>().enabled = true;
-        }
-    }
-
     void OnMouseOver()
     {
-        Debug.Log("Hovering");
-        if (Input.GetMouseButtonDown(0) && canBeClicked)
+        if (!canBeClicked) return;
+        if (Input.GetMouseButtonDown(0))
         {
             TriggerDialogue();
-
-            //colliderOfObject.enabled = false;
-
             clicked.Invoke();
-
-            Debug.Log("clicked on dialogue object");
-            //change color to white
         }
     }
-
-    private void OnMouseDown()
-    {
-        DeactivateTriggerDialogue();
-    }
-
-
-
 }

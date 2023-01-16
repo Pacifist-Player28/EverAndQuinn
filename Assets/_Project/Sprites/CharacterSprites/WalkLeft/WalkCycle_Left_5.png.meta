@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: acdda28c88b1f4c42b1f22ea749a4f8a
+guid: 9411464b8f866f24cb3a6a4533d0ebe3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 300
+  spritePixelsToUnits: 450
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,27 +121,6 @@ TextureImporter:
       bones: []
       spriteID: dc106a9da6c18294eb5c737844ec5abb
       internalID: 869967617
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Turn_Around__1
-      rect:
-        serializedVersion: 2
-        x: 914
-        y: 1742
-        width: 8
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3df05669f597cce4d8bb2fce9bae7c9f
-      internalID: -576687560
       vertices: []
       indices: 
       edges: []

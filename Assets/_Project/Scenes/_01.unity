@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 3710532}
   - component: {fileID: 3710531}
   - component: {fileID: 3710530}
+  - component: {fileID: 3710533}
   m_Layer: 0
   m_Name: Couch
   m_TagString: Interactable
@@ -197,12 +198,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
-    - 1.3
-    - 2.3
-    - 3.3
+    - Sofa so good.
     spritesRight: []
     spritesLeft: []
   clicked:
@@ -260,6 +265,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3710533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
+--- !u!1 &24108369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2550269764230832757, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
+  m_PrefabInstance: {fileID: 130028574}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &24108375
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24108369}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c482b3b07a9bed44a9d7504988628d95, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!81 &24108376
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24108369}
+  m_Enabled: 1
 --- !u!1 &70586345
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +323,7 @@ GameObject:
   - component: {fileID: 70586349}
   - component: {fileID: 70586348}
   - component: {fileID: 70586347}
+  - component: {fileID: 70586350}
   m_Layer: 0
   m_Name: shoues
   m_TagString: Interactable
@@ -334,6 +386,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -397,6 +455,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &70586350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70586345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &104587203
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +480,7 @@ GameObject:
   - component: {fileID: 104587207}
   - component: {fileID: 104587206}
   - component: {fileID: 104587205}
+  - component: {fileID: 104587208}
   m_Layer: 0
   m_Name: Plant (6)
   m_TagString: Interactable
@@ -471,6 +543,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -534,6 +612,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &104587208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104587203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1001 &130028574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -560,6 +651,26 @@ PrefabInstance:
     - target: {fileID: 2550269764230832754, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550269764230832754, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
+      propertyPath: walkUp
+      value: WalkUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550269764230832754, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
+      propertyPath: walkDown
+      value: WalkDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550269764230832754, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
+      propertyPath: walkLeft
+      value: WalkLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550269764230832754, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
+      propertyPath: idleFront
+      value: IdleFront
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550269764230832754, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
+      propertyPath: walkRight
+      value: WalkRight
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832754, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: openInventory
@@ -711,6 +822,7 @@ GameObject:
   - component: {fileID: 156141332}
   - component: {fileID: 156141331}
   - component: {fileID: 156141330}
+  - component: {fileID: 156141333}
   m_Layer: 0
   m_Name: Schrank
   m_TagString: Interactable
@@ -773,12 +885,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
-    - 1.3
-    - 2.3
-    - 3.3
+    - A room without a book is like a body without a soul.
     spritesRight: []
     spritesLeft: []
   clicked:
@@ -836,6 +952,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &156141333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156141328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &208429802
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,6 +975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 208429804}
   - component: {fileID: 208429803}
+  - component: {fileID: 208429805}
   m_Layer: 0
   m_Name: Layout
   m_TagString: Untagged
@@ -920,6 +1050,19 @@ Transform:
   m_Father: {fileID: 912883343}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &208429805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208429802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &221499165
 GameObject:
   m_ObjectHideFlags: 0
@@ -932,6 +1075,7 @@ GameObject:
   - component: {fileID: 221499169}
   - component: {fileID: 221499168}
   - component: {fileID: 221499167}
+  - component: {fileID: 221499170}
   m_Layer: 0
   m_Name: Plant
   m_TagString: Interactable
@@ -994,6 +1138,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -1057,6 +1207,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &221499170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221499165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &273475496
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,22 +1361,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1632859133, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: maxCameraPos.x
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632859133, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: maxCameraPos.y
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632859133, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: minCameraPos.x
-      value: -21
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632859133, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: minCameraPos.y
-      value: -17
-      objectReference: {fileID: 0}
     - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1276,6 +1423,7 @@ GameObject:
   - component: {fileID: 334513854}
   - component: {fileID: 334513853}
   - component: {fileID: 334513852}
+  - component: {fileID: 334513855}
   m_Layer: 0
   m_Name: Plant (8)
   m_TagString: Interactable
@@ -1338,12 +1486,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
-    - 1.3
-    - 2.3
-    - 3.3
+    - Table for one, please.
     spritesRight: []
     spritesLeft: []
   clicked:
@@ -1401,6 +1553,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &334513855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334513850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &381962650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,6 +1578,7 @@ GameObject:
   - component: {fileID: 381962654}
   - component: {fileID: 381962653}
   - component: {fileID: 381962652}
+  - component: {fileID: 381962655}
   m_Layer: 0
   m_Name: Schrank (1)
   m_TagString: Interactable
@@ -1475,6 +1641,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -1538,6 +1710,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &381962655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 381962650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &383681643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,6 +1811,7 @@ GameObject:
   - component: {fileID: 434529784}
   - component: {fileID: 434529783}
   - component: {fileID: 434529782}
+  - component: {fileID: 434529785}
   m_Layer: 0
   m_Name: shoues
   m_TagString: Interactable
@@ -1688,6 +1874,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -1751,6 +1943,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &434529785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434529780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &459204662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,6 +1968,7 @@ GameObject:
   - component: {fileID: 459204665}
   - component: {fileID: 459204664}
   - component: {fileID: 459204663}
+  - component: {fileID: 459204667}
   m_Layer: 0
   m_Name: Schubladen
   m_TagString: Interactable
@@ -1810,6 +2016,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -1888,6 +2100,19 @@ Transform:
   m_Father: {fileID: 912883343}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &459204667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459204662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &541543543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,6 +2125,7 @@ GameObject:
   - component: {fileID: 541543547}
   - component: {fileID: 541543546}
   - component: {fileID: 541543545}
+  - component: {fileID: 541543548}
   m_Layer: 0
   m_Name: Schrank (3)
   m_TagString: Interactable
@@ -1962,6 +2188,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -2025,6 +2257,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &541543548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541543543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &632996597
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,6 +2282,7 @@ GameObject:
   - component: {fileID: 632996601}
   - component: {fileID: 632996600}
   - component: {fileID: 632996599}
+  - component: {fileID: 632996602}
   m_Layer: 0
   m_Name: Regale
   m_TagString: Interactable
@@ -2099,6 +2345,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -2162,6 +2414,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &632996602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632996597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &711196112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2174,6 +2439,7 @@ GameObject:
   - component: {fileID: 711196116}
   - component: {fileID: 711196115}
   - component: {fileID: 711196114}
+  - component: {fileID: 711196117}
   m_Layer: 0
   m_Name: Clothes
   m_TagString: Interactable
@@ -2236,6 +2502,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -2299,6 +2571,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &711196117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711196112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &744392293
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,6 +2596,7 @@ GameObject:
   - component: {fileID: 744392297}
   - component: {fileID: 744392296}
   - component: {fileID: 744392295}
+  - component: {fileID: 744392298}
   m_Layer: 0
   m_Name: shoues
   m_TagString: Interactable
@@ -2373,6 +2659,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -2436,6 +2728,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &744392298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744392293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1001 &767898376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2496,6 +2801,10 @@ PrefabInstance:
       value: 0.023
       objectReference: {fileID: 0}
     - target: {fileID: 8209732979913559550, guid: 34f25b5e247c93c41aecfb547d84c036, type: 3}
+      propertyPath: textSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 48f141324ba43594aa7c06de93958c86, type: 3}
+    - target: {fileID: 8209732979913559550, guid: 34f25b5e247c93c41aecfb547d84c036, type: 3}
       propertyPath: dialogueUi
       value: 
       objectReference: {fileID: 1060985611662395662}
@@ -2514,6 +2823,10 @@ PrefabInstance:
     - target: {fileID: 8209732979913559550, guid: 34f25b5e247c93c41aecfb547d84c036, type: 3}
       propertyPath: animationSpeed
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8209732979913559550, guid: 34f25b5e247c93c41aecfb547d84c036, type: 3}
+      propertyPath: timeBetweenTextSound
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8209732979913559550, guid: 34f25b5e247c93c41aecfb547d84c036, type: 3}
       propertyPath: interactables.Array.size
@@ -2570,6 +2883,7 @@ GameObject:
   - component: {fileID: 805560190}
   - component: {fileID: 805560189}
   - component: {fileID: 805560188}
+  - component: {fileID: 805560191}
   m_Layer: 0
   m_Name: Clothes
   m_TagString: Interactable
@@ -2632,6 +2946,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -2695,6 +3015,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &805560191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805560186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &847759504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,6 +3040,7 @@ GameObject:
   - component: {fileID: 847759508}
   - component: {fileID: 847759507}
   - component: {fileID: 847759506}
+  - component: {fileID: 847759509}
   m_Layer: 0
   m_Name: Plant (7)
   m_TagString: Interactable
@@ -2769,6 +3103,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -2832,6 +3172,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &847759509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847759504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &848948568
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,6 +3325,7 @@ GameObject:
   - component: {fileID: 872589970}
   - component: {fileID: 872589969}
   - component: {fileID: 872589968}
+  - component: {fileID: 872589971}
   m_Layer: 0
   m_Name: Schrank (2)
   m_TagString: Interactable
@@ -3034,6 +3388,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -3097,6 +3457,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &872589971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872589966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &912883342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3247,6 +3620,7 @@ GameObject:
   - component: {fileID: 960206545}
   - component: {fileID: 960206544}
   - component: {fileID: 960206543}
+  - component: {fileID: 960206546}
   m_Layer: 0
   m_Name: Clothes
   m_TagString: Interactable
@@ -3309,6 +3683,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -3372,6 +3752,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &960206546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960206541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &1030268284
 GameObject:
   m_ObjectHideFlags: 0
@@ -3384,6 +3777,7 @@ GameObject:
   - component: {fileID: 1030268288}
   - component: {fileID: 1030268287}
   - component: {fileID: 1030268286}
+  - component: {fileID: 1030268289}
   m_Layer: 0
   m_Name: Clothes
   m_TagString: Interactable
@@ -3446,6 +3840,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -3509,6 +3909,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1030268289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030268284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &1043753484
 GameObject:
   m_ObjectHideFlags: 0
@@ -3521,6 +3934,7 @@ GameObject:
   - component: {fileID: 1043753488}
   - component: {fileID: 1043753487}
   - component: {fileID: 1043753486}
+  - component: {fileID: 1043753489}
   m_Layer: 0
   m_Name: Plant (2)
   m_TagString: Interactable
@@ -3583,6 +3997,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -3646,6 +4066,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1043753489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043753484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &1082690543
 GameObject:
   m_ObjectHideFlags: 0
@@ -3658,6 +4091,7 @@ GameObject:
   - component: {fileID: 1082690547}
   - component: {fileID: 1082690546}
   - component: {fileID: 1082690545}
+  - component: {fileID: 1082690548}
   m_Layer: 0
   m_Name: Plant (1)
   m_TagString: Interactable
@@ -3720,6 +4154,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -3783,6 +4223,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1082690548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1082690543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &1159294464
 GameObject:
   m_ObjectHideFlags: 0
@@ -4014,6 +4467,7 @@ GameObject:
   - component: {fileID: 1255672899}
   - component: {fileID: 1255672898}
   - component: {fileID: 1255672901}
+  - component: {fileID: 1255672902}
   m_Layer: 0
   m_Name: Square
   m_TagString: Interactable
@@ -4035,18 +4489,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
-    - One potential reason is that the dialogueText variable is not being set correctly.
-      Make sure that this variable is set to the correct UI Text component in your
-      scene, and that the component is active in the hierarchy.
-    - One potential reason is that the dialogueText variable is not being set correctly.
-      Make sure that this variable is set to the correct UI Text component in your
-      scene, and that the component is active in the hierarchy.
-    - One potential reason is that the dialogueText variable is not being set correctly.
-      Make sure that this variable is set to the correct UI Text component in your
-      scene, and that the component is active in the hierarchy.
+    - Closet full of surprises.
     spritesRight:
     - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
     - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
@@ -4169,6 +4621,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1255672902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255672897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &1259336010
 GameObject:
   m_ObjectHideFlags: 0
@@ -4181,6 +4646,7 @@ GameObject:
   - component: {fileID: 1259336014}
   - component: {fileID: 1259336013}
   - component: {fileID: 1259336012}
+  - component: {fileID: 1259336015}
   m_Layer: 0
   m_Name: Regale (1)
   m_TagString: Interactable
@@ -4243,6 +4709,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -4306,6 +4778,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1259336015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1259336010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &1394180491
 GameObject:
   m_ObjectHideFlags: 0
@@ -4318,6 +4803,7 @@ GameObject:
   - component: {fileID: 1394180495}
   - component: {fileID: 1394180494}
   - component: {fileID: 1394180493}
+  - component: {fileID: 1394180496}
   m_Layer: 0
   m_Name: Schrank (4)
   m_TagString: Interactable
@@ -4380,6 +4866,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -4443,6 +4935,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1394180496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394180491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
+--- !u!1 &1397472245 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8209732979913559546, guid: 34f25b5e247c93c41aecfb547d84c036, type: 3}
+  m_PrefabInstance: {fileID: 767898376}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1714119885
 GameObject:
   m_ObjectHideFlags: 0
@@ -4455,6 +4965,7 @@ GameObject:
   - component: {fileID: 1714119889}
   - component: {fileID: 1714119888}
   - component: {fileID: 1714119887}
+  - component: {fileID: 1714119890}
   m_Layer: 0
   m_Name: Plant (3)
   m_TagString: Interactable
@@ -4517,6 +5028,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -4580,6 +5097,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1714119890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714119885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &1736449042
 GameObject:
   m_ObjectHideFlags: 0
@@ -4592,6 +5122,7 @@ GameObject:
   - component: {fileID: 1736449045}
   - component: {fileID: 1736449044}
   - component: {fileID: 1736449043}
+  - component: {fileID: 1736449047}
   m_Layer: 0
   m_Name: Schubladen
   m_TagString: Interactable
@@ -4639,12 +5170,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
-    - 1.2
-    - 2.2
-    - 3.2
+    - Light up my life
     spritesRight:
     - {fileID: 21300000, guid: d07a86481b875de4faeae3b4c8e72761, type: 3}
     - {fileID: 21300000, guid: d07a86481b875de4faeae3b4c8e72761, type: 3}
@@ -4725,6 +5260,19 @@ Transform:
   m_Father: {fileID: 912883343}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1736449047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736449042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &1739106709
 GameObject:
   m_ObjectHideFlags: 0
@@ -4737,6 +5285,7 @@ GameObject:
   - component: {fileID: 1739106713}
   - component: {fileID: 1739106712}
   - component: {fileID: 1739106711}
+  - component: {fileID: 1739106714}
   m_Layer: 0
   m_Name: "K\xFCcheninsel"
   m_TagString: Interactable
@@ -4799,6 +5348,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -4862,6 +5417,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1739106714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739106709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &1766831058
 GameObject:
   m_ObjectHideFlags: 0
@@ -4874,6 +5442,7 @@ GameObject:
   - component: {fileID: 1766831062}
   - component: {fileID: 1766831061}
   - component: {fileID: 1766831060}
+  - component: {fileID: 1766831063}
   m_Layer: 0
   m_Name: "K\xFChlschrank"
   m_TagString: Interactable
@@ -4936,12 +5505,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
-    - 1.3
-    - 2.3
-    - 3.3
+    - Always chillin' in the fridge.
     spritesRight: []
     spritesLeft: []
   clicked:
@@ -4999,6 +5572,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1766831063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766831058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &1793385033
 GameObject:
   m_ObjectHideFlags: 0
@@ -5011,6 +5597,7 @@ GameObject:
   - component: {fileID: 1793385037}
   - component: {fileID: 1793385036}
   - component: {fileID: 1793385035}
+  - component: {fileID: 1793385038}
   m_Layer: 0
   m_Name: Plant (4)
   m_TagString: Interactable
@@ -5073,6 +5660,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -5136,17 +5729,126 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1793385038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793385033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!114 &1873154268 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8209732979913559550, guid: 34f25b5e247c93c41aecfb547d84c036, type: 3}
   m_PrefabInstance: {fileID: 767898376}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1397472245}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d8b2b220b2366747bdf79c23d03c450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1873154270
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397472245}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 100
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2066627837
 GameObject:
   m_ObjectHideFlags: 0
@@ -5212,6 +5914,7 @@ GameObject:
   - component: {fileID: 2075176471}
   - component: {fileID: 2075176470}
   - component: {fileID: 2075176469}
+  - component: {fileID: 2075176472}
   m_Layer: 0
   m_Name: Plant (5)
   m_TagString: Interactable
@@ -5274,6 +5977,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -5337,6 +6046,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2075176472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075176467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!1 &2078900127
 GameObject:
   m_ObjectHideFlags: 0
@@ -5387,6 +6109,7 @@ GameObject:
   - component: {fileID: 2089687386}
   - component: {fileID: 2089687385}
   - component: {fileID: 2089687384}
+  - component: {fileID: 2089687387}
   m_Layer: 0
   m_Name: shoues
   m_TagString: Interactable
@@ -5449,6 +6172,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canBeClicked: 1
   triggerDistance: 2.45
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   dialogue:
     name: Object
     sentences:
@@ -5512,6 +6241,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2089687387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089687382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.1
 --- !u!114 &448737865257045429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5612,6 +6354,7 @@ GameObject:
   - component: {fileID: 1060985610384183663}
   - component: {fileID: 1060985610384183660}
   - component: {fileID: 1060985610384183662}
+  - component: {fileID: 1060985610384183664}
   m_Layer: 5
   m_Name: BG
   m_TagString: Untagged
@@ -5733,6 +6476,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1060985610384183658}
   m_CullTransparentMesh: 1
+--- !u!114 &1060985610384183664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060985610384183658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa9fcf04276a1249bccaccbdb736870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1060985610384183660}
 --- !u!224 &1060985610586832102
 RectTransform:
   m_ObjectHideFlags: 0

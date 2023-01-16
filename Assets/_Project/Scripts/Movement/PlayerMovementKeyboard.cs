@@ -21,7 +21,23 @@ public class PlayerMovementKeyboard : MonoBehaviour
     public UnityEvent OpenInventory;
     public UnityEvent CloseInventory;
 
+    [Header("Animations")]
+    public string walkLeft;
+    public string walkRight;
+    public string walkUp;
+    public string walkDown;
+    [Space]
+    public string idleFront;
+
+    private Animator animator;
+    private new Vector2 vectorAnimation;
+
     //
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     public void FixedUpdate()
     {
@@ -34,11 +50,12 @@ public class PlayerMovementKeyboard : MonoBehaviour
 
         transform.position += dir.normalized * speed * Time.deltaTime;
 
-
+        vectorAnimation = dir;
     }
 
     public void Update()
     {
+        //delete both if statements on build!!!
         if (Input.GetKeyDown(Shift)) speed = 10;
 
         if (Input.GetKeyUp(Shift)) speed = 5;
@@ -53,6 +70,31 @@ public class PlayerMovementKeyboard : MonoBehaviour
         {
             CloseInventory.Invoke();
             Debug.Log("Close Inventory");
+        }
+
+        if (vectorAnimation.x == 0f && vectorAnimation.y == 0f)
+        {
+            animator.Play(idleFront);
+        }
+
+        if(vectorAnimation.x < 0)
+        {
+            animator.Play(walkLeft);
+        }
+
+        if (vectorAnimation.x > 0)
+        {
+            animator.Play(walkRight);
+        }
+
+        if (vectorAnimation.y < 0)
+        {
+            animator.Play(walkDown);
+        }
+
+        if (vectorAnimation.y > 0)
+        {
+            animator.Play(walkUp);
         }
     }
 }

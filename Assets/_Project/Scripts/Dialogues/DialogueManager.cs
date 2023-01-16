@@ -5,13 +5,15 @@ using System.Collections.Generic;
 using System.Collections;
 using TMPro;
 using Inventory;
+using System.Threading;
 
 public class DialogueManager : MonoBehaviour
 {
     [Header("Dialogues")]
     public TMP_Text dialogueText;
     public GameObject dialogueUi;
-    public UnityEvent enableCollider;
+    public AudioClip textSound;
+    public float timeBetweenTextSound;
     public GameObject spriteLeft, spriteRight;
     [Space]
     public float animationSpeed;
@@ -23,9 +25,12 @@ public class DialogueManager : MonoBehaviour
     private PlayerMovementKeyboard playerMovement;
     private DialogueTrigger activeDialogueTrigger;
     private int spriteCount = 0;
+    private AudioSource source;
+    private float timerForText;
 
     private void Start()
     {
+        source = GetComponent<AudioSource>();
         spriteCount = 0;
         sentences = new Queue<string>();
         playerMovement = FindObjectOfType<PlayerMovementKeyboard>();
@@ -81,8 +86,6 @@ public class DialogueManager : MonoBehaviour
     {
         //disable UI
         dialogueUi.SetActive(false);
-
-        enableCollider.Invoke();
 
         //enable Player movement
         playerMovement.enabled = true;
@@ -157,9 +160,16 @@ public class DialogueManager : MonoBehaviour
     {
         //dialogueText.text = sentences.Dequeue().ToString();
         dialogueText.text = "";
+        int soundIndex = 0;
 
         foreach (char letter in text.ToCharArray())
         {
+            soundIndex++;
+            if (soundIndex == 3)
+            {
+                source.PlayOneShot(textSound);
+                soundIndex -= soundIndex;
+            }
             dialogueText.text += letter;
             yield return new WaitForSeconds(textDelay);
         }

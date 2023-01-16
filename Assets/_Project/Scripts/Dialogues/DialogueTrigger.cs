@@ -1,21 +1,21 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class DialogueTrigger : MonoBehaviour
 {
     [HideInInspector] public bool canBeClicked = true;
     public float triggerDistance = 2.45f;
     [Space]
+    public AnimationCurve curve;
     public Dialogue dialogue;
     public UnityEvent clicked;
 
     private GameObject player;
-    private DialogueManager dialogueManager;
 
     void Start()
     {
         player = GameObject.Find("Player");
-        dialogueManager = FindObjectOfType<DialogueManager>();
     }
 
     public void Update()
@@ -38,6 +38,8 @@ public class DialogueTrigger : MonoBehaviour
         }
         else canBeClicked = false;
     }
+
+
 
     void OnMouseOver()
     {

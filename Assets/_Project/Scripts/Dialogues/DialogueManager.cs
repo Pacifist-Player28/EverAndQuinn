@@ -28,6 +28,21 @@ public class DialogueManager : MonoBehaviour
     private AudioSource source;
     private float timerForText;
 
+    public static DialogueManager instance;
+    public DialogueTrigger activeTrigger;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
     private void Start()
     {
         source = GetComponent<AudioSource>();
@@ -49,6 +64,11 @@ public class DialogueManager : MonoBehaviour
         dialogueUi.SetActive(true);
         //disable Player movement
         playerMovement.enabled = false;
+
+        for (int i = 0; i < interactables.Length; i++)
+        {
+            interactables[i].GetComponent<Collider2D>().enabled = false;
+        }
 
         foreach (string sentence in dialogue.sentences)
         {
@@ -84,6 +104,11 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        for (int i = 0; i < interactables.Length; i++)
+        {
+            interactables[i].GetComponent<Collider2D>().enabled = true;
+        }
+
         //disable UI
         dialogueUi.SetActive(false);
 

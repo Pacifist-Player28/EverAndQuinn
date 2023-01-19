@@ -55,9 +55,8 @@ public class PlayerMovementKeyboard : MonoBehaviour
 
     public void Update()
     {
-        //delete both if statements on build!!!
+        // delete both if statements on build!!!
         if (Input.GetKeyDown(Shift)) speed = 10;
-
         if (Input.GetKeyUp(Shift)) speed = 5;
 
         if (Input.GetKeyDown(openInventory))
@@ -76,25 +75,13 @@ public class PlayerMovementKeyboard : MonoBehaviour
         {
             animator.Play(idleFront);
         }
-
-        if(vectorAnimation.x < 0)
+        else
         {
-            animator.Play(walkLeft);
-        }
-
-        if (vectorAnimation.x > 0)
-        {
-            animator.Play(walkRight);
-        }
-
-        if (vectorAnimation.y < 0)
-        {
-            animator.Play(walkDown);
-        }
-
-        if (vectorAnimation.y > 0)
-        {
-            animator.Play(walkUp);
+            if (vectorAnimation.x < 0) animator.Play(walkLeft);
+            else if (vectorAnimation.x > 0) animator.Play(walkRight);
+            else if (vectorAnimation.y < 0) animator.Play(walkDown);
+            else if (vectorAnimation.y > 0) animator.Play(walkUp);
         }
     }
+
 }

@@ -26,7 +26,9 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+
+        DialogueManager.instance.StartDialogue(dialogue);
     }
 
     public void OnDistanceShorter(float distance)
@@ -46,6 +48,7 @@ public class DialogueTrigger : MonoBehaviour
         if (!canBeClicked) return;
         if (Input.GetMouseButtonDown(0))
         {
+            //DialogueManager.instance.activeTrigger = this;
             TriggerDialogue();
             clicked.Invoke();
         }

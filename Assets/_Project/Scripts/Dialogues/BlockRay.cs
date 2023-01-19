@@ -3,21 +3,42 @@ using UnityEngine.UI;
 
 public class BlockRay : MonoBehaviour
 {
-
     public Image image;
+
+    private GameObject[] interactables;
+    private Ray raycast;
+
+    private void Start()
+    {
+        raycast = FindObjectOfType<Camera>().ScreenPointToRay(Input.mousePosition);
+
+        interactables = GameObject.FindGameObjectsWithTag("Interactable");
+    }
 
     void Update()
     {
-        if (image.raycastTarget)
+        RaycastHit hit;
+        if (Physics.Raycast(raycast, out hit))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+            if (hit.transform == image.transform) 
+            { 
+                Debug.Log("JAHSLFKWEIUFVUIEWF");
 
-            if (Physics.Raycast(ray, out hit) && hit.transform.gameObject == image.gameObject)
+                for (int i = 0; i < interactables.Length; i++)
+                {
+                interactables[i].GetComponent<Collider2D>().enabled = false;
+                }
+            }
+
+            else
             {
-                Debug.Log("YUHU TARGET FOUND");
-                return;
+                Debug.Log("alkfkadjkj");
+                for (int i = 0; i < interactables.Length; i++)
+                {
+                    interactables[i].GetComponent<Collider2D>().enabled = true;
+                }
             }
         }
+
     }
 }

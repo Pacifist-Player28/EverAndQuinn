@@ -3,6 +3,8 @@ using System;
 
 public class GameSettings : MonoBehaviour
 {
+    [HideInInspector]
+    public static GameSettings instance;
     public int solutionSlotsSolved;
     public int solution;
     public bool puzzleSolved = false;
@@ -14,6 +16,15 @@ public class GameSettings : MonoBehaviour
     {
         current = this;
         DialogueManager dialogueManager = GetComponent<DialogueManager>();
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
     }
 
     void Update()

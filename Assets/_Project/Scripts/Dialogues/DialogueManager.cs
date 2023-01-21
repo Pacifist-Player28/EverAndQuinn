@@ -55,7 +55,7 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         MeasureAndActivate();
-
+        Debug.Log("spritecount: " + spriteCount);
         if (Input.GetKeyDown(KeyCode.Space)) DisplayNextSentence();
     }
 
@@ -81,6 +81,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        StopCoroutine(TextAnimation(sentences.Dequeue().ToString()));
         spriteCount += 2;
         if (sentences.Count == 0)
         {
@@ -92,6 +93,8 @@ public class DialogueManager : MonoBehaviour
         //dialogueText.text = sentences.Dequeue().ToString();
         StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
         DisplayNextSprites(activeDialogueTrigger.dialogue);
+        //Debug.Log(activeDialogueTrigger.dialogue.spritesLeft.ToString());
+        //Debug.Log(activeDialogueTrigger.dialogue.spritesRight.ToString());
     }
 
     public void DisplayNextSprites(Dialogue dialogue)

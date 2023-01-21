@@ -36,7 +36,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (destroy == true)
         {
-            tag = "Object";
+            triggerDistance = 0;
         }
     }
 

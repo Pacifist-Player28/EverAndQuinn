@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Events;
 using Inventory;
 
-public class PuzzleSlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragHandler
+public class PuzzleSlot : MonoBehaviour, IDropHandler
 {
     public string solution;
     public UnityEvent AddToSolution;
@@ -16,7 +16,6 @@ public class PuzzleSlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
     {
         dropped = eventData.pointerDrag;
         DragableItem dragableItem = dropped.GetComponent<DragableItem>();
-        Debug.Log("3");
         if (transform.childCount == 0)
         {
             dragableItem.parentAfterDrag = transform;
@@ -27,28 +26,7 @@ public class PuzzleSlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragH
         {
             //Debug.Log("Solution puzzle " + dropped.tag);
             AddToSolution.Invoke();
-        }
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        Debug.Log("1");
-        DragableItem dragableItem = dropped.GetComponent<DragableItem>();
-
-        if (dragableItem.solution == solution)
-        {
-            SubtractFromSolution.Invoke();
-        }
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        Debug.Log("2");
-        DragableItem dragableItem = dropped.GetComponent<DragableItem>();
-
-        if (dragableItem.solution == solution)
-        {
-            SubtractFromSolution.Invoke();
+            
         }
     }
 }

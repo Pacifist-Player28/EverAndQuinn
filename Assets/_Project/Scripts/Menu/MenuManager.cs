@@ -4,10 +4,25 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
+    [HideInInspector]
+    public static MenuManager instance;
+
     [SerializeField]
     private GameObject loadingProgress;
     [SerializeField]
     private Texture2D cursorTexture;
+
+        private void Awake()
+        {
+            if (instance == null)
+            {
+                instance = this;
+            }
+            else
+            {
+                Destroy(this);
+            }
+        }
 
     private void Start()
     {

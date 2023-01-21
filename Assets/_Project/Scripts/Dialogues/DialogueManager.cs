@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Collections;
 using TMPro;
 using Inventory;
-using System.Threading;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -26,9 +25,10 @@ public class DialogueManager : MonoBehaviour
     private DialogueTrigger activeDialogueTrigger;
     private int spriteCount = 0;
     private AudioSource source;
-    private float timerForText;
 
+    [HideInInspector]
     public static DialogueManager instance;
+    [HideInInspector]
     public DialogueTrigger activeTrigger;
 
     private void Awake()
@@ -55,6 +55,8 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         MeasureAndActivate();
+
+        if (Input.GetKeyDown(KeyCode.Space)) DisplayNextSentence();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -90,8 +92,6 @@ public class DialogueManager : MonoBehaviour
         //dialogueText.text = sentences.Dequeue().ToString();
         StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
         DisplayNextSprites(activeDialogueTrigger.dialogue);
-
-        Debug.Log("Script: " + FindObjectOfType<DialogueTrigger>().name);
     }
 
     public void DisplayNextSprites(Dialogue dialogue)
@@ -116,6 +116,10 @@ public class DialogueManager : MonoBehaviour
         playerMovement.enabled = true;
 
         spriteCount -= spriteCount;
+
+        StopAllCoroutines();
+
+        activeDialogueTrigger.endOfDialogue.Invoke();
     }
 
     public void AddItemToInventory(ItemSetting item)
@@ -147,10 +151,10 @@ public class DialogueManager : MonoBehaviour
             }
         }
 
-        if(nearestIndex != -1)
+        if (nearestIndex != -1)
         {
             nearestInteractable = interactables[nearestIndex];
-            Debug.Log("Nearest: " + nearestInteractable.name);
+            //Debug.Log("Nearest: " + nearestInteractable.name);
         }
 
         for (int i = 0; i < interactables.Length; i++)
@@ -162,7 +166,6 @@ public class DialogueManager : MonoBehaviour
                 index++;
             }
         }
-
         activeDialogueTrigger = nearestInteractable.GetComponent<DialogueTrigger>();
         activeDialogueTrigger.enabled = true;
     }

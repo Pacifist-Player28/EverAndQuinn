@@ -3,8 +3,6 @@ using UnityEngine.Events;
 
 public class PlayerMovementKeyboard : MonoBehaviour
 {
-    //public Rigidbody2D rb;
-
     [Header("Controls")]
     public KeyCode W;
     public KeyCode A;

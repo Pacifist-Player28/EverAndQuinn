@@ -26,10 +26,9 @@ public class ObjectTriggerScript : MonoBehaviour
 
     void OnMouseOver()
     {
-        Debug.Log("Hovering");
         if (Input.GetMouseButton(0) && canBeClicked)
         {
-            Debug.Log("clicked");
+            //Debug.Log("clicked");
             clicked.Invoke();
         }
     }
@@ -38,7 +37,7 @@ public class ObjectTriggerScript : MonoBehaviour
     {
         if (Vector2.Distance(GetComponent<Transform>().position, player.transform.position) < distance)
         {
-            Debug.Log("Distance is short enough");
+            //Debug.Log("Distance is short enough");
             canBeClicked = true;
         }
         else canBeClicked = false;

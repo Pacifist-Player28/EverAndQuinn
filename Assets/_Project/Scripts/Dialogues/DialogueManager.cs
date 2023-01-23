@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
@@ -33,14 +32,8 @@ public class DialogueManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(this);
-        }
+        if (instance == null) instance = this;
+        else Destroy(this);
     }
 
     private void Start()
@@ -55,8 +48,8 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         MeasureAndActivate();
-        Debug.Log("spritecount: " + spriteCount);
-        if (Input.GetKeyDown(KeyCode.Space)) DisplayNextSentence();
+        Debug.Log("active dialogue: " + activeDialogueTrigger.name);
+        if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -81,20 +74,16 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        StopCoroutine(TextAnimation(sentences.Dequeue().ToString()));
-        spriteCount += 2;
+        StopAllCoroutines();
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
-
-        //string sentence = sentences.Dequeue();
-        //dialogueText.text = sentences.Dequeue().ToString();
+        spriteCount += 2;
         StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
         DisplayNextSprites(activeDialogueTrigger.dialogue);
-        //Debug.Log(activeDialogueTrigger.dialogue.spritesLeft.ToString());
-        //Debug.Log(activeDialogueTrigger.dialogue.spritesRight.ToString());
+
     }
 
     public void DisplayNextSprites(Dialogue dialogue)

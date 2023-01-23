@@ -26,7 +26,7 @@ public class ObjectTriggerScript : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButton(0) && canBeClicked)
+        if (Input.GetMouseButtonDown(0) && canBeClicked)
         {
             //Debug.Log("clicked");
             clicked.Invoke();

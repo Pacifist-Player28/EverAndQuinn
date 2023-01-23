@@ -1,6 +1,6 @@
-using Inventory;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -9,13 +9,37 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     public string solution;
     public Image image;
 
+    private PuzzleSlot parentPuzzleSlot;
+
+    private void Start()
+    {
+        image = GetComponent<Image>();
+    }
+
+    void Update()
+    {
+        if (image.sprite == null) image.enabled = false;
+        else image.enabled = true;
+
+        if (parentPuzzleSlot == null)
+        {
+            return;
+        }
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
+        //parentPuzzleSlot = parentAfterDrag.GetComponent<PuzzleSlot>();  
         parentAfterDrag = transform.parent;
         //refers to the Canvas
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         image.raycastTarget = false;
+
+        if (parentPuzzleSlot.solution == solution)
+        {
+            parentPuzzleSlot.SubtractFromSolution.Invoke();
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -25,22 +49,15 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        parentPuzzleSlot = parentAfterDrag.GetComponent<PuzzleSlot>();
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
+
+        if (parentPuzzleSlot.solution == solution)
+        {
+            parentPuzzleSlot.AddToSolution.Invoke();
+        }
     }
 
-    private void Awake()
-    {
-        image = GetComponent<Image>();
-    }
 
-    private void Update()
-    {
-        //cant place items into slots anymore????
-        //if (image.sprite == null) image.raycastTarget = false;
-        //else image.raycastTarget = true;
-
-        if (image.sprite == null) image.enabled = false;
-        else image.enabled = true;
-    }
 }

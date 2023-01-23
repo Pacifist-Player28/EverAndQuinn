@@ -3,6 +3,9 @@ using UnityEngine.Events;
 
 public class PlayerMovementKeyboard : MonoBehaviour
 {
+    [HideInInspector]
+    public static PlayerMovementKeyboard instance;
+
     [Header("Controls")]
     public KeyCode W;
     public KeyCode A;
@@ -31,6 +34,18 @@ public class PlayerMovementKeyboard : MonoBehaviour
     private new Vector2 vectorAnimation;
 
     //
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     private void Start()
     {

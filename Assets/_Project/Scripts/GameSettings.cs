@@ -5,10 +5,17 @@ public class GameSettings : MonoBehaviour
 {
     [HideInInspector]
     public static GameSettings instance;
-    public int solutionSlotsSolved;
-    public int solution;
-    public bool puzzleSolved = false;
 
+    public int slotsSolved_first;
+    public int solution_first;
+    [Space]
+    public int slotsSolved_second;
+    public int solution_second;
+    [Space]
+    public bool solved_first = false;
+    public bool solved_second = false;
+    [Space]
+    [HideInInspector]
     public static GameSettings current;
     public event Action OnPlayerEnter;
 
@@ -17,14 +24,8 @@ public class GameSettings : MonoBehaviour
         current = this;
         DialogueManager dialogueManager = GetComponent<DialogueManager>();
 
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(this);
-        }
+        if (instance == null) instance = this;
+        else Destroy(this);
     }
 
     void Update()
@@ -42,22 +43,38 @@ public class GameSettings : MonoBehaviour
         }
     }
 
-    public void AddSolutionPuzzle()
+    public void AddSolutionPuzzle01()
     {
-        solutionSlotsSolved++;
+        slotsSolved_first++;
     }
 
-    public void SubtractSolutuionPuzzle()
+    public void SubtractSolutuionPuzzle01()
     {
-        solutionSlotsSolved--;
+        slotsSolved_first--;
+    }
+
+    public void AddSolutionPuzzle02()
+    {
+        slotsSolved_second++;
+    }
+
+    public void SubtractSolutuionPuzzle02()
+    {
+        slotsSolved_second--;
     }
 
     public void CompareSolution()
     {
-        if(solutionSlotsSolved == solution)
+        if(slotsSolved_first == solution_first)
         {
-            Debug.Log("Solution found");
-            puzzleSolved = true;
+            Debug.Log("Solution found for the first puzzle");
+            solved_first = true;
+        }
+
+        if(slotsSolved_second == solution_second)
+        {
+            Debug.Log("Solution found for the first puzzle");
+            solved_second = true;
         }
     }
 }

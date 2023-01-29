@@ -13,11 +13,11 @@ public class CutSceneTrigger : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var bruh = GetComponent<DialogueTrigger>().dialogue;
+        var theDialogue = GetComponent<DialogueTrigger>().dialogue;
         if (collision.gameObject == PlayerMovementKeyboard.instance.gameObject)
         {
             OnCollision.Invoke();
-            DialogueManager.instance.StartDialogue(bruh);
+            DialogueManager.instance.StartDialogue(theDialogue);
         }
     }
 }

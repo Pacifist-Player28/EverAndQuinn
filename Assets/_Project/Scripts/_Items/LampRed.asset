@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: 
   solution: 
-  pickupDistance: 0
+  pickupDistance: 1.5
   game: {fileID: -649361466, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
   inventory: {fileID: -649361466, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
   collected: 0

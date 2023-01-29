@@ -30,7 +30,8 @@ public class PlayerMovementKeyboard : MonoBehaviour
     [Space]
     public string idleFront;
 
-    private Animator animator;
+    [HideInInspector]
+    public Animator animator;
     private new Vector2 vectorAnimation;
 
     //

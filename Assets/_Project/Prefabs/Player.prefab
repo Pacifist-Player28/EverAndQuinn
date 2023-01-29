@@ -53,9 +53,9 @@ MonoBehaviour:
   A: 97
   S: 115
   D: 100
-  Shift: 304
-  speed: 3
-  openInventory: 101
+  Shift: 0
+  speed: 2.85
+  openInventory: 0
   OpenInventory:
     m_PersistentCalls:
       m_Calls:
@@ -91,6 +91,7 @@ MonoBehaviour:
   walkUp: WalkUp
   walkDown: WalkDown
   idleFront: IdleFront
+  animator: {fileID: 0}
 --- !u!212 &2550269764230832758
 SpriteRenderer:
   m_ObjectHideFlags: 0

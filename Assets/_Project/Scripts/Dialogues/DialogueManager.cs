@@ -21,14 +21,14 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> sentences;
     private PlayerMovementKeyboard playerMovement;
-    private DialogueTrigger activeDialogueTrigger;
+
     private int spriteCount = 0;
     private AudioSource source;
 
     [HideInInspector]
     public static DialogueManager instance;
     [HideInInspector]
-    public DialogueTrigger activeTrigger;
+    public DialogueTrigger activeDialogueTrigger;
 
     private void Awake()
     {
@@ -41,19 +41,21 @@ public class DialogueManager : MonoBehaviour
         source = GetComponent<AudioSource>();
         spriteCount = 0;
         sentences = new Queue<string>();
-        playerMovement = FindObjectOfType<PlayerMovementKeyboard>();
+        //playerMovement = FindObjectOfType<PlayerMovementKeyboard>();
+        playerMovement = PlayerMovementKeyboard.instance;
         interactables = GameObject.FindGameObjectsWithTag("Interactable");
     }
 
     private void Update()
     {
-        MeasureAndActivate();
-        Debug.Log("active dialogue: " + activeDialogueTrigger.name);
+        //MeasureAndActivate();
+        //Debug.Log("active dialogue: " + activeDialogueTrigger.name);
         if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
+        playerMovement.animator.Play(playerMovement.idleFront);
         sentences.Clear();
         //enable UI
         dialogueUi.SetActive(true);
@@ -119,48 +121,48 @@ public class DialogueManager : MonoBehaviour
         item.collected = true;
     }
 
-    public void MeasureAndActivate()
-    {
-        //this method activates the nearest interactable and disables every other inside the scene.
-        distanceToInteractables = new Vector2[interactables.Length];
-        Vector2 smallestVector = new Vector2(float.MaxValue, float.MaxValue);
-        GameObject nearestInteractable = null;
-        GameObject[] otherInteractables = new GameObject[interactables.Length - 1];
-        int nearestIndex = -1;
-        int index = 0;
+    //public void MeasureAndActivate()
+    //{
+    //    //this method activates the nearest interactable and disables every other inside the scene.
+    //    distanceToInteractables = new Vector2[interactables.Length];
+    //    Vector2 smallestVector = new Vector2(float.MaxValue, float.MaxValue);
+    //    GameObject nearestInteractable = null;
+    //    GameObject[] otherInteractables = new GameObject[interactables.Length - 1];
+    //    int nearestIndex = -1;
+    //    int index = 0;
 
-        for (int i = 0; i < interactables.Length; i++)
-        {
-            distanceToInteractables[i] = interactables[i].transform.position - playerMovement.transform.position;
-        }
+    //    for (int i = 0; i < interactables.Length; i++)
+    //    {
+    //        distanceToInteractables[i] = interactables[i].transform.position - playerMovement.transform.position;
+    //    }
 
-        for (int i = 0; i < distanceToInteractables.Length; i++)
-        {
-            if (distanceToInteractables[i].magnitude < smallestVector.magnitude)
-            {
-                smallestVector = distanceToInteractables[i];
-                nearestIndex = i;
-            }
-        }
+    //    for (int i = 0; i < distanceToInteractables.Length; i++)
+    //    {
+    //        if (distanceToInteractables[i].magnitude < smallestVector.magnitude)
+    //        {
+    //            smallestVector = distanceToInteractables[i];
+    //            nearestIndex = i;
+    //        }
+    //    }
 
-        if (nearestIndex != -1)
-        {
-            nearestInteractable = interactables[nearestIndex];
-            //Debug.Log("Nearest: " + nearestInteractable.name);
-        }
+    //    if (nearestIndex != -1)
+    //    {
+    //        nearestInteractable = interactables[nearestIndex];
+    //        //Debug.Log("Nearest: " + nearestInteractable.name);
+    //    }
 
-        for (int i = 0; i < interactables.Length; i++)
-        {
-            if (i != nearestIndex)
-            {
-                otherInteractables[index] = interactables[i];
-                otherInteractables[index].GetComponent<DialogueTrigger>().enabled = false;
-                index++;
-            }
-        }
-        activeDialogueTrigger = nearestInteractable.GetComponent<DialogueTrigger>();
-        activeDialogueTrigger.enabled = true;
-    }
+    //    for (int i = 0; i < interactables.Length; i++)
+    //    {
+    //        if (i != nearestIndex)
+    //        {
+    //            otherInteractables[index] = interactables[i];
+    //            otherInteractables[index].GetComponent<DialogueTrigger>().enabled = false;
+    //            index++;
+    //        }
+    //    }
+    //    activeDialogueTrigger = nearestInteractable.GetComponent<DialogueTrigger>();
+    //    activeDialogueTrigger.enabled = true;
+    //}
 
     IEnumerator SwitchSprites(Dialogue dialogue)
     {

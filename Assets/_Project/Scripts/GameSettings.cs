@@ -1,10 +1,14 @@
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 public class GameSettings : MonoBehaviour
 {
     [HideInInspector]
     public static GameSettings instance;
+
+    [SerializeField]
+    private Texture2D cursorTexture;
 
     public int slotsSolved_first;
     public int solution_first;
@@ -18,11 +22,19 @@ public class GameSettings : MonoBehaviour
     [HideInInspector]
     public static GameSettings current;
     public event Action OnPlayerEnter;
+    [Space]
+    public UnityEvent puzzle01;
+    public UnityEvent puzzle02;
+
+    private bool puzzle1Check = false;
+    private bool puzzle2Check = false;
 
     void Awake()
     {
         current = this;
         DialogueManager dialogueManager = GetComponent<DialogueManager>();
+
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
 
         if (instance == null) instance = this;
         else Destroy(this);
@@ -65,17 +77,31 @@ public class GameSettings : MonoBehaviour
 
     public void CompareSolution()
     {
-        if(slotsSolved_first == solution_first)
+        if(slotsSolved_first == solution_first && !puzzle1Check)
         {
             Debug.Log("Solution found for the first puzzle");
             solved_first = true;
+            puzzle01.Invoke();
+            puzzle1Check = true;
         }
 
-        if(slotsSolved_second == solution_second)
+        if(slotsSolved_second == solution_second && !puzzle2Check)
         {
             Debug.Log("Solution found for the first puzzle");
             solved_second = true;
+            puzzle02.Invoke();
+            puzzle2Check = true;
         }
+    }
+
+    public void ActivateMovement()
+    {
+        PlayerMovementKeyboard.instance.enabled = true;
+    }
+
+    public void DeactivateMovement()
+    {
+        PlayerMovementKeyboard.instance.enabled = false;
     }
 }
 

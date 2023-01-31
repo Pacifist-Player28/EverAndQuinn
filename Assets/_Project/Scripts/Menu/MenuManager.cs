@@ -6,9 +6,6 @@ public class MenuManager : MonoBehaviour
 {
     [HideInInspector]
     public static MenuManager instance;
-
-    [SerializeField]
-    private GameObject loadingProgress;
     [SerializeField]
     private Texture2D cursorTexture;
 
@@ -49,8 +46,8 @@ public class MenuManager : MonoBehaviour
     //    }
     //}
 
-    public void LoadGame(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
+    //public void loadgame(string scenename)
+    //{
+    //    scenemanager.loadscene(scenename);
+    //}
 }

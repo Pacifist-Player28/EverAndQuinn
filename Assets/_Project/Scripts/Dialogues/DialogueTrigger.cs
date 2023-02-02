@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -58,5 +60,16 @@ public class DialogueTrigger : MonoBehaviour
             TriggerDialogue();
             clicked.Invoke();
         }
+    }
+
+    public void TriggerDialogeOverTime(float time)
+    {
+        StartCoroutine(StartDialogueOverTime(time));
+    }
+
+    IEnumerator StartDialogueOverTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        TriggerDialogue();
     }
 }

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e95c66731284ab4ba632e08ca870520, type: 3}
-  m_Name: LampBlue
+  m_Name: LampRed02
   m_EditorClassIdentifier: 
-  itemName: asdasda
-  solution: 
-  pickupDistance: 1.5
-  game: {fileID: 791892102, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
-  inventory: {fileID: 791892102, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
+  itemName: Lamp
+  solution: LampRed
+  pickupDistance: 2
+  game: {fileID: -649361466, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
+  inventory: {fileID: -649361466, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
   collected: 0

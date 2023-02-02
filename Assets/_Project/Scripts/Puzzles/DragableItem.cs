@@ -21,10 +21,7 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         if (image.sprite == null) image.enabled = false;
         else image.enabled = true;
 
-        if (parentPuzzleSlot == null)
-        {
-            return;
-        }
+        if (parentPuzzleSlot == null) return;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -36,6 +33,7 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         transform.SetAsLastSibling();
         image.raycastTarget = false;
 
+        if (parentPuzzleSlot == null) return;
         if (parentPuzzleSlot.solution == solution)
         {
             parentPuzzleSlot.SubtractFromSolution.Invoke();
@@ -53,6 +51,7 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
 
+        if (parentPuzzleSlot == null) return;
         if (parentPuzzleSlot.solution == solution)
         {
             parentPuzzleSlot.AddToSolution.Invoke();

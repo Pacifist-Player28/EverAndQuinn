@@ -19,13 +19,13 @@ public class PuzzleSlot : MonoBehaviour, IDropHandler, IDragHandler, IBeginDragH
         //if (transform.childCount == 0)
         //{
         //    dragableItem.parentAfterDrag = transform;
-        //    //OnDropItem.Invoke();
+        //    OnDropItem.Invoke();
         //}
 
         //if (dragableItem.solution == solution)
         //{
-        //    //Debug.Log("Solution puzzle " + dropped.tag);
-        //    //AddToSolution.Invoke();
+        //    Debug.Log("Solution puzzle " + dropped.tag);
+        //    AddToSolution.Invoke();
         //}
     }
 
@@ -42,7 +42,7 @@ public class PuzzleSlot : MonoBehaviour, IDropHandler, IDragHandler, IBeginDragH
         //if (dragableItem.solution == solution)
         //{
         //    Debug.Log("Solution puzzle " + dropped.tag);
-        //    //AddToSolution.Invoke();
+        //    AddToSolution.Invoke();
         //}
     }
 }

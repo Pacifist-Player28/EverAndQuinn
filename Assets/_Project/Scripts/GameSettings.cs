@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using Inventory;
 using UnityEngine.Events;
 
 public class GameSettings : MonoBehaviour
@@ -25,6 +26,7 @@ public class GameSettings : MonoBehaviour
     [Space]
     public UnityEvent puzzle01;
     public UnityEvent puzzle02;
+    public UnityEvent finish;
 
     private bool puzzle1Check = false;
     private bool puzzle2Check = false;
@@ -92,6 +94,8 @@ public class GameSettings : MonoBehaviour
             puzzle02.Invoke();
             puzzle2Check = true;
         }
+
+        if (slotsSolved_second == solution_second && slotsSolved_first == solution_first) finish.Invoke();
     }
 
     public void ActivateMovement()
@@ -102,6 +106,11 @@ public class GameSettings : MonoBehaviour
     public void DeactivateMovement()
     {
         PlayerMovementKeyboard.instance.enabled = false;
+    }
+
+    public void AddItemToInventory(ItemSetting item)
+    {
+        item.collected = true;
     }
 }
 

@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 using TMPro;
-using Inventory;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -50,6 +49,7 @@ public class DialogueManager : MonoBehaviour
     {
         //MeasureAndActivate();
         //Debug.Log("active dialogue: " + activeDialogueTrigger.name);
+        Debug.Log("SpriteCount: " + spriteCount);
         if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
     }
 
@@ -113,11 +113,6 @@ public class DialogueManager : MonoBehaviour
         activeDialogueTrigger.endOfDialogue.Invoke();
 
         activeDialogueTrigger.GetComponent<Collider2D>().enabled = true;
-    }
-
-    public void AddItemToInventory(ItemSetting item)
-    {
-        item.collected = true;
     }
 
     //public void MeasureAndActivate()

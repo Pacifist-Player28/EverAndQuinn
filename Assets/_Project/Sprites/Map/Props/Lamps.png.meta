@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 93a44fe5bea980c4b9033a9798e925aa
+guid: de3190bcdf48a7f4eb1a1ed9efd274a2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,8 +47,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 575, y: 661, z: 583, w: 829}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,7 +106,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,7 +117,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lamp_Yellow
+      name: LampTransparent
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 1667
+        width: 184
+        height: 444
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 8, z: 8, w: 8}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947ce26f277b94d48a77113f838555c9
+      internalID: 1860648879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LampYellow
       rect:
         serializedVersion: 2
         x: 1287
@@ -131,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d335623891e42cf4d9ecd3a2daa4671b
-      internalID: 1858572628
+      spriteID: 00fa8ebea0bf7ea489c361c6c41fb971
+      internalID: 393582110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lamp_Blue
+      name: LampBlue
       rect:
         serializedVersion: 2
         x: 1543
@@ -152,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02a48a73c830e5b4c9b809dd6ab373f8
-      internalID: 791892102
+      spriteID: a6e6706ede6d7ad48a6b4a72f367b292
+      internalID: -1133199664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lamp_Green
+      name: LampGreen
       rect:
         serializedVersion: 2
         x: 1809
@@ -173,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1136725d6bb40c546b727e243be34165
-      internalID: 991632182
+      spriteID: 96b1f751efa08ae42a3e680d826c364d
+      internalID: -144680959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lamp_Red
+      name: LampRed
       rect:
         serializedVersion: 2
         x: 2061
@@ -194,8 +215,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 945aa29aa1dacf142a6cfc0bb0ab3031
-      internalID: -649361466
+      spriteID: e5c6ed547a34c4d4c9ce92d1ebd8ddab
+      internalID: -743057405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LampPurple
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1672
+        width: 188
+        height: 444
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520f2bea47ade2b48a3ee5b224748e34
+      internalID: -1096164569
       vertices: []
       indices: 
       edges: []
@@ -204,17 +246,19 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Lamp_Green: 991632182
-      Lamp_Blue: 791892102
-      Lamp_Red: -649361466
-      Lamp_Yellow: 1858572628
+      LampBlue: -1133199664
+      LampPurple: -1096164569
+      LampTransparent: 1860648879
+      LampRed: -743057405
+      LampYellow: 393582110
+      LampGreen: -144680959
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

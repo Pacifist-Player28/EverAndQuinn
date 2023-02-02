@@ -71,6 +71,8 @@ public class PlayerMovementKeyboard : MonoBehaviour
 
     public void Update()
     {
+        if (Input.GetKeyDown(Escape)) clickedEscape.Invoke();
+
         // delete both if statements on build!!!
         if (Input.GetKeyDown(Shift)) speed = 10;
         if (Input.GetKeyUp(Shift)) speed = 5;
@@ -98,8 +100,6 @@ public class PlayerMovementKeyboard : MonoBehaviour
             else if (vectorAnimation.y < 0) animator.Play(walkDown);
             else if (vectorAnimation.y > 0) animator.Play(walkUp);
         }
-
-        if (Input.GetKeyDown(Escape)) clickedEscape.Invoke();
     }
 
 }

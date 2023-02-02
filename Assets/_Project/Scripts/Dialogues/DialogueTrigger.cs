@@ -41,23 +41,13 @@ public class DialogueTrigger : MonoBehaviour
     public void TriggerDialogue()
     {
         DialogueManager.instance.StartDialogue(dialogue);
+        GetComponent<Collider2D>().enabled = false;
     }
 
     public void DestroyThisTriggerDialogue()
     {
         Destroy(this);
     }
-
-    //public void OnDistanceShorter(float distance)
-    //{
-    //    if (Vector2.Distance(GetComponent<Transform>().position, player.transform.position) < distance)
-    //    {
-    //        //Debug.Log("Distance is short enough");
-    //        canBeClicked = true;
-    //    }
-    //    else canBeClicked = false;
-    //}
-
 
     void OnMouseOver()
     {

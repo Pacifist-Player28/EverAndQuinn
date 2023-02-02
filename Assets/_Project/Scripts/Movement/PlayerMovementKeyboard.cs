@@ -7,29 +7,31 @@ public class PlayerMovementKeyboard : MonoBehaviour
     public static PlayerMovementKeyboard instance;
 
     [Header("Controls")]
-    public KeyCode W;
-    public KeyCode A;
-    public KeyCode S;
-    public KeyCode D;
-
-    public KeyCode Shift;
+    [SerializeField] KeyCode W;
+    [SerializeField] KeyCode A;
+    [SerializeField] KeyCode S;
+    [SerializeField] KeyCode D;
+    [Space]
+    [SerializeField] KeyCode Shift;
+    [Space]
+    [SerializeField] KeyCode Escape;
 
     [Header("Speed")]
     public float speed;
 
     [Header("Open Inventory")]
-    public KeyCode openInventory;
-    public UnityEvent OpenInventory;
-    public UnityEvent CloseInventory;
+    [SerializeField] KeyCode open;
+    [SerializeField] UnityEvent openInventory;
+    [SerializeField] UnityEvent closeInventory;
+    [SerializeField] UnityEvent clickedEscape;
 
     [Header("Animations")]
-    public string walkLeft;
-    public string walkRight;
-    public string walkUp;
-    public string walkDown;
+    [SerializeField] string walkLeft;
+    [SerializeField] string walkRight;
+    [SerializeField] string walkUp;
+    [SerializeField] string walkDown;
     [Space]
     public string idleFront;
-
     [HideInInspector]
     public Animator animator;
     private new Vector2 vectorAnimation;
@@ -73,15 +75,15 @@ public class PlayerMovementKeyboard : MonoBehaviour
         if (Input.GetKeyDown(Shift)) speed = 10;
         if (Input.GetKeyUp(Shift)) speed = 5;
 
-        if (Input.GetKeyDown(openInventory))
+        if (Input.GetKeyDown(open))
         {
-            OpenInventory.Invoke();
+            openInventory.Invoke();
             Debug.Log("Open Inventory");
         }
 
-        if (Input.GetKeyUp(openInventory))
+        if (Input.GetKeyUp(open))
         {
-            CloseInventory.Invoke();
+            closeInventory.Invoke();
             Debug.Log("Close Inventory");
         }
 
@@ -96,6 +98,8 @@ public class PlayerMovementKeyboard : MonoBehaviour
             else if (vectorAnimation.y < 0) animator.Play(walkDown);
             else if (vectorAnimation.y > 0) animator.Play(walkUp);
         }
+
+        if (Input.GetKeyDown(Escape)) clickedEscape.Invoke();
     }
 
 }

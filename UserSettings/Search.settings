@@ -7,9 +7,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.DD5CDD96" = "t:DialogueTrigger"
+	"last_search.DD5CDD96" = "MenuManager"
 	"OpenInspectorPreview.DD5CDD96" = "0"
-	"currentGroup.DD5CDD96" = "scene"
+	"currentGroup.DD5CDD96" = "asset"
 }
 providers = {
 	adb = {
@@ -56,6 +56,8 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"Me"
+	"me"
 	"t:D"
 	"t"
 	"triggerdistance:"

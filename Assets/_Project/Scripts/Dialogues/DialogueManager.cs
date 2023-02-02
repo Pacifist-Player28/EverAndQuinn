@@ -90,10 +90,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSprites(Dialogue dialogue)
     {
-        if (spriteCount < dialogue.spritesRight.Length)
-        {
-            StartCoroutine(SwitchSprites(dialogue));
-        }
+        StartCoroutine(SwitchSprites(dialogue));
     }
 
     public void EndDialogue()
@@ -114,6 +111,8 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
 
         activeDialogueTrigger.endOfDialogue.Invoke();
+
+        activeDialogueTrigger.GetComponent<Collider2D>().enabled = true;
     }
 
     public void AddItemToInventory(ItemSetting item)

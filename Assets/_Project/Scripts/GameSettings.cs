@@ -31,6 +31,8 @@ public class GameSettings : MonoBehaviour
     private bool puzzle1Check = false;
     private bool puzzle2Check = false;
 
+    bool invokedCheck;
+
     void Awake()
     {
         current = this;
@@ -95,7 +97,11 @@ public class GameSettings : MonoBehaviour
             puzzle2Check = true;
         }
 
-        if (slotsSolved_second == solution_second && slotsSolved_first == solution_first) finish.Invoke();
+        if (slotsSolved_second == solution_second && slotsSolved_first == solution_first && !invokedCheck)
+        {
+            finish.Invoke();
+            invokedCheck = true;
+        }
     }
 
     public void ActivateMovement()

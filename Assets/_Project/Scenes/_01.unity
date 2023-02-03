@@ -946,7 +946,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70586345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.1463995, y: -8.34, z: -0.13495825}
+  m_LocalPosition: {x: -6.1463995, y: -7.95, z: -0.13495825}
   m_LocalScale: {x: 0.7954581, y: 0.17857225, z: 0.30379114}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1370,7 +1370,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2550269764230832754, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: speed
-      value: 15
+      value: 3.25
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832754, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: Escape
@@ -1462,11 +1462,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832759, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.96
+      value: 4.74
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832759, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.72
+      value: -9.33
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832759, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2570,7 +2570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 4.5
+  triggerDistance: 3
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   dialogue:
     name: 
@@ -3117,7 +3117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 4.5
+  triggerDistance: 4
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   dialogue:
     name: Fridge
@@ -3569,7 +3569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1632859133, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: minCameraPos.x
-      value: -5.7
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 1632859133, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: minCameraPos.y
@@ -3581,11 +3581,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7.53
       objectReference: {fileID: 0}
     - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -8.01
       objectReference: {fileID: 0}
     - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4504,7 +4504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434529780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.2864, y: -8.34, z: -0.13495825}
+  m_LocalPosition: {x: -4.2864, y: -7.95, z: -0.13495825}
   m_LocalScale: {x: 0.7954581, y: 0.17857225, z: 0.30379114}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4660,7 +4660,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447155786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.964, y: -8.151, z: -0.13495825}
+  m_LocalPosition: {x: -7.99, y: -7.7609997, z: -0.13495825}
   m_LocalScale: {x: 10.363032, y: 0.1625, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7108,7 +7108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 4.5
+  triggerDistance: 3
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   dialogue:
     name: 
@@ -7584,7 +7584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 4.5
+  triggerDistance: 4
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   dialogue:
     name: Island
@@ -8291,7 +8291,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711196112}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.0325, y: -8.34, z: -0.13495825}
+  m_LocalPosition: {x: -8.0325, y: -7.95, z: -0.13495825}
   m_LocalScale: {x: 1.2429032, y: 0.17857225, z: 0.30379114}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8694,7 +8694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744392293}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.3663993, y: -8.34, z: -0.13495825}
+  m_LocalPosition: {x: -3.3663993, y: -7.95, z: -0.13495825}
   m_LocalScale: {x: 0.7954581, y: 0.17857225, z: 0.30379114}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9073,7 +9073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 4.5
+  triggerDistance: 3
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   dialogue:
     name: 
@@ -9120,7 +9120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805560186}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.3764, y: -8.34, z: -0.13495825}
+  m_LocalPosition: {x: -12.3764, y: -7.95, z: -0.13495825}
   m_LocalScale: {x: 1.2429032, y: 0.17857225, z: 0.30379114}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9993,7 +9993,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960206541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.47, y: -8.34, z: -0.13495825}
+  m_LocalPosition: {x: -9.47, y: -7.95, z: -0.13495825}
   m_LocalScale: {x: 1.2429032, y: 0.17857225, z: 0.30379114}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10265,7 +10265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 4.5
+  triggerDistance: 3
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   dialogue:
     name: 
@@ -10573,7 +10573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 4.5
+  triggerDistance: 3
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   dialogue:
     name: 
@@ -10673,7 +10673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030268284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.9074, y: -8.34, z: -0.13495825}
+  m_LocalPosition: {x: -10.9074, y: -7.95, z: -0.13495825}
   m_LocalScale: {x: 1.2429032, y: 0.17857225, z: 0.30379114}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11109,7 +11109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 4.5
+  triggerDistance: 3
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   dialogue:
     name: 
@@ -11884,7 +11884,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1146640778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.79, y: -16.1, z: 0}
+  m_LocalPosition: {x: -1.95, y: -13.94, z: 0}
   m_LocalScale: {x: 1, y: 3.6885939, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13419,7 +13419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 4.5
+  triggerDistance: 3
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   dialogue:
     name: 
@@ -19632,7 +19632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1979168545
 Transform:
   m_ObjectHideFlags: 0
@@ -19999,7 +19999,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028462368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.31, y: -5.51, z: 0}
+  m_LocalPosition: {x: -9.39, y: -4.47, z: 0}
   m_LocalScale: {x: 9.69435, y: 4.509, z: 4.509}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22571,7 +22571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 4.5
+  triggerDistance: 3
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   dialogue:
     name: 
@@ -23004,7 +23004,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089687382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.2063994, y: -8.34, z: -0.13495825}
+  m_LocalPosition: {x: -5.2063994, y: -7.95, z: -0.13495825}
   m_LocalScale: {x: 0.7954581, y: 0.17857225, z: 0.30379114}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23997,7 +23997,7 @@ MonoBehaviour:
   slotsSolved_first: 0
   solution_first: 4
   slotsSolved_second: 0
-  solution_second: 6
+  solution_second: 9
   solved_first: 0
   solved_second: 0
   puzzle01:

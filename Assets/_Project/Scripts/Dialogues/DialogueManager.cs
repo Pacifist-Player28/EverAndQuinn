@@ -55,6 +55,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        Debug.Log("Aha-2");
         playerMovement.animator.Play(playerMovement.idleFront);
         sentences.Clear();
         //enable UI
@@ -66,22 +67,25 @@ public class DialogueManager : MonoBehaviour
         {
             interactables[i].GetComponent<Collider2D>().enabled = false;
         }
-
+        Debug.Log("Aha-1");
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
+        Debug.Log("Aha0");
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
     {
+        Debug.Log("Aha");
         StopAllCoroutines();
         if (sentences.Count == 0)
         {
             EndDialogue();
             return;
         }
+        Debug.Log("Aha2");
         spriteCount += 2;
         StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
         DisplayNextSprites(activeDialogueTrigger.dialogue);
@@ -90,6 +94,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSprites(Dialogue dialogue)
     {
+        Debug.Log("Aha3");
         StartCoroutine(SwitchSprites(dialogue));
     }
 
@@ -112,6 +117,7 @@ public class DialogueManager : MonoBehaviour
 
         activeDialogueTrigger.endOfDialogue.Invoke();
 
+        if (activeDialogueTrigger.GetComponent<Collider2D>() == null) return;
         activeDialogueTrigger.GetComponent<Collider2D>().enabled = true;
     }
 

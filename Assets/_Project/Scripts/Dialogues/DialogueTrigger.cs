@@ -2,72 +2,81 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DialogueTrigger : MonoBehaviour
-{
-    [HideInInspector] public bool canBeClicked = true;
-    public float triggerDistance = 4.5f;
-    [Space]
-    public Sprite transparentSprite;
-    public Dialogue dialogue;
-    public UnityEvent clicked;
-    public UnityEvent endOfDialogue;
-
-    private GameObject player;
-
-    [HideInInspector]
-    public DialogueTrigger instance;
-
-    private void Awake()
+namespace DialogueSystem
+{ 
+    public class DialogueTrigger : MonoBehaviour
     {
-        instance = this;
-    }
+        [HideInInspector] public bool canBeClicked = true;
+        public float triggerDistance = 4.5f;
+        [Space]
+        public Sprite transparentSprite;
+        public Dialogue dialogue;
+        public UnityEvent clicked;
+        public UnityEvent endOfDialogue;
 
-    void Start()
-    {
-        player = GameObject.Find("Player");
-    }
+        private GameObject player;
 
-    public void Update()
-    {
-        //OnDistanceShorter(triggerDistance);
-        //Debug.Log("CanBeclickes is " + canBeClicked);
-        for (int i = 0; i < dialogue.spritesLeft.Length ; i++)
+        [HideInInspector]
+        public DialogueTrigger instance;
+
+        private void Awake()
         {
-            if (dialogue.spritesLeft[i] == null) dialogue.spritesLeft[i] = transparentSprite;
-            if (dialogue.spritesRight[i] == null) dialogue.spritesRight[i] = transparentSprite;
+            instance = this;
         }
-    }
 
-    public void TriggerDialogue()
-    {
-        DialogueManager.instance.StartDialogue(dialogue);
-        GetComponent<Collider2D>().enabled = false;
-    }
-
-    public void DestroyThisTriggerDialogue()
-    {
-        Destroy(this);
-    }
-
-    void OnMouseOver()
-    {
-        DialogueManager.instance.activeDialogueTrigger = instance;
-        if (!enabled) return;
-        if (Input.GetMouseButtonDown(0) && Vector2.Distance(GetComponent<Transform>().position, player.transform.position) < triggerDistance)
+        private void OnDrawGizmosSelected()
         {
-            TriggerDialogue();
-            clicked.Invoke();
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, triggerDistance);
         }
-    }
 
-    public void TriggerDialogeOverTime(float time)
-    {
-        StartCoroutine(StartDialogueOverTime(time));
-    }
+        void Start()
+        {
+            player = PlayerMovementKeyboard.instance.gameObject;
+        }
 
-    IEnumerator StartDialogueOverTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-        TriggerDialogue();
+        public void Update()
+        {
+            //OnDistanceShorter(triggerDistance);
+            //Debug.Log("CanBeclickes is " + canBeClicked);
+            for (int i = 0; i < dialogue.spritesLeft.Length ; i++)
+            {
+                if (dialogue.spritesLeft[i] == null) dialogue.spritesLeft[i] = transparentSprite;
+                if (dialogue.spritesRight[i] == null) dialogue.spritesRight[i] = transparentSprite;
+            }
+        }
+
+        public void DestroyThisTriggerDialogue()
+        {
+            Destroy(this);
+        }
+
+        void OnMouseOver()
+        {
+            //make this trigger active
+            DialogueManager.instance.activeDialogueTrigger = instance;
+            if (!enabled) return;
+            if (Input.GetMouseButtonDown(0) && Vector2.Distance(GetComponent<Transform>().position, player.transform.position) < triggerDistance)
+            {
+                DialogueManager.instance.StartDialogue(dialogue);
+                clicked.Invoke();
+            }
+        }
+
+        public void TriggerDialogeOverTime(float time)
+        {
+            StartCoroutine(StartDialogueOverTime(time));
+        }
+
+        public void MakeThisActive()
+        {
+            DialogueManager.instance.activeDialogueTrigger = instance;
+        }
+
+        IEnumerator StartDialogueOverTime(float time)
+        {
+            yield return new WaitForSeconds(time);
+            DialogueManager.instance.StartDialogue(dialogue);
+        }
     }
 }

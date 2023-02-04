@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Purple Book
   solution: purple
   pickupDistance: 3.5
-  game: {fileID: 245370333, guid: 3e9939cb2c900064eab3f00f6df0be12, type: 3}
-  inventory: {fileID: 2040458228, guid: 3e9939cb2c900064eab3f00f6df0be12, type: 3}
+  inGame: {fileID: -1038382109, guid: 3e9939cb2c900064eab3f00f6df0be12, type: 3}
+  inInventory: {fileID: -1038382109, guid: 3e9939cb2c900064eab3f00f6df0be12, type: 3}
   collected: 0

@@ -7,7 +7,7 @@ namespace Inventory
     {
         public string itemName, solution;
         public float pickupDistance;
-        public Sprite game, inventory;
+        public Sprite inGame, inInventory;
         public bool collected;
     }
 }

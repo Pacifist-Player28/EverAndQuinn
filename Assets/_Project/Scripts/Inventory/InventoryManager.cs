@@ -15,7 +15,8 @@ namespace Inventory
                 {
                     items[i] = item.setting;
                     item.setting.collected = true;
-                    item.gameObject.SetActive(false);
+                    //item.gameObject.SetActive(false);
+                    item.DeactivateItem();
                     return;
                 }
             }
@@ -31,7 +32,6 @@ namespace Inventory
             {
                 if (setting.collected) collected.Add(setting);
             }
-
             return collected.ToArray();
         }
     }

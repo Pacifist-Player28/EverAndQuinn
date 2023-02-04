@@ -34,7 +34,7 @@ namespace Inventory
             //item count should not be longer than images
             for (int i = 0; i < items.Length; i++)
             {
-                images[i].sprite = items[i].inventory;
+                images[i].sprite = items[i].inInventory;
                 
                 if(solutionActive) slots[i].solution = items[i].solution;
             }

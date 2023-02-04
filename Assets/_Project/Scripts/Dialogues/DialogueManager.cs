@@ -4,196 +4,172 @@ using System.Collections.Generic;
 using System.Collections;
 using TMPro;
 
-public class DialogueManager : MonoBehaviour
-{
-    [Header("Dialogues")]
-    public TMP_Text dialogueText;
-    public GameObject dialogueUi;
-    public AudioClip textSound;
-    public float timeBetweenTextSound;
-    public GameObject spriteLeft, spriteRight;
-    [Space]
-    public float animationSpeed;
-    public float textDelay = 0.01f;
-    public GameObject[] interactables;
-    public Vector2[] distanceToInteractables;
-
-    private Queue<string> sentences;
-    private PlayerMovementKeyboard playerMovement;
-
-    private int spriteCount = 0;
-    private AudioSource source;
-
-    [HideInInspector]
-    public static DialogueManager instance;
-    [HideInInspector]
-    public DialogueTrigger activeDialogueTrigger;
-
-    private void Awake()
+namespace DialogueSystem 
+{ 
+    public class DialogueManager : MonoBehaviour
     {
-        if (instance == null) instance = this;
-        else Destroy(this);
-    }
+        [Header("Dialogues")]
+        [SerializeField] TMP_Text dialogueText;
+        [SerializeField] AudioClip textSound;
+        [SerializeField] float textDelay = 0.01f;
+        [SerializeField] GameObject dialogueUi;
+        [SerializeField] GameObject spriteLeft, spriteRight;
+        [Space]
+        [SerializeField] float spriteAnimationSpeed;
+        GameObject[] interactables;
+        //SerializeField] Vector2[] distanceToInteractables;
 
-    private void Start()
-    {
-        source = GetComponent<AudioSource>();
-        spriteCount = 0;
-        sentences = new Queue<string>();
-        //playerMovement = FindObjectOfType<PlayerMovementKeyboard>();
-        playerMovement = PlayerMovementKeyboard.instance;
-        interactables = GameObject.FindGameObjectsWithTag("Interactable");
-    }
+        Queue<string> sentences;
 
-    private void Update()
-    {
-        //MeasureAndActivate();
-        //Debug.Log("active dialogue: " + activeDialogueTrigger.name);
-        Debug.Log("SpriteCount: " + spriteCount);
-        if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
-    }
+        int spriteCount = 0;
+        AudioSource audioSource;
 
-    public void StartDialogue(Dialogue dialogue)
-    {
-        Debug.Log("Aha-2");
-        playerMovement.animator.Play(playerMovement.idleFront);
-        sentences.Clear();
-        //enable UI
-        dialogueUi.SetActive(true);
-        //disable Player movement
-        playerMovement.enabled = false;
+        [HideInInspector] public static DialogueManager instance;
+        [HideInInspector] public DialogueTrigger activeDialogueTrigger;
+        PlayerMovementKeyboard playerMovement;
 
-        for (int i = 0; i < interactables.Length; i++)
+        private void Awake()
         {
-            interactables[i].GetComponent<Collider2D>().enabled = false;
-        }
-        Debug.Log("Aha-1");
-        foreach (string sentence in dialogue.sentences)
-        {
-            sentences.Enqueue(sentence);
-        }
-        Debug.Log("Aha0");
-        DisplayNextSentence();
-    }
-
-    public void DisplayNextSentence()
-    {
-        Debug.Log("Aha");
-        StopAllCoroutines();
-        if (sentences.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }
-        Debug.Log("Aha2");
-        spriteCount += 2;
-        StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
-        DisplayNextSprites(activeDialogueTrigger.dialogue);
-
-    }
-
-    public void DisplayNextSprites(Dialogue dialogue)
-    {
-        Debug.Log("Aha3");
-        StartCoroutine(SwitchSprites(dialogue));
-    }
-
-    public void EndDialogue()
-    {
-        for (int i = 0; i < interactables.Length; i++)
-        {
-            interactables[i].GetComponent<Collider2D>().enabled = true;
+            if (instance == null) instance = this;
+            else Destroy(this);
         }
 
-        //disable UI
-        dialogueUi.SetActive(false);
-
-        //enable Player movement
-        playerMovement.enabled = true;
-
-        spriteCount -= spriteCount;
-
-        StopAllCoroutines();
-
-        activeDialogueTrigger.endOfDialogue.Invoke();
-
-        if (activeDialogueTrigger.GetComponent<Collider2D>() == null) return;
-        activeDialogueTrigger.GetComponent<Collider2D>().enabled = true;
-    }
-
-    //public void MeasureAndActivate()
-    //{
-    //    //this method activates the nearest interactable and disables every other inside the scene.
-    //    distanceToInteractables = new Vector2[interactables.Length];
-    //    Vector2 smallestVector = new Vector2(float.MaxValue, float.MaxValue);
-    //    GameObject nearestInteractable = null;
-    //    GameObject[] otherInteractables = new GameObject[interactables.Length - 1];
-    //    int nearestIndex = -1;
-    //    int index = 0;
-
-    //    for (int i = 0; i < interactables.Length; i++)
-    //    {
-    //        distanceToInteractables[i] = interactables[i].transform.position - playerMovement.transform.position;
-    //    }
-
-    //    for (int i = 0; i < distanceToInteractables.Length; i++)
-    //    {
-    //        if (distanceToInteractables[i].magnitude < smallestVector.magnitude)
-    //        {
-    //            smallestVector = distanceToInteractables[i];
-    //            nearestIndex = i;
-    //        }
-    //    }
-
-    //    if (nearestIndex != -1)
-    //    {
-    //        nearestInteractable = interactables[nearestIndex];
-    //        //Debug.Log("Nearest: " + nearestInteractable.name);
-    //    }
-
-    //    for (int i = 0; i < interactables.Length; i++)
-    //    {
-    //        if (i != nearestIndex)
-    //        {
-    //            otherInteractables[index] = interactables[i];
-    //            otherInteractables[index].GetComponent<DialogueTrigger>().enabled = false;
-    //            index++;
-    //        }
-    //    }
-    //    activeDialogueTrigger = nearestInteractable.GetComponent<DialogueTrigger>();
-    //    activeDialogueTrigger.enabled = true;
-    //}
-
-    IEnumerator SwitchSprites(Dialogue dialogue)
-    {
-        int index = spriteCount;
-        while (index <= spriteCount)
+        private void Start()
         {
-            spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[spriteCount - 1];
-            spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[spriteCount - 1];
-            yield return new WaitForSeconds(animationSpeed);
-            spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[spriteCount - 2];
-            spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[spriteCount - 2];
-            yield return new WaitForSeconds(animationSpeed);
+            audioSource = GetComponent<AudioSource>();
+            spriteCount = 0;
+            sentences = new Queue<string>();
+            playerMovement = PlayerMovementKeyboard.instance;
+            interactables = GameObject.FindGameObjectsWithTag("Interactable");
         }
-    }
 
-    IEnumerator TextAnimation(string text)
-    {
-        //dialogueText.text = sentences.Dequeue().ToString();
-        dialogueText.text = "";
-        int soundIndex = 0;
-
-        foreach (char letter in text.ToCharArray())
+        private void Update()
         {
-            soundIndex++;
-            if (soundIndex == 3)
+            Debug.Log("SpriteCount: " + spriteCount);
+            if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
+        }
+
+        public void StartDialogue(Dialogue dialogue)
+        {
+            playerMovement.animator.Play(playerMovement.idleFront);
+            sentences.Clear();
+            dialogueUi.SetActive(true);
+            playerMovement.enabled = false;
+
+            for (int i = 0; i < interactables.Length; i++)
             {
-                source.PlayOneShot(textSound);
-                soundIndex -= soundIndex;
+                interactables[i].GetComponent<Collider2D>().enabled = false;
             }
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(textDelay);
+            foreach (string sentence in dialogue.sentences)
+            {
+                sentences.Enqueue(sentence);
+            }
+            DisplayNextSentence();
+        }
+
+        public void DisplayNextSentence()
+        {
+            StopAllCoroutines();
+            if (sentences.Count == 0)
+            {
+                spriteCount -= spriteCount;
+                EndDialogue();
+                return;
+            }
+            StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
+            StartCoroutine(SwitchSprites(activeDialogueTrigger.dialogue));
+            spriteCount += 2;
+        }
+
+        public void EndDialogue()
+        {
+            StopAllCoroutines();
+
+            for (int i = 0; i < interactables.Length; i++)
+            {
+                interactables[i].GetComponent<Collider2D>().enabled = true;
+            }
+
+            //if (activeDialogueTrigger.GetComponent<Collider2D>() == null) return;
+            dialogueUi.SetActive(false);
+            playerMovement.enabled = true;
+            activeDialogueTrigger.endOfDialogue.Invoke();
+        }
+
+        //public void MeasureAndActivate()
+        //{
+        //    //this method activates the nearest interactable and disables every other inside the scene.
+        //    distanceToInteractables = new Vector2[interactables.Length];
+        //    Vector2 smallestVector = new Vector2(float.MaxValue, float.MaxValue);
+        //    GameObject nearestInteractable = null;
+        //    GameObject[] otherInteractables = new GameObject[interactables.Length - 1];
+        //    int nearestIndex = -1;
+        //    int index = 0;
+
+        //    for (int i = 0; i < interactables.Length; i++)
+        //    {
+        //        distanceToInteractables[i] = interactables[i].transform.position - playerMovement.transform.position;
+        //    }
+
+        //    for (int i = 0; i < distanceToInteractables.Length; i++)
+        //    {
+        //        if (distanceToInteractables[i].magnitude < smallestVector.magnitude)
+        //        {
+        //            smallestVector = distanceToInteractables[i];
+        //            nearestIndex = i;
+        //        }
+        //    }
+
+        //    if (nearestIndex != -1)
+        //    {
+        //        nearestInteractable = interactables[nearestIndex];
+        //        //Debug.Log("Nearest: " + nearestInteractable.name);
+        //    }
+
+        //    for (int i = 0; i < interactables.Length; i++)
+        //    {
+        //        if (i != nearestIndex)
+        //        {
+        //            otherInteractables[index] = interactables[i];
+        //            otherInteractables[index].GetComponent<DialogueTrigger>().enabled = false;
+        //            index++;
+        //        }
+        //    }
+        //    activeDialogueTrigger = nearestInteractable.GetComponent<DialogueTrigger>();
+        //    activeDialogueTrigger.enabled = true;
+        //}
+
+        IEnumerator SwitchSprites(Dialogue dialogue)
+        {
+            int index = spriteCount;
+            while (index <= spriteCount)
+            {
+                spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 1];  
+                spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[index - 1];
+                yield return new WaitForSeconds(spriteAnimationSpeed);
+                spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 2];
+                spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[index - 2];
+                yield return new WaitForSeconds(spriteAnimationSpeed);
+            }
+        }
+
+        IEnumerator TextAnimation(string text)
+        {
+            //dialogueText.text = sentences.Dequeue().ToString();
+            dialogueText.text = "";
+            int soundIndex = 0;
+
+            foreach (char letter in text.ToCharArray())
+            {
+                soundIndex++;
+                if (soundIndex == 3)
+                {
+                    audioSource.PlayOneShot(textSound);
+                    soundIndex -= soundIndex;
+                }
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(textDelay);
+            }
         }
     }
 }

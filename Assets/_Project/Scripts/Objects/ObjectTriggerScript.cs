@@ -3,11 +3,10 @@ using UnityEngine.Events;
 
 public class ObjectTriggerScript : MonoBehaviour
 {
-    private bool canBeClicked = false;
-    public float triggerDistance = 7.5f;
-    public UnityEvent clicked;
-
-    private GameObject player;
+    bool canBeClicked = false;
+    GameObject player;
+    [SerializeField] float triggerDistance = 7.5f;
+    [SerializeField] UnityEvent clicked;
 
     void Start()
     {

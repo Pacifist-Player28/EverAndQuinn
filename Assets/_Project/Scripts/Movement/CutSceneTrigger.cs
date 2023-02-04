@@ -1,15 +1,11 @@
 using UnityEngine;
 using UnityEngine.Events;
+using DialogueSystem;
 
 public class CutSceneTrigger : MonoBehaviour
 {
     [SerializeField]
     UnityEvent OnCollision;
-
-    private void Start()
-    {
-        
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

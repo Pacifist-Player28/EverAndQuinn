@@ -1,14 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
-public class Dialogue
-{
-    public string name;
+namespace DialogueSystem {
+    [System.Serializable]
+    public class Dialogue
+    {
+        public string name;
 
-    [TextArea]
-    public string[] sentences;
+        [TextArea]
+        public string[] sentences;
 
-    public Sprite[] spritesRight;
-    public Sprite[] spritesLeft;
+        public Sprite[] spritesRight;
+        public Sprite[] spritesLeft;
+    }
 }

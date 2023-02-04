@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using Inventory;
 using UnityEngine.Events;
+using DialogueSystem;
 
 public class GameSettings : MonoBehaviour
 {

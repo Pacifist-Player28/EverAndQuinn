@@ -8,19 +8,31 @@ namespace Inventory
         public ItemSetting setting;
         public UnityEvent collect;
 
-        private void Awake() => GetComponent<SpriteRenderer>().sprite = setting.game;
+        private void Awake() => GetComponent<SpriteRenderer>().sprite = setting.inGame;
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(transform.position, setting.pickupDistance);
+        }
 
         private void OnMouseOver()
         {
-            var player = FindObjectOfType<PlayerMovementKeyboard>().transform;
+            var player = PlayerMovementKeyboard.instance.transform;
             if (Vector3.Distance(player.position, transform.position) > setting.pickupDistance) return;
 
             if (Input.GetMouseButtonDown(0))
             {
-                var im = GetComponentInParent<InventoryManager>();
-                im.AddItem(this);
+                var inventoryManager = GetComponentInParent<InventoryManager>();
+                inventoryManager.AddItem(this);
                 collect.Invoke();
             }
+        }
+
+        public void DeactivateItem()
+        {
+            GetComponent<SpriteRenderer>().enabled = false;
+            GetComponent<Collider2D>().enabled = false;
         }
     }
 }

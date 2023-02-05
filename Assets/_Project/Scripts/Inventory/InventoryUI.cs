@@ -1,3 +1,5 @@
+using System.Linq;
+using UnityEditor.Graphs;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,52 +12,42 @@ namespace Inventory
         [SerializeField] DragableItem[] dragableItem;
         [SerializeField] Image[] images;
         [SerializeField] GameObject[] slots;
-        int amountOfChildren;
-        //public string[] solutions;
+        [SerializeField] GameObject slotGameobject;
+        [SerializeField] int amountOfItems;
+        int previousAmountOfItems = 0;
 
-        [Header("Activate solution puzzle")]
-        public bool solutionActive = false;
+        Transform parent;
 
         private void Start()
         {
-            //find images in Children
-            //for (int i = 0; i < transform.childCount; i++)
-            //{
-            //    Transform child = transform.GetChild(i);
-            //    amountOfChildren += child.childCount;
-            //}
-            //dragableItem = new DragableItem[amountOfChildren];
-
-            //images = new Image[amountOfChildren];
-            //images = GetComponentsInChildren<Image>();
-
-            //for (int i = 0; i < images.Length; i++)
-            //{
-            //    images[i] =
-            //}
+            parent = transform.GetChild(0);
         }
 
         public void Update()
         {
+            Debug.Log("previousAmountOfItems: " + previousAmountOfItems + " amountOfItems: " + amountOfItems);
+            amountOfItems = inventoryManager.GetItems().Count();
 
+            AddSlotIntoHierachy();
 
-            //Refresh();
-            //if (Input.GetKeyDown(openInventory))
-            //{
-            //    inventory.SetActive(!inventory.activeSelf);
-            //}
+            if (previousAmountOfItems != amountOfItems)
+            {
+                slots = new GameObject[amountOfItems];
+                Instantiate(slotGameobject, parent);
+                //slots[amountOfItems].GetComponentInChildren<Image>().sprite = inventoryManager.items[amountOfItems].inInventory;
+                previousAmountOfItems++;
+                return;
+            }
         }
 
-        //public void Refresh()
-        //{
-        //    var items = inventoryManager.GetItems();
-        //    //item count should not be longer than images
-        //    for (int i = 0; i < images.Length; i++)
-        //    {
-        //        images[i].sprite = items[i].inInventory;
-
-        //        if (solutionActive) dragableItem[i].solution = items[i].solution;
-        //    }
-        //}
+        void AddSlotIntoHierachy()
+        {
+            for (int i = 0; i < previousAmountOfItems; i++)
+            {
+                slots[i] = parent.GetChild(i).gameObject;
+                var item = slots[i].transform.GetChild(0);
+                item.GetComponent<Image>().sprite = inventoryManager.items[i].inInventory;
+            }
+        }
     }
 }

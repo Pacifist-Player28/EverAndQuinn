@@ -1161,13 +1161,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryManager: {fileID: 2066627838}
-  images: []
   dragableItem: []
-  slot: {fileID: 853863141541296688, guid: 876396f6ecb79fc4db2852e385d538cb, type: 3}
-  item: {fileID: 8215303104232490588, guid: 41e21d7c6c892bb4f8a765f3a7f718eb, type: 3}
-  openInventory: 105
-  inventory: {fileID: 1546244418}
-  solutionActive: 1
+  images: []
+  slots: []
+  slotGameobject: {fileID: 853863141541296688, guid: 876396f6ecb79fc4db2852e385d538cb, type: 3}
+  amountOfItems: 0
 --- !u!1001 &130028574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15944,7 +15942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1693400023
 RectTransform:
   m_ObjectHideFlags: 0

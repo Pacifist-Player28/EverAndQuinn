@@ -45,7 +45,7 @@ namespace DialogueSystem
 
         private void Update()
         {
-            Debug.Log("SpriteCount: " + spriteCount);
+            //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
         }
 
@@ -144,7 +144,7 @@ namespace DialogueSystem
             int index = spriteCount;
             while (index <= spriteCount)
             {
-                spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 1];  
+                spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 1];
                 spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[index - 1];
                 yield return new WaitForSeconds(spriteAnimationSpeed);
                 spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 2];

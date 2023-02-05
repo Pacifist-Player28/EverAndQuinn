@@ -7,6 +7,11 @@ namespace Inventory
     {
         public ItemSetting[] items = new ItemSetting[14];
 
+        private void Awake()
+        {
+            
+        }
+
         public void AddItem(Item item)
         {
             for (int i = 0; i < items.Length; i++)
@@ -29,9 +34,18 @@ namespace Inventory
 
             foreach (ItemSetting setting in allSettings)
             {
-                if (setting.collected) collected.Add(setting);
+                if (setting.collected)
+                {
+                    collected.Add(setting);
+                    for (int i = 0; i < items.Length; i++)
+                    {
+                        if (items[i] != null) continue;
+                        else items[i] = setting;
+                        break;
+                    }
+                }
             }
-            return collected.ToArray();
+            //return collected.ToArray();
         }
     }
 }

@@ -6,8 +6,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
 {
     [SerializeField] bool changeSprites;
     [Space]
-    [SerializeField] Sprite hoverSprite;
-    [SerializeField] Sprite exitSprite;
+    [SerializeField] Sprite hoverSprite, exitSprite;
     RectTransform children;
     Image thisImage;
     bool taken;
@@ -27,10 +26,10 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
     {
         if(transform.childCount == 0) 
         { 
-        GameObject dropped = eventData.pointerDrag;
-        DragableItem dragableItem = dropped.GetComponent<DragableItem>();
-        dragableItem.parentAfterDrag = transform;
-        taken = false;
+            GameObject dropped = eventData.pointerDrag;
+            DragableItem dragableItem = dropped.GetComponent<DragableItem>();
+            dragableItem.parentTransform = transform;
+            taken = false;
         }
     }
 

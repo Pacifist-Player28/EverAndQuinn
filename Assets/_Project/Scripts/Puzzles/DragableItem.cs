@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [HideInInspector] public Transform parentAfterDrag;
+    [HideInInspector] public Transform parentTransform;
     public string solution;
-    public Image image;
+    Image image;
 
     private PuzzleSlot parentPuzzleSlot;
 
@@ -18,26 +17,23 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     void Update()
     {
-        if (image.sprite == null) image.enabled = false;
-        else image.enabled = true;
+        //if (image.sprite == null) image.enabled = false;
+        //else image.enabled = true;
 
         if (parentPuzzleSlot == null) return;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
-    {
-        //parentPuzzleSlot = parentAfterDrag.GetComponent<PuzzleSlot>();  
-        parentAfterDrag = transform.parent;
+    { 
+        parentTransform = transform.parent;
         //refers to the Canvas
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
         image.raycastTarget = false;
 
         if (parentPuzzleSlot == null) return;
-        if (parentPuzzleSlot.solution == solution)
-        {
-            parentPuzzleSlot.SubtractFromSolution.Invoke();
-        }
+        
+        if (parentPuzzleSlot.solution == solution) parentPuzzleSlot.SubtractFromSolution.Invoke();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -47,8 +43,8 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        parentPuzzleSlot = parentAfterDrag.GetComponent<PuzzleSlot>();
-        transform.SetParent(parentAfterDrag);
+        parentPuzzleSlot = parentTransform.GetComponent<PuzzleSlot>();
+        transform.SetParent(parentTransform);
         image.raycastTarget = true;
 
         if (parentPuzzleSlot == null) return;

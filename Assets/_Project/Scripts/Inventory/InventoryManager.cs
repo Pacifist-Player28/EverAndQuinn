@@ -5,7 +5,7 @@ namespace Inventory
 {
     public class InventoryManager : MonoBehaviour
     {
-        public ItemSetting[] items = new ItemSetting[7];
+        public ItemSetting[] items = new ItemSetting[14];
 
         public void AddItem(Item item)
         {
@@ -15,7 +15,6 @@ namespace Inventory
                 {
                     items[i] = item.setting;
                     item.setting.collected = true;
-                    //item.gameObject.SetActive(false);
                     item.DeactivateItem();
                     return;
                 }

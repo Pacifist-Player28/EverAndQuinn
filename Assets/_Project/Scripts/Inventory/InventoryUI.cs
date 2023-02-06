@@ -21,6 +21,7 @@ namespace Inventory
         private void Start()
         {
             parent = transform.GetChild(0);
+            SlotAndItemImage();
         }
 
         public void Update()
@@ -28,10 +29,9 @@ namespace Inventory
             Debug.Log("previousAmountOfItems: " + previousAmountOfItems + " amountOfItems: " + amountOfItems);
             amountOfItems = inventoryManager.GetItems().Count();
 
-            AddSlotIntoHierachy();
-
             if (previousAmountOfItems != amountOfItems)
             {
+                SlotAndItemImage();
                 slots = new GameObject[amountOfItems];
                 Instantiate(slotGameobject, parent);
                 //slots[amountOfItems].GetComponentInChildren<Image>().sprite = inventoryManager.items[amountOfItems].inInventory;
@@ -40,7 +40,7 @@ namespace Inventory
             }
         }
 
-        void AddSlotIntoHierachy()
+        void SlotAndItemImage()
         {
             for (int i = 0; i < previousAmountOfItems; i++)
             {

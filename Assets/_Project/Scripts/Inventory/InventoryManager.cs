@@ -27,25 +27,40 @@ namespace Inventory
         }
 
         public ItemSetting[] GetItems()
-        {        
+        {
             var allSettings = Resources.FindObjectsOfTypeAll<ItemSetting>();
 
-            List<ItemSetting> collected = new();
+            List<ItemSetting> collected = new List<ItemSetting>();
 
             foreach (ItemSetting setting in allSettings)
             {
                 if (setting.collected)
                 {
                     collected.Add(setting);
+                    bool itemExists = false;
                     for (int i = 0; i < items.Length; i++)
                     {
-                        if (items[i] != null) continue;
-                        else items[i] = setting;
-                        break;
+                        if (items[i] == setting)
+                        {
+                            itemExists = true;
+                            break;
+                        }
+                    }
+                    if (!itemExists)
+                    {
+                        for (int i = 0; i < items.Length; i++)
+                        {
+                            if (items[i] == null)
+                            {
+                                items[i] = setting;
+                                break;
+                            }
+                        }
                     }
                 }
             }
-            //return collected.ToArray();
+            return collected.ToArray();
         }
+
     }
 }

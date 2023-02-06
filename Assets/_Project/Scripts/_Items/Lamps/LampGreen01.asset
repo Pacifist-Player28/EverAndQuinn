@@ -15,6 +15,6 @@ MonoBehaviour:
   itemName: Lamp
   solution: LampGreen
   pickupDistance: 2
-  game: {fileID: 991632182, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
-  inventory: {fileID: 991632182, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
+  inGame: {fileID: 0}
+  inInventory: {fileID: 0}
   collected: 0

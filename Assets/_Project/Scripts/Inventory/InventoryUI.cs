@@ -9,8 +9,6 @@ namespace Inventory
     {
         [Header("Inventory based variables")]
         [SerializeField] InventoryManager inventoryManager;
-        [SerializeField] DragableItem[] dragableItem;
-        [SerializeField] Image[] images;
         [SerializeField] GameObject[] slots;
         [SerializeField] GameObject slotGameobject;
         [SerializeField] int amountOfItems;
@@ -27,22 +25,21 @@ namespace Inventory
         public void Update()
         {
             Debug.Log("previousAmountOfItems: " + previousAmountOfItems + " amountOfItems: " + amountOfItems);
+            //only call this when picking up an item
             amountOfItems = inventoryManager.GetItems().Count();
 
             if (previousAmountOfItems != amountOfItems)
             {
-                SlotAndItemImage();
                 slots = new GameObject[amountOfItems];
                 Instantiate(slotGameobject, parent);
-                //slots[amountOfItems].GetComponentInChildren<Image>().sprite = inventoryManager.items[amountOfItems].inInventory;
+                SlotAndItemImage();
                 previousAmountOfItems++;
-                return;
             }
         }
 
         void SlotAndItemImage()
         {
-            for (int i = 0; i < previousAmountOfItems; i++)
+            for (int i = 0; i < amountOfItems; i++)
             {
                 slots[i] = parent.GetChild(i).gameObject;
                 var item = slots[i].transform.GetChild(0);

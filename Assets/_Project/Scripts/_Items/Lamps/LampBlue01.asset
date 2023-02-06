@@ -17,4 +17,4 @@ MonoBehaviour:
   pickupDistance: 2
   inGame: {fileID: 791892102, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
   inInventory: {fileID: 791892102, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
-  collected: 1
+  collected: 0

@@ -53,6 +53,4 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             parentPuzzleSlot.AddToSolution.Invoke();
         }
     }
-
-
 }

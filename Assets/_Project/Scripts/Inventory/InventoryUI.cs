@@ -1,5 +1,4 @@
 using System.Linq;
-using UnityEditor.Graphs;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,19 +13,11 @@ namespace Inventory
         [SerializeField] int amountOfItems;
         int previousAmountOfItems = 0;
 
-        [SerializeField] Transform startTransform;
-        [SerializeField] Transform targetTransform;
-        [SerializeField] float animationTime = 1.0f;
-        
-
         Transform parent;
 
         private void Awake()
         {
             parent = transform.GetChild(0);
-            //amountOfItems = inventoryManager.GetItems().Count();
-            //amountOfItems = inventoryManager.GetItems().Count();
-            //SlotAndItemImage();
         }
 
         public void LateUpdate()
@@ -54,11 +45,6 @@ namespace Inventory
                 var item = slots[i].transform.GetChild(0);
                 item.GetComponent<Image>().sprite = inventoryManager.items[i].inInventory;
             }
-        }
-
-        private void MoveComponent()
-        {
-            
         }
     }
 }

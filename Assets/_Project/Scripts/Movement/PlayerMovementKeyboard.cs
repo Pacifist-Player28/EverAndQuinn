@@ -21,7 +21,7 @@ public class PlayerMovementKeyboard : MonoBehaviour
     //3.25
 
     [Header("Open Inventory")]
-    [SerializeField] KeyCode open;
+    public KeyCode open;
     [SerializeField] UnityEvent openInventory;
     [SerializeField] UnityEvent closeInventory;
     [SerializeField] UnityEvent clickedEscape;

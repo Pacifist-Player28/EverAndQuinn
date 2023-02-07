@@ -47,6 +47,7 @@ namespace DialogueSystem
         {
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
+            if (dialogueText.ToString().Contains("Ever")) Debug.Log("EVER");
         }
 
         public void StartDialogue(Dialogue dialogue)
@@ -55,6 +56,7 @@ namespace DialogueSystem
             sentences.Clear();
             dialogueUi.SetActive(true);
             playerMovement.enabled = false;
+            spriteCount += 2;
 
             for (int i = 0; i < interactables.Length; i++)
             {
@@ -144,6 +146,7 @@ namespace DialogueSystem
             int index = spriteCount;
             while (index <= spriteCount)
             {
+                Debug.Log("Dialogue Sprites: index = " + index + " spriteCount = " + spriteCount);
                 spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 1];
                 spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[index - 1];
                 yield return new WaitForSeconds(spriteAnimationSpeed);

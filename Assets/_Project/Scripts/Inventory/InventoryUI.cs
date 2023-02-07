@@ -14,27 +14,36 @@ namespace Inventory
         [SerializeField] int amountOfItems;
         int previousAmountOfItems = 0;
 
+        [SerializeField] Transform startTransform;
+        [SerializeField] Transform targetTransform;
+        [SerializeField] float animationTime = 1.0f;
+        
+
         Transform parent;
 
-        private void Start()
+        private void Awake()
         {
             parent = transform.GetChild(0);
-            SlotAndItemImage();
+            //amountOfItems = inventoryManager.GetItems().Count();
+            //amountOfItems = inventoryManager.GetItems().Count();
+            //SlotAndItemImage();
         }
 
-        public void Update()
+        public void LateUpdate()
         {
             Debug.Log("previousAmountOfItems: " + previousAmountOfItems + " amountOfItems: " + amountOfItems);
-            //only call this when picking up an item
-            amountOfItems = inventoryManager.GetItems().Count();
 
             if (previousAmountOfItems != amountOfItems)
             {
                 slots = new GameObject[amountOfItems];
                 Instantiate(slotGameobject, parent);
+                Debug.Log("Instantiatet!");
                 SlotAndItemImage();
                 previousAmountOfItems++;
             }
+
+            //only call this when picking up an item
+            amountOfItems = inventoryManager.GetItems().Count();
         }
 
         void SlotAndItemImage()
@@ -45,6 +54,11 @@ namespace Inventory
                 var item = slots[i].transform.GetChild(0);
                 item.GetComponent<Image>().sprite = inventoryManager.items[i].inInventory;
             }
+        }
+
+        private void MoveComponent()
+        {
+            
         }
     }
 }

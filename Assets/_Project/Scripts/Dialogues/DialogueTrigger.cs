@@ -77,6 +77,7 @@ namespace DialogueSystem
         {
             yield return new WaitForSeconds(time);
             DialogueManager.instance.StartDialogue(dialogue);
+            
         }
     }
 }

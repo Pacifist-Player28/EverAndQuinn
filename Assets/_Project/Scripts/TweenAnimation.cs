@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TweenAnimation : MonoBehaviour
 {
     [SerializeField] Transform startTransform;
     [SerializeField] Transform targetTransform;
     [SerializeField] float animationTime = 0.25f;
+    [Space]
+    [SerializeField] bool makeIconDissapear;
+    [SerializeField] Image icon;
 
     private void Update()
     {

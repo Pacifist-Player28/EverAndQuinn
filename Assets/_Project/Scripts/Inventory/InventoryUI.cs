@@ -8,7 +8,7 @@ namespace Inventory
     {
         [Header("Inventory based variables")]
         [SerializeField] InventoryManager inventoryManager;
-        [SerializeField] GameObject[] slots;
+        public GameObject[] slots;
         [SerializeField] GameObject slotGameobject;
         [SerializeField] int amountOfItems;
         int previousAmountOfItems = 0;
@@ -18,32 +18,37 @@ namespace Inventory
         private void Awake()
         {
             parent = transform.GetChild(0);
+            amountOfItems = inventoryManager.GetItems().Count();
         }
 
         public void LateUpdate()
         {
             Debug.Log("previousAmountOfItems: " + previousAmountOfItems + " amountOfItems: " + amountOfItems);
+            //only call this when picking up an item
+            amountOfItems = inventoryManager.GetItems().Count();
 
             if (previousAmountOfItems != amountOfItems)
             {
+                previousAmountOfItems++;
                 slots = new GameObject[amountOfItems];
                 Instantiate(slotGameobject, parent);
-                Debug.Log("Instantiatet!");
                 SlotAndItemImage();
-                previousAmountOfItems++;
             }
-
-            //only call this when picking up an item
-            amountOfItems = inventoryManager.GetItems().Count();
         }
 
         void SlotAndItemImage()
         {
             for (int i = 0; i < amountOfItems; i++)
             {
+                var im = inventoryManager.items[i];
+
                 slots[i] = parent.GetChild(i).gameObject;
+
                 var item = slots[i].transform.GetChild(0);
-                item.GetComponent<Image>().sprite = inventoryManager.items[i].inInventory;
+
+                item.GetComponent<Image>().sprite = im.inInventory;
+                slots[i].layer = im.layerValue;
+                slots[i].transform.GetChild(0).GetComponent<DragableItem>().solution = im.solution;
             }
         }
     }

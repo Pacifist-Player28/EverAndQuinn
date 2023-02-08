@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Lamp
   solution: LampPurple
+  layerName: Lamps
+  layerValue: 8
   pickupDistance: 2
-  inGame: {fileID: 0}
-  inInventory: {fileID: 0}
+  inGame: {fileID: 791892102, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
+  inInventory: {fileID: 791892102, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
   collected: 0

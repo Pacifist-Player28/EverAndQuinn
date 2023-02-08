@@ -18,12 +18,13 @@ namespace Inventory
 
         private void OnMouseOver()
         {
+            var inventoryManager = GetComponentInParent<InventoryManager>();
+            Debug.Log("Name: " + inventoryManager.name);
             var player = PlayerMovementKeyboard.instance.transform;
             if (Vector3.Distance(player.position, transform.position) > setting.pickupDistance) return;
 
             if (Input.GetMouseButtonDown(0))
             {
-                var inventoryManager = GetComponentInParent<InventoryManager>();
                 inventoryManager.AddItem(this);
                 collect.Invoke();
             }

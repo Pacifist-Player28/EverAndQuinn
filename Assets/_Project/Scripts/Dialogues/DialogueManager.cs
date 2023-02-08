@@ -10,7 +10,8 @@ namespace DialogueSystem
     {
         [Header("Dialogues")]
         [SerializeField] TMP_Text dialogueText;
-        [SerializeField] AudioClip textSound;
+        [SerializeField] AudioClip textSoundMain;
+        [SerializeField] AudioClip textSoundPhone;
         [SerializeField] float textDelay = 0.01f;
         [SerializeField] GameObject dialogueUi;
         [SerializeField] GameObject spriteLeft, spriteRight;
@@ -167,7 +168,7 @@ namespace DialogueSystem
                 soundIndex++;
                 if (soundIndex == 3)
                 {
-                    audioSource.PlayOneShot(textSound);
+                    audioSource.PlayOneShot(textSoundMain);
                     soundIndex -= soundIndex;
                 }
                 dialogueText.text += letter;

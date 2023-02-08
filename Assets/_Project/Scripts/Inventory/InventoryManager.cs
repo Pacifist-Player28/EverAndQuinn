@@ -7,11 +7,6 @@ namespace Inventory
     {
         public ItemSetting[] items = new ItemSetting[14];
 
-        private void Awake()
-        {
-            
-        }
-
         public void AddItem(Item item)
         {
             for (int i = 0; i < items.Length; i++)
@@ -36,12 +31,18 @@ namespace Inventory
             {
                 if (setting.collected)
                 {
-                    collected.Add(setting);
                     bool itemExists = false;
+                    collected.Add(setting);
                     for (int i = 0; i < items.Length; i++)
                     {
                         if (items[i] == setting)
                         {
+                            itemExists = true;
+                            break;
+                        }
+                        else if (items[i] != null && items[i].layerName == gameObject.layer.ToString())
+                        {
+                            items[i] = setting;
                             itemExists = true;
                             break;
                         }
@@ -61,6 +62,5 @@ namespace Inventory
             }
             return collected.ToArray();
         }
-
     }
 }

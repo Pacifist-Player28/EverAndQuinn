@@ -1,12 +1,15 @@
+using Inventory;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class ObjectTriggerScript : MonoBehaviour
 {
     bool canBeClicked = false;
+    bool clickedCheck = false;
     GameObject player;
     [SerializeField] float triggerDistance = 7.5f;
     [SerializeField] UnityEvent clicked;
+    [SerializeField] UnityEvent clickStop;
 
     void Start()
     {
@@ -25,10 +28,16 @@ public class ObjectTriggerScript : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0) && canBeClicked)
+        if (Input.GetMouseButtonDown(0) && canBeClicked && !clickedCheck)
         {
-            //Debug.Log("clicked");
             clicked.Invoke();
+            clickedCheck = true;
+        }
+        
+        if(Input.GetMouseButtonDown(0) && canBeClicked && clickedCheck)
+        {
+            clickStop.Invoke();
+            clickedCheck = false;
         }
     }
 
@@ -41,4 +50,12 @@ public class ObjectTriggerScript : MonoBehaviour
         }
         else canBeClicked = false;
     }
+
+    //public void DeactivateItems(InventoryUI inventory, string layerNameToDeactivate)
+    //{
+    //    for (int i = 0; i < inventory.slots.Length; i++)
+    //    {
+    //        if (inventory.slots[i].transform.GetChild(0).GetComponent<DragableItem>().)
+    //    }
+    //}
 }

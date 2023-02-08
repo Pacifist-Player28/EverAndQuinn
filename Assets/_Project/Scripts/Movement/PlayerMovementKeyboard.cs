@@ -35,7 +35,7 @@ public class PlayerMovementKeyboard : MonoBehaviour
     public string idleFront;
     [HideInInspector]
     public Animator animator;
-    private new Vector2 vectorAnimation;
+    private Vector2 vectorAnimation;
 
     //
 

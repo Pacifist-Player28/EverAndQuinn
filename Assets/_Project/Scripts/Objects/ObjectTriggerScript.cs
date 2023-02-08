@@ -22,6 +22,12 @@ public class ObjectTriggerScript : MonoBehaviour
         OnDistanceShorter(triggerDistance);
     }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, triggerDistance);
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
         GameSettings.current.PlayerEnter();
@@ -33,12 +39,13 @@ public class ObjectTriggerScript : MonoBehaviour
         {
             clicked.Invoke();
             clickedCheck = true;
+            Debug.Log("clicked ON");
         }
-        
-        if(Input.GetMouseButtonDown(0) && canBeClicked && clickedCheck)
+        else if(Input.GetMouseButtonDown(0) && canBeClicked && clickedCheck)
         {
             clickStop.Invoke();
             clickedCheck = false;
+            Debug.Log("clicked OFF");
         }
     }
 

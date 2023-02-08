@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TweenAnimation : MonoBehaviour
+public class TweenAnimationUi : MonoBehaviour
 {
     [SerializeField] Transform startTransform;
     [SerializeField] Transform targetTransform;
     [SerializeField] float animationTime = 0.25f;
     [Space]
-    [SerializeField] bool makeIconDissapear;
     [SerializeField] Image icon;
 
     private void Update()
@@ -15,6 +14,7 @@ public class TweenAnimation : MonoBehaviour
         if (Input.GetKeyDown(PlayerMovementKeyboard.instance.open))
         {
             MoveComponentUp();
+
         }
 
         if (Input.GetKeyUp(PlayerMovementKeyboard.instance.open))
@@ -23,13 +23,15 @@ public class TweenAnimation : MonoBehaviour
         }
     }
 
-    private void MoveComponentUp()
+    public void MoveComponentUp()
     {
         LeanTween.moveLocalY(gameObject, targetTransform.localPosition.y, animationTime).setEaseInOutQuad();
+        icon.rectTransform.rotation = new Quaternion(0f, 0f, 360f, 0f);
     }
 
-    private void MoveComponentDown()
+    public void MoveComponentDown()
     {
         LeanTween.moveLocalY(gameObject, startTransform.localPosition.y, animationTime).setEaseInOutQuad();
+        icon.rectTransform.rotation = new Quaternion(0f, 0f, 0f, 0f);
     }
 }

@@ -119,6 +119,15 @@ public class GameSettings : MonoBehaviour
     {
         item.collected = true;
     }
+
+    public void ActivateAllDialogue()
+    {
+        DialogueTrigger[] dialogues = FindObjectsOfType<DialogueTrigger>();
+        foreach (var dialogue in dialogues)
+        {
+            dialogue.enabled = true;
+        }
+    }
 }
 
 

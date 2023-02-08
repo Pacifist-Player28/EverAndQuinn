@@ -146,7 +146,7 @@ namespace DialogueSystem
             int index = spriteCount;
             while (index <= spriteCount)
             {
-                Debug.Log("Dialogue Sprites: index = " + index + " spriteCount = " + spriteCount);
+                //Debug.Log("Dialogue Sprites: index = " + index + " spriteCount = " + spriteCount);
                 spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 1];
                 spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[index - 1];
                 yield return new WaitForSeconds(spriteAnimationSpeed);

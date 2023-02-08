@@ -6,12 +6,12 @@ namespace DialogueSystem
 { 
     public class DialogueTrigger : MonoBehaviour
     {
-        [HideInInspector] public bool canBeClicked = true;
-        public float triggerDistance = 4.5f;
+        [SerializeField] bool canBeClicked = true;
+        [SerializeField] float triggerDistance = 4.5f;
         [Space]
-        public Sprite transparentSprite;
+        [SerializeField] Sprite transparentSprite;
+        [SerializeField] UnityEvent clicked;
         public Dialogue dialogue;
-        public UnityEvent clicked;
         public UnityEvent endOfDialogue;
 
         private GameObject player;

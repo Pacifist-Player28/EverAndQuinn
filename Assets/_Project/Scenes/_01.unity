@@ -198,6 +198,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Collision
     sentences:
@@ -208,9 +211,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -681,12 +681,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70586345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.79, y: -9.33, z: -0.13495825}
-  m_LocalScale: {x: 0.7954581, y: 0.17857225, z: 0.30379114}
+  m_LocalPosition: {x: -1.43, y: -10.882, z: -0.13495825}
+  m_LocalScale: {x: 0.5990034, y: 0.37095213, z: 0.63107216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &70586347
 BoxCollider2D:
@@ -721,14 +721,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70586345}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 2.45
+  triggerDistance: 1.06
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Object
     sentences:
@@ -739,9 +742,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -1446,7 +1446,7 @@ GameObject:
   - component: {fileID: 150553485}
   m_Layer: 0
   m_Name: Closet (2)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1459,7 +1459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150553481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.86, y: -2.04, z: -0.13495825}
+  m_LocalPosition: {x: -1.81, y: -2.04, z: -0.13495825}
   m_LocalScale: {x: 1.8375, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1551,7 +1551,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150553481}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -1559,6 +1559,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.76
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -1569,9 +1572,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -1668,7 +1668,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &156141332
 SpriteRenderer:
@@ -1773,7 +1773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90730cf791e56c6458e2b64894da5dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDistance: 5
+  triggerDistance: 2.64
   clicked:
     m_PersistentCalls:
       m_Calls:
@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156141328}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -1879,6 +1879,21 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 2.64
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 156141335}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   dialogue:
     name: Object
     sentences:
@@ -1905,21 +1920,6 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
     - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
     - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 156141335}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -2272,8 +2272,8 @@ Tilemap:
   - first: {x: -3, y: -4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileIndex: 9
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2332,8 +2332,8 @@ Tilemap:
   - first: {x: 3, y: -4, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileIndex: 6
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2512,8 +2512,8 @@ Tilemap:
   - first: {x: -2, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileIndex: 4
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2582,8 +2582,8 @@ Tilemap:
   - first: {x: -3, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileIndex: 6
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2592,8 +2592,8 @@ Tilemap:
   - first: {x: -2, y: -1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileIndex: 4
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2632,8 +2632,8 @@ Tilemap:
   - first: {x: -3, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileIndex: 2
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2642,8 +2642,8 @@ Tilemap:
   - first: {x: -2, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileIndex: 4
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2692,8 +2692,8 @@ Tilemap:
   - first: {x: -2, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileIndex: 4
+      m_TileSpriteIndex: 5
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2905,21 +2905,21 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: a7a588eb0a2c2134384f4bb9d32f784a, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 4
+    m_Data: {fileID: 11400000, guid: f0ad44412b6900045a5bef6b520a383e, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 6336d981e136666418db7a94eba3e7bb, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 948274b44d6d95c4ca624720c5f9cc4a, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 3ecd6c42830d4914295e1b65056fa450, type: 2}
-  - m_RefCount: 31
+  - m_RefCount: 23
     m_Data: {fileID: 11400000, guid: 15c0ff2062906ea4ca342485b86a4633, type: 2}
-  - m_RefCount: 14
+  - m_RefCount: 15
     m_Data: {fileID: 11400000, guid: 47a45555197981c4482209a3f7fec35f, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 2ce074f4a9c76c04a8e0a57e2cb2f924, type: 2}
@@ -2932,23 +2932,23 @@ Tilemap:
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 3
+  - m_RefCount: 5
     m_Data: {fileID: 220207866, guid: 254bd31831594ab4fa69b94b863e6ac1, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 298274904, guid: 254bd31831594ab4fa69b94b863e6ac1, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 4
+    m_Data: {fileID: 1290358682, guid: 254bd31831594ab4fa69b94b863e6ac1, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -1909681373, guid: 254bd31831594ab4fa69b94b863e6ac1, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1252679598, guid: 254bd31831594ab4fa69b94b863e6ac1, type: 3}
-  - m_RefCount: 31
+  - m_RefCount: 23
     m_Data: {fileID: 21300000, guid: 4053c9d40541bce47adeef2984222cc6, type: 3}
-  - m_RefCount: 14
+  - m_RefCount: 15
     m_Data: {fileID: 528171266, guid: 254bd31831594ab4fa69b94b863e6ac1, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -117246020, guid: 254bd31831594ab4fa69b94b863e6ac1, type: 3}
@@ -3073,6 +3073,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Collision
     sentences:
@@ -3083,9 +3086,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -3250,7 +3250,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 912883343}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &208429805
 MonoBehaviour:
@@ -3279,7 +3279,7 @@ GameObject:
   - component: {fileID: 220412155}
   m_Layer: 0
   m_Name: cupboard_9 (2)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3349,7 +3349,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &220412154
 BoxCollider2D:
@@ -3384,14 +3384,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220412151}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 3
+  triggerDistance: 1.64
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -3412,45 +3415,6 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, CustomScripts
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: ed42faaa6951c7e43a1a3ab25d0e7d0a, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Inventory.ItemSetting, CustomScripts
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, CustomScripts
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 3d333cfca713d3d4b934d34aa7f5e3a9, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Inventory.ItemSetting, CustomScripts
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, CustomScripts
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: a60db0d2b92db7d4383a492eea5f575f, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Inventory.ItemSetting, CustomScripts
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -3488,7 +3452,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &221499167
 BoxCollider2D:
@@ -3523,7 +3487,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221499165}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -3531,6 +3495,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.94
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Object
     sentences:
@@ -3541,9 +3508,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -3824,6 +3788,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: book
     sentences:
@@ -3834,9 +3801,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -3935,14 +3899,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267201346}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 2.91
+  triggerDistance: 2.89
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Fridge
     sentences:
@@ -3964,9 +3931,6 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -4033,7 +3997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90730cf791e56c6458e2b64894da5dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDistance: 4.5
+  triggerDistance: 2.93
   clicked:
     m_PersistentCalls:
       m_Calls:
@@ -5349,7 +5313,7 @@ GameObject:
   - component: {fileID: 395553847}
   m_Layer: 0
   m_Name: Sofa
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5441,7 +5405,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395553844}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -5449,6 +5413,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 2.5
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Sofa
     sentences:
@@ -5459,9 +5426,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
     - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -5819,12 +5783,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434529780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.069999695, y: -9.33, z: -0.13495825}
-  m_LocalScale: {x: 0.7954581, y: 0.17857225, z: 0.30379114}
+  m_LocalPosition: {x: -0.046078, y: -10.882, z: -0.13495825}
+  m_LocalScale: {x: 0.5990034, y: 0.37095213, z: 0.63107216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &434529782
 BoxCollider2D:
@@ -5859,14 +5823,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434529780}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 2.45
+  triggerDistance: 1.06
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Object
     sentences:
@@ -5877,9 +5844,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -5974,13 +5938,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447155786}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -3.6336002, y: -9.141, z: -0.13495825}
   m_LocalScale: {x: 10.363032, y: 0.1625, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2026800990}
-  m_RootOrder: 26
+  m_Father: {fileID: 912883343}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &447155788
 SpriteRenderer:
@@ -6397,7 +6361,7 @@ GameObject:
   - component: {fileID: 535153429}
   m_Layer: 0
   m_Name: Closet (6)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6502,7 +6466,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 535153425}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -6510,6 +6474,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.76
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -6521,33 +6488,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, CustomScripts
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: b5a48b132b4ae92449fe691ac451ef75, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Inventory.ItemSetting, CustomScripts
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, CustomScripts
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: c9bece59837669645ba621a338ae4502, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Inventory.ItemSetting, CustomScripts
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -6625,7 +6565,7 @@ GameObject:
   - component: {fileID: 554559523}
   m_Layer: 0
   m_Name: Telephone
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6643,7 +6583,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 14
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &554559519
 AudioSource:
@@ -6652,7 +6592,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554559517}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 12789273c4f11a04785305c5c0ebf914, type: 3}
@@ -6808,6 +6748,45 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.5
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 554559519}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8209732979590414071}
+        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
+        m_MethodName: ActivateAllDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1833446898}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   dialogue:
     name: Telephone
     sentences:
@@ -6926,21 +6905,6 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 8c65373c8e21b7742b2dfb2e4e3517eb, type: 3}
     - {fileID: 21300000, guid: 7f93e743081fc93439fd509cbf3f95c4, type: 3}
     - {fileID: 21300000, guid: 8c65373c8e21b7742b2dfb2e4e3517eb, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 554559519}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -7367,6 +7331,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: book
     sentences:
@@ -7377,9 +7344,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -8157,7 +8121,7 @@ GameObject:
   - component: {fileID: 640427229}
   m_Layer: 0
   m_Name: cupboard_0
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8227,7 +8191,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &640427228
 BoxCollider2D:
@@ -8262,14 +8226,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640427225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 3
+  triggerDistance: 1.93
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -8280,9 +8247,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -8463,7 +8427,7 @@ Transform:
   - {fileID: 532318957}
   - {fileID: 1706158252}
   m_Father: {fileID: 912883343}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &668892101
 GameObject:
@@ -8632,7 +8596,7 @@ GameObject:
   - component: {fileID: 671185156}
   m_Layer: 0
   m_Name: KitchenIsland
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8728,7 +8692,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 35
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &671185156
 MonoBehaviour:
@@ -8737,7 +8701,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671185152}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -8745,6 +8709,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 3.22
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Island
     sentences:
@@ -8755,9 +8722,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -9337,12 +9301,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711196112}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.6761007, y: -9.33, z: -0.13495825}
-  m_LocalScale: {x: 1.2429032, y: 0.17857225, z: 0.30379114}
+  m_LocalPosition: {x: -4.79, y: -9.87, z: -0.13495825}
+  m_LocalScale: {x: 0.7302056, y: 1.3609438, z: 0.30379114}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &711196114
 BoxCollider2D:
@@ -9377,14 +9341,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 711196112}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 2.45
+  triggerDistance: 1.75
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Object
     sentences:
@@ -9395,9 +9362,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -9481,7 +9445,7 @@ GameObject:
   - component: {fileID: 714001872}
   m_Layer: 0
   m_Name: Closet (5)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9586,7 +9550,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714001868}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -9594,6 +9558,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.76
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -9604,9 +9571,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -9786,12 +9750,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744392293}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.99000025, y: -9.33, z: -0.13495825}
-  m_LocalScale: {x: 0.7954581, y: 0.17857225, z: 0.30379114}
+  m_LocalPosition: {x: 0.64669, y: -10.882, z: -0.13495825}
+  m_LocalScale: {x: 0.5990034, y: 0.37095213, z: 0.63107216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &744392295
 BoxCollider2D:
@@ -9826,14 +9790,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744392293}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 2.45
+  triggerDistance: 1.06
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Object
     sentences:
@@ -9844,9 +9811,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -9930,7 +9894,7 @@ GameObject:
   - component: {fileID: 784963886}
   m_Layer: 0
   m_Name: cupboard_9 (1)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10000,7 +9964,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &784963885
 BoxCollider2D:
@@ -10035,14 +9999,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784963882}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 3
+  triggerDistance: 1.64
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -10053,9 +10020,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -10124,12 +10088,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805560186}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.02, y: -9.33, z: -0.13495825}
-  m_LocalScale: {x: 1.2429032, y: 0.17857225, z: 0.30379114}
+  m_LocalPosition: {x: -7.3421, y: -9.87, z: -0.13495825}
+  m_LocalScale: {x: 0.7302056, y: 1.3609438, z: 0.30379114}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &805560188
 BoxCollider2D:
@@ -10164,14 +10128,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805560186}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 2.45
+  triggerDistance: 1.75
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Object
     sentences:
@@ -10182,9 +10149,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -10481,7 +10445,7 @@ GameObject:
   - component: {fileID: 872745370}
   m_Layer: 0
   m_Name: Sofa Finish
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10521,14 +10485,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872745364}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 3.5
+  triggerDistance: 2.5
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Sofa
     sentences:
@@ -10539,9 +10506,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
     - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -10700,6 +10664,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 447155787}
   - {fileID: 208429804}
   - {fileID: 2026800990}
   - {fileID: 664948855}
@@ -10784,6 +10749,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919046534}
   m_CullTransparentMesh: 1
+--- !u!1 &931897830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 931897831}
+  m_Layer: 0
+  m_Name: TransformStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &931897831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931897830}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1532930587}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &934800215
 GameObject:
   m_ObjectHideFlags: 0
@@ -10832,15 +10828,15 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
     - "Puhh. I did a lot today. Maybe it\u2019s time to go back to sleep."
     spritesRight: []
     spritesLeft: []
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -10899,12 +10895,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960206541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.1136007, y: -9.33, z: -0.13495825}
-  m_LocalScale: {x: 1.2429032, y: 0.17857225, z: 0.30379114}
+  m_LocalPosition: {x: -5.6346, y: -9.87, z: -0.13495825}
+  m_LocalScale: {x: 0.7302056, y: 1.3609438, z: 0.30379114}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &960206543
 BoxCollider2D:
@@ -10939,29 +10935,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 960206541}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 2.45
+  triggerDistance: 1.75
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  dialogue:
-    name: Object
-    sentences:
-    - Here also!
-    - A lamp inside my jacket...
-    spritesRight:
-    - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
-    - {fileID: 21300000, guid: b8de6b6a11509174994c173fc9abbcf3, type: 3}
-    - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
-    - {fileID: 21300000, guid: b8de6b6a11509174994c173fc9abbcf3, type: 3}
-    spritesLeft:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
   clicked:
     m_PersistentCalls:
       m_Calls:
@@ -10977,6 +10958,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  dialogue:
+    name: Object
+    sentences:
+    - Here also!
+    - A lamp inside my jacket...
+    spritesRight:
+    - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
+    - {fileID: 21300000, guid: b8de6b6a11509174994c173fc9abbcf3, type: 3}
+    - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
+    - {fileID: 21300000, guid: b8de6b6a11509174994c173fc9abbcf3, type: 3}
+    spritesLeft:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -11046,6 +11042,163 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorToAdd: 0.1
+--- !u!1 &961503656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 961503657}
+  - component: {fileID: 961503658}
+  - component: {fileID: 961503660}
+  - component: {fileID: 961503661}
+  m_Layer: 5
+  m_Name: SecondButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &961503657
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961503656}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1917937589}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 7, y: 3.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &961503658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961503656}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1630396337}
+        m_TargetAssemblyTypeName: TweenAnimationUi, Assembly-CSharp
+        m_MethodName: MoveComponentDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1917937592}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 961503658}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!222 &961503660
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961503656}
+  m_CullTransparentMesh: 1
+--- !u!114 &961503661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961503656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &975761464
 GameObject:
   m_ObjectHideFlags: 0
@@ -11060,7 +11213,7 @@ GameObject:
   - component: {fileID: 975761468}
   m_Layer: 0
   m_Name: cupboard_9 (3)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11130,7 +11283,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 30
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &975761467
 BoxCollider2D:
@@ -11165,14 +11318,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 975761464}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 3
+  triggerDistance: 1.64
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -11183,9 +11339,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -11368,7 +11521,7 @@ GameObject:
   - component: {fileID: 1012120465}
   m_Layer: 0
   m_Name: cupboard_1
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11438,7 +11591,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 28
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1012120464
 BoxCollider2D:
@@ -11473,14 +11626,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1012120461}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 3
+  triggerDistance: 1.86
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -11491,9 +11647,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -11579,12 +11732,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030268284}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.5510006, y: -9.33, z: -0.13495825}
-  m_LocalScale: {x: 1.2429032, y: 0.17857225, z: 0.30379114}
+  m_LocalPosition: {x: -6.479, y: -9.87, z: -0.13495825}
+  m_LocalScale: {x: 0.7302056, y: 1.3609438, z: 0.30379114}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1030268286
 BoxCollider2D:
@@ -11619,14 +11772,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030268284}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 2.45
+  triggerDistance: 1.75
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Object
     sentences:
@@ -11637,21 +11793,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, CustomScripts
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: a043038aa3ff36d4784b8f6b4e9c4c7a, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Inventory.ItemSetting, CustomScripts
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -11754,7 +11895,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1043753486
 BoxCollider2D:
@@ -11789,7 +11930,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043753484}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -11797,6 +11938,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.56
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Object
     sentences:
@@ -11807,9 +11951,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -11893,7 +12034,7 @@ GameObject:
   - component: {fileID: 1062783361}
   m_Layer: 0
   m_Name: cupboard_9
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11963,7 +12104,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 34
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1062783360
 BoxCollider2D:
@@ -11998,14 +12139,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062783357}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 3
+  triggerDistance: 1.64
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -12016,9 +12160,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -12051,7 +12192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068846016}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.21, y: 13.68, z: -0.135}
+  m_LocalPosition: {x: -5.57, y: 13.68, z: -0.135}
   m_LocalScale: {x: 3.7046754, y: 3.7046754, z: 0.7409351}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12065,7 +12206,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1068846016}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -12073,6 +12214,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 4.5
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Fridge
     sentences:
@@ -12083,9 +12227,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -12297,7 +12438,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1082690545
 BoxCollider2D:
@@ -12332,7 +12473,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082690543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -12340,6 +12481,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.46
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Object
     sentences:
@@ -12355,21 +12499,6 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, CustomScripts
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: a30d44007b079c346a7b360dbbde8b65, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Inventory.ItemSetting, CustomScripts
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -12690,6 +12819,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Collision
     sentences:
@@ -12700,9 +12832,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -12784,6 +12913,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1168667742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1168667743}
+  m_Layer: 0
+  m_Name: TransformEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1168667743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168667742}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1532930587}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1170159390
 GameObject:
   m_ObjectHideFlags: 0
@@ -13504,7 +13664,7 @@ Transform:
   - {fileID: 2028462369}
   - {fileID: 1367840453}
   m_Father: {fileID: 912883343}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1198968815
 GameObject:
@@ -13535,12 +13695,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198968815}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.9499998, y: 3.3, z: -0.13495825}
-  m_LocalScale: {x: 2.008125, y: 4.0401564, z: 1}
+  m_LocalPosition: {x: -4.92, y: 2.75, z: -0.13495825}
+  m_LocalScale: {x: 2.008125, y: 2.9796154, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1198968817
 BoxCollider2D:
@@ -13588,24 +13748,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198968815}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 5
+  triggerDistance: 2.47
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  dialogue:
-    name: Shelf
-    sentences:
-    - Now it's all sorted out!
-    spritesRight:
-    - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-    - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-    spritesLeft:
-    - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-    - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
     m_PersistentCalls:
       m_Calls:
@@ -13621,6 +13771,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  dialogue:
+    name: Shelf
+    sentences:
+    - Now it's all sorted out!
+    spritesRight:
+    - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+    - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+    spritesLeft:
+    - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+    - {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -14071,7 +14231,7 @@ Transform:
   - {fileID: 170929202}
   - {fileID: 1146640779}
   m_Father: {fileID: 912883343}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236663831
 GameObject:
@@ -14087,7 +14247,7 @@ GameObject:
   - component: {fileID: 1236663835}
   m_Layer: 0
   m_Name: cupboard_1 (1)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14157,7 +14317,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 33
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1236663834
 BoxCollider2D:
@@ -14192,7 +14352,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236663831}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -14200,6 +14360,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.81
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -14210,9 +14373,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -14564,7 +14724,7 @@ GameObject:
   - component: {fileID: 1273534575}
   m_Layer: 0
   m_Name: cupboard_9 (5)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14660,7 +14820,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 36
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1273534575
 MonoBehaviour:
@@ -14669,7 +14829,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273534571}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -14677,6 +14837,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.92
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -14687,9 +14850,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -14708,7 +14868,7 @@ GameObject:
   - component: {fileID: 1295224060}
   m_Layer: 0
   m_Name: Closet (7)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14813,7 +14973,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295224056}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -14821,6 +14981,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.76
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -14831,9 +14994,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -15182,7 +15342,7 @@ GameObject:
   - component: {fileID: 1366280977}
   m_Layer: 0
   m_Name: Closet (4)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15195,7 +15355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366280973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.88, y: -6, z: -0.13495825}
+  m_LocalPosition: {x: -17.77, y: -6, z: -0.13495825}
   m_LocalScale: {x: 0.98370075, y: 1.525, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15287,7 +15447,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366280973}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -15295,6 +15455,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.75
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -15305,9 +15468,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -16582,8 +16742,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.65001845, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: ee44fd67caf2b3e4bb197c6dabe0a1e6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -16601,12 +16761,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532930584}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.63, y: 0.6699999, z: -0.13495825}
+  m_LocalPosition: {x: -4.72, y: -0.11, z: -0.13495825}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1833446899}
+  - {fileID: 931897831}
+  - {fileID: 1168667743}
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 13
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1532930588
 MonoBehaviour:
@@ -16620,7 +16783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90730cf791e56c6458e2b64894da5dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDistance: 3
+  triggerDistance: 1.72
   clicked:
     m_PersistentCalls:
       m_Calls:
@@ -16636,9 +16799,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1833446900}
+        m_TargetAssemblyTypeName: TweenAnimationVinylPlayer, Assembly-CSharp
+        m_MethodName: ChangeSpriteStop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   clickStop:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1532930585}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1833446900}
+        m_TargetAssemblyTypeName: TweenAnimationVinylPlayer, Assembly-CSharp
+        m_MethodName: ChangeSpriteStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &1532930589
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16656,14 +16855,14 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.0566666, y: 1.6266667}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.37, y: 1.75}
   m_EdgeRadius: 0
 --- !u!114 &1532930590
 MonoBehaviour:
@@ -16685,7 +16884,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532930584}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -16693,6 +16892,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.72
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Player with disk
     sentences:
@@ -16708,9 +16910,6 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -16814,7 +17013,7 @@ GameObject:
   - component: {fileID: 1605644174}
   m_Layer: 0
   m_Name: Closet (1)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16919,7 +17118,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605644170}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -16927,6 +17126,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.75
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Closet
     sentences:
@@ -16937,9 +17139,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -17332,8 +17531,7 @@ MonoBehaviour:
   startTransform: {fileID: 793655977}
   targetTransform: {fileID: 123047699}
   animationTime: 0.1
-  makeIconDissapear: 0
-  icon: {fileID: 0}
+  icon: {fileID: 1917937590}
 --- !u!114 &1630396338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18906,6 +19104,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: book
     sentences:
@@ -18916,13 +19117,113 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
   instance: {fileID: 0}
+--- !u!1 &1833446898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1833446899}
+  - component: {fileID: 1833446901}
+  - component: {fileID: 1833446900}
+  m_Layer: 0
+  m_Name: HoverObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1833446899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833446898}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1532930587}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1833446900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833446898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82c77c25d60dc634e881222fd6a24254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTransform: {fileID: 931897831}
+  targetTransform: {fileID: 1168667743}
+  animationTime: 0.15
+  minDistance: 2
+  one: {fileID: 21300000, guid: 522d930b476835d42aa731f962c50311, type: 3}
+  two: {fileID: 21300000, guid: 8b6187e22eeae864dbef51d9c12c4b1f, type: 3}
+--- !u!212 &1833446901
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833446898}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 522d930b476835d42aa731f962c50311, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!82 &1873154270
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19033,7 +19334,7 @@ GameObject:
   - component: {fileID: 1873201695}
   m_Layer: 0
   m_Name: Closet (3)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19046,7 +19347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873201691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.88, y: -4.34, z: -0.13495825}
+  m_LocalPosition: {x: -17.77, y: -4.34, z: -0.13495825}
   m_LocalScale: {x: 0.98370075, y: 1.525, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19138,7 +19439,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873201691}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
@@ -19146,6 +19447,9 @@ MonoBehaviour:
   canBeClicked: 1
   triggerDistance: 1.75
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -19161,9 +19465,6 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -19512,6 +19813,7 @@ GameObject:
   - component: {fileID: 1917937589}
   - component: {fileID: 1917937591}
   - component: {fileID: 1917937590}
+  - component: {fileID: 1917937592}
   m_Layer: 5
   m_Name: ArrowDown
   m_TagString: Untagged
@@ -19530,13 +19832,14 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 8.98, y: 8.98, z: 8.98}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 961503657}
   m_Father: {fileID: 1630396336}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -170}
+  m_AnchoredPosition: {x: 0, y: -134.1}
   m_SizeDelta: {x: 7, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1917937590
@@ -19577,6 +19880,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917937588}
   m_CullTransparentMesh: 1
+--- !u!114 &1917937592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917937588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1917937590}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1630396337}
+        m_TargetAssemblyTypeName: TweenAnimationUi, Assembly-CSharp
+        m_MethodName: MoveComponentUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 961503658}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1917937592}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1918396788
 GameObject:
   m_ObjectHideFlags: 0
@@ -20100,6 +20483,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 554559518}
+  - {fileID: 1532930587}
   - {fileID: 744392294}
   - {fileID: 434529781}
   - {fileID: 2089687383}
@@ -20113,8 +20498,6 @@ Transform:
   - {fileID: 1043753485}
   - {fileID: 156141329}
   - {fileID: 1198968816}
-  - {fileID: 1532930587}
-  - {fileID: 554559518}
   - {fileID: 267201348}
   - {fileID: 1068846017}
   - {fileID: 395553845}
@@ -20126,7 +20509,6 @@ Transform:
   - {fileID: 714001869}
   - {fileID: 535153426}
   - {fileID: 1295224057}
-  - {fileID: 447155787}
   - {fileID: 640427227}
   - {fileID: 1012120463}
   - {fileID: 2057289789}
@@ -20138,7 +20520,7 @@ Transform:
   - {fileID: 671185155}
   - {fileID: 1273534574}
   m_Father: {fileID: 912883343}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2028462368
 GameObject:
@@ -20872,7 +21254,7 @@ GameObject:
   - component: {fileID: 2057289791}
   m_Layer: 0
   m_Name: cupboard_9 (4)
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20942,7 +21324,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 29
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2057289790
 BoxCollider2D:
@@ -20977,14 +21359,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057289787}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 3
+  triggerDistance: 1.64
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: 
     sentences:
@@ -20995,33 +21380,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, CustomScripts
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 3ef649eef5fbb5d42be3a132e5de2052, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Inventory.ItemSetting, CustomScripts
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, CustomScripts
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: a93d6a5fa4f348f4e8fa4f129caa2d29, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Inventory.ItemSetting, CustomScripts
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -21378,12 +21736,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089687382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8499999, y: -9.33, z: -0.13495825}
-  m_LocalScale: {x: 0.7954581, y: 0.17857225, z: 0.30379114}
+  m_LocalPosition: {x: -0.72214997, y: -10.882, z: -0.13495825}
+  m_LocalScale: {x: 0.5990034, y: 0.37095213, z: 0.63107216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2026800990}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2089687384
 BoxCollider2D:
@@ -21418,14 +21776,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089687382}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canBeClicked: 1
-  triggerDistance: 2.45
+  triggerDistance: 1.06
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
   dialogue:
     name: Object
     sentences:
@@ -21436,9 +21797,6 @@ MonoBehaviour:
     spritesLeft:
     - {fileID: 0}
     - {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []

@@ -6,6 +6,7 @@ namespace Inventory
 {
     public class InventoryUI : MonoBehaviour
     {
+        public static InventoryUI instance;
         [Header("Inventory based variables")]
         [SerializeField] InventoryManager inventoryManager;
         public GameObject[] slots;
@@ -17,6 +18,8 @@ namespace Inventory
 
         private void Awake()
         {
+            if (instance == null) instance = this;
+            else Destroy(this);
             parent = transform.GetChild(0);
             amountOfItems = inventoryManager.GetItems().Count();
         }

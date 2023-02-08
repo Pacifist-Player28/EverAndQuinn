@@ -7,6 +7,7 @@ public class ObjectTriggerScript : MonoBehaviour
     bool canBeClicked = false;
     bool clickedCheck = false;
     GameObject player;
+    InventoryManager im;
     [SerializeField] float triggerDistance = 7.5f;
     [SerializeField] UnityEvent clicked;
     [SerializeField] UnityEvent clickStop;
@@ -51,11 +52,21 @@ public class ObjectTriggerScript : MonoBehaviour
         else canBeClicked = false;
     }
 
-    //public void DeactivateItems(InventoryUI inventory, string layerNameToDeactivate)
-    //{
-    //    for (int i = 0; i < inventory.slots.Length; i++)
-    //    {
-    //        if (inventory.slots[i].transform.GetChild(0).GetComponent<DragableItem>().)
-    //    }
-    //}
+    public void DeactivateItems(int layerToDeactivate)
+    {
+        for (int i = 0; i < InventoryUI.instance.slots.Length; i++)
+        {
+            if (InventoryUI.instance.slots[i].layer == layerToDeactivate)   
+                InventoryUI.instance.slots[i].SetActive(false);
+        }
+    }
+
+    public void ActivateItems()
+    {
+        for (int i = 0; i < InventoryUI.instance.slots.Length; i++)
+        {
+            if (InventoryUI.instance.slots[i].activeSelf == false)
+                InventoryUI.instance.slots[i].SetActive(true);
+        }
+    }
 }

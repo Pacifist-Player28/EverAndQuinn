@@ -5,7 +5,14 @@ namespace Inventory
 {
     public class InventoryManager : MonoBehaviour
     {
+        public static InventoryManager instance;
         public ItemSetting[] items = new ItemSetting[14];
+
+        private void Awake()
+        {
+            if (instance == null) instance = this;
+            else Destroy(this);
+        }
 
         public void AddItem(Item item)
         {

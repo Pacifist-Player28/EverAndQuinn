@@ -87,7 +87,7 @@ namespace DialogueSystem
         public void EndDialogue()
         {
             StopAllCoroutines();
-
+            activeDialogueTrigger.endOfDialogue.Invoke();
             for (int i = 0; i < interactables.Length; i++)
             {
                 interactables[i].GetComponent<Collider2D>().enabled = true;
@@ -96,7 +96,6 @@ namespace DialogueSystem
             //if (activeDialogueTrigger.GetComponent<Collider2D>() == null) return;
             dialogueUi.SetActive(false);
             playerMovement.enabled = true;
-            activeDialogueTrigger.endOfDialogue.Invoke();
         }
 
         //public void MeasureAndActivate()

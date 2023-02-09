@@ -3,14 +3,15 @@ using System;
 using Inventory;
 using UnityEngine.Events;
 using DialogueSystem;
+using UnityEngine.UI;
+using TMPro;
 
 public class GameSettings : MonoBehaviour
 {
     [HideInInspector]
     public static GameSettings instance;
 
-    [SerializeField]
-    private Texture2D cursorTexture;
+    [SerializeField] Texture2D cursorTexture;
 
     public int slotsSolved_first;
     public int solution_first;
@@ -21,6 +22,7 @@ public class GameSettings : MonoBehaviour
     public bool solved_first = false;
     public bool solved_second = false;
     [Space]
+    [SerializeField] GameObject trashSlider;
     [HideInInspector]
     public static GameSettings current;
     public event Action OnPlayerEnter;
@@ -128,6 +130,11 @@ public class GameSettings : MonoBehaviour
             dialogue.enabled = true;
         }
     }
+
+    public void ChangeSlider()
+    {
+        var slider = trashSlider.GetComponent<Slider>();
+        slider.value = slider.value + 1;
+        trashSlider.gameObject.GetComponentInChildren<TMP_Text>().text = ((slider.value / slider.maxValue)*100).ToString() + "% trash collected";
+    }
 }
-
-

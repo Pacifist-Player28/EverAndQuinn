@@ -41,7 +41,7 @@ public class InventoryVisual : MonoBehaviour
         {
             //Debug.Log("i: " + i);
             //why does it not just ignore the NullReferenceException?
-            if (inventoryManager.items[i].inInventory != null)
+            if (inventoryManager.items[i] != null)
                 slots[i].sprite = inventoryManager.items[i].inInventory;
             else break;
         }

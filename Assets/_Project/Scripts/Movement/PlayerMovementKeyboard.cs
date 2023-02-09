@@ -37,6 +37,8 @@ public class PlayerMovementKeyboard : MonoBehaviour
     public Animator animator;
     private Vector2 vectorAnimation;
 
+    float timePassed;
+
     //
 
     private void Awake()
@@ -60,10 +62,26 @@ public class PlayerMovementKeyboard : MonoBehaviour
     {
         Vector3 dir = new Vector3(0, 0, 0);
 
-        if (Input.GetKey(W)) dir.y += 1;
-        if (Input.GetKey(A)) dir.x += -1;
-        if (Input.GetKey(S)) dir.y += -1;
-        if (Input.GetKey(D)) dir.x += 1;
+        if (Input.GetKey(W)) 
+        {
+            dir.y += 1;
+            timePassed = 0;
+        }
+        if (Input.GetKey(A))
+        {
+            dir.x += -1;
+            timePassed = 0;
+        }
+        if (Input.GetKey(S))
+        {
+            dir.y += -1;
+            timePassed = 0;
+        }
+        if (Input.GetKey(D)) 
+        { 
+            dir.x += 1;
+            timePassed = 0;
+        }
 
         transform.position += dir.normalized * speed * Time.deltaTime;
 
@@ -72,6 +90,8 @@ public class PlayerMovementKeyboard : MonoBehaviour
 
     public void Update()
     {
+        timePassed = timePassed + Time.deltaTime;
+
         if (Input.GetKeyDown(Escape)) clickedEscape.Invoke();
 
         // delete both if statements on build!!!

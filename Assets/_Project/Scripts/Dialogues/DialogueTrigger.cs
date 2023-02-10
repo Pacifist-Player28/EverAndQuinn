@@ -13,6 +13,7 @@ namespace DialogueSystem
         [SerializeField] UnityEvent clicked;
         public Dialogue dialogue;
         public UnityEvent endOfDialogue;
+        bool dialogueTriggered = false;
 
         private GameObject player;
 
@@ -63,20 +64,26 @@ namespace DialogueSystem
             }
         }
 
-        public void TriggerDialogeOverTime(float time)
-        {
-            StartCoroutine(StartDialogueOverTime(time));
-        }
-
         public void MakeThisActive()
         {
-            DialogueManager.instance.activeDialogueTrigger = instance;
+            DialogueManager.instance.activeDialogueTrigger = this;
+        }
+
+        public void TriggerDialogeOverTime(float time)
+        {
+            if (!dialogueTriggered)
+            {
+                dialogueTriggered = true;
+                StartCoroutine(StartDialogueOverTime(time));
+            }
         }
 
         IEnumerator StartDialogueOverTime(float time)
         {
             yield return new WaitForSeconds(time);
             DialogueManager.instance.StartDialogue(dialogue);
+            yield return null;
         }
+
     }
 }

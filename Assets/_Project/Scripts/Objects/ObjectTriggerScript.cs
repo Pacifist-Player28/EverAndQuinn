@@ -7,7 +7,6 @@ public class ObjectTriggerScript : MonoBehaviour
     bool canBeClicked = false;
     bool clickedCheck = false;
     GameObject player;
-    InventoryManager im;
     [SerializeField] float triggerDistance = 7.5f;
     [SerializeField] UnityEvent clicked;
     [SerializeField] UnityEvent clickStop;
@@ -63,8 +62,9 @@ public class ObjectTriggerScript : MonoBehaviour
     {
         for (int i = 0; i < InventoryUI.instance.slots.Length; i++)
         {
-            if (InventoryUI.instance.slots[i].layer == layerToDeactivate)   
+            if (InventoryUI.instance.slots[i].layer == layerToDeactivate)
                 InventoryUI.instance.slots[i].SetActive(false);
+            else continue;
         }
     }
 

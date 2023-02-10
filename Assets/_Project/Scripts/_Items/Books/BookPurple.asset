@@ -17,6 +17,6 @@ MonoBehaviour:
   layerName: Books
   layerValue: 7
   pickupDistance: 1.5
-  inGame: {fileID: -1038382109, guid: 3e9939cb2c900064eab3f00f6df0be12, type: 3}
-  inInventory: {fileID: -1038382109, guid: 3e9939cb2c900064eab3f00f6df0be12, type: 3}
+  inGame: {fileID: 245370333, guid: 3e9939cb2c900064eab3f00f6df0be12, type: 3}
+  inInventory: {fileID: 2040458228, guid: 3e9939cb2c900064eab3f00f6df0be12, type: 3}
   collected: 0

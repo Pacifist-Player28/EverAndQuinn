@@ -5,13 +5,13 @@ using UnityEngine.Events;
 using DialogueSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Rendering;
 
 public class GameSettings : MonoBehaviour
 {
     [HideInInspector]
     public static GameSettings instance;
-
-    [SerializeField] Texture2D cursorTexture;
+    //[SerializeField] Texture2D cursorTexture;
 
     public int slotsSolved_first;
     public int solution_first;
@@ -19,17 +19,21 @@ public class GameSettings : MonoBehaviour
     public int slotsSolved_second;
     public int solution_second;
     [Space]
+    public bool solved_trash = false;
     public bool solved_first = false;
     public bool solved_second = false;
     [Space]
     [SerializeField] GameObject trashSlider;
+    [SerializeField] AudioClip trashFullAudio;
     [HideInInspector]
     public static GameSettings current;
     public event Action OnPlayerEnter;
     [Space]
+    public UnityEvent startDialogue;
     public UnityEvent puzzle01;
     public UnityEvent puzzle02;
     public UnityEvent finish;
+    public UnityEvent trashCollected;
 
     private bool puzzle1Check = false;
     private bool puzzle2Check = false;
@@ -40,16 +44,26 @@ public class GameSettings : MonoBehaviour
     {
         current = this;
         DialogueManager dialogueManager = GetComponent<DialogueManager>();
-
-        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+        DeactivateAllTrash();
+        //Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
 
         if (instance == null) instance = this;
         else Destroy(this);
     }
 
+    private void Start()
+    {
+        startDialogue.Invoke();
+    }
+
     void Update()
     {
         CompareSolution();
+        if(trashSlider.GetComponent<Slider>().value == trashSlider.GetComponent<Slider>().maxValue)
+        {
+            solved_trash = true;
+            trashCollected.Invoke();
+        }
     }
 
     //
@@ -135,6 +149,32 @@ public class GameSettings : MonoBehaviour
     {
         var slider = trashSlider.GetComponent<Slider>();
         slider.value = slider.value + 1;
-        trashSlider.gameObject.GetComponentInChildren<TMP_Text>().text = ((slider.value / slider.maxValue)*100).ToString() + "% trash collected";
+        trashSlider.gameObject.GetComponentInChildren<TMP_Text>().text = ((slider.value / slider.maxValue)*100).ToString("0") + "% trash collected";
+    }
+
+    public void ActivateAllTrash()
+    {
+        ObjectTriggerScript[] trash = FindObjectsOfType<ObjectTriggerScript>();
+
+        for (int i = 0; i < trash.Length; i++)
+        {
+            if (trash[i].CompareTag("Trash"))
+            {
+                trash[i].enabled = true;
+            }
+        }
+    }
+
+    public void DeactivateAllTrash()
+    {
+        ObjectTriggerScript[] trash = FindObjectsOfType<ObjectTriggerScript>();
+
+        for (int i = 0; i < trash.Length; i++)
+        {
+            if (trash[i].CompareTag("Trash"))
+            {
+                trash[i].enabled = false;
+            }
+        }
     }
 }

@@ -1,6 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -8,22 +9,31 @@ public class MenuManager : MonoBehaviour
     public static MenuManager instance;
     [SerializeField]
     private Texture2D cursorTexture;
+    [SerializeField]
+    Slider volumeSlider;
+    [SerializeField] AudioListener listener;
 
-        private void Awake()
+    private void Awake()
+    {
+        if (instance == null)
         {
-            if (instance == null)
-            {
-                instance = this;
-            }
-            else
-            {
-                Destroy(this);
-            }
+            instance = this;
         }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     private void Start()
     {
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+        listener = FindObjectOfType<AudioListener>();
+    }
+
+    private void Update()
+    {
+        AudioListener.volume = (float)volumeSlider.value;
     }
 
     public void QuitGame()
@@ -33,6 +43,7 @@ public class MenuManager : MonoBehaviour
 #endif
         Application.Quit();
     }
+
 
     //public void PauseGame()
     //{

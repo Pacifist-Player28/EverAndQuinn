@@ -26,7 +26,7 @@ namespace Inventory
 
         public void LateUpdate()
         {
-            //Debug.Log("previousAmountOfItems: " + previousAmountOfItems + " amountOfItems: " + amountOfItems);
+            Debug.Log("previousAmountOfItems: " + previousAmountOfItems + " amountOfItems: " + amountOfItems);
             //only call this when picking up an item
             amountOfItems = inventoryManager.GetItems().Count();
 

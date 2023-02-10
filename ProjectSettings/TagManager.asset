@@ -13,6 +13,7 @@ TagManager:
   - Puzzle5
   - DialogueSprites
   - Interactable
+  - Trash
   layers:
   - Default
   - TransparentFX

@@ -24,9 +24,10 @@ public class InventoryVisual : MonoBehaviour
 
     private void Update()
     {
+        itemNow = inventoryManager.GetItems().Count();
         //Debug.Log("Item now: " + itemNow);
         //itemNow = inventoryManager.GetItems().Count();
-        AddItemIllustration();
+        //AddItemIllustration();
         if (itemNow != itemBefore)
         { 
             AddItemIllustration();
@@ -39,8 +40,6 @@ public class InventoryVisual : MonoBehaviour
         //slots should have the same lenght as the InventoryManager
         for (int i = 0; i < slots.Length; i++)
         {
-            //Debug.Log("i: " + i);
-            //why does it not just ignore the NullReferenceException?
             if (inventoryManager.items[i] != null)
                 slots[i].sprite = inventoryManager.items[i].inInventory;
             else break;

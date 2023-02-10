@@ -15,12 +15,14 @@ namespace Inventory
         int previousAmountOfItems = 0;
 
         Transform parent;
+        Transform parent2;
 
         private void Awake()
         {
             if (instance == null) instance = this;
             else Destroy(this);
             parent = transform.GetChild(0);
+            parent2 = parent.transform.GetChild(0);
             amountOfItems = inventoryManager.GetItems().Count();
         }
 
@@ -34,7 +36,7 @@ namespace Inventory
             {
                 previousAmountOfItems++;
                 slots = new GameObject[amountOfItems];
-                Instantiate(slotGameobject, parent);
+                Instantiate(slotGameobject, parent2);
                 SlotAndItemImage();
             }
         }
@@ -45,7 +47,7 @@ namespace Inventory
             {
                 var im = inventoryManager.items[i];
 
-                slots[i] = parent.GetChild(i).gameObject;
+                slots[i] = parent2.GetChild(i).gameObject;
 
                 var item = slots[i].transform.GetChild(0);
 

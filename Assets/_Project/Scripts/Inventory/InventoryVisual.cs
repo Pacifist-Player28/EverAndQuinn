@@ -27,6 +27,7 @@ public class InventoryVisual : MonoBehaviour
         itemNow = inventoryManager.GetItems().Count();
         //Debug.Log("Item now: " + itemNow);
         //itemNow = inventoryManager.GetItems().Count();
+        //
         //AddItemIllustration();
         if (itemNow != itemBefore)
         { 

@@ -34,17 +34,9 @@ public class ObjectTriggerScript : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0) && canBeClicked && !clickedCheck)
+        if (Input.GetMouseButtonDown(0) && canBeClicked)
         {
             clicked.Invoke();
-            clickedCheck = true;
-            Debug.Log("clicked ON");
-        }
-        else if(Input.GetMouseButtonDown(0) && canBeClicked && clickedCheck)
-        {
-            clickStop.Invoke();
-            clickedCheck = false;
-            Debug.Log("clicked OFF");
         }
     }
 

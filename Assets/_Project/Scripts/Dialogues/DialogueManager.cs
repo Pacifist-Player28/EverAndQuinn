@@ -46,7 +46,7 @@ namespace DialogueSystem
 
         private void Update()
         {
-            Debug.Log("SpriteCount: " + spriteCount);
+            //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
             if (dialogueText.ToString().Contains("Ever")) Debug.Log("EVER");
         }
@@ -96,7 +96,7 @@ namespace DialogueSystem
             //if (activeDialogueTrigger.GetComponent<Collider2D>() == null) return;
             dialogueUi.SetActive(false);
             playerMovement.enabled = true;
-            Debug.Log("ENDOFDIALOGUE");
+            //Debug.Log("ENDOFDIALOGUE");
         }
 
         //public void MeasureAndActivate()
@@ -145,7 +145,7 @@ namespace DialogueSystem
         IEnumerator SwitchSprites(Dialogue dialogue)
         {
             int index = spriteCount;
-            Debug.Log("index: " + index + " spritecount: " + spriteCount);
+            //Debug.Log("index: " + index + " spritecount: " + spriteCount);
             while (index <= spriteCount)
             {
                 //Debug.Log("Dialogue Sprites: index = " + index + " spriteCount = " + spriteCount);

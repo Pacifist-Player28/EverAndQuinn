@@ -14,7 +14,9 @@ namespace DialogueSystem
         [SerializeField] AudioClip textSoundPhone;
         [SerializeField] float textDelay = 0.01f;
         [SerializeField] GameObject dialogueUi;
+        [SerializeField] Emotions emotions;
         [SerializeField] GameObject spriteLeft, spriteRight;
+        [SerializeField] string currentEmotinoLeft, currentEmotionRight;
         [Space]
         [SerializeField] float spriteAnimationSpeed;
         GameObject[] interactables;
@@ -49,6 +51,11 @@ namespace DialogueSystem
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
             if (dialogueText.ToString().Contains("Ever")) Debug.Log("EVER");
+
+            for (int i = 0; i < spriteCount; i++)
+            {
+
+            }
         }
 
         public void StartDialogue(Dialogue dialogue)
@@ -80,7 +87,7 @@ namespace DialogueSystem
             }
             spriteCount += 2;
             StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
-            StartCoroutine(SwitchSprites(activeDialogueTrigger.dialogue));
+            //StartCoroutine(SwitchSprites(activeDialogueTrigger.dialogue));
         }
 
         public void EndDialogue()
@@ -142,19 +149,28 @@ namespace DialogueSystem
         //    activeDialogueTrigger.enabled = true;
         //}
 
-        IEnumerator SwitchSprites(Dialogue dialogue)
+        //IEnumerator SwitchSprites(Dialogue dialogue)
+        //{
+        //    int index = spriteCount;
+        //    Debug.Log("index: " + index + " spritecount: " + spriteCount);
+        //    while (index <= spriteCount)
+        //    {
+        //        Debug.Log("Dialogue Sprites: index = " + index + " spriteCount = " + spriteCount);
+        //        spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 1];
+        //        spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[index - 1];
+        //        yield return new WaitForSeconds(spriteAnimationSpeed);
+        //        spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 2];
+        //        spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[index - 2];
+        //        yield return new WaitForSeconds(spriteAnimationSpeed);
+        //    }
+        //}
+
+        IEnumerator ChangeEmotions()
         {
             int index = spriteCount;
-            //Debug.Log("index: " + index + " spritecount: " + spriteCount);
-            while (index <= spriteCount)
+            while(index <= spriteCount)
             {
-                //Debug.Log("Dialogue Sprites: index = " + index + " spriteCount = " + spriteCount);
-                spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 1];
-                spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[index - 1];
-                yield return new WaitForSeconds(spriteAnimationSpeed);
-                spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 2];
-                spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[index - 2];
-                yield return new WaitForSeconds(spriteAnimationSpeed);
+                
             }
         }
 

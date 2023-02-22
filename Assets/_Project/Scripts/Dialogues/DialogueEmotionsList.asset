@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf52891ada5db04db13e8cafa5b402b, type: 3}
+  m_Name: DialogueEmotionsList
+  m_EditorClassIdentifier: 
+  quinn_neutral_string: QuinnNeutral
+  quinn_angry_string: QuinnAngry
+  quinn_confused_string: QuinnConfused
+  quinn_neutral_Sprite:
+  - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
+  - {fileID: 21300000, guid: c2779d4fecad0784895654a57991aa3d, type: 3}
+  quinn_angry:
+  - {fileID: 0}
+  - {fileID: 0}
+  quinn_confused:
+  - {fileID: 0}
+  - {fileID: 0}
+  carolyn_neutral_string: CarolynNeutral
+  carolyn_neutral:
+  - {fileID: 0}
+  - {fileID: 0}

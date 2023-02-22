@@ -11,14 +11,16 @@ namespace DialogueSystem
         [Space]
         [SerializeField] Sprite transparentSprite;
         [SerializeField] UnityEvent clicked;
+        [SerializeField] string[] emotionForSentence;
         public Dialogue dialogue;
         public UnityEvent endOfDialogue;
-        bool dialogueTriggered = false;
-
-        private GameObject player;
 
         [HideInInspector]
         public DialogueTrigger instance;
+
+        bool dialogueTriggered = false;
+        GameObject player;
+
 
         private void Awake()
         {

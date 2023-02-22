@@ -201,7 +201,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Collision
     sentences:
@@ -835,7 +835,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Object
     sentences:
@@ -1650,7 +1650,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -1971,7 +1971,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Object
     sentences:
@@ -3169,7 +3169,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Collision
     sentences:
@@ -3590,7 +3590,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -3699,7 +3699,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Object
     sentences:
@@ -4282,7 +4282,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Fridge
     sentences:
@@ -5493,7 +5493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.98
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5952,7 +5952,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -6097,7 +6097,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Sofa
     sentences:
@@ -6649,7 +6649,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Object
     sentences:
@@ -7664,7 +7664,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -8096,10 +8096,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  emotions:
-  - 
-  - 
-  - 
+  emotionForSentence:
+  - QuinnNeutral
+  - QuinnNeutral
+  - QuinnAngry
   - 
   - 
   - 
@@ -9354,7 +9354,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -9406,7 +9406,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -10015,7 +10015,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Island
     sentences:
@@ -10740,7 +10740,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Object
     sentences:
@@ -10972,7 +10972,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -11343,7 +11343,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Object
     sentences:
@@ -11592,7 +11592,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -11783,7 +11783,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Object
     sentences:
@@ -12665,7 +12665,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -12797,7 +12797,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Object
     sentences:
@@ -13169,7 +13169,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -13478,7 +13478,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -13642,7 +13642,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Object
     sentences:
@@ -13814,7 +13814,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Object
     sentences:
@@ -14024,7 +14024,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -14099,7 +14099,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: jhfgjjch
     sentences:
@@ -14208,7 +14208,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Fridge
     sentences:
@@ -14477,7 +14477,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Object
     sentences:
@@ -14850,7 +14850,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Collision
     sentences:
@@ -15099,7 +15099,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: jhfgjjch
     sentences:
@@ -15883,7 +15883,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Shelf
     sentences:
@@ -16559,7 +16559,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -17037,7 +17037,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -17194,7 +17194,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -17661,7 +17661,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -19240,7 +19240,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Player with disk
     sentences:
@@ -19480,7 +19480,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Closet
     sentences:
@@ -22246,7 +22246,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -23208,7 +23208,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -24668,7 +24668,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: 
     sentences:
@@ -25188,7 +25188,7 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotions: []
+  emotionForSentence: []
   dialogue:
     name: Object
     sentences:
@@ -26107,9 +26107,13 @@ MonoBehaviour:
   textSoundPhone: {fileID: 8300000, guid: 48f141324ba43594aa7c06de93958c86, type: 3}
   textDelay: 0.023
   dialogueUi: {fileID: 1060985611662395662}
+  emotions: {fileID: 11400000, guid: e74bbca91afc74445ac6c7044b4161c0, type: 2}
   spriteLeft: {fileID: 383681643}
   spriteRight: {fileID: 919046534}
+  currentEmotionLeft: 
+  currentEmotionRight: 
   spriteAnimationSpeed: 0.4
+  sentenceCount: 0
   activeDialogueTrigger: {fileID: 0}
 --- !u!114 &8209732979590414071
 MonoBehaviour:
@@ -26560,7 +26564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9174682410060982373, guid: 9a0c68c72ed02aa4d84b69fb33056ea6, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9174682410060982373, guid: 9a0c68c72ed02aa4d84b69fb33056ea6, type: 3}
       propertyPath: m_AnchorMax.x

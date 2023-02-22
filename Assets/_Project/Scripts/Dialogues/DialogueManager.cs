@@ -16,7 +16,7 @@ namespace DialogueSystem
         [SerializeField] GameObject dialogueUi;
         [SerializeField] Emotions emotions;
         [SerializeField] GameObject spriteLeft, spriteRight;
-        [SerializeField] string currentEmotinoLeft, currentEmotionRight;
+        public string currentEmotionLeft, currentEmotionRight;
         [Space]
         [SerializeField] float spriteAnimationSpeed;
         GameObject[] interactables;
@@ -24,7 +24,7 @@ namespace DialogueSystem
 
         Queue<string> sentences;
 
-        int spriteCount = 2;
+        [HideInInspector] public int sentenceCount = 0;
         AudioSource audioSource;
 
         [HideInInspector] public static DialogueManager instance;
@@ -40,7 +40,7 @@ namespace DialogueSystem
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
-            spriteCount = 0;
+            sentenceCount = 0;
             sentences = new Queue<string>();
             playerMovement = PlayerMovementKeyboard.instance;
             interactables = GameObject.FindGameObjectsWithTag("Interactable");
@@ -50,12 +50,11 @@ namespace DialogueSystem
         {
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
-            if (dialogueText.ToString().Contains("Ever")) Debug.Log("EVER");
+            Debug.Log(currentEmotionRight);
+            Debug.Log("Sentence count: " + sentenceCount);
 
-            for (int i = 0; i < spriteCount; i++)
-            {
-
-            }
+            if (sentenceCount == 0) return;
+            else currentEmotionRight = activeDialogueTrigger.emotionForSentence[DialogueManager.instance.sentenceCount];
         }
 
         public void StartDialogue(Dialogue dialogue)
@@ -85,7 +84,7 @@ namespace DialogueSystem
                 EndDialogue();
                 return;
             }
-            spriteCount += 2;
+            sentenceCount += 1;
             StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
             //StartCoroutine(SwitchSprites(activeDialogueTrigger.dialogue));
         }
@@ -93,7 +92,7 @@ namespace DialogueSystem
         public void EndDialogue()
         {
             StopAllCoroutines();
-            spriteCount -= spriteCount;
+            sentenceCount -= sentenceCount;
             activeDialogueTrigger.endOfDialogue.Invoke();
             for (int i = 0; i < interactables.Length; i++)
             {
@@ -165,14 +164,14 @@ namespace DialogueSystem
         //    }
         //}
 
-        IEnumerator ChangeEmotions()
-        {
-            int index = spriteCount;
-            while(index <= spriteCount)
-            {
+        //IEnumerator ChangeEmotions()
+        //{
+        //    int index = spriteCount;
+        //    while(index <= spriteCount)
+        //    {
                 
-            }
-        }
+        //    }
+        //}
 
         IEnumerator TextAnimation(string text)
         {
@@ -191,6 +190,27 @@ namespace DialogueSystem
                 dialogueText.text += letter;
                 yield return new WaitForSeconds(textDelay);
             }
+        }
+
+        public void ChangeSprite()
+        {
+            if(currentEmotionRight == "QuinnNeutral")
+            {
+                var sprite1 = emotions.quinn_neutral_Sprite[1];
+                var sprite2 = emotions.quinn_neutral_Sprite[2];
+
+                StartCoroutine(SwitchAndReplaceSprites(sprite1, sprite2));
+            }
+        }
+
+        IEnumerator SwitchAndReplaceSprites(Sprite sprite1, Sprite sprite2)
+        {
+            var spriteOnRight = spriteRight.GetComponent<Image>().sprite;
+
+            spriteOnRight = sprite1;
+            yield return new WaitForSeconds(spriteAnimationSpeed);
+            spriteOnRight = sprite2;
+            yield return new WaitForSeconds(spriteAnimationSpeed);
         }
     }
 }

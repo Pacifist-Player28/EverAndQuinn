@@ -11,7 +11,7 @@ namespace DialogueSystem
         [Space]
         [SerializeField] Sprite transparentSprite;
         [SerializeField] UnityEvent clicked;
-        [SerializeField] string[] emotionForSentence;
+        public string[] emotionForSentence;
         public Dialogue dialogue;
         public UnityEvent endOfDialogue;
 
@@ -36,6 +36,7 @@ namespace DialogueSystem
         void Start()
         {
             player = PlayerMovementKeyboard.instance.gameObject;
+            emotionForSentence[] = new emotionForSentence[dialogue.sentences.Length];
         }
 
         public void Update()

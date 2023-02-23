@@ -68,32 +68,62 @@ namespace Inventory
         {
             for (int i = 0; i < amountOfItems; i++)
             {
-                var image = slots[i].transform.GetChild(0).GetComponent<Image>();
-                var parents = slots[i].transform.GetComponent<Image>();
+                if (slots[i].transform.childCount > 0)
+                {
+                    Image slotImage = slots[i].transform.GetComponent<Image>();
+                    Image childImage = slots[i].transform.GetChild(0).GetComponent<Image>();
 
-                image.raycastTarget = false;
-                image.enabled = false;
-                //Debug.Log("Item");
-                parents.raycastTarget = false;
-                parents.enabled = false;
-                //Debug.Log("Slot");
+                    slotImage.raycastTarget = false;
+                    slotImage.enabled = false;
+                    childImage.raycastTarget = false;
+                    childImage.enabled = false;
+                }
+                else
+                {
+                    Image slotImage = slots[i].transform.GetComponent<Image>();
+
+                    slotImage.raycastTarget = false;
+                    slotImage.enabled = false;
+                }
             }
         }
+
+
 
         public void ActivateInventory()
         {
             for (int i = 0; i < amountOfItems; i++)
             {
-                var image = slots[i].transform.GetChild(0).GetComponent<Image>();
-                var parents = slots[i].transform.GetComponent<Image>();
+                if (slots[i].transform.childCount > 0)
+                {
+                    var image = slots[i].transform.GetChild(0)?.GetComponent<Image>();
+                    var parentImage = slots[i].transform.GetComponent<Image>();
 
-                image.raycastTarget = true;
-                image.enabled = true;
+                    if (image != null)
+                    {
+                        image.raycastTarget = true;
+                        image.enabled = true;
+                    }
 
-                parents.raycastTarget = true;
-                parents.enabled = true;
+                    if (parentImage != null)
+                    {
+                        parentImage.raycastTarget = true;
+                        parentImage.enabled = true;
+                    }
+                }
+                else
+                {
+                    var parentImage = slots[i].transform.GetComponent<Image>();
+
+                    if (parentImage != null)
+                    {
+                        parentImage.raycastTarget = true;
+                        parentImage.enabled = true;
+                    }
+                }
             }
         }
+
 
         public void IsPuzzleOpen(bool config)
         {

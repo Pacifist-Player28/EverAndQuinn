@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -41,7 +42,6 @@ namespace Inventory
                 Instantiate(slotGameobject, childSlot);
                 SlotAndItemImage();
             }
-
             if (puzzleOpen) ActivateInventory();
             else DeactivateInventory();
         }
@@ -54,11 +54,13 @@ namespace Inventory
 
                 slots[i] = childSlot.GetChild(i).gameObject;
 
-                var item = slots[i].transform.GetChild(0);
-
-                item.GetComponent<Image>().sprite = im.inInventory;
-                slots[i].layer = im.layerValue;
-                slots[i].transform.GetChild(0).GetComponent<DragableItem>().solution = im.solution;
+                if (slots[i].transform.GetChild(0) == null) return;
+                else
+                {
+                    slots[i].transform.GetChild(0).GetComponent<Image>().sprite = im.inInventory;
+                    slots[i].layer = im.layerValue;
+                    slots[i].transform.GetChild(0).GetComponent<DragableItem>().solution = im.solution;
+                }
             }
         }
 
@@ -71,10 +73,10 @@ namespace Inventory
 
                 image.raycastTarget = false;
                 image.enabled = false;
-                Debug.Log("Item");
+                //Debug.Log("Item");
                 parents.raycastTarget = false;
                 parents.enabled = false;
-                Debug.Log("Slot");
+                //Debug.Log("Slot");
             }
         }
 

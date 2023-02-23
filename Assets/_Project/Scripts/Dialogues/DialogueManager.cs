@@ -49,17 +49,17 @@ namespace DialogueSystem
 
         private void Update()
         {
+            //Debug.Log("Sentence count: " + sentenceCount);
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
 
             if (sentenceCount < 0) return;
-            else
-            currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount];
-            currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount];
-
-            //Debug.Log(currentEmotionRight);
-            //Debug.Log("Sentence count: " + sentenceCount + " currentEmotionRight: " + currentEmotionRight);
-            //Debug.Log("emotion for sentence: " + activeDialogueTrigger.emotionForSentence[sentenceCount]);
+            else 
+            { 
+                currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount];
+                currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount];
+            }
+            //Debug.Log("emotion for sentence right: " + currentEmotionRight + " emotion for sentence left: " + currentEmotionLeft);
 
 
         }
@@ -95,7 +95,7 @@ namespace DialogueSystem
             sentenceCount += 1;
             StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
             //StartCoroutine(SwitchSprites(activeDialogueTrigger.dialogue));
-            Debug.Log("Emotion right: " + currentEmotionRight);
+            //Debug.Log("Emotion right: " + currentEmotionRight);
             ChangeSpriteRight();
             ChangeSpriteLeft();
         }
@@ -205,7 +205,7 @@ namespace DialogueSystem
 
         public void ChangeSpriteRight()
         {
-            if(currentEmotionRight == null)
+            if(currentEmotionRight == "transparent")
             {
                 var sprite1 = emotions.transparent;
                 var sprite2 = emotions.transparent;
@@ -247,10 +247,10 @@ namespace DialogueSystem
 
         public void ChangeSpriteLeft()
         {
-            if (currentEmotionLeft == null)
+            if (currentEmotionLeft == "transparent")
             {
                 var sprite1 = emotions.transparent;
-                var sprite2 = emotions.transparent;
+                StartCoroutine(SwitchAndReplaceLeftSprites(sprite1, sprite1));
             }
             else if (currentEmotionLeft == "CarolynNeutral")
             {
@@ -270,7 +270,7 @@ namespace DialogueSystem
         IEnumerator SwitchAndReplaceRightSprites(Sprite sprite1, Sprite sprite2)
         {
             //var spriteOnRight = spriteRight.GetComponent<Image>().sprite;
-            Debug.Log(spriteRight.GetComponent<Image>().sprite);
+            //Debug.Log(spriteRight.GetComponent<Image>().sprite);
             var index = sentenceCount;
             while(index <= sentenceCount) 
             { 
@@ -284,7 +284,7 @@ namespace DialogueSystem
         IEnumerator SwitchAndReplaceLeftSprites(Sprite sprite1, Sprite sprite2)
         {
             //var spriteOnRight = spriteRight.GetComponent<Image>().sprite;
-            Debug.Log(spriteRight.GetComponent<Image>().sprite);
+            //Debug.Log(spriteRight.GetComponent<Image>().sprite);
             var index = sentenceCount;
             while (index <= sentenceCount)
             {

@@ -30,39 +30,54 @@ namespace Inventory
             puzzleOpen = false;
         }
 
-        public void LateUpdate()
+        public void Update()
         {
-            //Debug.Log("previousAmountOfItems: " + previousAmountOfItems + " amountOfItems: " + amountOfItems);
-            //only call this when picking up an item
             amountOfItems = inventoryManager.GetItems().Count();
             if (previousAmountOfItems != amountOfItems)
             {
                 previousAmountOfItems++;
-                slots = new GameObject[amountOfItems];
-                Instantiate(slotGameobject, childSlot);
+                Array.Resize(ref slots, amountOfItems);
+                GameObject newSlotObject = Instantiate(slotGameobject, childSlot);
+                slots[amountOfItems - 1] = newSlotObject;
                 SlotAndItemImage();
             }
+
             if (puzzleOpen) ActivateInventory();
             else DeactivateInventory();
         }
+
 
         void SlotAndItemImage()
         {
             for (int i = 0; i < amountOfItems; i++)
             {
-                var im = inventoryManager.items[i];
+                var itemSetting = inventoryManager.items[i];
+                Debug.Log("item setting: " + itemSetting.name);
 
-                slots[i] = childSlot.GetChild(i).gameObject;
+                GameObject slotObject = childSlot.GetChild(i).gameObject;
 
-                if (slots[i].transform.GetChild(0) == null) return;
-                else
+                if (slotObject == null)
                 {
-                    slots[i].transform.GetChild(0).GetComponent<Image>().sprite = im.inInventory;
-                    slots[i].layer = im.layerValue;
-                    slots[i].transform.GetChild(0).GetComponent<DragableItem>().solution = im.solution;
+                    slotObject = Instantiate(slotGameobject, childSlot);
                 }
+
+                slots[i] = slotObject;
+
+                if (slotObject.transform.childCount == 0)
+                    return;
+
+                var image = slotObject.transform.GetChild(0).GetComponent<Image>();
+                image.sprite = itemSetting.inInventory;
+
+                slotObject.layer = itemSetting.layerValue;
+
+                var dragableItem = slotObject.transform.GetChild(0).GetComponent<DragableItem>();
+                dragableItem.solution = itemSetting.solution;
             }
         }
+
+
+
 
         public void DeactivateInventory()
         {
@@ -87,8 +102,6 @@ namespace Inventory
                 }
             }
         }
-
-
 
         public void ActivateInventory()
         {

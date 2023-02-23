@@ -18,5 +18,5 @@ MonoBehaviour:
   layerValue: 7
   pickupDistance: 1.5
   inGame: {fileID: -614226576, guid: 3e9939cb2c900064eab3f00f6df0be12, type: 3}
-  inInventory: {fileID: 520722827, guid: 951fe58117191224fb3aee28c71f12f5, type: 3}
+  inInventory: {fileID: 21300000, guid: ef8d3bd19cab7e64c90b5ddd8d85f776, type: 3}
   collected: 1

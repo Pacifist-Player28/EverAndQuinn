@@ -17,6 +17,6 @@ MonoBehaviour:
   layerName: Lamps
   layerValue: 8
   pickupDistance: 2
-  inGame: {fileID: -649361466, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
-  inInventory: {fileID: -649361466, guid: 93a44fe5bea980c4b9033a9798e925aa, type: 3}
+  inGame: {fileID: 1426212847, guid: 3e7e7f968a5dfef41814985078491084, type: 3}
+  inInventory: {fileID: 1426212847, guid: 3e7e7f968a5dfef41814985078491084, type: 3}
   collected: 0

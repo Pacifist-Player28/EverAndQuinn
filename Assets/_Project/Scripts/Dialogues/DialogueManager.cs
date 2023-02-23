@@ -60,8 +60,6 @@ namespace DialogueSystem
                 currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount];
             }
             //Debug.Log("emotion for sentence right: " + currentEmotionRight + " emotion for sentence left: " + currentEmotionLeft);
-
-
         }
 
         public void StartDialogue(Dialogue dialogue)

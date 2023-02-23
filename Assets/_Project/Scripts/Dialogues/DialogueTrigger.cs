@@ -36,7 +36,7 @@ namespace DialogueSystem
         void Start()
         {
             player = PlayerMovementKeyboard.instance.gameObject;
-            emotionForSentence[] = new emotionForSentence[dialogue.sentences.Length];
+            //emotionForSentence = new string[???];
         }
 
         public void Update()
@@ -48,6 +48,8 @@ namespace DialogueSystem
                 if (dialogue.spritesLeft[i] == null) dialogue.spritesLeft[i] = transparentSprite;
                 if (dialogue.spritesRight[i] == null) dialogue.spritesRight[i] = transparentSprite;
             }
+
+            emotionForSentence = new string[dialogue.sentences.Length];
         }
 
         public void DestroyThisTriggerDialogue()

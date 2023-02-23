@@ -51,7 +51,7 @@ namespace DialogueSystem
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
             Debug.Log(currentEmotionRight);
-            Debug.Log("Sentence count: " + sentenceCount);
+            Debug.Log("Sentence count: " + sentenceCount + " emotionForSentence: " + activeDialogueTrigger.emotionForSentence);
 
             if (sentenceCount == 0) return;
             else currentEmotionRight = activeDialogueTrigger.emotionForSentence[DialogueManager.instance.sentenceCount];

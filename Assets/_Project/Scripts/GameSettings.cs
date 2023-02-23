@@ -5,7 +5,6 @@ using UnityEngine.Events;
 using DialogueSystem;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.Rendering;
 
 public class GameSettings : MonoBehaviour
 {
@@ -176,5 +175,10 @@ public class GameSettings : MonoBehaviour
                 trash[i].enabled = false;
             }
         }
+    }
+
+    public void DebugMessage(string message)
+    {
+        Debug.Log(message);
     }
 }

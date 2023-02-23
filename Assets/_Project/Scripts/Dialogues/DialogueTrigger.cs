@@ -14,6 +14,7 @@ namespace DialogueSystem
         public string[] emotionForSentence;
         public Dialogue dialogue;
         public UnityEvent endOfDialogue;
+        public UnityEvent startOfDialogue;
 
         [HideInInspector]
         public DialogueTrigger instance;
@@ -48,8 +49,7 @@ namespace DialogueSystem
                 if (dialogue.spritesLeft[i] == null) dialogue.spritesLeft[i] = transparentSprite;
                 if (dialogue.spritesRight[i] == null) dialogue.spritesRight[i] = transparentSprite;
             }
-
-            emotionForSentence = new string[dialogue.sentences.Length];
+            //emotionForSentence = new string[dialogue.sentences.Length];
         }
 
         public void DestroyThisTriggerDialogue()

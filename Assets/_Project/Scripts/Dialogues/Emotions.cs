@@ -10,9 +10,10 @@ namespace DialogueSystem
         public string quinn_angry_string = "QuinnAngry";
         public string quinn_confused_string = "QuinnConfused";
         [Space]
-        public Sprite[] quinn_neutral_Sprite = new Sprite[2];
+        public Sprite[] quinn_neutral = new Sprite[2];
         public Sprite[] quinn_angry = new Sprite[2];
         public Sprite[] quinn_confused = new Sprite[2];
+        public Sprite[] quinn_nervous = new Sprite[2];
         [Space]
         [Header("Carolyn")]
         public string carolyn_neutral_string = "CarolynNeutral";

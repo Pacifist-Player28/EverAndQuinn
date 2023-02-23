@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 using TMPro;
+using System;
 
 namespace DialogueSystem 
 { 
@@ -40,7 +41,7 @@ namespace DialogueSystem
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
-            sentenceCount = 0;
+            sentenceCount = -1;
             sentences = new Queue<string>();
             playerMovement = PlayerMovementKeyboard.instance;
             interactables = GameObject.FindGameObjectsWithTag("Interactable");
@@ -50,11 +51,16 @@ namespace DialogueSystem
         {
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
-            Debug.Log(currentEmotionRight);
-            Debug.Log("Sentence count: " + sentenceCount + " emotionForSentence: " + activeDialogueTrigger.emotionForSentence);
 
-            if (sentenceCount == 0) return;
-            else currentEmotionRight = activeDialogueTrigger.emotionForSentence[DialogueManager.instance.sentenceCount];
+            if (sentenceCount < 0) return;
+            else
+            currentEmotionRight = activeDialogueTrigger.emotionForSentence[sentenceCount];
+
+            //Debug.Log(currentEmotionRight);
+            //Debug.Log("Sentence count: " + sentenceCount + " currentEmotionRight: " + currentEmotionRight);
+            //Debug.Log("emotion for sentence: " + activeDialogueTrigger.emotionForSentence[sentenceCount]);
+
+
         }
 
         public void StartDialogue(Dialogue dialogue)
@@ -63,6 +69,7 @@ namespace DialogueSystem
             sentences.Clear();
             dialogueUi.SetActive(true);
             playerMovement.enabled = false;
+            activeDialogueTrigger.startOfDialogue.Invoke();
             //spriteCount += 2;
 
             for (int i = 0; i < interactables.Length; i++)
@@ -87,6 +94,8 @@ namespace DialogueSystem
             sentenceCount += 1;
             StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
             //StartCoroutine(SwitchSprites(activeDialogueTrigger.dialogue));
+            Debug.Log("Emotion right: " + currentEmotionRight);
+            ChangeSprite();
         }
 
         public void EndDialogue()
@@ -196,8 +205,29 @@ namespace DialogueSystem
         {
             if(currentEmotionRight == "QuinnNeutral")
             {
-                var sprite1 = emotions.quinn_neutral_Sprite[1];
-                var sprite2 = emotions.quinn_neutral_Sprite[2];
+                var sprite1 = emotions.quinn_neutral[0];
+                var sprite2 = emotions.quinn_neutral[1];
+
+                StartCoroutine(SwitchAndReplaceSprites(sprite1, sprite2));
+            }
+            else if (currentEmotionRight == "QuinnAngry")
+            {
+                var sprite1 = emotions.quinn_angry[0];
+                var sprite2 = emotions.quinn_angry[1];
+
+                StartCoroutine(SwitchAndReplaceSprites(sprite1, sprite2));
+            }
+            else if (currentEmotionRight == "QuinnConfused")
+            {
+                var sprite1 = emotions.quinn_confused[0];
+                var sprite2 = emotions.quinn_confused[1];
+
+                StartCoroutine(SwitchAndReplaceSprites(sprite1, sprite2));
+            }
+            else if (currentEmotionRight == "QuinnNervous")
+            {
+                var sprite1 = emotions.quinn_nervous[0];
+                var sprite2 = emotions.quinn_nervous[1];
 
                 StartCoroutine(SwitchAndReplaceSprites(sprite1, sprite2));
             }
@@ -205,12 +235,16 @@ namespace DialogueSystem
 
         IEnumerator SwitchAndReplaceSprites(Sprite sprite1, Sprite sprite2)
         {
-            var spriteOnRight = spriteRight.GetComponent<Image>().sprite;
-
-            spriteOnRight = sprite1;
-            yield return new WaitForSeconds(spriteAnimationSpeed);
-            spriteOnRight = sprite2;
-            yield return new WaitForSeconds(spriteAnimationSpeed);
+            //var spriteOnRight = spriteRight.GetComponent<Image>().sprite;
+            Debug.Log(spriteRight.GetComponent<Image>().sprite);
+            var index = sentenceCount;
+            while(index <= sentenceCount) 
+            { 
+                spriteRight.GetComponent<Image>().sprite = sprite1;
+                yield return new WaitForSeconds(spriteAnimationSpeed);
+                spriteRight.GetComponent<Image>().sprite = sprite2;
+                yield return new WaitForSeconds(spriteAnimationSpeed);
+            }
         }
     }
 }

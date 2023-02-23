@@ -11,7 +11,8 @@ namespace DialogueSystem
         [Space]
         [SerializeField] Sprite transparentSprite;
         [SerializeField] UnityEvent clicked;
-        public string[] emotionForSentence;
+        public string[] emotionRight;
+        public string[] emotionLeft;
         public Dialogue dialogue;
         public UnityEvent endOfDialogue;
         public UnityEvent startOfDialogue;

@@ -15,9 +15,10 @@ MonoBehaviour:
   quinn_neutral_string: QuinnNeutral
   quinn_angry_string: QuinnAngry
   quinn_confused_string: QuinnConfused
+  transparent: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   quinn_neutral:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
+  - {fileID: 21300000, guid: c2779d4fecad0784895654a57991aa3d, type: 3}
   quinn_angry:
   - {fileID: 21300000, guid: 215521fc933f46f4b8c88c2facdbd2f8, type: 3}
   - {fileID: 21300000, guid: e5150f81a9b918e419b4a8ec72042e92, type: 3}

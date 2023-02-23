@@ -238,6 +238,11 @@ namespace DialogueSystem
 
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
             }
+            else if(currentEmotionRight == "QuinnStop")
+            {
+                var sprite1 = emotions.quinn_stop;
+                StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite1));
+            }
         }
 
         public void ChangeSpriteLeft()
@@ -247,12 +252,18 @@ namespace DialogueSystem
                 var sprite1 = emotions.transparent;
                 var sprite2 = emotions.transparent;
             }
-            if (currentEmotionLeft == "CarolynNeutral")
+            else if (currentEmotionLeft == "CarolynNeutral")
             {
                 var sprite1 = emotions.carolyn_neutral[0];
                 var sprite2 = emotions.carolyn_neutral[1];
 
                 StartCoroutine(SwitchAndReplaceLeftSprites(sprite1, sprite2));
+            }
+            else if (currentEmotionLeft == "CarolynStop")
+            {
+                var sprite1 = emotions.carolyn_stop;
+
+                StartCoroutine(SwitchAndReplaceLeftSprites(sprite1, sprite1));
             }
         }
 

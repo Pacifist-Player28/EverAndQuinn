@@ -7500,38 +7500,38 @@ MonoBehaviour:
         m_CallState: 2
   emotionRight:
   - QuinnNeutral
+  - QuinnStop
   - QuinnNeutral
-  - QuinnNeutral
+  - QuinnStop
+  - QuinnStop
+  - QuinnStop
+  - QuinnNervous
+  - QuinnStop
   - QuinnNervous
   - QuinnNeutral
-  - QuinnNervous
-  - QuinnNervous
+  - QuinnStop
   - QuinnNeutral
-  - QuinnNervous
-  - QuinnNeutral
-  - QuinnNervous
-  - QuinnNeutral
-  - QuinnNeutral
-  - QuinnNervous
+  - QuinnStop
+  - QuinnStop
   - QuinnNeutral
   - QuinnNeutral
   emotionLeft:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - CarolynStop
+  - CarolynNeutral
+  - CarolynStop
+  - CarolynNeutral
+  - CarolynNeutral
+  - CarolynNeutral
+  - CarolynStop
+  - CarolynStop
+  - CarolynNeutral
+  - CarolynStop
+  - CarolynNeutral
+  - CarolynStop
+  - CarolynStop
+  - CarolynNeutral
+  - CarolynStop
+  - CarolynStop
   dialogue:
     name: Telephone
     sentences:

@@ -16,6 +16,7 @@ MonoBehaviour:
   quinn_angry_string: QuinnAngry
   quinn_confused_string: QuinnConfused
   transparent: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  quinn_stop: {fileID: 21300000, guid: f589cfe03011da342aacac3fcef32c8b, type: 3}
   quinn_neutral:
   - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
   - {fileID: 21300000, guid: c2779d4fecad0784895654a57991aa3d, type: 3}
@@ -29,6 +30,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d07a86481b875de4faeae3b4c8e72761, type: 3}
   - {fileID: 21300000, guid: 8f971bb82e2e99f4dab9d5ffb8a2a7de, type: 3}
   carolyn_neutral_string: CarolynNeutral
+  carolyn_stop: {fileID: 21300000, guid: 690eb4f9e0bfd2747bdb03412c6559dd, type: 3}
   carolyn_neutral:
   - {fileID: 21300000, guid: c1e757ec162f8b241b74c47ba4761557, type: 3}
   - {fileID: 21300000, guid: d45d98f2027cd7645844e6552c80efe4, type: 3}

@@ -29,6 +29,9 @@ MonoBehaviour:
   quinn_nervous:
   - {fileID: 21300000, guid: d07a86481b875de4faeae3b4c8e72761, type: 3}
   - {fileID: 21300000, guid: 8f971bb82e2e99f4dab9d5ffb8a2a7de, type: 3}
+  quinn_surprised:
+  - {fileID: 21300000, guid: 91204cabb76e8bd48b46d29b33b7c666, type: 3}
+  - {fileID: 21300000, guid: b8de6b6a11509174994c173fc9abbcf3, type: 3}
   carolyn_neutral_string: CarolynNeutral
   carolyn_stop: {fileID: 21300000, guid: 690eb4f9e0bfd2747bdb03412c6559dd, type: 3}
   carolyn_neutral:

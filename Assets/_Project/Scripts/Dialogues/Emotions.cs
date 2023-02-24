@@ -16,6 +16,7 @@ namespace DialogueSystem
         public Sprite[] quinn_angry = new Sprite[2];
         public Sprite[] quinn_confused = new Sprite[2];
         public Sprite[] quinn_nervous = new Sprite[2];
+        public Sprite[] quinn_surprised = new Sprite[2];
         [Space]
         [Header("Carolyn")]
         public string carolyn_neutral_string = "CarolynNeutral";

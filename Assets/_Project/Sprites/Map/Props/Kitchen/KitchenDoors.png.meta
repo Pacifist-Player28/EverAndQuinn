@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3e7e7f968a5dfef41814985078491084
+guid: 7206fd2a627b9e64d9a4ac6fc70f1edd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 800
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,127 +117,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NewLampBlue
+      name: KitchenDoors_0
       rect:
         serializedVersion: 2
-        x: 1084
-        y: 993
-        width: 300
-        height: 450
+        x: 18
+        y: 9
+        width: 1019
+        height: 341
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 772a7addbf8a9be45a1304f051f4585e
-      internalID: 1495112068
+      spriteID: 231d50b6fdb0a2a45b4e1878acde0dd8
+      internalID: -915967266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewLampYellow
+      name: KitchenDoors_1
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 991
-        width: 298
-        height: 449
+        x: 1176
+        y: 10
+        width: 1033
+        height: 340
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b896c1b264eb5044fad99ac6ef66b40c
-      internalID: 178967212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewLampGreen
-      rect:
-        serializedVersion: 2
-        x: 1779
-        y: 715
-        width: 307
-        height: 449
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbc097fc520c4804daacfbfe48c7e441
-      internalID: 1923631324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewLampTransparent
-      rect:
-        serializedVersion: 2
-        x: 1073
-        y: 444
-        width: 300
-        height: 449
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4ee8bb2b7e832a4a876787148a27d6e
-      internalID: -1293997639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewLampRed
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 449
-        width: 301
-        height: 449
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc7ef162df73daa4b80e56c7108f0f75
-      internalID: 1426212847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewLampPurple
-      rect:
-        serializedVersion: 2
-        x: 1816
-        y: 171
-        width: 298
-        height: 449
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e6705a4f76f203468760318ba161ec2
-      internalID: -1493304607
+      spriteID: 0ffb5880579cc9d4c830bd607eb003fb
+      internalID: 176029518
       vertices: []
       indices: 
       edges: []
@@ -253,12 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NewLampPurple: -1493304607
-      NewLampYellow: 178967212
-      NewLampTransparent: -1293997639
-      NewLampGreen: 1923631324
-      NewLampRed: 1426212847
-      NewLampBlue: 1495112068
+      KitchenDoors_1: 176029518
+      KitchenDoors_0: -915967266
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

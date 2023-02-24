@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3e7e7f968a5dfef41814985078491084
+guid: 67211990c4ddb6f4c8660b0d808fab05
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NewLampBlue
+      name: Plant1_fresh
       rect:
         serializedVersion: 2
-        x: 1084
-        y: 993
-        width: 300
-        height: 450
+        x: 1157
+        y: 2207
+        width: 679
+        height: 928
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 772a7addbf8a9be45a1304f051f4585e
-      internalID: 1495112068
+      spriteID: 2c386ac249858ef4db3ba4597492bcf9
+      internalID: -1094373112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewLampYellow
+      name: Plant2_fresh
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 991
-        width: 298
-        height: 449
+        x: 2144
+        y: 2463
+        width: 798
+        height: 1260
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,92 +152,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b896c1b264eb5044fad99ac6ef66b40c
-      internalID: 178967212
+      spriteID: 52de97f199841eb4c95e15441e4e65c3
+      internalID: -1129175595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewLampGreen
+      name: Plant1_dead
       rect:
         serializedVersion: 2
-        x: 1779
-        y: 715
-        width: 307
-        height: 449
+        x: 3147
+        y: 2463
+        width: 746
+        height: 540
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 17, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbc097fc520c4804daacfbfe48c7e441
-      internalID: 1923631324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewLampTransparent
-      rect:
-        serializedVersion: 2
-        x: 1073
-        y: 444
-        width: 300
-        height: 449
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4ee8bb2b7e832a4a876787148a27d6e
-      internalID: -1293997639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewLampRed
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 449
-        width: 301
-        height: 449
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc7ef162df73daa4b80e56c7108f0f75
-      internalID: 1426212847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewLampPurple
-      rect:
-        serializedVersion: 2
-        x: 1816
-        y: 171
-        width: 298
-        height: 449
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e6705a4f76f203468760318ba161ec2
-      internalID: -1493304607
+      spriteID: e9857ac66f188ea4596c8105e17c3e41
+      internalID: -99484929
       vertices: []
       indices: 
       edges: []
@@ -253,12 +190,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NewLampPurple: -1493304607
-      NewLampYellow: 178967212
-      NewLampTransparent: -1293997639
-      NewLampGreen: 1923631324
-      NewLampRed: 1426212847
-      NewLampBlue: 1495112068
+      Plant2_fresh: -1129175595
+      Plant1_dead: -99484929
+      Plant1_fresh: -1094373112
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

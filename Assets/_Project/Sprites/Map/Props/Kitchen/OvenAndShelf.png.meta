@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3e7e7f968a5dfef41814985078491084
+guid: fdeb53adf616eb64bb09072fe6c4b172
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 700
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,127 +117,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NewLampBlue
+      name: Shelf
       rect:
         serializedVersion: 2
-        x: 1084
-        y: 993
-        width: 300
-        height: 450
+        x: 89
+        y: 1470
+        width: 1081
+        height: 375
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 772a7addbf8a9be45a1304f051f4585e
-      internalID: 1495112068
+      spriteID: a764b82ac32508a4c8d1f93b878ba376
+      internalID: -1954067318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewLampYellow
+      name: Oven
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 991
-        width: 298
-        height: 449
+        x: 9
+        y: 4
+        width: 1158
+        height: 1314
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b896c1b264eb5044fad99ac6ef66b40c
-      internalID: 178967212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewLampGreen
-      rect:
-        serializedVersion: 2
-        x: 1779
-        y: 715
-        width: 307
-        height: 449
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbc097fc520c4804daacfbfe48c7e441
-      internalID: 1923631324
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewLampTransparent
-      rect:
-        serializedVersion: 2
-        x: 1073
-        y: 444
-        width: 300
-        height: 449
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4ee8bb2b7e832a4a876787148a27d6e
-      internalID: -1293997639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewLampRed
-      rect:
-        serializedVersion: 2
-        x: 1440
-        y: 449
-        width: 301
-        height: 449
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cc7ef162df73daa4b80e56c7108f0f75
-      internalID: 1426212847
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NewLampPurple
-      rect:
-        serializedVersion: 2
-        x: 1816
-        y: 171
-        width: 298
-        height: 449
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e6705a4f76f203468760318ba161ec2
-      internalID: -1493304607
+      spriteID: ae1f8a3a227726e4f96ed446eb404d89
+      internalID: -527605011
       vertices: []
       indices: 
       edges: []
@@ -253,12 +169,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      NewLampPurple: -1493304607
-      NewLampYellow: 178967212
-      NewLampTransparent: -1293997639
-      NewLampGreen: 1923631324
-      NewLampRed: 1426212847
-      NewLampBlue: 1495112068
+      Shelf: -1954067318
+      Oven: -527605011
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

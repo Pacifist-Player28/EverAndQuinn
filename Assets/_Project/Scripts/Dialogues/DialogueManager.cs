@@ -203,7 +203,7 @@ namespace DialogueSystem
 
         public void ChangeSpriteRight()
         {
-            if(currentEmotionRight == "transparent")
+            if(currentEmotionRight == "transparent" || currentEmotionRight == null)
             {
                 var sprite1 = emotions.transparent;
                 var sprite2 = emotions.transparent;
@@ -241,11 +241,18 @@ namespace DialogueSystem
                 var sprite1 = emotions.quinn_stop;
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite1));
             }
+            else if(currentEmotionRight == "QuinnSurprised")
+            {
+                var sprite1 = emotions.quinn_surprised[0];
+                var sprite2 = emotions.quinn_surprised[1];
+
+                StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
+            }
         }
 
         public void ChangeSpriteLeft()
         {
-            if (currentEmotionLeft == "transparent")
+            if (currentEmotionLeft == "transparent" || currentEmotionLeft == null)
             {
                 var sprite1 = emotions.transparent;
                 StartCoroutine(SwitchAndReplaceLeftSprites(sprite1, sprite1));

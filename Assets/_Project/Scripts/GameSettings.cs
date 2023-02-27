@@ -18,11 +18,13 @@ public class GameSettings : MonoBehaviour
     public int slotsSolved_second;
     public int solution_second;
     [Space]
-    public bool solved_trash = false;
+    public bool solved_trashPuzzle = false;
     public bool solved_first = false;
     public bool solved_second = false;
     [Space]
-    [SerializeField] GameObject trashSlider;
+    public int trashAmount;
+    [SerializeField] int trashGoalAmount;
+    [SerializeField] TMP_Text trashUi;
     [SerializeField] AudioClip trashFullAudio;
     [HideInInspector]
     public static GameSettings current;
@@ -58,14 +60,13 @@ public class GameSettings : MonoBehaviour
     void Update()
     {
         CompareSolution();
-        if(trashSlider.GetComponent<Slider>().value == trashSlider.GetComponent<Slider>().maxValue)
+        if(trashAmount == trashGoalAmount)
         {
-            solved_trash = true;
+            solved_trashPuzzle = true;
+            //start Event
             trashCollected.Invoke();
         }
     }
-
-    //
 
     public void PlayerEnter()
     {
@@ -138,7 +139,7 @@ public class GameSettings : MonoBehaviour
     public void ActivateAllDialogue()
     {
         DialogueTrigger[] dialogues = FindObjectsOfType<DialogueTrigger>();
-        foreach (var dialogue in dialogues)
+        foreach (DialogueTrigger dialogue in dialogues)
         {
             dialogue.enabled = true;
         }
@@ -146,9 +147,8 @@ public class GameSettings : MonoBehaviour
 
     public void ChangeSlider()
     {
-        var slider = trashSlider.GetComponent<Slider>();
-        slider.value = slider.value + 1;
-        trashSlider.gameObject.GetComponentInChildren<TMP_Text>().text = ((slider.value / slider.maxValue)*100).ToString("0") + "% trash collected";
+        trashAmount = +trashAmount;
+        trashUi.text = ((trashAmount / trashGoalAmount)*100).ToString("0") + "% trash collected";
     }
 
     public void ActivateAllTrash()

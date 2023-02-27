@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -22,7 +23,6 @@ namespace DialogueSystem
 
         bool dialogueTriggered = false;
         GameObject player;
-
 
         private void Awake()
         {
@@ -53,7 +53,7 @@ namespace DialogueSystem
             //emotionForSentence = new string[dialogue.sentences.Length];
         }
 
-        public void DestroyThisTriggerDialogue()
+        public void DestroyTriggerDialogue()
         {
             Destroy(this);
         }
@@ -61,10 +61,11 @@ namespace DialogueSystem
         void OnMouseOver()
         {
             //make this trigger active
-            DialogueManager.instance.activeDialogueTrigger = instance;
+            
             if (!enabled) return;
-            if (Input.GetMouseButtonDown(0) && Vector2.Distance(GetComponent<Transform>().position, player.transform.position) < triggerDistance)
+            else if (Input.GetMouseButtonDown(0) && Vector2.Distance(GetComponent<Transform>().position, player.transform.position) < triggerDistance)
             {
+                DialogueManager.instance.activeDialogueTrigger = instance;
                 DialogueManager.instance.StartDialogue(dialogue);
                 clicked.Invoke();
             }
@@ -86,10 +87,9 @@ namespace DialogueSystem
 
         IEnumerator StartDialogueOverTime(float time)
         {
+            MakeThisActive();
             yield return new WaitForSeconds(time);
             DialogueManager.instance.StartDialogue(dialogue);
-            yield return null;
         }
-
     }
 }

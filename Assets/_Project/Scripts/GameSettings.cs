@@ -11,21 +11,25 @@ public class GameSettings : MonoBehaviour
     [HideInInspector]
     public static GameSettings instance;
     //[SerializeField] Texture2D cursorTexture;
-
+    [Header("Debugging")]
+    [SerializeField] bool skipFirstDialogue;
+    [SerializeField] bool skipPhone;
+    [Space]
+    [Header("Puzzle Info")]
     public int slotsSolved_first;
     public int solution_first;
     [Space]
     public int slotsSolved_second;
     public int solution_second;
     [Space]
-    public bool solved_trashPuzzle = false;
+    //public bool solved_trashPuzzle = false;
     public bool solved_first = false;
     public bool solved_second = false;
     [Space]
-    public int trashAmount;
+    [SerializeField] int trashAmount;
     [SerializeField] int trashGoalAmount;
     [SerializeField] TMP_Text trashUi;
-    [SerializeField] AudioClip trashFullAudio;
+    [SerializeField] AudioClip solvedPuzzleClip;
     [HideInInspector]
     public static GameSettings current;
     public event Action OnPlayerEnter;
@@ -36,8 +40,11 @@ public class GameSettings : MonoBehaviour
     public UnityEvent finish;
     public UnityEvent trashCollected;
 
+    GameObject[] trashList;
+
     private bool puzzle1Check = false;
     private bool puzzle2Check = false;
+    private bool trashCheck = false;
 
     bool invokedCheck;
 
@@ -54,17 +61,22 @@ public class GameSettings : MonoBehaviour
 
     private void Start()
     {
+        if(!skipFirstDialogue)
         startDialogue.Invoke();
+
+        trashList = GameObject.FindGameObjectsWithTag("Trash");
+        trashGoalAmount = trashList.Length;
     }
 
     void Update()
     {
+        ActivateAllDialogue();
         CompareSolution();
-        if(trashAmount == trashGoalAmount)
+        if(trashAmount == trashGoalAmount && !trashCheck)
         {
-            solved_trashPuzzle = true;
-            //start Event
+            //solved_trashPuzzle = true;
             trashCollected.Invoke();
+            trashCheck = true;
         }
     }
 
@@ -138,16 +150,23 @@ public class GameSettings : MonoBehaviour
 
     public void ActivateAllDialogue()
     {
-        DialogueTrigger[] dialogues = FindObjectsOfType<DialogueTrigger>();
-        foreach (DialogueTrigger dialogue in dialogues)
-        {
-            dialogue.enabled = true;
+        bool config = false;
+
+        if (skipPhone && !config) 
+        { 
+            DialogueTrigger[] dialogues = FindObjectsOfType<DialogueTrigger>();
+            foreach (DialogueTrigger dialogue in dialogues)
+            {
+                dialogue.enabled = true;
+            }
+            config = true;
         }
     }
 
-    public void ChangeSlider()
+    public void AddTrash()
     {
-        trashAmount = +trashAmount;
+        Debug.Log("Collected Trash ");
+        trashAmount = trashAmount + 1;
         trashUi.text = ((trashAmount / trashGoalAmount)*100).ToString("0") + "% trash collected";
     }
 

@@ -16,7 +16,6 @@ public class PlayerMovementKeyboard : MonoBehaviour
     [Space]
     [SerializeField] KeyCode Escape;
 
-    [Header("Speed")]
     public float speed;
     //3.25
 

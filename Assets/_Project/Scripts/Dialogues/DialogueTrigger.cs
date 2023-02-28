@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -39,18 +38,6 @@ namespace DialogueSystem
         {
             player = PlayerMovementKeyboard.instance.gameObject;
             //emotionForSentence = new string[???];
-        }
-
-        public void Update()
-        {
-            //OnDistanceShorter(triggerDistance);
-            //Debug.Log("CanBeclickes is " + canBeClicked);
-            for (int i = 0; i < dialogue.spritesLeft.Length ; i++)
-            {
-                if (dialogue.spritesLeft[i] == null) dialogue.spritesLeft[i] = transparentSprite;
-                if (dialogue.spritesRight[i] == null) dialogue.spritesRight[i] = transparentSprite;
-            }
-            //emotionForSentence = new string[dialogue.sentences.Length];
         }
 
         public void DestroyTriggerDialogue()

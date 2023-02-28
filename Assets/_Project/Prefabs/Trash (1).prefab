@@ -299,6 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3774823455300535694}
   - component: {fileID: 3774823455300535695}
+  - component: {fileID: 1036644890}
   - component: {fileID: 3774823455300535692}
   - component: {fileID: 3774823455300535693}
   - component: {fileID: 3774823455300535690}
@@ -377,6 +378,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1036644890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3774823455300535697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99ff60d5d13490429e6cf34ff304dca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trashSprites:
+  - {fileID: 2112085145, guid: 6674e0995d531424d9bf774fb165385d, type: 3}
+  - {fileID: 1360755482, guid: 6674e0995d531424d9bf774fb165385d, type: 3}
+  - {fileID: -568317550, guid: 6674e0995d531424d9bf774fb165385d, type: 3}
+  - {fileID: 606384603, guid: 6674e0995d531424d9bf774fb165385d, type: 3}
+  - {fileID: -54855170, guid: 6674e0995d531424d9bf774fb165385d, type: 3}
+  - {fileID: -1966679969, guid: 6674e0995d531424d9bf774fb165385d, type: 3}
+  - {fileID: 319742824, guid: 6674e0995d531424d9bf774fb165385d, type: 3}
+  - {fileID: -1508022263, guid: 6674e0995d531424d9bf774fb165385d, type: 3}
 --- !u!114 &3774823455300535692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,7 +453,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
-        m_MethodName: ChangeSlider
+        m_MethodName: AddTrash
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -439,7 +461,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   clickStop:
     m_PersistentCalls:

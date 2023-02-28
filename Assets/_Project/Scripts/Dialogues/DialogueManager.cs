@@ -20,11 +20,8 @@ namespace DialogueSystem
         [Space]
         [SerializeField] float spriteAnimationSpeed;
         GameObject[] interactables;
-        //SerializeField] Vector2[] distanceToInteractables;
-
         Queue<string> sentences;
-
-        [HideInInspector] public int sentenceCount = 0;
+        int sentenceCount = 0;
         AudioSource audioSource;
 
         [HideInInspector] public static DialogueManager instance;
@@ -40,7 +37,7 @@ namespace DialogueSystem
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
-            sentenceCount = -1;
+            sentenceCount = 0;
             sentences = new Queue<string>();
             playerMovement = PlayerMovementKeyboard.instance;
             interactables = GameObject.FindGameObjectsWithTag("Interactable");
@@ -48,17 +45,17 @@ namespace DialogueSystem
 
         private void Update()
         {
-            //Debug.Log("Sentence count: " + sentenceCount);
+            Debug.Log("emotion for sentence right: " + currentEmotionRight + " emotion for sentence left: " + currentEmotionLeft);
+            Debug.Log("Sentence count: " + sentenceCount);
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
 
-            if (sentenceCount < 0) return;
+            if (sentenceCount <= 0) return;
             else 
             { 
-                currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount];
-                currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount];
+                currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount - 1];
+                currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount - 1];
             }
-            //Debug.Log("emotion for sentence right: " + currentEmotionRight + " emotion for sentence left: " + currentEmotionLeft);
         }
 
         public void StartDialogue(Dialogue dialogue)
@@ -112,74 +109,6 @@ namespace DialogueSystem
             playerMovement.enabled = true;
             //Debug.Log("ENDOFDIALOGUE");
         }
-
-        //public void MeasureAndActivate()
-        //{
-        //    //this method activates the nearest interactable and disables every other inside the scene.
-        //    distanceToInteractables = new Vector2[interactables.Length];
-        //    Vector2 smallestVector = new Vector2(float.MaxValue, float.MaxValue);
-        //    GameObject nearestInteractable = null;
-        //    GameObject[] otherInteractables = new GameObject[interactables.Length - 1];
-        //    int nearestIndex = -1;
-        //    int index = 0;
-
-        //    for (int i = 0; i < interactables.Length; i++)
-        //    {
-        //        distanceToInteractables[i] = interactables[i].transform.position - playerMovement.transform.position;
-        //    }
-
-        //    for (int i = 0; i < distanceToInteractables.Length; i++)
-        //    {
-        //        if (distanceToInteractables[i].magnitude < smallestVector.magnitude)
-        //        {
-        //            smallestVector = distanceToInteractables[i];
-        //            nearestIndex = i;
-        //        }
-        //    }
-
-        //    if (nearestIndex != -1)
-        //    {
-        //        nearestInteractable = interactables[nearestIndex];
-        //        //Debug.Log("Nearest: " + nearestInteractable.name);
-        //    }
-
-        //    for (int i = 0; i < interactables.Length; i++)
-        //    {
-        //        if (i != nearestIndex)
-        //        {
-        //            otherInteractables[index] = interactables[i];
-        //            otherInteractables[index].GetComponent<DialogueTrigger>().enabled = false;
-        //            index++;
-        //        }
-        //    }
-        //    activeDialogueTrigger = nearestInteractable.GetComponent<DialogueTrigger>();
-        //    activeDialogueTrigger.enabled = true;
-        //}
-
-        //IEnumerator SwitchSprites(Dialogue dialogue)
-        //{
-        //    int index = spriteCount;
-        //    Debug.Log("index: " + index + " spritecount: " + spriteCount);
-        //    while (index <= spriteCount)
-        //    {
-        //        Debug.Log("Dialogue Sprites: index = " + index + " spriteCount = " + spriteCount);
-        //        spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 1];
-        //        spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[index - 1];
-        //        yield return new WaitForSeconds(spriteAnimationSpeed);
-        //        spriteRight.GetComponent<Image>().sprite = dialogue.spritesRight[index - 2];
-        //        spriteLeft.GetComponent<Image>().sprite = dialogue.spritesLeft[index - 2];
-        //        yield return new WaitForSeconds(spriteAnimationSpeed);
-        //    }
-        //}
-
-        //IEnumerator ChangeEmotions()
-        //{
-        //    int index = spriteCount;
-        //    while(index <= spriteCount)
-        //    {
-                
-        //    }
-        //}
 
         IEnumerator TextAnimation(string text)
         {

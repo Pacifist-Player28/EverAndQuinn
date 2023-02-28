@@ -45,7 +45,7 @@ namespace DialogueSystem
 
         private void Update()
         {
-            Debug.Log("emotion for sentence right: " + currentEmotionRight + " emotion for sentence left: " + currentEmotionLeft);
+            //Debug.Log("emotion for sentence right: " + currentEmotionRight + " emotion for sentence left: " + currentEmotionLeft);
             Debug.Log("Sentence count: " + sentenceCount);
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
@@ -56,6 +56,14 @@ namespace DialogueSystem
                 currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount - 1];
                 currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount - 1];
             }
+
+            var index = sentenceCount;
+            if(index != sentenceCount)
+            {
+                ChangeSpriteRight();
+                ChangeSpriteLeft();
+            }
+
         }
 
         public void StartDialogue(Dialogue dialogue)
@@ -65,12 +73,13 @@ namespace DialogueSystem
             dialogueUi.SetActive(true);
             playerMovement.enabled = false;
             activeDialogueTrigger.startOfDialogue.Invoke();
-            //spriteCount += 2;
 
             for (int i = 0; i < interactables.Length; i++)
             {
+                //Debug.Log("name: " + interactables[i].name);
                 interactables[i].GetComponent<Collider2D>().enabled = false;
             }
+
             foreach (string sentence in dialogue.sentences)
             {
                 sentences.Enqueue(sentence);
@@ -88,10 +97,6 @@ namespace DialogueSystem
             }
             sentenceCount += 1;
             StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
-            //StartCoroutine(SwitchSprites(activeDialogueTrigger.dialogue));
-            //Debug.Log("Emotion right: " + currentEmotionRight);
-            ChangeSpriteRight();
-            ChangeSpriteLeft();
         }
 
         public void EndDialogue()
@@ -133,35 +138,31 @@ namespace DialogueSystem
         {
             if(currentEmotionRight == "transparent" || currentEmotionRight == null)
             {
-                var sprite1 = emotions.transparent;
-                var sprite2 = emotions.transparent;
+                var sprite = emotions.transparent;
+                StartCoroutine(SwitchAndReplaceRightSprites(sprite, sprite));
             }
             else if(currentEmotionRight == "QuinnNeutral")
             {
                 var sprite1 = emotions.quinn_neutral[0];
                 var sprite2 = emotions.quinn_neutral[1];
-
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
             }
             else if (currentEmotionRight == "QuinnAngry")
             {
                 var sprite1 = emotions.quinn_angry[0];
                 var sprite2 = emotions.quinn_angry[1];
-
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
             }
             else if (currentEmotionRight == "QuinnConfused")
             {
                 var sprite1 = emotions.quinn_confused[0];
                 var sprite2 = emotions.quinn_confused[1];
-
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
             }
             else if (currentEmotionRight == "QuinnNervous")
             {
                 var sprite1 = emotions.quinn_nervous[0];
                 var sprite2 = emotions.quinn_nervous[1];
-
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
             }
             else if(currentEmotionRight == "QuinnStop")
@@ -173,7 +174,6 @@ namespace DialogueSystem
             {
                 var sprite1 = emotions.quinn_surprised[0];
                 var sprite2 = emotions.quinn_surprised[1];
-
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
             }
         }
@@ -189,13 +189,11 @@ namespace DialogueSystem
             {
                 var sprite1 = emotions.carolyn_neutral[0];
                 var sprite2 = emotions.carolyn_neutral[1];
-
                 StartCoroutine(SwitchAndReplaceLeftSprites(sprite1, sprite2));
             }
             else if (currentEmotionLeft == "CarolynStop")
             {
                 var sprite1 = emotions.carolyn_stop;
-
                 StartCoroutine(SwitchAndReplaceLeftSprites(sprite1, sprite1));
             }
         }

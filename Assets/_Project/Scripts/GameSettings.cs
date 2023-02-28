@@ -167,7 +167,8 @@ public class GameSettings : MonoBehaviour
     {
         Debug.Log("Collected Trash ");
         trashAmount = trashAmount + 1;
-        trashUi.text = ((trashAmount / trashGoalAmount)*100).ToString("0") + "% trash collected";
+        trashUi.text = (trashAmount * 100 / trashGoalAmount).ToString() + "% Trash collected";
+        Debug.Log("Updated trashUI");
     }
 
     public void ActivateAllTrash()

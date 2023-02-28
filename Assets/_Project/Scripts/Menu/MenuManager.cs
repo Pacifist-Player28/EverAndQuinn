@@ -28,7 +28,7 @@ public class MenuManager : MonoBehaviour
     private void Start()
     {
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
-        listener = FindObjectOfType<AudioListener>();
+        //listener = FindObjectOfType<AudioListener>();
     }
 
     private void Update()

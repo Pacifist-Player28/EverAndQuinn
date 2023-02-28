@@ -100,13 +100,13 @@ public class PlayerMovementKeyboard : MonoBehaviour
         if (Input.GetKeyDown(open))
         {
             openInventory.Invoke();
-            Debug.Log("Open Inventory");
+            //Debug.Log("Open Inventory");
         }
 
         if (Input.GetKeyUp(open))
         {
             closeInventory.Invoke();
-            Debug.Log("Close Inventory");
+            //Debug.Log("Close Inventory");
         }
 
         if (vectorAnimation.x == 0f && vectorAnimation.y == 0f)

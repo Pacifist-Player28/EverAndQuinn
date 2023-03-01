@@ -83,8 +83,8 @@ public class GameSettings : MonoBehaviour
     {
         sentenceCount_text.text = "Sentence Count: " + DialogueManager.instance.sentenceCount.ToString();
         activeDialogue_text.text = "Sentence Count: " + DialogueManager.instance.activeDialogueTrigger.name;
-        currentEmotion_Left.text = "Active emotion left: " + DialogueManager.instance.activeDialogueTrigger.emotionLeft[DialogueManager.instance.sentenceCount];
-        currentEmotion_Right.text = "Active emotion right: " + DialogueManager.instance.activeDialogueTrigger.emotionRight[DialogueManager.instance.sentenceCount];
+        //currentEmotion_Left.text = "Active emotion left: " + DialogueManager.instance.activeDialogueTrigger.emotionLeft[DialogueManager.instance.sentenceCount -1];
+        //currentEmotion_Right.text = "Active emotion right: " + DialogueManager.instance.activeDialogueTrigger.emotionRight[DialogueManager.instance.sentenceCount -1];
         emotionLeft_text.text = "Emotion left: " + DialogueManager.instance.currentEmotionLeft.ToString();
         emotionRight_text.text = "Emotion right: " + DialogueManager.instance.currentEmotionRight.ToString();
         ActivateAllDialogue();

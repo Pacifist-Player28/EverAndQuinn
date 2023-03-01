@@ -49,9 +49,8 @@ namespace DialogueSystem
             Debug.Log("Sentence count: " + sentenceCount);
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
-
-            if (sentenceCount <= 0) return;
-            else
+    
+            if(sentenceCount > 0)
             {
                 currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount-1];
                 currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount-1];
@@ -88,9 +87,9 @@ namespace DialogueSystem
                 return;
             }
             sentenceCount += 1;
-            ChangeSpriteRight();
-            ChangeSpriteLeft();
             StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
+            ChangeSpriteLeft();
+            ChangeSpriteRight();
         }
 
         public void EndDialogue()
@@ -130,19 +129,22 @@ namespace DialogueSystem
 
         public void ChangeSpriteRight()
         {
-            if(currentEmotionRight == "transparent" || currentEmotionRight == null)
+            if (currentEmotionRight == "transparent" || currentEmotionRight == null)
             {
+                Debug.Log("Transparent sprite");
                 var sprite = emotions.transparent;
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite, sprite));
             }
-            else if(currentEmotionRight == "QuinnNeutral")
+            else if (currentEmotionRight == "QuinnNeutral")
             {
+                Debug.Log("Neutral sprite");
                 var sprite1 = emotions.quinn_neutral[0];
                 var sprite2 = emotions.quinn_neutral[1];
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
             }
             else if (currentEmotionRight == "QuinnAngry")
             {
+                Debug.Log("Angry sprite");
                 var sprite1 = emotions.quinn_angry[0];
                 var sprite2 = emotions.quinn_angry[1];
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
@@ -159,17 +161,18 @@ namespace DialogueSystem
                 var sprite2 = emotions.quinn_nervous[1];
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
             }
-            else if(currentEmotionRight == "QuinnStop")
+            else if (currentEmotionRight == "QuinnStop")
             {
                 var sprite1 = emotions.quinn_stop;
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite1));
             }
-            else if(currentEmotionRight == "QuinnSurprised")
+            else if (currentEmotionRight == "QuinnSurprised")
             {
                 var sprite1 = emotions.quinn_surprised[0];
                 var sprite2 = emotions.quinn_surprised[1];
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
             }
+            else Debug.LogWarning("Nichts gefunden?");
         }
 
         public void ChangeSpriteLeft()
@@ -196,26 +199,28 @@ namespace DialogueSystem
         {
             //var spriteOnRight = spriteRight.GetComponent<Image>().sprite;
             //Debug.Log(spriteRight.GetComponent<Image>().sprite);
-            var index = sentenceCount;
-            while(index <= sentenceCount) 
+            while(true) 
             { 
                 spriteRight.GetComponent<Image>().sprite = sprite1;
+                Debug.Log(sprite1);
                 yield return new WaitForSeconds(spriteAnimationSpeed);
                 spriteRight.GetComponent<Image>().sprite = sprite2;
+                Debug.Log(sprite2);
                 yield return new WaitForSeconds(spriteAnimationSpeed);
             }
         }
 
-        IEnumerator SwitchAndReplaceLeftSprites(Sprite sprite1, Sprite sprite2)
+        public IEnumerator SwitchAndReplaceLeftSprites(Sprite sprite1, Sprite sprite2)
         {
             //var spriteOnRight = spriteRight.GetComponent<Image>().sprite;
             //Debug.Log(spriteRight.GetComponent<Image>().sprite);
-            var index = sentenceCount;
-            while (index <= sentenceCount)
+            while (true)
             {
                 spriteLeft.GetComponent<Image>().sprite = sprite1;
+                Debug.Log(sprite1);
                 yield return new WaitForSeconds(spriteAnimationSpeed);
                 spriteLeft.GetComponent<Image>().sprite = sprite2;
+                Debug.Log(sprite2);
                 yield return new WaitForSeconds(spriteAnimationSpeed);
             }
         }

@@ -5,7 +5,6 @@ using UnityEngine.Events;
 public class ObjectTriggerScript : MonoBehaviour
 {
     bool canBeClicked = false;
-    bool clickedCheck = false;
     GameObject player;
     [SerializeField] float triggerDistance = 7.5f;
     [SerializeField] UnityEvent clicked;

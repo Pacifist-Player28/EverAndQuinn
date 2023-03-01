@@ -21,7 +21,7 @@ namespace DialogueSystem
         [SerializeField] float spriteAnimationSpeed;
         GameObject[] interactables;
         Queue<string> sentences;
-        public int sentenceCount = 0;
+        [HideInInspector] public int sentenceCount = 0;
         AudioSource audioSource;
 
         [HideInInspector] public static DialogueManager instance;

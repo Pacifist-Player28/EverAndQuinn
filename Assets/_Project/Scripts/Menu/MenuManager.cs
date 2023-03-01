@@ -33,6 +33,7 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
+        if (listener == null && volumeSlider == null) return;
         AudioListener.volume = (float)volumeSlider.value;
     }
 

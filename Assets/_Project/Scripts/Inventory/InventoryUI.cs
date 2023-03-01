@@ -17,14 +17,14 @@ namespace Inventory
         bool puzzleOpen;
 
         Transform parent;
-        Transform slot;
+        Transform gridSystem;
 
         private void Awake()
         {
             if (instance == null) instance = this;
             else Destroy(this);
             parent = transform.GetChild(0);
-            slot = parent.transform.GetChild(0);
+            gridSystem = parent.transform.GetChild(0);
             amountOfItems = inventoryManager.GetItems().Count();
 
             puzzleOpen = false;
@@ -37,7 +37,7 @@ namespace Inventory
             {
                 previousAmountOfItems++;
                 Array.Resize(ref slots, amountOfItems);
-                GameObject newSlotObject = Instantiate(slotGameobject, slot);
+                GameObject newSlotObject = Instantiate(slotGameobject, gridSystem);
                 slots[amountOfItems - 1] = newSlotObject;
                 SlotAndItemImage();
             }
@@ -49,26 +49,26 @@ namespace Inventory
 
         void SlotAndItemImage()
         {
-            for (int i = 0; i < amountOfItems; i++)
+            for (int i = 0; i < previousAmountOfItems; i++)
             {
                 var itemSetting = inventoryManager.items[i];
 
-                GameObject slotObject = slot.GetChild(i).gameObject;
+                GameObject slot = gridSystem.GetChild(i).gameObject;
 
-                slots[i] = slotObject;
+                slots[i] = slot;
 
-                if (slotObject.transform.childCount == 0) 
+                if (slot.transform.childCount == 0) 
                 {
                     continue;
                 }
 
                 Debug.Log("Now planting image");
-                var image = slotObject.transform.GetChild(0).GetComponent<Image>();
+                var image = slot.transform.GetChild(0).GetComponent<Image>();
                 image.sprite = itemSetting.inInventory;
 
-                slotObject.layer = itemSetting.layerValue;
+                slot.layer = itemSetting.layerValue;
 
-                var dragableItem = slotObject.transform.GetChild(0).GetComponent<DragableItem>();
+                var dragableItem = slot.transform.GetChild(0).GetComponent<DragableItem>();
                 dragableItem.solution = itemSetting.solution;
                 Debug.Log("planted image");
             }
@@ -76,7 +76,7 @@ namespace Inventory
 
         public void DeactivateInventory()
         {
-            for (int i = 0; i < amountOfItems; i++)
+            for (int i = 0; i < previousAmountOfItems; i++)
             {
                 if (slots[i].transform.childCount > 0)
                 {
@@ -100,7 +100,7 @@ namespace Inventory
 
         public void ActivateInventory()
         {
-            for (int i = 0; i < amountOfItems; i++)
+            for (int i = 0; i < previousAmountOfItems; i++)
             {
                 if (slots[i].transform.childCount > 0)
                 {

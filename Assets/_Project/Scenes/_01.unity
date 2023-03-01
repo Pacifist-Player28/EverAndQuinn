@@ -2164,11 +2164,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832759, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.73
+      value: -8.4
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832759, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.31
+      value: -6.09
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832759, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6551,11 +6551,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1632859133, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: minCameraPos.x
-      value: -10.1
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 1632859133, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: minCameraPos.y
-      value: -15
+      value: -13.2
       objectReference: {fileID: 0}
     - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: m_RootOrder
@@ -6563,11 +6563,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.55
       objectReference: {fileID: 0}
     - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -13.14
       objectReference: {fileID: 0}
     - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
       propertyPath: m_LocalPosition.z
@@ -33424,8 +33424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ddca664280490b4eb747c827611407a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skipFirstDialogue: 0
-  skipPhone: 0
+  skipFirstDialogue: 1
+  skipPhone: 1
   activateDebugWindow: 1
   debugWindow: {fileID: 100791600}
   sentenceCount_text: {fileID: 781044268}
@@ -33937,7 +33937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9174682410060982372, guid: 9a0c68c72ed02aa4d84b69fb33056ea6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9174682410060982373, guid: 9a0c68c72ed02aa4d84b69fb33056ea6, type: 3}
       propertyPath: m_Pivot.x

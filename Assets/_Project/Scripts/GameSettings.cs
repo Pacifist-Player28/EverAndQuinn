@@ -14,6 +14,14 @@ public class GameSettings : MonoBehaviour
     [Header("Debugging")]
     [SerializeField] bool skipFirstDialogue;
     [SerializeField] bool skipPhone;
+    [SerializeField] bool activateDebugWindow;
+    [SerializeField] GameObject debugWindow;
+    [SerializeField] TMP_Text sentenceCount_text;
+    [SerializeField] TMP_Text activeDialogue_text;
+    [SerializeField] TMP_Text currentEmotion_Left;
+    [SerializeField] TMP_Text currentEmotion_Right;
+    [SerializeField] TMP_Text emotionRight_text;
+    [SerializeField] TMP_Text emotionLeft_text;
     [Space]
     [Header("Puzzle Info")]
     public int slotsSolved_first;
@@ -62,7 +70,10 @@ public class GameSettings : MonoBehaviour
     private void Start()
     {
         if(!skipFirstDialogue)
-        startDialogue.Invoke();
+            startDialogue.Invoke();
+
+        if (!activateDebugWindow)
+            debugWindow.SetActive(false);
 
         trashList = GameObject.FindGameObjectsWithTag("Trash");
         trashGoalAmount = trashList.Length;
@@ -70,6 +81,12 @@ public class GameSettings : MonoBehaviour
 
     void Update()
     {
+        sentenceCount_text.text = "Sentence Count: " + DialogueManager.instance.sentenceCount.ToString();
+        activeDialogue_text.text = "Sentence Count: " + DialogueManager.instance.activeDialogueTrigger.name;
+        currentEmotion_Left.text = "Active emotion left: " + DialogueManager.instance.activeDialogueTrigger.emotionLeft[DialogueManager.instance.sentenceCount];
+        currentEmotion_Right.text = "Active emotion right: " + DialogueManager.instance.activeDialogueTrigger.emotionRight[DialogueManager.instance.sentenceCount];
+        emotionLeft_text.text = "Emotion left: " + DialogueManager.instance.currentEmotionLeft.ToString();
+        emotionRight_text.text = "Emotion right: " + DialogueManager.instance.currentEmotionRight.ToString();
         ActivateAllDialogue();
         CompareSolution();
         if(trashAmount == trashGoalAmount && !trashCheck)
@@ -150,6 +167,7 @@ public class GameSettings : MonoBehaviour
 
     public void ActivateAllDialogue()
     {
+        //it is called every frame!
         bool config = false;
 
         if (skipPhone && !config) 

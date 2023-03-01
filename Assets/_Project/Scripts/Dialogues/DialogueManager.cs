@@ -21,7 +21,7 @@ namespace DialogueSystem
         [SerializeField] float spriteAnimationSpeed;
         GameObject[] interactables;
         Queue<string> sentences;
-        int sentenceCount = 0;
+        public int sentenceCount = 0;
         AudioSource audioSource;
 
         [HideInInspector] public static DialogueManager instance;
@@ -51,19 +51,11 @@ namespace DialogueSystem
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
 
             if (sentenceCount <= 0) return;
-            else 
-            { 
-                currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount - 1];
-                currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount - 1];
-            }
-
-            var index = sentenceCount;
-            if(index != sentenceCount)
+            else
             {
-                ChangeSpriteRight();
-                ChangeSpriteLeft();
+                currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount-1];
+                currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount-1];
             }
-
         }
 
         public void StartDialogue(Dialogue dialogue)
@@ -96,6 +88,8 @@ namespace DialogueSystem
                 return;
             }
             sentenceCount += 1;
+            ChangeSpriteRight();
+            ChangeSpriteLeft();
             StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
         }
 

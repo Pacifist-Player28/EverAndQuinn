@@ -49,7 +49,7 @@ namespace DialogueSystem
             Debug.Log("Sentence count: " + sentenceCount);
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
-    
+
             if(sentenceCount > 0)
             {
                 currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount-1];

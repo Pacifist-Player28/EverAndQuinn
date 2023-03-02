@@ -91,7 +91,6 @@ public class GameSettings : MonoBehaviour
             emotionLeft_text.text = "Emotion left: " + DialogueManager.instance.currentEmotionLeft.ToString();
         if (DialogueManager.instance.currentEmotionRight != null)
             emotionRight_text.text = "Emotion right: " + DialogueManager.instance.currentEmotionRight.ToString();
-        ActivateAllDialogue();
         CompareSolution();
         if(trashAmount == trashGoalAmount && !trashCheck)
         {
@@ -169,19 +168,28 @@ public class GameSettings : MonoBehaviour
         item.collected = true;
     }
 
-    public void ActivateAllDialogue()
+    public void ActivateAllDialoguePhone()
     {
-        //it is called every frame!
         bool config = false;
 
-        if (skipPhone && !config) 
-        { 
+        if (skipPhone && !config)
+        {
             DialogueTrigger[] dialogues = FindObjectsOfType<DialogueTrigger>();
             foreach (DialogueTrigger dialogue in dialogues)
             {
                 dialogue.enabled = true;
             }
             config = true;
+        }
+        else return;
+    }
+
+    public void ActivateAllDialogue()
+    {
+        DialogueTrigger[] dialogues = FindObjectsOfType<DialogueTrigger>();
+        foreach (DialogueTrigger dialogue in dialogues)
+        { 
+            dialogue.enabled = true;
         }
     }
 
@@ -218,6 +226,27 @@ public class GameSettings : MonoBehaviour
             }
         }
     }
+
+    public void ActivateALlItems()
+    {
+        Item[] lol = FindObjectsOfType<Item>();
+
+        for (int i = 0; i < lol.Length; i++)
+        {
+            lol[i].GetComponent<Collider2D>().enabled = true;
+        }
+    }
+
+    public void DisableAllItems()
+    {
+        Item[] lol = FindObjectsOfType<Item>();
+
+        for (int i = 0; i < lol.Length; i++)
+        {
+            lol[i].GetComponent<Collider2D>().enabled = false;
+        }
+    }
+
 
     public void DebugMessage(string message)
     {

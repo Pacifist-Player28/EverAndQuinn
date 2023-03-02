@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1369099509447198741}
   m_Layer: 0
   m_Name: Item
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,23 +209,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
     m_PersistentCalls:
       m_Calls: []
+  emotionRight: []
+  emotionLeft: []
   dialogue:
-    name: book
     sentences:
     - You picked up a book!
-    spritesRight:
-    - {fileID: 0}
-    - {fileID: 0}
-    spritesLeft:
-    - {fileID: 0}
-    - {fileID: 0}
   endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
   instance: {fileID: 0}

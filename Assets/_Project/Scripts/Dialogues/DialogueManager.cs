@@ -46,7 +46,7 @@ namespace DialogueSystem
         private void Update()
         {
             //Debug.Log("emotion for sentence right: " + currentEmotionRight + " emotion for sentence left: " + currentEmotionLeft);
-            Debug.Log("Sentence count: " + sentenceCount);
+            //Debug.Log("Sentence count: " + sentenceCount);
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
 
@@ -127,7 +127,6 @@ namespace DialogueSystem
         {
             if (sentenceCount > 0)
             {
-                Debug.Log("current emotion is: " + (sentenceCount - 1));
                 currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount - 1];
                 currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount - 1];
             }
@@ -139,7 +138,6 @@ namespace DialogueSystem
             }
             else if (emotions.spriteDictionary.TryGetValue(currentEmotionRight, out var spriteArray))
             {
-                Debug.Log("COde is being translated asndkasnfkakjdgkjdsnfdskf");
                 StartCoroutine(SwitchAndReplaceRightSprites(spriteArray[0], spriteArray[1]));
             }
             else
@@ -154,9 +152,29 @@ namespace DialogueSystem
         {
             if (sentenceCount > 0)
             {
-                Debug.Log("current emotion is: " + (sentenceCount - 1));
                 currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount - 1];
                 currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount - 1];
+            }
+
+            if (currentEmotionLeft == emotions.string_transparent || currentEmotionLeft == null)
+            {
+                Debug.Log("Bruh1");
+                var transparentSprite = emotions.transparentSprite;
+                Debug.Log("Bruh2");
+                StartCoroutine(SwitchAndReplaceLeftSprites(transparentSprite, transparentSprite));
+                Debug.Log("Bruh3");
+            }
+            else if (emotions.spriteDictionary.TryGetValue(currentEmotionLeft, out var spriteArray))
+            {
+                Debug.Log("Bruh4");
+                StartCoroutine(SwitchAndReplaceLeftSprites(spriteArray[0], spriteArray[1]));
+                Debug.Log("Bruh5");
+            }
+            else
+            {
+                var text = GameSettings.instance.foundSprite;
+                text.text = "NO SPRITE FOUND 2";
+                text.color = Color.red;
             }
         }
 
@@ -176,8 +194,6 @@ namespace DialogueSystem
 
         public IEnumerator SwitchAndReplaceLeftSprites(Sprite sprite1, Sprite sprite2)
         {
-            //var spriteOnRight = spriteRight.GetComponent<Image>().sprite;
-            //Debug.Log(spriteRight.GetComponent<Image>().sprite);
             while (true)
             {
                 spriteLeft.GetComponent<Image>().sprite = sprite1;

@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: DialogueEmotionsList
   m_EditorClassIdentifier: 
   string_transparent: transparent
+  string_QuinnStop: QuinnStop
   string_QuinnNeutral: QuinnNeutral
   string_QuinnAngry: QuinnAngry
   string_QuinnConfused: QuinnConfused
   string_QuinnNervous: QuinnNervous
   string_QuinnSurprised: QuinnSurprised
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  sprite_QuinnStop: {fileID: 21300000, guid: f589cfe03011da342aacac3fcef32c8b, type: 3}
+  sprite_QuinnStop:
+  - {fileID: 21300000, guid: f589cfe03011da342aacac3fcef32c8b, type: 3}
+  - {fileID: 21300000, guid: f589cfe03011da342aacac3fcef32c8b, type: 3}
   sprite_QuinnNeutral:
   - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
   - {fileID: 21300000, guid: c2779d4fecad0784895654a57991aa3d, type: 3}
@@ -34,9 +37,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8f971bb82e2e99f4dab9d5ffb8a2a7de, type: 3}
   sprite_Quinnsurprised:
   - {fileID: 21300000, guid: 91204cabb76e8bd48b46d29b33b7c666, type: 3}
-  - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
-  carolyn_neutral_string: CarolynNeutral
-  carolyn_stop: {fileID: 21300000, guid: 690eb4f9e0bfd2747bdb03412c6559dd, type: 3}
-  carolyn_neutral:
+  - {fileID: 21300000, guid: b8de6b6a11509174994c173fc9abbcf3, type: 3}
+  string_CarolynStop: CarolynStop
+  string_CarolynNeutral: CarolynNeutral
+  sprite_CarolynStop:
+  - {fileID: 21300000, guid: 690eb4f9e0bfd2747bdb03412c6559dd, type: 3}
+  - {fileID: 21300000, guid: 690eb4f9e0bfd2747bdb03412c6559dd, type: 3}
+  sprite_CarolynNeutral:
   - {fileID: 21300000, guid: c1e757ec162f8b241b74c47ba4761557, type: 3}
   - {fileID: 21300000, guid: d45d98f2027cd7645844e6552c80efe4, type: 3}

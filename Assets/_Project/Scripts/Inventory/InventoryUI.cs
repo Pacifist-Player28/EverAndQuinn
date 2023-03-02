@@ -62,7 +62,7 @@ namespace Inventory
                     continue;
                 }
 
-                Debug.Log("Now planting image");
+                //Debug.Log("Now planting image");
                 var image = slot.transform.GetChild(0).GetComponent<Image>();
                 image.sprite = itemSetting.inInventory;
 
@@ -70,7 +70,7 @@ namespace Inventory
 
                 var dragableItem = slot.transform.GetChild(0).GetComponent<DragableItem>();
                 dragableItem.solution = itemSetting.solution;
-                Debug.Log("planted image");
+                //Debug.Log("planted image");
             }
         }
 

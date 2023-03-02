@@ -247,7 +247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.27
   transparentSprite: {fileID: 0}
   clicked:
@@ -342,7 +341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -866,7 +864,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 3.1
   transparentSprite: {fileID: 0}
   clicked:
@@ -1112,7 +1109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.34
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -2226,7 +2222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 2.64
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -3231,7 +3226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -3490,7 +3484,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 3.26
   transparentSprite: {fileID: 0}
   clicked:
@@ -3798,7 +3791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.64
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -4189,7 +4181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 2.89
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -5946,7 +5937,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 0
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -6105,7 +6095,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 2.5
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -6570,7 +6559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.34
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -7086,7 +7074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.27
   transparentSprite: {fileID: 0}
   clicked:
@@ -7607,7 +7594,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.5
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -9062,7 +9048,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.93
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -9636,7 +9621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 3.71
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -10405,7 +10389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.84
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -10964,7 +10947,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.34
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -11380,7 +11362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.64
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -11507,7 +11488,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 2.65
   transparentSprite: {fileID: 0}
   clicked:
@@ -11603,7 +11583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.84
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -12719,7 +12698,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -12848,7 +12826,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.84
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -13503,7 +13480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.84
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -13512,11 +13488,11 @@ MonoBehaviour:
   emotionRight:
   - QuinnNeutral
   - QuinnConfused
-  - transparent
+  - QuinnNeutral
   emotionLeft:
-  - transparent
-  - transparent
-  - transparent
+  - QuinnNeutral
+  - QuinnNeutral
+  - QuinnNeutral
   dialogue:
     sentences:
     - Another Jacket.
@@ -13679,7 +13655,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.56
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -13888,7 +13863,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.64
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -13958,7 +13932,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 0
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -14076,7 +14049,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 2.89
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -14527,7 +14499,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.89
   transparentSprite: {fileID: 0}
   clicked:
@@ -14800,7 +14771,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -15046,7 +15016,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 0
   triggerDistance: 0
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -15561,7 +15530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7214056296853611894, guid: d21d0eac26b180e469dbbf0c64019861, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7214056296853611894, guid: d21d0eac26b180e469dbbf0c64019861, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15951,7 +15920,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 2.47
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -16985,7 +16953,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.92
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -17348,7 +17315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 2.7
   transparentSprite: {fileID: 0}
   clicked:
@@ -18211,7 +18177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.27
   transparentSprite: {fileID: 0}
   clicked:
@@ -19326,7 +19291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.72
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:
@@ -19554,7 +19518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 2.7
   transparentSprite: {fileID: 0}
   clicked:
@@ -20235,7 +20198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.27
   transparentSprite: {fileID: 0}
   clicked:
@@ -20637,7 +20599,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 3.1
   transparentSprite: {fileID: 0}
   clicked:
@@ -20781,7 +20742,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 3.1
   transparentSprite: {fileID: 0}
   clicked:
@@ -20898,7 +20858,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 2.16
   transparentSprite: {fileID: 0}
   clicked:
@@ -23238,7 +23197,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 2.16
   transparentSprite: {fileID: 0}
   clicked:
@@ -24030,7 +23988,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 2.65
   transparentSprite: {fileID: 0}
   clicked:
@@ -24366,7 +24323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 2.65
   transparentSprite: {fileID: 0}
   clicked:
@@ -24689,7 +24645,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7214056296853611894, guid: d21d0eac26b180e469dbbf0c64019861, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7214056296853611894, guid: d21d0eac26b180e469dbbf0c64019861, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26314,7 +26270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canBeClicked: 1
   triggerDistance: 1.34
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   clicked:

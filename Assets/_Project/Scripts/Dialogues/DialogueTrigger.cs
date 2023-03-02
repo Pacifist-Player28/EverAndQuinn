@@ -7,7 +7,6 @@ namespace DialogueSystem
 { 
     public class DialogueTrigger : MonoBehaviour
     {
-        [SerializeField] bool canBeClicked = true;
         [SerializeField] float triggerDistance = 4.5f;
         [Space]
         [SerializeField] Sprite transparentSprite;

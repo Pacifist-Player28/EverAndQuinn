@@ -130,86 +130,33 @@ namespace DialogueSystem
 
         public void ChangeSpriteRight()
         {
-            if (currentEmotionRight == "transparent" || currentEmotionRight == null)
+            if (currentEmotionRight == emotions.string_transparent || currentEmotionRight == null)
             {
-                Debug.Log("Transparent sprite");
-                var sprite = emotions.transparent;
-                StartCoroutine(SwitchAndReplaceRightSprites(sprite, sprite));
+                var transparentSprite = emotions.transparentSprite;
+                StartCoroutine(SwitchAndReplaceRightSprites(transparentSprite, transparentSprite));
             }
-            else if (currentEmotionRight == "QuinnNeutral")
+            else if (emotions.spriteDictionary.TryGetValue(currentEmotionRight, out var spriteArray))
             {
-                Debug.Log("Neutral sprite");
-                var sprite1 = emotions.quinn_neutral[0];
-                var sprite2 = emotions.quinn_neutral[1];
-                StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
-            }
-            else if (currentEmotionRight == "QuinnAngry")
-            {
-                Debug.Log("Angry sprite");
-                var sprite1 = emotions.quinn_angry[0];
-                var sprite2 = emotions.quinn_angry[1];
-                StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
-            }
-            else if (currentEmotionRight == "QuinnConfused")
-            {
-                var sprite1 = emotions.quinn_confused[0];
-                var sprite2 = emotions.quinn_confused[1];
-                StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
-            }
-            else if (currentEmotionRight == "QuinnNervous")
-            {
-                var sprite1 = emotions.quinn_nervous[0];
-                var sprite2 = emotions.quinn_nervous[1];
-                StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
-            }
-            else if (currentEmotionRight == "QuinnStop")
-            {
-                var sprite1 = emotions.quinn_stop;
-                StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite1));
-            }
-            else if (currentEmotionRight == "QuinnSurprised")
-            {
-                var sprite1 = emotions.quinn_surprised[0];
-                var sprite2 = emotions.quinn_surprised[1];
-                StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
+                Debug.Log("COde is being translated asndkasnfkakjdgkjdsnfdskf");
+                StartCoroutine(SwitchAndReplaceRightSprites(spriteArray[0], spriteArray[1]));
             }
             else
             {
-                var text1 = GameSettings.instance.currentEmotion_Right;
-                var text2 = GameSettings.instance.currentEmotion_Right;
-                text1.text = "NO SPRITE FOUND";
-                text2.text = "NO SPRITE FOUND";
-                text1.color = Color.red;
-                text2.color = Color.red;
+                var text = GameSettings.instance.foundSprite;
+                text.text = "NO SPRITE FOUND";
+                text.color = Color.red;
             }
         }
 
         public void ChangeSpriteLeft()
         {
-            if (currentEmotionLeft == "transparent" || currentEmotionLeft == null)
-            {
-                var sprite1 = emotions.transparent;
-                StartCoroutine(SwitchAndReplaceLeftSprites(sprite1, sprite1));
-            }
-            else if (currentEmotionLeft == "CarolynNeutral")
-            {
-                var sprite1 = emotions.carolyn_neutral[0];
-                var sprite2 = emotions.carolyn_neutral[1];
-                StartCoroutine(SwitchAndReplaceLeftSprites(sprite1, sprite2));
-            }
-            else if (currentEmotionLeft == "CarolynStop")
-            {
-                var sprite1 = emotions.carolyn_stop;
-                StartCoroutine(SwitchAndReplaceLeftSprites(sprite1, sprite1));
-            }
+
         }
 
         IEnumerator SwitchAndReplaceRightSprites(Sprite sprite1, Sprite sprite2)
         {
-            //var spriteOnRight = spriteRight.GetComponent<Image>().sprite;
-            //Debug.Log(spriteRight.GetComponent<Image>().sprite);
-            while(true) 
-            { 
+            while (true)
+            {
                 spriteRight.GetComponent<Image>().sprite = sprite1;
                 Debug.Log(sprite1);
                 yield return new WaitForSeconds(spriteAnimationSpeed);
@@ -218,6 +165,7 @@ namespace DialogueSystem
                 yield return new WaitForSeconds(spriteAnimationSpeed);
             }
         }
+
 
         public IEnumerator SwitchAndReplaceLeftSprites(Sprite sprite1, Sprite sprite2)
         {

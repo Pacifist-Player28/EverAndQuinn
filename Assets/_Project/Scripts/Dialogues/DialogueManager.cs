@@ -50,12 +50,7 @@ namespace DialogueSystem
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
 
-            if(sentenceCount > 0)
-            {
-                Debug.Log("current emotion is: " + (sentenceCount - 1));
-                currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount-1];
-                currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount-1];
-            }
+
         }
 
         public void StartDialogue(Dialogue dialogue)
@@ -89,8 +84,8 @@ namespace DialogueSystem
             }
             sentenceCount += 1;
             StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
-            ChangeSpriteLeft();
             ChangeSpriteRight();
+            ChangeSpriteLeft();
         }
 
         public void EndDialogue()
@@ -130,6 +125,13 @@ namespace DialogueSystem
 
         public void ChangeSpriteRight()
         {
+            if (sentenceCount > 0)
+            {
+                Debug.Log("current emotion is: " + (sentenceCount - 1));
+                currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount - 1];
+                currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount - 1];
+            }
+
             if (currentEmotionRight == emotions.string_transparent || currentEmotionRight == null)
             {
                 var transparentSprite = emotions.transparentSprite;
@@ -150,7 +152,12 @@ namespace DialogueSystem
 
         public void ChangeSpriteLeft()
         {
-
+            if (sentenceCount > 0)
+            {
+                Debug.Log("current emotion is: " + (sentenceCount - 1));
+                currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount - 1];
+                currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount - 1];
+            }
         }
 
         IEnumerator SwitchAndReplaceRightSprites(Sprite sprite1, Sprite sprite2)

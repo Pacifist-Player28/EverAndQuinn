@@ -16,12 +16,13 @@ public class GameSettings : MonoBehaviour
     [SerializeField] bool skipPhone;
     [SerializeField] bool activateDebugWindow;
     [SerializeField] GameObject debugWindow;
-    [SerializeField] TMP_Text sentenceCount_text;
-    [SerializeField] TMP_Text activeDialogue_text;
-    [SerializeField] TMP_Text currentEmotion_Left;
-    [SerializeField] TMP_Text currentEmotion_Right;
-    [SerializeField] TMP_Text emotionRight_text;
-    [SerializeField] TMP_Text emotionLeft_text;
+    public TMP_Text sentenceCount_text;
+    public TMP_Text activeDialogue_text;
+    public TMP_Text currentEmotion_Left;
+    public TMP_Text currentEmotion_Right;
+    public TMP_Text foundSprite;
+    public TMP_Text emotionRight_text;
+    public TMP_Text emotionLeft_text;
     [Space]
     [Header("Puzzle Info")]
     public int slotsSolved_first;
@@ -86,8 +87,10 @@ public class GameSettings : MonoBehaviour
         else activeDialogue_text.text = "Sentence Count: " + DialogueManager.instance.activeDialogueTrigger.name;
         //currentEmotion_Left.text = "Active emotion left: " + DialogueManager.instance.activeDialogueTrigger.emotionLeft[DialogueManager.instance.sentenceCount -1];
         //currentEmotion_Right.text = "Active emotion right: " + DialogueManager.instance.activeDialogueTrigger.emotionRight[DialogueManager.instance.sentenceCount -1];
-        emotionLeft_text.text = "Emotion left: " + DialogueManager.instance.currentEmotionLeft.ToString();
-        emotionRight_text.text = "Emotion right: " + DialogueManager.instance.currentEmotionRight.ToString();
+        if(DialogueManager.instance.currentEmotionLeft != null)
+            emotionLeft_text.text = "Emotion left: " + DialogueManager.instance.currentEmotionLeft.ToString();
+        if (DialogueManager.instance.currentEmotionRight != null)
+            emotionRight_text.text = "Emotion right: " + DialogueManager.instance.currentEmotionRight.ToString();
         ActivateAllDialogue();
         CompareSolution();
         if(trashAmount == trashGoalAmount && !trashCheck)

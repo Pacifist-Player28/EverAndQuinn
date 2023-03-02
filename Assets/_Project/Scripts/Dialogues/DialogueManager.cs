@@ -52,6 +52,7 @@ namespace DialogueSystem
 
             if(sentenceCount > 0)
             {
+                Debug.Log("current emotion is: " + (sentenceCount - 1));
                 currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount-1];
                 currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount-1];
             }
@@ -172,7 +173,15 @@ namespace DialogueSystem
                 var sprite2 = emotions.quinn_surprised[1];
                 StartCoroutine(SwitchAndReplaceRightSprites(sprite1, sprite2));
             }
-            else Debug.LogWarning("Nichts gefunden?");
+            else
+            {
+                var text1 = GameSettings.instance.currentEmotion_Right;
+                var text2 = GameSettings.instance.currentEmotion_Right;
+                text1.text = "NO SPRITE FOUND";
+                text2.text = "NO SPRITE FOUND";
+                text1.color = Color.red;
+                text2.color = Color.red;
+            }
         }
 
         public void ChangeSpriteLeft()

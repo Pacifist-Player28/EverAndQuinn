@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using System;
 using UnityEngine.Events;
 
 namespace DialogueSystem
@@ -38,6 +39,8 @@ namespace DialogueSystem
         {
             player = PlayerMovementKeyboard.instance.gameObject;
             //emotionForSentence = new string[???];
+            Array.Resize(ref emotionRight, dialogue.sentences.Length);
+            Array.Resize(ref emotionLeft, dialogue.sentences.Length);
         }
 
         public void DestroyTriggerDialogue()

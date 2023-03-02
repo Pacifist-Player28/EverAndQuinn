@@ -7160,7 +7160,7 @@ GameObject:
   - component: {fileID: 484400710}
   m_Layer: 0
   m_Name: DialogueLamp
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13045,7 +13045,7 @@ GameObject:
   - component: {fileID: 856911028}
   m_Layer: 0
   m_Name: DialogueLamp
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17683,9 +17683,9 @@ Transform:
   - {fileID: 319971894}
   - {fileID: 837881324}
   - {fileID: 2024876285}
+  - {fileID: 411870282}
   - {fileID: 214168894}
   - {fileID: 2021678316}
-  - {fileID: 411870282}
   - {fileID: 180700019}
   - {fileID: 1686021943}
   m_Father: {fileID: 2026800990}
@@ -24130,7 +24130,7 @@ GameObject:
   - component: {fileID: 1908692538}
   m_Layer: 0
   m_Name: DialogueLamp
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

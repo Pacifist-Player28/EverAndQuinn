@@ -208,7 +208,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -915967266, guid: 7206fd2a627b9e64d9a4ac6fc70f1edd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -879,7 +879,7 @@ GameObject:
   - component: {fileID: 75913516}
   m_Layer: 0
   m_Name: SmallPlant
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1251,17 +1251,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2550269764230832758, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832759, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832759, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.08
+      value: -3.53
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832759, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.24
+      value: 4.21
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832759, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1767,6 +1771,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: DeactivateMovement
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2131344596}
+        m_TargetAssemblyTypeName: Inventory.InventoryUI, Assembly-CSharp
+        m_MethodName: IsPuzzleOpen
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2651,7 +2667,7 @@ GameObject:
   - component: {fileID: 170816484}
   m_Layer: 0
   m_Name: Cups
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5562,42 +5578,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   emotionRight:
-  - QuinnConfused
-  - 
+  - QuinnNeutral
+  - QuinnNeutral
   emotionLeft:
   - 
   - 
   dialogue:
     sentences:
-    - Somthing is inside this one...
-    - '*You picked up some lamps*'
+    - A brown jacket
+    - Nothing interesting
   endOfDialogue:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: a93d6a5fa4f348f4e8fa4f129caa2d29, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Inventory.ItemSetting, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
-        m_MethodName: AddItemToInventory
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: c9bece59837669645ba621a338ae4502, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Inventory.ItemSetting, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -6705,10 +6697,12 @@ MonoBehaviour:
   clicked:
     m_PersistentCalls:
       m_Calls: []
-  emotionRight: []
+  emotionRight:
+  - QuinnSurprised
   emotionLeft: []
   dialogue:
-    sentences: []
+    sentences:
+    - A well looking plant!
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -6776,7 +6770,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446056673}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.760043, y: 10.305582, z: -0.13495825}
+  m_LocalPosition: {x: -14.760043, y: 10.305582, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7200,7 +7194,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -915967266, guid: 7206fd2a627b9e64d9a4ac6fc70f1edd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9516,7 +9510,7 @@ GameObject:
   - component: {fileID: 617309331}
   m_Layer: 0
   m_Name: Serviet
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9927,7 +9921,7 @@ MonoBehaviour:
   - 
   dialogue:
     sentences:
-    - "Oh, cereal! Didn\u2019t know I had that?"
+    - Just a table.
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
@@ -10052,7 +10046,7 @@ PrefabInstance:
     - target: {fileID: 1369099509447198739, guid: 157d8eaf46115644a95ea538403b2f68, type: 3}
       propertyPath: setting
       value: 
-      objectReference: {fileID: 11400000, guid: a30d44007b079c346a7b360dbbde8b65, type: 2}
+      objectReference: {fileID: 11400000, guid: 2c01cf6503efda24c8c616ef63d2c449, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 157d8eaf46115644a95ea538403b2f68, type: 3}
 --- !u!4 &659338483 stripped
@@ -11323,7 +11317,7 @@ GameObject:
   - component: {fileID: 726167826}
   m_Layer: 0
   m_Name: Jars
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12545,15 +12539,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.9
+      value: -8.34
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.98
+      value: 8.12
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14273,7 +14267,7 @@ GameObject:
   - component: {fileID: 998162113}
   m_Layer: 0
   m_Name: DialogueLamp
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14608,7 +14602,7 @@ GameObject:
   - component: {fileID: 1019425453}
   m_Layer: 0
   m_Name: Kettle
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17622,9 +17616,9 @@ Transform:
   - {fileID: 921859001}
   - {fileID: 849923140}
   - {fileID: 850072554}
-  - {fileID: 319971894}
   - {fileID: 837881324}
   - {fileID: 2024876285}
+  - {fileID: 319971894}
   - {fileID: 411870282}
   - {fileID: 214168894}
   - {fileID: 2021678316}
@@ -18690,7 +18684,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -915967266, guid: 7206fd2a627b9e64d9a4ac6fc70f1edd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -20600,7 +20594,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -915967266, guid: 7206fd2a627b9e64d9a4ac6fc70f1edd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -23413,7 +23407,7 @@ GameObject:
   - component: {fileID: 1852566377}
   m_Layer: 0
   m_Name: Board
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25801,11 +25795,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.33
+      value: -7.7700005
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.85
+      value: 7.99
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25903,15 +25897,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.58
+      value: -8.02
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.57
+      value: 7.71
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26815,7 +26809,7 @@ GameObject:
   - component: {fileID: 2060356866}
   m_Layer: 0
   m_Name: Toaster
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -247,11 +247,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.27
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - transparent
   - QuinnNeutral
@@ -262,13 +260,15 @@ MonoBehaviour:
     sentences:
     - '*opens*'
     - Contains air. But that's all there is.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &16351380
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,22 +937,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 4.5
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences: []
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &100791600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1581,7 +1581,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2131344596}
         m_TargetAssemblyTypeName: Inventory.InventoryUI, Assembly-CSharp
-        m_MethodName: IsPuzzleOpen
+        m_MethodName: PuzzleOpen
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1628,8 +1628,8 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, CustomScripts
-        m_MethodName: DeactivateMovement
+        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
+        m_MethodName: _DeactivateMovement
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1651,9 +1651,6 @@ MonoBehaviour:
           m_StringArgument: Lamps
           m_BoolArgument: 1
         m_CallState: 2
-  clickStop:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &156141336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1666,8 +1663,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.64
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  interactOnce: 0
+  emotionRight: []
+  emotionLeft: []
+  dialogue:
+    sentences:
+    - Hmmm...
+    - Some books are missing.
+    - Some of them are still lying around... I need to place them back into my book
+      shelf...
+    - Let's see what is actually missing.
   clicked:
     m_PersistentCalls:
       m_Calls:
@@ -1683,15 +1690,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  emotionRight: []
-  emotionLeft: []
-  dialogue:
-    sentences:
-    - Hmmm...
-    - Some books are missing.
-    - Some of them are still lying around... I need to place them back into my book
-      shelf...
-    - Let's see what is actually missing.
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -1791,10 +1792,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!1 &168969580
 GameObject:
   m_ObjectHideFlags: 0
@@ -2725,22 +2722,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 4.5
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences: []
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &170929201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,16 +2784,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 0
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences:
     - I can't go there yet.
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -2824,10 +2825,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!114 &170929204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3331,7 +3328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3739,11 +3736,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.89
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNervous
   - QuinnNeutral
@@ -3755,6 +3750,12 @@ MonoBehaviour:
     - "Hmm, maybe I can fix it. Let\u2019s see."
     - Yeah, definitely broken. There are lamps missing. I wonder where they are.
       Maybe I can find them.
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -4010,10 +4011,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!61 &267201350
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4105,8 +4102,8 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, CustomScripts
-        m_MethodName: DeactivateMovement
+        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
+        m_MethodName: _DeactivateMovement
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4116,9 +4113,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  clickStop:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &272937268
 GameObject:
   m_ObjectHideFlags: 0
@@ -4303,6 +4297,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverAmount: 5
   hoverDuration: 0.6
+--- !u!1001 &277853864
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.13495825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491031, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_Name
+      value: Ok
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
 --- !u!1 &280979327
 GameObject:
   m_ObjectHideFlags: 0
@@ -4348,11 +4399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   - QuinnAngry
@@ -4361,13 +4410,15 @@ MonoBehaviour:
     sentences:
     - To be honest...
     - I don't even like the sun or the beach.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &280979330
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4394,44 +4445,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &286715476 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 459226739380819953, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-  m_PrefabInstance: {fileID: 308072540}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &286715481
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286715476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 0
-  m_Cameras: []
-  m_RendererIndex: -1
-  m_VolumeLayerMask:
-    serializedVersion: 2
-    m_Bits: 1
-  m_VolumeTrigger: {fileID: 0}
-  m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 1
-  m_Antialiasing: 0
-  m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
-  m_ClearDepth: 1
-  m_AllowXRRendering: 1
-  m_RequiresDepthTexture: 0
-  m_RequiresColorTexture: 0
-  m_Version: 2
 --- !u!1 &295572365
 GameObject:
   m_ObjectHideFlags: 0
@@ -5129,6 +5142,14 @@ PrefabInstance:
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3774823455300535693, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.21000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774823455300535693, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.29000002
+      objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5187,108 +5208,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
---- !u!1001 &308072540
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1632859133, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: maxCameraPos.x
-      value: -5.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632859133, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: maxCameraPos.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632859133, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: minCameraPos.x
-      value: -6.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1632859133, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: minCameraPos.y
-      value: -13.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819725, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819953, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_Name
-      value: Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819953, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819954, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_BackGroundColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819954, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_BackGroundColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819954, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_BackGroundColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819954, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_BackGroundColor.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 459226739380819954, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 87
-      objectReference: {fileID: 0}
-    - target: {fileID: 7951590269255448802, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-      propertyPath: volumeLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7951590269255448802, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 89128a91798cc384bbac35f2c67de245, type: 3}
 --- !u!1001 &319971893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5572,11 +5491,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   - QuinnNeutral
@@ -5587,13 +5504,15 @@ MonoBehaviour:
     sentences:
     - A brown jacket
     - Nothing interesting
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &365567128
 GameObject:
   m_ObjectHideFlags: 0
@@ -5983,11 +5902,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 0
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -5995,6 +5912,12 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Ugh no way...
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -6022,10 +5945,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!1 &395553844
 GameObject:
   m_ObjectHideFlags: 0
@@ -6138,23 +6057,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.5
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences:
     - "I can\u2019t go back to sleep yet. There is still stuff to do."
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &395553849
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6228,7 +6147,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &411870281
 PrefabInstance:
@@ -6275,7 +6194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6692,24 +6611,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.72
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnSurprised
   emotionLeft: []
   dialogue:
     sentences:
     - A well looking plant!
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &446056676
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7038,11 +6957,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.64
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -7050,13 +6967,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Now it's all sorted out.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &471640417
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7233,11 +7152,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.27
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - transparent
   - QuinnNeutral
@@ -7248,13 +7165,15 @@ MonoBehaviour:
     sentences:
     - '*opens*'
     - Just random plates I don't even use.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &484400707
 GameObject:
   m_ObjectHideFlags: 0
@@ -7300,11 +7219,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnConfused
   - 
@@ -7313,6 +7230,12 @@ MonoBehaviour:
     sentences:
     - Somthing is inside this one...
     - '*You picked up some lamps*'
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -7340,10 +7263,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!61 &484400710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7508,24 +7427,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnConfused
   emotionLeft: []
   dialogue:
     sentences:
     - Someones scarf?
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &489204975
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8050,47 +7969,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.82
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 554559519}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Stop
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
-        m_MethodName: ActivateAllDialogue
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+  interactOnce: 0
   emotionRight:
   - QuinnConfused
   - QuinnConfused
@@ -8155,6 +8036,48 @@ MonoBehaviour:
     - Will I get my record back?
     - Uhm, sure, I'll try and find it for you.
     - Oh thank you! Call me when you do!
+  clicked:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 554559519}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8209732979590414071}
+        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
+        m_MethodName: ActivateAllDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -8218,10 +8141,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!61 &554559523
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8529,24 +8448,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnSurprised
   emotionLeft: []
   dialogue:
     sentences:
     - My favourite gloves!
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &569820265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8885,93 +8804,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 593352787}
   m_CullTransparentMesh: 1
---- !u!1 &596782731
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 596782733}
-  - component: {fileID: 596782732}
-  m_Layer: 0
-  m_Name: Shelf01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &596782732
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596782731}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: f105a36c2b80f9f44be18afb92a753fb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1.0203581, y: 0.84049994}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &596782733
+--- !u!4 &596782733 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+  m_PrefabInstance: {fileID: 1451922846431698716}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596782731}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.459, y: -1.213, z: -0.13495825}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 802118319}
-  - {fileID: 1920417331}
-  - {fileID: 2048483233}
-  m_Father: {fileID: 665812966}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &597811927
 GameObject:
   m_ObjectHideFlags: 0
@@ -9285,9 +9122,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  clickStop:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &604645116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9300,24 +9134,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.89
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft: []
   dialogue:
     sentences:
     - Finally. It works again!
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &604645117
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9568,22 +9402,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 4.5
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences: []
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &621874371
 GameObject:
   m_ObjectHideFlags: 0
@@ -9910,11 +9744,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.93
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnConfused
   emotionLeft:
@@ -9922,13 +9754,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Just a table.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &651486381
 GameObject:
   m_ObjectHideFlags: 0
@@ -10414,7 +10248,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!167 &668892104
 AudioReverbZone:
@@ -10564,11 +10398,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 3.71
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - 
   emotionLeft:
@@ -10576,13 +10408,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - This kitchen is a mess.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &671731868
 GameObject:
   m_ObjectHideFlags: 0
@@ -11375,22 +11209,155 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 4.5
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences: []
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &726974387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 726974391}
+  - component: {fileID: 726974390}
+  - component: {fileID: 726974389}
+  - component: {fileID: 726974388}
+  - component: {fileID: 726974392}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &726974388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726974387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: 0
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!81 &726974389
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726974387}
+  m_Enabled: 1
+--- !u!20 &726974390
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726974387}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0
+  far clip plane: 10
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &726974391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726974387}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &726974392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726974387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e62ec11cc0b747a42b0b337b0d24478b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minCameraPos: {x: -6.25, y: -13.2}
+  maxCameraPos: {x: -5.6, y: 4.25}
 --- !u!1 &733363490
 GameObject:
   m_ObjectHideFlags: 0
@@ -11804,11 +11771,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.5
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -11816,6 +11781,12 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Let's go sleep.
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -11831,10 +11802,6 @@ MonoBehaviour:
           m_StringArgument: _Menu
           m_BoolArgument: 0
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!61 &743414893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12012,23 +11979,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences:
     - A red jacket. Nothing fancy.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &775130151
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12100,24 +12067,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnConfused
   emotionLeft: []
   dialogue:
     sentences:
     - A lot of hats. But none are mine?
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &780812661
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12401,99 +12368,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &802118318
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 802118319}
-  - component: {fileID: 802118320}
-  - component: {fileID: 802118321}
-  m_Layer: 0
-  m_Name: Left
-  m_TagString: Interactable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &802118319
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802118318}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.79, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 596782733}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &802118320
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802118318}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.0814323, y: 3.3619998}
-    newSize: {x: 1.0203581, y: 0.84049994}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.03, y: 3.3619998}
-  m_EdgeRadius: 0
---- !u!114 &802118321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 802118318}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerDistance: 2.65
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
-  emotionRight:
-  - QuinnNeutral
-  - QuinnAngry
-  emotionLeft:
-  - transparent
-  - transparent
-  dialogue:
-    sentences:
-    - A dirty bookshelf.
-    - Better not touch this for ever.
-  endOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!1001 &837881323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12539,7 +12413,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13127,16 +13001,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.13
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences:
     - Let's take this lamp for our fridge!
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -13152,10 +13030,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!61 &856911029
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13816,17 +13690,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 0
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences:
     - I'm tired now. I'll just take a short nap and I will continue later on.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
@@ -13844,7 +13716,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &934800218
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14073,23 +13947,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences:
     - Whose jacket is this?
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &963750555
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14325,11 +14199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.27
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - transparent
   - QuinnSurprised
@@ -14340,6 +14212,12 @@ MonoBehaviour:
     sentences:
     - '*opens*'
     - Something! Some small lamps!
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -14367,10 +14245,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!1 &1005696373
 GameObject:
   m_ObjectHideFlags: 0
@@ -14660,22 +14534,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 4.5
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences: []
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1020970033
 GameObject:
   m_ObjectHideFlags: 0
@@ -14853,11 +14727,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.64
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   - QuinnConfused
@@ -14869,13 +14741,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Just storage.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1067722876
 GameObject:
   m_ObjectHideFlags: 0
@@ -14920,11 +14794,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 0
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNervous
   - QuinnNervous
@@ -14938,6 +14810,12 @@ MonoBehaviour:
     - Damn! This house is such a mess. I'll never find the record like this.
     - ... (thinking)
     - Maybe tyding up would help.
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -14965,10 +14843,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!1 &1075913216
 GameObject:
   m_ObjectHideFlags: 0
@@ -15228,11 +15102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNervous
   emotionLeft:
@@ -15240,13 +15112,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - I should water them someday again.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1091515770
 GameObject:
   m_ObjectHideFlags: 0
@@ -15500,16 +15374,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 0
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences:
     - I don't want to go outside
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -15537,10 +15415,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!114 &1146640781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15714,11 +15588,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 0
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnSurprised
   - QuinnConfused
@@ -15732,21 +15604,9 @@ MonoBehaviour:
     - Finally I found the record!
     - For some reason inside some trash?
     - Whatever. Soon I'll go to bed again.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1170366242}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: StopAllCoroutines
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -15762,7 +15622,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1170366242}
+        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
+        m_MethodName: StopAllCoroutines
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1175238516
 GameObject:
   m_ObjectHideFlags: 0
@@ -16684,24 +16558,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft: []
   dialogue:
     sentences:
     - Blue and yellow. I guess it works.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1210644043
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17698,24 +17572,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft: []
   dialogue:
     sentences:
     - A beige jacket.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1311088883
 GameObject:
   m_ObjectHideFlags: 0
@@ -17861,11 +17735,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.7
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -17873,13 +17745,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - A spider is hanging down.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1323205559
 GameObject:
   m_ObjectHideFlags: 0
@@ -18723,11 +18597,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.27
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - transparent
   - QuinnNeutral
@@ -18738,13 +18610,15 @@ MonoBehaviour:
     sentences:
     - '*opens*'
     - Empty.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1395898342 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8242208534982985017, guid: 1602d28c4f954de4d9f97957e0b50688, type: 3}
@@ -19714,17 +19588,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.72
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences:
     - My my player!
     - Why not play something?
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -19752,10 +19630,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!114 &1532930592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19771,36 +19645,12 @@ MonoBehaviour:
   spriteOff: {fileID: 0}
   spriteOn: {fileID: 0}
   triggerDistance: 7.5
-  clicked:
+  clickOnce:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1532930585}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  clickStop:
+      m_Calls: []
+  clickTwice:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1532930585}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Pause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1546244418
 GameObject:
   m_ObjectHideFlags: 0
@@ -19986,11 +19836,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.7
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   - QuinnNeutral
@@ -20000,13 +19848,15 @@ MonoBehaviour:
     sentences:
     - Shelf.
     - Just a shelf.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1561039099
 GameObject:
   m_ObjectHideFlags: 0
@@ -20634,11 +20484,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.27
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - transparent
   - QuinnSurprised
@@ -20649,13 +20497,15 @@ MonoBehaviour:
     sentences:
     - '*opens*'
     - Again. Nothing of importance there. Won't touch anything in here yet.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1634785478
 GameObject:
   m_ObjectHideFlags: 0
@@ -21035,11 +20885,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 3.1
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - 
   emotionLeft:
@@ -21047,13 +20895,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Plants bla bla bla
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1647761979
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21151,11 +21001,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.16
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   - 
@@ -21169,6 +21017,12 @@ MonoBehaviour:
     - The oven should have something.
     - '*screwing*'
     - '*you got lamps*'
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -21220,10 +21074,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!61 &1657546164
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22245,11 +22095,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.16
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -22257,13 +22105,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Just an oven I guess.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1757973256
 GameObject:
   m_ObjectHideFlags: 0
@@ -23465,22 +23315,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 4.5
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences: []
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!82 &1873154270
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24036,11 +23886,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnConfused
   - 
@@ -24051,6 +23899,12 @@ MonoBehaviour:
     sentences:
     - Somthing is inside this one...
     - '*You picked up some lamps*'
+  clicked:
+    m_PersistentCalls:
+      m_Calls: []
+  startOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -24078,10 +23932,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!1 &1917937588
 GameObject:
   m_ObjectHideFlags: 0
@@ -24341,99 +24191,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918396788}
   m_CullTransparentMesh: 1
---- !u!1 &1920417330
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1920417331}
-  - component: {fileID: 1920417332}
-  - component: {fileID: 1920417333}
-  m_Layer: 0
-  m_Name: Right
-  m_TagString: Interactable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1920417331
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920417330}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.98, y: -0.77, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 596782733}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1920417332
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920417330}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.0814323, y: 3.3619998}
-    newSize: {x: 1.0203581, y: 0.84049994}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.91, y: 1.72}
-  m_EdgeRadius: 0
---- !u!114 &1920417333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1920417330}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerDistance: 2.65
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
-  emotionRight:
-  - QuinnNeutral
-  - QuinnNervous
-  emotionLeft:
-  - transparent
-  - transparent
-  dialogue:
-    sentences:
-    - Old collections of something.
-    - I don't know what's in there.
-  endOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
 --- !u!1 &1929787045
 GameObject:
   m_ObjectHideFlags: 0
@@ -24747,11 +24504,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.65
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -24759,13 +24514,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Dusty. That summarizes it.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1961377612
 GameObject:
   m_ObjectHideFlags: 0
@@ -24890,11 +24647,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.36
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -24902,13 +24657,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - This pant looks well!
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1965712846
 GameObject:
   m_ObjectHideFlags: 0
@@ -25055,11 +24812,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.64
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -25067,13 +24822,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Meh. Don't wanna touch anything in here.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &1968136846
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25459,11 +25216,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 2.16
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -25471,13 +25226,15 @@ MonoBehaviour:
   dialogue:
     sentences:
     - Nothing else to be found here.
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2009004151
 GameObject:
   m_ObjectHideFlags: 0
@@ -25897,7 +25654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26706,96 +26463,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043326641}
   m_CullTransparentMesh: 1
---- !u!1 &2048483232
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2048483233}
-  - component: {fileID: 2048483235}
-  - component: {fileID: 2048483234}
-  m_Layer: 0
-  m_Name: Plant
-  m_TagString: Interactable
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2048483233
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048483232}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.608, y: 0.069, z: 0}
-  m_LocalScale: {x: 0.34593, y: 0.34593, z: 0.34593}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 596782733}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2048483234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048483232}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerDistance: 1.95
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
-  emotionRight:
-  - QuinnNervous
-  emotionLeft:
-  - transparent
-  dialogue:
-    sentences:
-    - This plant looks dead. Better not bother with it.
-  endOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  startOfDialogue:
-    m_PersistentCalls:
-      m_Calls: []
-  instance: {fileID: 0}
---- !u!61 &2048483235
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2048483232}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.0814323, y: 3.3619998}
-    newSize: {x: 1.0203581, y: 0.84049994}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.91, y: 1.72}
-  m_EdgeRadius: 0
 --- !u!1 &2060356864
 GameObject:
   m_ObjectHideFlags: 0
@@ -26867,22 +26534,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 4.5
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences: []
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1001 &2060819717
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.13495825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491031, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_Name
+      value: Bruh
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
 --- !u!1 &2066627837
 GameObject:
   m_ObjectHideFlags: 0
@@ -27300,24 +27024,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
   triggerDistance: 1.89
-  transparentSprite: {fileID: 0}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnce: 0
   emotionRight:
   - QuinnNervous
   emotionLeft: []
   dialogue:
     sentences:
     - Same here...
-  endOfDialogue:
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &2081600682
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27516,8 +27240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryManager: {fileID: 2066627838}
   slots: []
-  slotGameobject: {fileID: 853863141541296688, guid: 876396f6ecb79fc4db2852e385d538cb, type: 3}
-  amountOfItems: 0
+  slotPrefab: {fileID: 853863141541296688, guid: 876396f6ecb79fc4db2852e385d538cb, type: 3}
 --- !u!1 &1060985610384183658
 GameObject:
   m_ObjectHideFlags: 0
@@ -28158,6 +27881,63 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!1001 &1451922846431698716
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 665812966}
+    m_Modifications:
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.459
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.213
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.13495825
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451922846942491031, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_Name
+      value: Shelf01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
 --- !u!1001 &4473986239480937889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28490,19 +28270,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d8b2b220b2366747bdf79c23d03c450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activeDialogueTrigger: {fileID: 0}
   dialogueText: {fileID: 1060985610586832121}
   textSoundMain: {fileID: 8300000, guid: 8e51cfde597bac547aef78c9ed210f21, type: 3}
-  textSoundPhone: {fileID: 8300000, guid: 48f141324ba43594aa7c06de93958c86, type: 3}
   textDelay: 0.023
+  emotionList: {fileID: 11400000, guid: a95037a6299dd4f4c8eb836a98299b00, type: 2}
   dialogueUi: {fileID: 1060985611662395662}
-  emotions: {fileID: 11400000, guid: e74bbca91afc74445ac6c7044b4161c0, type: 2}
   spriteLeft: {fileID: 383681643}
   spriteRight: {fileID: 919046534}
+  spriteAnimationSpeed: 0.4
   currentEmotionLeft: 
   currentEmotionRight: 
-  spriteAnimationSpeed: 0.4
   sentenceCount: 0
-  activeDialogueTrigger: {fileID: 0}
 --- !u!114 &8209732979590414071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28526,16 +28305,16 @@ MonoBehaviour:
   foundSprite: {fileID: 1221596445}
   emotionRight_text: {fileID: 1075913218}
   emotionLeft_text: {fileID: 1743202519}
-  slotsSolved_first: 0
-  solution_first: 4
-  slotsSolved_second: 0
-  solution_second: 9
-  solved_first: 0
-  solved_second: 0
-  trashAmount: 0
-  trashGoalAmount: 0
-  trashUi: {fileID: 459468585}
   solvedPuzzleClip: {fileID: 8300000, guid: 5bb303a516f4ea147ae3b7209e077534, type: 3}
+  solvedSlots_1: 0
+  solvedMax_1: 0
+  solvedSlots_2: 0
+  solvedMax_2: 0
+  puzzleSolved_1: 0
+  puzzleSolved_2: 0
+  trashCurrentAmount: 0
+  trashMaxAmount: 0
+  trashUi: {fileID: 459468585}
   startDialogue:
     m_PersistentCalls:
       m_Calls:

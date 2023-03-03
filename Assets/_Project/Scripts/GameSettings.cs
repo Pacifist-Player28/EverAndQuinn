@@ -8,8 +8,7 @@ using TMPro;
 
 public class GameSettings : MonoBehaviour
 {
-    [HideInInspector]
-    public static GameSettings instance;
+    [HideInInspector] public static GameSettings instance;
     //[SerializeField] Texture2D cursorTexture;
     [Header("Debugging")]
     [SerializeField] bool skipFirstDialogue;
@@ -23,25 +22,27 @@ public class GameSettings : MonoBehaviour
     public TMP_Text foundSprite;
     public TMP_Text emotionRight_text;
     public TMP_Text emotionLeft_text;
+
     [Space]
-    [Header("Puzzle Info")]
-    public int slotsSolved_first;
-    public int solution_first;
-    [Space]
-    public int slotsSolved_second;
-    public int solution_second;
-    [Space]
-    //public bool solved_trashPuzzle = false;
-    public bool solved_first = false;
-    public bool solved_second = false;
-    [Space]
-    [SerializeField] int trashAmount;
-    [SerializeField] int trashGoalAmount;
-    [SerializeField] TMP_Text trashUi;
+
+    [Header("Puzzles")]
     [SerializeField] AudioClip solvedPuzzleClip;
-    [HideInInspector]
-    public static GameSettings current;
-    public event Action OnPlayerEnter;
+    [Space]
+    public int solvedSlots_1;
+    public int solvedMax_1;
+    [Space]
+    public int solvedSlots_2;
+    public int solvedMax_2;
+    [Space]
+    public bool puzzleSolved_1 = false;
+    public bool puzzleSolved_2 = false;
+
+    [Space]
+
+    [Header("Trash")]
+    [SerializeField] int trashCurrentAmount;
+    [SerializeField] int trashMaxAmount;
+    [SerializeField] TMP_Text trashUi;
     [Space]
     public UnityEvent startDialogue;
     public UnityEvent puzzle01;
@@ -55,13 +56,12 @@ public class GameSettings : MonoBehaviour
     private bool puzzle2Check = false;
     private bool trashCheck = false;
 
-    bool invokedCheck;
+    bool config;
 
     void Awake()
     {
-        current = this;
+        instance = this;
         DialogueManager dialogueManager = GetComponent<DialogueManager>();
-        DeactivateAllTrash();
         //Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
 
         if (instance == null) instance = this;
@@ -77,105 +77,87 @@ public class GameSettings : MonoBehaviour
             debugWindow.SetActive(false);
 
         trashList = GameObject.FindGameObjectsWithTag("Trash");
-        trashGoalAmount = trashList.Length;
+        trashMaxAmount = trashList.Length;
     }
 
     void Update()
     {
+        _DebugWindow();
+        CompareSolution();
+    }
+
+    private void _DebugWindow()
+    {
         sentenceCount_text.text = "Sentence Count: " + DialogueManager.instance.sentenceCount.ToString();
+
         if (DialogueManager.instance.activeDialogueTrigger == null) activeDialogue_text.text = "Sentence Count: null";
         else activeDialogue_text.text = "Sentence Count: " + DialogueManager.instance.activeDialogueTrigger.name;
+
         //currentEmotion_Left.text = "Active emotion left: " + DialogueManager.instance.activeDialogueTrigger.emotionLeft[DialogueManager.instance.sentenceCount -1];
         //currentEmotion_Right.text = "Active emotion right: " + DialogueManager.instance.activeDialogueTrigger.emotionRight[DialogueManager.instance.sentenceCount -1];
-        if(DialogueManager.instance.currentEmotionLeft != null)
+
+        if (DialogueManager.instance.currentEmotionLeft != null)
             emotionLeft_text.text = "Emotion left: " + DialogueManager.instance.currentEmotionLeft.ToString();
+
         if (DialogueManager.instance.currentEmotionRight != null)
             emotionRight_text.text = "Emotion right: " + DialogueManager.instance.currentEmotionRight.ToString();
-        CompareSolution();
-        if(trashAmount == trashGoalAmount && !trashCheck)
+    }
+
+    public void _AddPuzzleItem01(int difference)
+    {
+        solvedSlots_1 = solvedSlots_1 + difference;
+    }
+
+    public void _AddPuzzleItem02(int difference)
+    {
+        solvedSlots_2 = solvedSlots_2 + difference;
+    }
+
+    private void CompareSolution()
+    {
+        if (!puzzle1Check && solvedSlots_1 == solvedMax_1)
         {
-            //solved_trashPuzzle = true;
-            trashCollected.Invoke();
-            trashCheck = true;
-        }
-    }
-
-    public void PlayerEnter()
-    {
-        if (OnPlayerEnter != null)
-        {
-            OnPlayerEnter();
-        }
-    }
-
-    public void AddSolutionPuzzle01()
-    {
-        slotsSolved_first++;
-    }
-
-    public void SubtractSolutuionPuzzle01()
-    {
-        slotsSolved_first--;
-    }
-
-    public void AddSolutionPuzzle02()
-    {
-        slotsSolved_second++;
-    }
-
-    public void SubtractSolutuionPuzzle02()
-    {
-        slotsSolved_second--;
-    }
-
-    public void CompareSolution()
-    {
-        if(slotsSolved_first == solution_first && !puzzle1Check)
-        {
-            Debug.Log("Solution found for the first puzzle");
-            solved_first = true;
+            puzzleSolved_1 = true;
             puzzle01.Invoke();
             puzzle1Check = true;
         }
 
-        if(slotsSolved_second == solution_second && !puzzle2Check)
+        if (!puzzle2Check && solvedSlots_2 == solvedMax_2)
         {
-            Debug.Log("Solution found for the first puzzle");
-            solved_second = true;
+            puzzleSolved_2 = true;
             puzzle02.Invoke();
             puzzle2Check = true;
         }
 
-        if (slotsSolved_second == solution_second && slotsSolved_first == solution_first && !invokedCheck)
+        if (!config && puzzleSolved_1 && puzzleSolved_2)
         {
             finish.Invoke();
-            invokedCheck = true;
+            config = true;
         }
     }
 
-    public void ActivateMovement()
+    public void _ActivateMovement()
     {
         PlayerMovementKeyboard.instance.enabled = true;
     }
 
-    public void DeactivateMovement()
+    public void _DeactivateMovement()
     {
         PlayerMovementKeyboard.instance.enabled = false;
     }
 
-    public void AddItemToInventory(ItemSetting item)
+    public void _AddItemToInventory(ItemSetting item)
     {
         item.collected = true;
     }
 
-    public void ActivateAllDialoguePhone()
+    public void _ActivateAllDialoguePhone()
     {
         bool config = false;
 
         if (skipPhone && !config)
         {
-            DialogueTrigger[] dialogues = FindObjectsOfType<DialogueTrigger>();
-            foreach (DialogueTrigger dialogue in dialogues)
+            foreach (DialogueTrigger dialogue in FindObjectsOfType<DialogueTrigger>())
             {
                 dialogue.enabled = true;
             }
@@ -184,72 +166,48 @@ public class GameSettings : MonoBehaviour
         else return;
     }
 
-    public void ActivateAllDialogue()
+    public void _AllDialogue(bool state)
     {
-        DialogueTrigger[] dialogues = FindObjectsOfType<DialogueTrigger>();
-        foreach (DialogueTrigger dialogue in dialogues)
+        foreach (DialogueTrigger dialogue in FindObjectsOfType<DialogueTrigger>())
         { 
-            dialogue.enabled = true;
+            dialogue.enabled = state;
         }
     }
 
-    public void AddTrash()
+    public void _UpdateTrashUI()
     {
         Debug.Log("Collected Trash ");
-        trashAmount = trashAmount + 1;
-        trashUi.text = (trashAmount * 100 / trashGoalAmount).ToString() + "% Trash collected";
+        trashCurrentAmount = trashCurrentAmount + 1;
+        trashUi.text = (trashCurrentAmount * 100 / trashMaxAmount).ToString() + "% Trash collected";
         Debug.Log("Updated trashUI");
     }
 
-    public void ActivateAllTrash()
+    public void _AllObjects(bool state)
     {
-        ObjectTriggerScript[] trash = FindObjectsOfType<ObjectTriggerScript>();
-
-        for (int i = 0; i < trash.Length; i++)
+        foreach (ObjectTriggerScript trash in FindObjectsOfType<ObjectTriggerScript>())
         {
-            if (trash[i].CompareTag("Trash"))
+            if (trash.CompareTag("Trash"))
             {
-                trash[i].enabled = true;
+                trash.enabled = state;
             }
         }
     }
 
-    public void DeactivateAllTrash()
+    public void _AllItems(bool state)
     {
-        ObjectTriggerScript[] trash = FindObjectsOfType<ObjectTriggerScript>();
-
-        for (int i = 0; i < trash.Length; i++)
+        foreach (Item item in FindObjectsOfType<Item>())
         {
-            if (trash[i].CompareTag("Trash"))
-            {
-                trash[i].enabled = false;
-            }
+            item.GetComponent<Collider2D>().enabled = state;
+            item.enabled = state;
         }
     }
 
-    public void ActivateALlItems()
+    public void _CollectedAllTrash()
     {
-        Item[] lol = FindObjectsOfType<Item>();
-
-        for (int i = 0; i < lol.Length; i++)
+        if (trashCurrentAmount == trashMaxAmount && !trashCheck)
         {
-            lol[i].GetComponent<Collider2D>().enabled = true;
+            trashCollected.Invoke();
+            trashCheck = true;
         }
-    }
-
-    public void DisableAllItems()
-    {
-        Item[] lol = FindObjectsOfType<Item>();
-
-        for (int i = 0; i < lol.Length; i++)
-        {
-            lol[i].GetComponent<Collider2D>().enabled = false;
-        }
-    }
-
-
-    public void DebugMessage(string message)
-    {
-        Debug.Log(message);
     }
 }

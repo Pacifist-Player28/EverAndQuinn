@@ -1,17 +1,18 @@
+//use this script in order to start events and change the sprite when interacting with the object (for example lamps).
 using UnityEngine;
 using UnityEngine.Events;
 
 public class ObjectTriggerSwitch : MonoBehaviour
 {
     bool canBeClicked = false;
-    bool clickedCheck = false;
+    bool clickedOn = false;
 
     [SerializeField] Sprite spriteOff;
     [SerializeField] Sprite spriteOn;
     [Space]
     [SerializeField] float triggerDistance = 7.5f;
-    [SerializeField] UnityEvent clicked;
-    [SerializeField] UnityEvent clickStop;
+    [SerializeField] UnityEvent clickOnce;
+    [SerializeField] UnityEvent clickTwice;
 
     GameObject player;
 
@@ -33,30 +34,32 @@ public class ObjectTriggerSwitch : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0) && canBeClicked && !clickedCheck)
+        if (Input.GetMouseButtonDown(0) && canBeClicked)
         {
-            clicked.Invoke();
-            clickedCheck = true;
-            //Debug.Log("clicked ON");
-            if (spriteOn == null) return;
-            else GetComponent<SpriteRenderer>().sprite = spriteOn;
-        }
-        else if (Input.GetMouseButtonDown(0) && canBeClicked && clickedCheck)
-        {
-            clickStop.Invoke();
-            clickedCheck = false;
-            //Debug.Log("clicked OFF");
-            if (spriteOn == null) return;
-            else GetComponent<SpriteRenderer>().sprite = spriteOff;
+            clickedOn = !clickedOn;
+            if (clickedOn)
+            {
+                clickOnce.Invoke();
+                if (spriteOn != null)
+                {
+                    GetComponent<SpriteRenderer>().sprite = spriteOn;
+                }
+            }
+            else
+            {
+                clickTwice.Invoke();
+                if (spriteOff != null)
+                {
+                    GetComponent<SpriteRenderer>().sprite = spriteOff;
+                }
+            }
         }
     }
 
+
     public void OnDistanceShorter(float distance)
     {
-        if (Vector2.Distance(GetComponent<Transform>().position, player.transform.position) < distance)
-        {
-            canBeClicked = true;
-        }
-        else canBeClicked = false;
+        canBeClicked = Vector2.Distance(transform.position, player.transform.position) < distance;
     }
+
 }

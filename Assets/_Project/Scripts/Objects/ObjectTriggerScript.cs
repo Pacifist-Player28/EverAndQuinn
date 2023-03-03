@@ -1,3 +1,4 @@
+//use this script to start events when interacting with the object by clicking on it once
 using Inventory;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,7 +9,6 @@ public class ObjectTriggerScript : MonoBehaviour
     GameObject player;
     [SerializeField] float triggerDistance = 7.5f;
     [SerializeField] UnityEvent clicked;
-    [SerializeField] UnityEvent clickStop;
 
     void Start()
     {
@@ -24,11 +24,6 @@ public class ObjectTriggerScript : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, triggerDistance);
-    }
-
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        GameSettings.current.PlayerEnter();
     }
 
     void OnMouseOver()

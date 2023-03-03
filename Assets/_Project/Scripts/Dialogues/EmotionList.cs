@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace DialogueSystem
 {
     [CreateAssetMenu(menuName = "Dialogues/Dialogue emotions", fileName = "DialogueEmotionsList")]
-    public class Emotions : ScriptableObject
+    public class EmotionList : ScriptableObject
     {
         [Header("Transparent")]
         public string string_transparent = "transparent";

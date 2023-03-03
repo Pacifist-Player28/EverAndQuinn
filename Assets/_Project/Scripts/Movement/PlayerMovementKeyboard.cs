@@ -17,7 +17,7 @@ public class PlayerMovementKeyboard : MonoBehaviour
     [SerializeField] KeyCode Escape;
 
     public float speed;
-    //3.25
+    //Default = 3.25
 
     [Header("Open Inventory")]
     public KeyCode open;

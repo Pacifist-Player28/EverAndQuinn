@@ -1,4 +1,4 @@
-//Use this script in order to change the sprite inside the sprite list at the START of the scene.
+//Use this script in order to change the sprite inside a sprite list at the START of the scene.
 namespace trash 
 {
     using UnityEngine;

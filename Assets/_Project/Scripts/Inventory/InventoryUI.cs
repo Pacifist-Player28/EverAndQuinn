@@ -7,13 +7,16 @@ namespace Inventory
 {
     public class InventoryUI : MonoBehaviour
     {
-        public static InventoryUI instance;
+        [HideInInspector] public static InventoryUI instance;
+        
         [Header("Inventory based variables")]
         [SerializeField] InventoryManager inventoryManager;
         public GameObject[] slots;
-        [SerializeField] GameObject slotGameobject;
-        [SerializeField] int amountOfItems;
-        int previousAmountOfItems = 0;
+        [SerializeField] GameObject slotPrefab;
+        
+        int collectedItems;
+        int itemCounter = 0;
+        
         bool puzzleOpen;
 
         Transform parent;
@@ -23,22 +26,23 @@ namespace Inventory
         {
             if (instance == null) instance = this;
             else Destroy(this);
+
             parent = transform.GetChild(0);
             gridSystem = parent.transform.GetChild(0);
-            amountOfItems = inventoryManager.GetItems().Count();
+            collectedItems = inventoryManager.GetItems().Count();
 
             puzzleOpen = false;
         }
 
         public void Update()
         {
-            amountOfItems = inventoryManager.GetItems().Count();
-            if (previousAmountOfItems != amountOfItems)
+            collectedItems = inventoryManager.GetItems().Count();
+            if (itemCounter != collectedItems)
             {
-                previousAmountOfItems++;
-                Array.Resize(ref slots, amountOfItems);
-                GameObject newSlotObject = Instantiate(slotGameobject, gridSystem);
-                slots[amountOfItems - 1] = newSlotObject;
+                itemCounter++;
+                Array.Resize(ref slots, collectedItems);
+                GameObject newSlotObject = Instantiate(slotPrefab, gridSystem);
+                slots[collectedItems - 1] = newSlotObject;
                 SlotAndItemImage();
             }
 
@@ -49,7 +53,7 @@ namespace Inventory
 
         void SlotAndItemImage()
         {
-            for (int i = 0; i < previousAmountOfItems; i++)
+            for (int i = 0; i < itemCounter; i++)
             {
                 var itemSetting = inventoryManager.items[i];
 
@@ -62,7 +66,6 @@ namespace Inventory
                     continue;
                 }
 
-                //Debug.Log("Now planting image");
                 var image = slot.transform.GetChild(0).GetComponent<Image>();
                 image.sprite = itemSetting.inInventory;
 
@@ -70,13 +73,12 @@ namespace Inventory
 
                 var dragableItem = slot.transform.GetChild(0).GetComponent<DragableItem>();
                 dragableItem.solution = itemSetting.solution;
-                //Debug.Log("planted image");
             }
         }
 
         public void DeactivateInventory()
         {
-            for (int i = 0; i < previousAmountOfItems; i++)
+            for (int i = 0; i < itemCounter; i++)
             {
                 if (slots[i].transform.childCount > 0)
                 {
@@ -100,7 +102,7 @@ namespace Inventory
 
         public void ActivateInventory()
         {
-            for (int i = 0; i < previousAmountOfItems; i++)
+            for (int i = 0; i < itemCounter; i++)
             {
                 if (slots[i].transform.childCount > 0)
                 {
@@ -132,7 +134,7 @@ namespace Inventory
             }
         }
 
-        public void IsPuzzleOpen(bool config)
+        public void PuzzleOpen(bool config)
         {
             if (config) puzzleOpen = true;
             else puzzleOpen = false;

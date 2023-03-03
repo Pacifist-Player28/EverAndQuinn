@@ -8,25 +8,26 @@ namespace DialogueSystem
 { 
     public class DialogueManager : MonoBehaviour
     {
-        [Header("Dialogues")]
+        [HideInInspector] public static DialogueManager instance;
+        [HideInInspector] public DialogueTrigger activeDialogueTrigger;
+        PlayerMovementKeyboard player;
+
+        [Header("Dialogue Settings")]
         [SerializeField] TMP_Text dialogueText;
         [SerializeField] AudioClip textSoundMain;
-        [SerializeField] AudioClip textSoundPhone;
         [SerializeField] float textDelay = 0.01f;
-        [SerializeField] GameObject dialogueUi;
-        [SerializeField] Emotions emotions;
-        [SerializeField] GameObject spriteLeft, spriteRight;
-        public string currentEmotionLeft, currentEmotionRight;
         [Space]
+        [SerializeField] EmotionList emotionList;
+        [Space]
+        [SerializeField] GameObject dialogueUi;
+        [SerializeField] GameObject spriteLeft, spriteRight;
         [SerializeField] float spriteAnimationSpeed;
+        public string currentEmotionLeft, currentEmotionRight;
+
         GameObject[] interactables;
         Queue<string> sentences;
         [HideInInspector] public int sentenceCount = 0;
         AudioSource audioSource;
-
-        [HideInInspector] public static DialogueManager instance;
-        [HideInInspector] public DialogueTrigger activeDialogueTrigger;
-        PlayerMovementKeyboard playerMovement;
 
         private void Awake()
         {
@@ -39,8 +40,7 @@ namespace DialogueSystem
             audioSource = GetComponent<AudioSource>();
             sentenceCount = 0;
             sentences = new Queue<string>();
-            playerMovement = PlayerMovementKeyboard.instance;
-            interactables = GameObject.FindGameObjectsWithTag("Interactable");
+            player = PlayerMovementKeyboard.instance;
         }
 
         private void Update()
@@ -49,39 +49,36 @@ namespace DialogueSystem
             //Debug.Log("Sentence count: " + sentenceCount);
             //Debug.Log("SpriteCount: " + spriteCount);
             if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
-
-
         }
 
         public void StartDialogue(Dialogue dialogue)
         {
-            playerMovement.animator.Play(playerMovement.idleFront);
+            player.animator.Play(player.idleFront);
             sentences.Clear();
             dialogueUi.SetActive(true);
-            playerMovement.enabled = false;
             activeDialogueTrigger.startOfDialogue.Invoke();
+            player.enabled = false;
 
-            for (int i = 0; i < interactables.Length; i++)
-            {
-                //Debug.Log("name: " + interactables[i].name);
-                interactables[i].GetComponent<Collider2D>().enabled = false;
-            }
+            InteractableColliderState(false);
 
             foreach (string sentence in dialogue.sentences)
             {
                 sentences.Enqueue(sentence);
             }
+            
             DisplayNextSentence();
         }
 
         public void DisplayNextSentence()
         {
             StopAllCoroutines();
+            
             if (sentences.Count == 0)
             {
                 EndDialogue();
                 return;
             }
+
             sentenceCount += 1;
             StartCoroutine(TextAnimation(sentences.Dequeue().ToString()));
             ChangeSpriteRight();
@@ -93,14 +90,13 @@ namespace DialogueSystem
             StopAllCoroutines();
             sentenceCount -= sentenceCount;
             activeDialogueTrigger.endOfDialogue.Invoke();
-            for (int i = 0; i < interactables.Length; i++)
-            {
-                interactables[i].GetComponent<Collider2D>().enabled = true;
-            }
+            activeDialogueTrigger.DestroyTriggerDialogue();
+
+            InteractableColliderState(true);
 
             //if (activeDialogueTrigger.GetComponent<Collider2D>() == null) return;
             dialogueUi.SetActive(false);
-            playerMovement.enabled = true;
+            player.enabled = true;
             //Debug.Log("ENDOFDIALOGUE");
         }
 
@@ -125,20 +121,42 @@ namespace DialogueSystem
 
         public void ChangeSpriteRight()
         {
+            SetCurrentEmotions();
+
+            StartCoroutine(SwitchAndReplaceSprites(currentEmotionRight, spriteRight.GetComponent<Image>()));
+        }
+
+        public void ChangeSpriteLeft()
+        {
+            SetCurrentEmotions();
+
+            StartCoroutine(SwitchAndReplaceSprites(currentEmotionLeft, spriteLeft.GetComponent<Image>()));
+        }
+
+        private void SetCurrentEmotions()
+        {
             if (sentenceCount > 0)
             {
                 currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount - 1];
                 currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount - 1];
             }
+        }
 
-            if (currentEmotionRight == emotions.string_transparent || currentEmotionRight == null)
+        private IEnumerator SwitchAndReplaceSprites(string currentEmotion, Image sprite)
+        {
+            if (currentEmotion == emotionList.string_transparent || currentEmotion == null)
             {
-                var transparentSprite = emotions.transparentSprite;
-                StartCoroutine(SwitchAndReplaceRightSprites(transparentSprite, transparentSprite));
+                sprite.sprite = emotionList.transparentSprite;
             }
-            else if (emotions.spriteDictionary.TryGetValue(currentEmotionRight, out var spriteArray))
+            else if (emotionList.spriteDictionary.TryGetValue(currentEmotion, out var spriteArray))
             {
-                StartCoroutine(SwitchAndReplaceRightSprites(spriteArray[0], spriteArray[1]));
+                while (true)
+                {
+                    sprite.sprite = spriteArray[0];
+                    yield return new WaitForSeconds(spriteAnimationSpeed);
+                    sprite.sprite = spriteArray[1];
+                    yield return new WaitForSeconds(spriteAnimationSpeed);
+                }
             }
             else
             {
@@ -148,61 +166,13 @@ namespace DialogueSystem
             }
         }
 
-        public void ChangeSpriteLeft()
+        private void InteractableColliderState(bool state)
         {
-            if (sentenceCount > 0)
+            foreach (GameObject interactable in GameObject.FindGameObjectsWithTag("Interactable"))
             {
-                currentEmotionRight = activeDialogueTrigger.emotionRight[sentenceCount - 1];
-                currentEmotionLeft = activeDialogueTrigger.emotionLeft[sentenceCount - 1];
-            }
-
-            if (currentEmotionLeft == emotions.string_transparent || currentEmotionLeft == null)
-            {
-                Debug.Log("Bruh1");
-                var transparentSprite = emotions.transparentSprite;
-                Debug.Log("Bruh2");
-                StartCoroutine(SwitchAndReplaceLeftSprites(transparentSprite, transparentSprite));
-                Debug.Log("Bruh3");
-            }
-            else if (emotions.spriteDictionary.TryGetValue(currentEmotionLeft, out var spriteArray))
-            {
-                Debug.Log("Bruh4");
-                StartCoroutine(SwitchAndReplaceLeftSprites(spriteArray[0], spriteArray[1]));
-                Debug.Log("Bruh5");
-            }
-            else
-            {
-                var text = GameSettings.instance.foundSprite;
-                text.text = "NO SPRITE FOUND 2";
-                text.color = Color.red;
+                interactable.GetComponent<Collider2D>().enabled = state;
             }
         }
 
-        IEnumerator SwitchAndReplaceRightSprites(Sprite sprite1, Sprite sprite2)
-        {
-            while (true)
-            {
-                spriteRight.GetComponent<Image>().sprite = sprite1;
-                Debug.Log(sprite1);
-                yield return new WaitForSeconds(spriteAnimationSpeed);
-                spriteRight.GetComponent<Image>().sprite = sprite2;
-                Debug.Log(sprite2);
-                yield return new WaitForSeconds(spriteAnimationSpeed);
-            }
-        }
-
-
-        public IEnumerator SwitchAndReplaceLeftSprites(Sprite sprite1, Sprite sprite2)
-        {
-            while (true)
-            {
-                spriteLeft.GetComponent<Image>().sprite = sprite1;
-                Debug.Log(sprite1);
-                yield return new WaitForSeconds(spriteAnimationSpeed);
-                spriteLeft.GetComponent<Image>().sprite = sprite2;
-                Debug.Log(sprite2);
-                yield return new WaitForSeconds(spriteAnimationSpeed);
-            }
-        }
     }
 }

@@ -4,13 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - NPC-Range
   - Object
-  - Puzzle1
-  - Puzzle2
-  - Puzzle3
-  - Puzzle4
-  - Puzzle5
   - DialogueSprites
   - Interactable
   - Trash

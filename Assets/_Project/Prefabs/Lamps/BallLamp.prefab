@@ -305,7 +305,7 @@ MonoBehaviour:
   spriteOff: {fileID: 21300000, guid: 8d963f6d45d7d9543a2165cc2ddc88b4, type: 3}
   spriteOn: {fileID: 21300000, guid: e1ded7d78f094e3439fc8695a0bf94ff, type: 3}
   triggerDistance: 2.45
-  clicked:
+  clickOnce:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8907984240262952533}
@@ -332,7 +332,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  clickStop:
+  clickTwice:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8907984240262952533}

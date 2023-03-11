@@ -72,7 +72,7 @@ namespace DialogueSystem
         public void _DestroyTriggerDialogue()
         {
             if (interactOnlyOnce)
-                Destroy(this);
+                Destroy(gameObject);
             else return;
         }
 

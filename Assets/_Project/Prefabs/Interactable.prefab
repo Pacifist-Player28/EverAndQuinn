@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1451922846942491031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.459, y: -1.213, z: -0.13495825}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -159,8 +159,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -247,8 +248,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -335,8 +337,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:

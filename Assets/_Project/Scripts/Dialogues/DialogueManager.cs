@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 using TMPro;
-using static DialogueSystem.DialogueTrigger;
 
 namespace DialogueSystem 
 { 
@@ -44,12 +43,16 @@ namespace DialogueSystem
             player = PlayerMovementKeyboard.instance;
         }
 
-        private void Update()
+        private void LateUpdate()
         {
             //Debug.Log("emotion for sentence right: " + currentEmotionRight + " emotion for sentence left: " + currentEmotionLeft);
             //Debug.Log("Sentence count: " + sentenceCount);
             //Debug.Log("SpriteCount: " + spriteCount);
-            if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true) DisplayNextSentence();
+
+            if (Input.anyKeyDown && dialogueUi.activeSelf == true)
+            {
+                DisplayNextSentence();
+            }
         }
 
         public void StartDialogue(Dialogue dialogue)

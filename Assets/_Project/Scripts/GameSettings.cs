@@ -1,9 +1,7 @@
 using UnityEngine;
-using System;
 using Inventory;
 using UnityEngine.Events;
 using DialogueSystem;
-using UnityEngine.UI;
 using TMPro;
 
 public class GameSettings : MonoBehaviour

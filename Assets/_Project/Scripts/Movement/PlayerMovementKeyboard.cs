@@ -121,5 +121,4 @@ public class PlayerMovementKeyboard : MonoBehaviour
             else if (vectorAnimation.y > 0) animator.Play(walkUp);
         }
     }
-
 }

@@ -10,8 +10,17 @@ namespace DialogueSystem
     {
         [HideInInspector] public DialogueTrigger instance;
 
+        public enum dialogueTagOptions
+        {
+            Untagged,
+            PreFridge,
+            Fridge,
+            Collected
+        }
+        public dialogueTagOptions dialogueTag;
+        [Space]
         [SerializeField] float triggerDistance = 4.5f;
-        [SerializeField] bool interactOnce = false;
+        [SerializeField] bool interactOnlyOnce = false;
         [Space]
         public string[] emotionRight;
         public string[] emotionLeft;
@@ -60,9 +69,9 @@ namespace DialogueSystem
             }
         }
 
-        public void DestroyTriggerDialogue()
+        public void _DestroyTriggerDialogue()
         {
-            if (interactOnce)
+            if (interactOnlyOnce)
                 Destroy(this);
             else return;
         }
@@ -72,16 +81,16 @@ namespace DialogueSystem
             DialogueManager.instance.activeDialogueTrigger = this;
         }
 
-        public void StartDialogeOverTime(float time)
+        public void _StartDialogeOverTime(float time)
         {
             if (!dialogueStart)
             {
-                StartCoroutine(StartDialogueOverTime(time));
+                StartCoroutine(StartDialogueCouroutine(time));
                 dialogueStart = true;
             }
         }
 
-        IEnumerator StartDialogueOverTime(float time)
+        IEnumerator StartDialogueCouroutine(float time)
         {
             TriggerActive();
             yield return new WaitForSeconds(time);

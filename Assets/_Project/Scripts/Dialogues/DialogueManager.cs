@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 using TMPro;
+using static DialogueSystem.DialogueTrigger;
 
 namespace DialogueSystem 
 { 
@@ -59,7 +60,7 @@ namespace DialogueSystem
             activeDialogueTrigger.startOfDialogue.Invoke();
             player.enabled = false;
 
-            InteractableColliderState(false);
+            ChangeInteractableColliderState(false);
 
             foreach (string sentence in dialogue.sentences)
             {
@@ -90,9 +91,9 @@ namespace DialogueSystem
             StopAllCoroutines();
             sentenceCount -= sentenceCount;
             activeDialogueTrigger.endOfDialogue.Invoke();
-            activeDialogueTrigger.DestroyTriggerDialogue();
+            activeDialogueTrigger._DestroyTriggerDialogue();
 
-            InteractableColliderState(true);
+            ChangeInteractableColliderState(true);
 
             //if (activeDialogueTrigger.GetComponent<Collider2D>() == null) return;
             dialogueUi.SetActive(false);
@@ -166,7 +167,7 @@ namespace DialogueSystem
             }
         }
 
-        private void InteractableColliderState(bool state)
+        private void ChangeInteractableColliderState(bool state)
         {
             foreach (GameObject interactable in GameObject.FindGameObjectsWithTag("Interactable"))
             {
@@ -174,5 +175,30 @@ namespace DialogueSystem
             }
         }
 
+        public void _DeactivateDialogue(string optionTodeactivate)
+        {
+            var allTriggers = Resources.FindObjectsOfTypeAll<DialogueTrigger>();
+
+            foreach (var trigger in allTriggers)
+            {
+                if (trigger.dialogueTag.ToString() == optionTodeactivate)
+                {
+                    trigger.gameObject.SetActive(false);
+                }
+            }
+        }
+
+        public void _ActivateDialogue(string optionTodeactivate)
+        {
+            var allTriggers = Resources.FindObjectsOfTypeAll<DialogueTrigger>();
+
+            foreach (var trigger in allTriggers)
+            {
+                if (trigger.dialogueTag.ToString() == optionTodeactivate)
+                {
+                    trigger.gameObject.SetActive(true);
+                }
+            }
+        }
     }
 }

@@ -58,12 +58,15 @@ public class GameSettings : MonoBehaviour
 
     void Awake()
     {
-        instance = this;
         DialogueManager dialogueManager = GetComponent<DialogueManager>();
         //Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
 
         if (instance == null) instance = this;
-        else Destroy(this);
+        else
+        {
+            Destroy(this);
+        }
+
     }
 
     private void Start()
@@ -80,12 +83,14 @@ public class GameSettings : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("Update!");
         _DebugWindow();
         CompareSolution();
     }
 
     private void _DebugWindow()
     {
+        Debug.Log("hikefiwuegfuijkbgkjsbajkgbsgjkasdfg");
         sentenceCount_text.text = "Sentence Count: " + DialogueManager.instance.sentenceCount.ToString();
 
         if (DialogueManager.instance.activeDialogueTrigger == null) activeDialogue_text.text = "Sentence Count: null";

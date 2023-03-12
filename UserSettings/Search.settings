@@ -7,9 +7,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.DD5CDD96" = "MenuManager"
+	"last_search.DD5CDD96" = ""
 	"OpenInspectorPreview.DD5CDD96" = "0"
-	"currentGroup.DD5CDD96" = "asset"
+	"currentGroup.DD5CDD96" = "scene"
 }
 providers = {
 	adb = {
@@ -56,6 +56,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"G"
 	"Me"
 	"me"
 	"t:D"
@@ -65,9 +66,8 @@ recentSearches = [
 searchItemFavorites = [
 ]
 savedSearchesSortOrder = 0
-showSavedSearchPanel = false
-expandedQueries = [
-]
+showSavedSearchPanel = true
+expandedQueries = [-1765347274]
 queryBuilder = false
 ignoredProperties = "id;name;classname;imagecontentshash"
 helperWidgetCurrentArea = "all"

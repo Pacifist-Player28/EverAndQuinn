@@ -248,8 +248,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.27
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - transparent
   - QuinnNeutral
@@ -350,7 +351,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle02
         m_Mode: 1
@@ -365,7 +366,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: SubtractSolutuionPuzzle02
         m_Mode: 1
@@ -938,8 +939,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 4.5
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -1257,7 +1259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832759, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2550269764230832759, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1627,7 +1629,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: _DeactivateMovement
         m_Mode: 1
@@ -1664,8 +1666,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.64
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -1768,7 +1771,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: DeactivateMovement
         m_Mode: 1
@@ -1825,7 +1828,7 @@ Transform:
   - {fileID: 1067722877}
   - {fileID: 1170366241}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &170804106
 GameObject:
@@ -2723,8 +2726,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 4.5
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -2785,8 +2789,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 0
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -3031,7 +3036,7 @@ PrefabInstance:
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 8209732979590414071}
+      objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -3301,7 +3306,7 @@ PrefabInstance:
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 8209732979590414071}
+      objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -3554,7 +3559,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle02
         m_Mode: 1
@@ -3569,7 +3574,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: SubtractSolutuionPuzzle02
         m_Mode: 1
@@ -3737,8 +3742,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNervous
   - QuinnNeutral
@@ -3975,7 +3981,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: DeactivateMovement
         m_Mode: 1
@@ -3999,7 +4005,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: DeactivateMovement
         m_Mode: 1
@@ -4101,7 +4107,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: _DeactivateMovement
         m_Mode: 1
@@ -4233,7 +4239,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414070}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DialogueManager, CustomScripts
         m_MethodName: DisplayNextSentence
         m_Mode: 1
@@ -4343,8 +4349,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   - QuinnAngry
@@ -5068,7 +5075,7 @@ PrefabInstance:
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 8209732979590414071}
+      objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -5169,7 +5176,7 @@ PrefabInstance:
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 8209732979590414071}
+      objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -5435,8 +5442,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   - QuinnNeutral
@@ -5846,8 +5854,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 0
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -6001,8 +6010,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.5
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -6034,7 +6044,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1445, y: 0.34424412}
+    oldSize: {x: 2.289, y: 0.68848825}
     newSize: {x: 1.1445, y: 0.34424412}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6090,7 +6100,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &411870281
 PrefabInstance:
@@ -6110,7 +6120,7 @@ PrefabInstance:
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 8209732979590414071}
+      objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -6279,7 +6289,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle01
         m_Mode: 1
@@ -6294,7 +6304,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: SubtractSolutuionPuzzle01
         m_Mode: 1
@@ -6555,8 +6565,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.72
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnSurprised
   emotionLeft: []
@@ -6901,8 +6912,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.64
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -7096,8 +7108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.27
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - transparent
   - QuinnNeutral
@@ -7163,8 +7176,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnConfused
   - 
@@ -7182,7 +7196,7 @@ MonoBehaviour:
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: AddItemToInventory
         m_Mode: 2
@@ -7194,7 +7208,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: AddItemToInventory
         m_Mode: 2
@@ -7370,8 +7384,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnConfused
   emotionLeft: []
@@ -7494,7 +7509,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle02
         m_Mode: 1
@@ -7509,7 +7524,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: SubtractSolutuionPuzzle02
         m_Mode: 1
@@ -7912,8 +7927,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.82
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnConfused
   - QuinnConfused
@@ -7993,7 +8009,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: ActivateAllDialogue
         m_Mode: 1
@@ -8023,7 +8039,7 @@ MonoBehaviour:
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: ActivateAllDialogue
         m_Mode: 1
@@ -8035,7 +8051,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: ActivateAllTrash
         m_Mode: 1
@@ -8071,7 +8087,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: ActivateALlItems
         m_Mode: 1
@@ -8391,8 +8407,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnSurprised
   emotionLeft: []
@@ -9052,7 +9069,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: DeactivateMovement
         m_Mode: 1
@@ -9077,8 +9094,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft: []
@@ -9345,8 +9363,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 4.5
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -9687,8 +9706,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.93
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnConfused
   emotionLeft:
@@ -10191,7 +10211,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!167 &668892104
 AudioReverbZone:
@@ -10252,7 +10272,7 @@ BoxCollider2D:
   m_Offset: {x: 0.45, y: 0}
   m_SpriteTilingProperty:
     border: {x: 1.8553847, y: 0.3600586, z: 0.9123077, w: 0.5477814}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5711307, y: 0.5408798}
     oldSize: {x: 7.692308, y: 4.616136}
     newSize: {x: 7.692308, y: 4.616136}
     adaptiveTilingThreshold: 0.5
@@ -10342,8 +10362,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 3.71
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - 
   emotionLeft:
@@ -11153,8 +11174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 4.5
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -11285,7 +11307,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &726974392
 MonoBehaviour:
@@ -11446,7 +11468,7 @@ Transform:
   - {fileID: 295572366}
   - {fileID: 170804107}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &740188714
 GameObject:
@@ -11715,8 +11737,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.5
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -11762,7 +11785,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.1445, y: 0.34424412}
+    oldSize: {x: 2.289, y: 0.68848825}
     newSize: {x: 1.1445, y: 0.34424412}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -11923,8 +11946,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -12011,8 +12035,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnConfused
   emotionLeft: []
@@ -12329,7 +12354,7 @@ PrefabInstance:
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 8209732979590414071}
+      objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -12705,7 +12730,7 @@ PrefabInstance:
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 8209732979590414071}
+      objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -12811,7 +12836,7 @@ PrefabInstance:
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 8209732979590414071}
+      objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -12945,8 +12970,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.13
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -12961,7 +12987,7 @@ MonoBehaviour:
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: AddItemToInventory
         m_Mode: 2
@@ -13434,7 +13460,7 @@ Transform:
   - {fileID: 1198352634}
   - {fileID: 720671872}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &919046534
 GameObject:
@@ -13634,8 +13660,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 0
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -13891,8 +13918,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -14143,8 +14171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.27
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - transparent
   - QuinnSurprised
@@ -14164,7 +14193,7 @@ MonoBehaviour:
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: AddItemToInventory
         m_Mode: 2
@@ -14176,7 +14205,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: AddItemToInventory
         m_Mode: 2
@@ -14269,7 +14298,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle02
         m_Mode: 1
@@ -14284,7 +14313,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: SubtractSolutuionPuzzle02
         m_Mode: 1
@@ -14478,8 +14507,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 4.5
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -14671,8 +14701,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.64
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   - QuinnConfused
@@ -14738,8 +14769,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 0
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNervous
   - QuinnNervous
@@ -15046,8 +15078,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNervous
   emotionLeft:
@@ -15165,11 +15198,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091515770}
   m_CullTransparentMesh: 1
---- !u!81 &1091664319 stripped
-AudioListener:
-  m_CorrespondingSourceObject: {fileID: 24108376, guid: 5420f07f1ea049c4dbb243c6676eebc6, type: 3}
-  m_PrefabInstance: {fileID: 130028574}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1146322447
 GameObject:
   m_ObjectHideFlags: 0
@@ -15318,8 +15346,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 0
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -15532,8 +15561,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 0
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnSurprised
   - QuinnConfused
@@ -16236,7 +16266,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle01
         m_Mode: 1
@@ -16251,7 +16281,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: SubtractSolutuionPuzzle01
         m_Mode: 1
@@ -16502,8 +16532,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft: []
@@ -16964,7 +16995,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle02
         m_Mode: 1
@@ -16979,7 +17010,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: SubtractSolutuionPuzzle02
         m_Mode: 1
@@ -17516,8 +17547,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft: []
@@ -17655,9 +17687,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.01, y: 0.15}
   m_SpriteTilingProperty:
-    border: {x: 0.4016, y: 0.4504, z: 0.37199998, w: 0.2776}
+    border: {x: 2.0080001, y: 2.252, z: 1.86, w: 1.3880001}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 5.0000005, y: 5.0000005}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -17679,8 +17711,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.7
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -18541,8 +18574,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.27
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - transparent
   - QuinnNeutral
@@ -18648,7 +18682,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle02
         m_Mode: 1
@@ -18663,7 +18697,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: SubtractSolutuionPuzzle02
         m_Mode: 1
@@ -19532,8 +19566,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.72
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -19780,8 +19815,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.7
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   - QuinnNeutral
@@ -20428,8 +20464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.27
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - transparent
   - QuinnSurprised
@@ -20605,7 +20642,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: ActivateMovement
         m_Mode: 1
@@ -20829,8 +20866,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 3.1
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - 
   emotionLeft:
@@ -20945,8 +20983,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.16
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   - 
@@ -20993,7 +21032,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: AddItemToInventory
         m_Mode: 2
@@ -21005,7 +21044,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: AddItemToInventory
         m_Mode: 2
@@ -21272,7 +21311,7 @@ PrefabInstance:
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 8209732979590414071}
+      objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -22039,8 +22078,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.16
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -22138,7 +22178,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle01
         m_Mode: 1
@@ -22153,7 +22193,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: SubtractSolutuionPuzzle01
         m_Mode: 1
@@ -22356,7 +22396,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle02
         m_Mode: 1
@@ -22371,7 +22411,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: SubtractSolutuionPuzzle02
         m_Mode: 1
@@ -22860,7 +22900,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle01
         m_Mode: 1
@@ -22875,7 +22915,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: SubtractSolutuionPuzzle01
         m_Mode: 1
@@ -23259,8 +23299,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 4.5
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -23274,102 +23315,6 @@ MonoBehaviour:
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
---- !u!82 &1873154270
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8209732979590414066}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 10
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1882183349
 GameObject:
   m_ObjectHideFlags: 0
@@ -23599,7 +23544,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle02
         m_Mode: 1
@@ -23614,7 +23559,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: SubtractSolutuionPuzzle02
         m_Mode: 1
@@ -23830,8 +23775,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnConfused
   - 
@@ -23851,7 +23797,7 @@ MonoBehaviour:
   endOfDialogue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: AddItemToInventory
         m_Mode: 2
@@ -23863,7 +23809,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: AddItemToInventory
         m_Mode: 2
@@ -24448,8 +24394,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.65
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -24591,8 +24538,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.36
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -24756,8 +24704,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.64
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -25160,8 +25109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 2.16
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNeutral
   emotionLeft:
@@ -25464,7 +25414,7 @@ PrefabInstance:
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 8209732979590414071}
+      objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -25570,7 +25520,7 @@ PrefabInstance:
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 8209732979590414071}
+      objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
@@ -26323,7 +26273,7 @@ MonoBehaviour:
   AddToSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, CustomScripts
         m_MethodName: AddSolutionPuzzle02
         m_Mode: 1
@@ -26338,7 +26288,7 @@ MonoBehaviour:
   SubtractFromSolution:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8209732979590414071}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
         m_MethodName: SubtractSolutuionPuzzle02
         m_Mode: 1
@@ -26478,8 +26428,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 4.5
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
@@ -26554,7 +26505,7 @@ Transform:
   - {fileID: 741204510}
   - {fileID: 659338483}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2067240068
 GameObject:
@@ -26911,8 +26862,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 1.89
-  interactOnce: 0
+  interactOnlyOnce: 0
   emotionRight:
   - QuinnNervous
   emotionLeft: []
@@ -27692,7 +27644,7 @@ RectTransform:
   - {fileID: 1971058405}
   - {fileID: 100791601}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -28109,452 +28061,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7214056296853611894, guid: d21d0eac26b180e469dbbf0c64019861, type: 3}
   m_PrefabInstance: {fileID: 7675323218656481481}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8209732979590414066
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8209732979590414068}
-  - component: {fileID: 1873154270}
-  - component: {fileID: 8209732979590414071}
-  - component: {fileID: 8209732979590414070}
-  - component: {fileID: 8209732979590414072}
-  m_Layer: 0
-  m_Name: --GameManager--
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8209732979590414068
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8209732979590414066}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8209732979590414070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8209732979590414066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d8b2b220b2366747bdf79c23d03c450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeDialogueTrigger: {fileID: 0}
-  dialogueText: {fileID: 1060985610586832121}
-  textSoundMain: {fileID: 8300000, guid: 8e51cfde597bac547aef78c9ed210f21, type: 3}
-  textDelay: 0.023
-  emotionList: {fileID: 11400000, guid: a95037a6299dd4f4c8eb836a98299b00, type: 2}
-  dialogueUi: {fileID: 1060985611662395662}
-  spriteLeft: {fileID: 383681643}
-  spriteRight: {fileID: 919046534}
-  spriteAnimationSpeed: 0.4
-  currentEmotionLeft: 
-  currentEmotionRight: 
-  sentenceCount: 0
---- !u!114 &8209732979590414071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8209732979590414066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ddca664280490b4eb747c827611407a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skipFirstDialogue: 0
-  skipPhone: 0
-  activateDebugWindow: 0
-  debugWindow: {fileID: 100791600}
-  sentenceCount_text: {fileID: 781044268}
-  activeDialogue_text: {fileID: 686296374}
-  currentEmotion_Left: {fileID: 1672375460}
-  currentEmotion_Right: {fileID: 842602760}
-  foundSprite: {fileID: 1221596445}
-  emotionRight_text: {fileID: 1075913218}
-  emotionLeft_text: {fileID: 1743202519}
-  solvedPuzzleClip: {fileID: 8300000, guid: 5bb303a516f4ea147ae3b7209e077534, type: 3}
-  solvedSlots_1: 0
-  solvedMax_1: 0
-  solvedSlots_2: 0
-  solvedMax_2: 0
-  puzzleSolved_1: 0
-  puzzleSolved_2: 0
-  trashCurrentAmount: 0
-  trashMaxAmount: 0
-  trashUi: {fileID: 459468585}
-  startDialogue:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 387808992}
-        m_TargetAssemblyTypeName: DialogueSystem.DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogeOverTime
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 3
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
-        m_MethodName: DisableAllItems
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  puzzle01:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 156141328}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1020970033}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 127163366}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2020723687}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, CustomScripts
-        m_MethodName: ActivateMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1634785478}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 156141335}
-        m_TargetAssemblyTypeName: ObjectTriggerScript, Assembly-CSharp
-        m_MethodName: ActivateItems
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 267201351}
-        m_TargetAssemblyTypeName: ObjectTriggerScript, Assembly-CSharp
-        m_MethodName: ActivateItems
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  puzzle02:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 267201346}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1693400022}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1634785478}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2020723687}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 127163366}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8209732979590414071}
-        m_TargetAssemblyTypeName: GameSettings, Assembly-CSharp
-        m_MethodName: ActivateMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 267201351}
-        m_TargetAssemblyTypeName: ObjectTriggerScript, Assembly-CSharp
-        m_MethodName: ActivateItems
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 156141335}
-        m_TargetAssemblyTypeName: ObjectTriggerScript, Assembly-CSharp
-        m_MethodName: ActivateItems
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  finish:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 395553844}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 934800217}
-        m_TargetAssemblyTypeName: DialogueTrigger, CustomScripts
-        m_MethodName: TriggerDialogeOverTime
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 2
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  trashCollected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1170366242}
-        m_TargetAssemblyTypeName: DialogueSystem.DialogueTrigger, Assembly-CSharp
-        m_MethodName: MakeThisActive
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1170366242}
-        m_TargetAssemblyTypeName: DialogueSystem.DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogeOverTime
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0.5
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1873154270}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 5bb303a516f4ea147ae3b7209e077534, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &8209732979590414072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8209732979590414066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c7b477d8b1d2c84986382613add8117, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cursorTexture: {fileID: 2800000, guid: 442bfca97b0d6cf4fa6dd2b8e1d09b3b, type: 3}
-  volumeSlider: {fileID: 365567130}
-  listener: {fileID: 1091664319}
 --- !u!1001 &8242208534677032338
 PrefabInstance:
   m_ObjectHideFlags: 0

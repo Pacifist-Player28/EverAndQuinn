@@ -83,14 +83,12 @@ public class GameSettings : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Update!");
         _DebugWindow();
         CompareSolution();
     }
 
     private void _DebugWindow()
     {
-        Debug.Log("hikefiwuegfuijkbgkjsbajkgbsgjkasdfg");
         sentenceCount_text.text = "Sentence Count: " + DialogueManager.instance.sentenceCount.ToString();
 
         if (DialogueManager.instance.activeDialogueTrigger == null) activeDialogue_text.text = "Sentence Count: null";

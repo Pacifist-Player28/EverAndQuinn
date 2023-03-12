@@ -14,6 +14,7 @@ namespace DialogueSystem
 
         [Header("Dialogue Settings")]
         [SerializeField] TMP_Text dialogueText;
+        [SerializeField] string HexCodeEver;
         [SerializeField] AudioClip textSoundMain;
         [SerializeField] float textDelay = 0.01f;
         [Space]
@@ -48,10 +49,16 @@ namespace DialogueSystem
             //Debug.Log("emotion for sentence right: " + currentEmotionRight + " emotion for sentence left: " + currentEmotionLeft);
             //Debug.Log("Sentence count: " + sentenceCount);
             //Debug.Log("SpriteCount: " + spriteCount);
+            dialogueText.text = ChangeWordColor(dialogueText.text, "Ever", HexCodeEver);
 
-            if (Input.GetKeyDown(KeyCode.Space) && dialogueUi.activeSelf == true)
+            if (Input.anyKeyDown && !Input.GetMouseButton(0) && !Input.GetMouseButton(1) && !Input.GetMouseButton(2) && dialogueUi.activeSelf && !IsMovementKey())
             {
                 DisplayNextSentence();
+            }
+
+            bool IsMovementKey()
+            {
+                return Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D);
             }
         }
 
@@ -202,6 +209,20 @@ namespace DialogueSystem
                     trigger.gameObject.SetActive(true);
                 }
             }
+        }
+
+        private string ChangeWordColor(string text, string word, string color)
+        {
+            string[] words = text.Split(' ');
+            for (int i = 0; i < words.Length; i++)
+            {
+                if (words[i].Equals(word))
+                {
+                    words[i] = $"<color={color}>{words[i]}</color>";
+                }
+            }
+            string newText = string.Join(" ", words);
+            return newText;
         }
     }
 }

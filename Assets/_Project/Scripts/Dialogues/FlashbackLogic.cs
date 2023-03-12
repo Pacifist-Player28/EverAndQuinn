@@ -16,7 +16,8 @@ public class FlashbackLogic : MonoBehaviour
     {
         if(DialogueManager.instance.sentenceCount == sentenceFlashback)
         {
-            animator.Play("Flashback01");
+            Debug.Log("Playing");
+            animator.Play("FlashBack_01");
         }
     }
 }

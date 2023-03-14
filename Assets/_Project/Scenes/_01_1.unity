@@ -2064,7 +2064,7 @@ GameObject:
   - component: {fileID: 170804108}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: UI-Elements
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2226,7 +2226,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2276,7 +2276,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 2
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2769,16 +2769,16 @@ Tilemap:
     m_Data: {fileID: 220207866, guid: 254bd31831594ab4fa69b94b863e6ac1, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
-    m_Data: {fileID: 298274904, guid: 254bd31831594ab4fa69b94b863e6ac1, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 4
     m_Data: {fileID: 1290358682, guid: 254bd31831594ab4fa69b94b863e6ac1, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 2
+    m_Data: {fileID: 298274904, guid: 254bd31831594ab4fa69b94b863e6ac1, type: 3}
   - m_RefCount: 17
     m_Data: {fileID: 21300000, guid: 4053c9d40541bce47adeef2984222cc6, type: 3}
   - m_RefCount: 10
@@ -2855,7 +2855,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -6, y: -6, z: 0}
-  m_Size: {x: 13, y: 12, z: 1}
+  m_Size: {x: 15, y: 12, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -3865,7 +3865,7 @@ GameObject:
   - component: {fileID: 295572367}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: UI-Elements
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12745,11 +12745,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.182
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.112
+      value: -5.11
       objectReference: {fileID: 0}
     - target: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22499,6 +22499,34 @@ PrefabInstance:
       propertyPath: setting
       value: 
       objectReference: {fileID: 11400000, guid: 0d88a812893af4e4eadf8b3668010028, type: 2}
+    - target: {fileID: 1369099509447198739, guid: 157d8eaf46115644a95ea538403b2f68, type: 3}
+      propertyPath: collect.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369099509447198739, guid: 157d8eaf46115644a95ea538403b2f68, type: 3}
+      propertyPath: collect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369099509447198739, guid: 157d8eaf46115644a95ea538403b2f68, type: 3}
+      propertyPath: collect.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369099509447198739, guid: 157d8eaf46115644a95ea538403b2f68, type: 3}
+      propertyPath: collect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2106640282}
+    - target: {fileID: 1369099509447198739, guid: 157d8eaf46115644a95ea538403b2f68, type: 3}
+      propertyPath: collect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerDialogeOverTime
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369099509447198739, guid: 157d8eaf46115644a95ea538403b2f68, type: 3}
+      propertyPath: collect.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 1369099509447198739, guid: 157d8eaf46115644a95ea538403b2f68, type: 3}
+      propertyPath: collect.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.Renderer, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1369099510969233254, guid: 157d8eaf46115644a95ea538403b2f68, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.999962
@@ -24584,6 +24612,11 @@ RectTransform:
   m_AnchoredPosition: {x: -500, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!212 &2106640282 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1369099509447198738, guid: 157d8eaf46115644a95ea538403b2f68, type: 3}
+  m_PrefabInstance: {fileID: 1970547908}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2124774018
 GameObject:
   m_ObjectHideFlags: 0
@@ -26481,7 +26514,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeDialogueTrigger: {fileID: 0}
   dialogueText: {fileID: 1060985610586832121}
-  HexCodeEver: '#29d62e'
+  HexCodeEver: '#5c7451'
   textSoundMain: {fileID: 8300000, guid: 8e51cfde597bac547aef78c9ed210f21, type: 3}
   textDelay: 0.023
   emotionList: {fileID: 11400000, guid: a95037a6299dd4f4c8eb836a98299b00, type: 2}

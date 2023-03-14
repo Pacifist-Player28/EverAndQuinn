@@ -8,6 +8,7 @@ TagManager:
   - DialogueSprites
   - Interactable
   - Trash
+  - UI-Elements
   layers:
   - Default
   - TransparentFX

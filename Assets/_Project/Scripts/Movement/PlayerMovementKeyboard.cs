@@ -37,6 +37,7 @@ public class PlayerMovementKeyboard : MonoBehaviour
     private Vector2 vectorAnimation;
 
     float timePassed;
+    SpriteRenderer playerRenderer;
 
     //
 
@@ -55,6 +56,7 @@ public class PlayerMovementKeyboard : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        playerRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void FixedUpdate()
@@ -90,6 +92,7 @@ public class PlayerMovementKeyboard : MonoBehaviour
     public void Update()
     {
         timePassed = timePassed + Time.deltaTime;
+        playerRenderer.sortingOrder = (int)transform.position.y;
 
         if (Input.GetKeyDown(Escape)) clickedEscape.Invoke();
 

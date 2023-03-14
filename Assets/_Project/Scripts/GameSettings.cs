@@ -71,7 +71,9 @@ public class GameSettings : MonoBehaviour
 
     private void Start()
     {
-        if(!skipFirstDialogue)
+        SortSprites();
+
+        if (!skipFirstDialogue)
             startDialogue.Invoke();
 
         if (!activateDebugWindow)
@@ -209,6 +211,22 @@ public class GameSettings : MonoBehaviour
         {
             trashCollected.Invoke();
             trashCheck = true;
+        }
+    }
+
+    public void SortSprites()
+    {
+        SpriteRenderer[] allSprites = FindObjectsOfType<SpriteRenderer>();
+        GameObject[] exceptions = GameObject.FindGameObjectsWithTag("UI-Elements");
+
+        foreach (var item in exceptions)
+        {
+            item.GetComponent<SpriteRenderer>().sortingOrder = -99;
+        }
+        
+        foreach (var sprite in allSprites)
+        { 
+            sprite.sortingOrder = (int)sprite.transform.position.y;
         }
     }
 }

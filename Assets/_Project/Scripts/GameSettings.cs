@@ -86,9 +86,26 @@ public class GameSettings : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(0))
+        {
+            PrintMouseHit();
+        }
+
         _DebugWindow();
         CompareSolution();
     }
+
+    void PrintMouseHit()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            Debug.Log("Mouse is currently hitting: " + hit.collider.gameObject.name);
+        }
+    }
+
 
     private void _DebugWindow()
     {
@@ -217,21 +234,12 @@ public class GameSettings : MonoBehaviour
 
     public void SortSprites()
     {
-        SpriteRenderer[] allSprites = FindObjectsOfType<SpriteRenderer>();
-        GameObject[] exceptions = GameObject.FindGameObjectsWithTag("UI-Elements");
+        GameObject[] sortingObjects = GameObject.FindGameObjectsWithTag("LayerSorting");
 
-        foreach (var item in exceptions)
+        foreach (var sortedObject in sortingObjects)
         {
-            if(item.GetComponent<TilemapRenderer>() != null)
-            item.GetComponent<TilemapRenderer>().sortingOrder = -99;
-
-            if(item.GetComponent<SpriteRenderer>() != null)
-            item.GetComponent<SpriteRenderer>().sortingOrder = -98;
-        }
-        
-        foreach (var sprite in allSprites)
-        { 
-            sprite.sortingOrder = (int)sprite.transform.position.y;
+            SpriteRenderer renderer = sortedObject.GetComponent<SpriteRenderer>();
+            renderer.sortingOrder = (int)renderer.transform.position.y;
         }
     }
 }

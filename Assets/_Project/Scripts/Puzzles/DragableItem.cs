@@ -23,6 +23,14 @@ public class DragableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         if (parentPuzzleSlot == null) return;
     }
 
+    private void OnMouseOver()
+    {
+        Debug.Log("Mouse is hitting me: " + gameObject.name);
+
+        if (Input.GetMouseButtonDown(0))
+            Debug.Log("Mouse clicked me: " + gameObject.name);
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     { 
         parentTransform = transform.parent;

@@ -3,6 +3,7 @@ using Inventory;
 using UnityEngine.Events;
 using DialogueSystem;
 using TMPro;
+using UnityEngine.Tilemaps;
 
 public class GameSettings : MonoBehaviour
 {
@@ -221,7 +222,11 @@ public class GameSettings : MonoBehaviour
 
         foreach (var item in exceptions)
         {
-            item.GetComponent<SpriteRenderer>().sortingOrder = -99;
+            if(item.GetComponent<TilemapRenderer>() != null)
+            item.GetComponent<TilemapRenderer>().sortingOrder = -99;
+
+            if(item.GetComponent<SpriteRenderer>() != null)
+            item.GetComponent<SpriteRenderer>().sortingOrder = -98;
         }
         
         foreach (var sprite in allSprites)

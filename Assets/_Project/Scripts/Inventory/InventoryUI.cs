@@ -43,15 +43,13 @@ namespace Inventory
                 Array.Resize(ref slots, collectedItems);
                 GameObject newSlotObject = Instantiate(slotPrefab, gridSystem);
                 slots[collectedItems - 1] = newSlotObject;
-                SlotAndItemImage();
+                _SlotAndItemImage();
             }
 
-            if (puzzleOpen) ActivateInventory();
-            else DeactivateInventory();
+            if (!puzzleOpen) _DeactivateInventory();
         }
 
-
-        void SlotAndItemImage()
+        void _SlotAndItemImage()
         {
             for (int i = 0; i < itemCounter; i++)
             {
@@ -76,8 +74,9 @@ namespace Inventory
             }
         }
 
-        public void DeactivateInventory()
+        public void _DeactivateInventory()
         {
+            puzzleOpen = false;
             for (int i = 0; i < itemCounter; i++)
             {
                 if (slots[i].transform.childCount > 0)
@@ -100,11 +99,12 @@ namespace Inventory
             }
         }
 
-        public void ActivateInventory()
+        public void _ActivateInventory(int layerNumber)
         {
+            puzzleOpen = true;
             for (int i = 0; i < itemCounter; i++)
             {
-                if (slots[i].transform.childCount > 0)
+                if (slots[i].transform.childCount > 0 && layerNumber == slots[i].layer)
                 {
                     var image = slots[i].transform.GetChild(0)?.GetComponent<Image>();
                     var parentImage = slots[i].transform.GetComponent<Image>();
@@ -113,12 +113,14 @@ namespace Inventory
                     {
                         image.raycastTarget = true;
                         image.enabled = true;
+                        image.gameObject.SetActive(true);
                     }
 
                     if (parentImage != null)
                     {
                         parentImage.raycastTarget = true;
                         parentImage.enabled = true;
+                        parentImage.gameObject.SetActive(true);
                     }
                 }
                 else
@@ -127,17 +129,18 @@ namespace Inventory
 
                     if (parentImage != null)
                     {
-                        parentImage.raycastTarget = true;
-                        parentImage.enabled = true;
+                        parentImage.raycastTarget = false;
+                        parentImage.enabled = false;
+                        parentImage.gameObject.SetActive(false);
                     }
                 }
             }
         }
 
-        public void PuzzleOpen(bool config)
-        {
-            if (config) puzzleOpen = true;
-            else puzzleOpen = false;
-        }
+        //public void _PuzzleOpen(bool config)
+        //{
+        //    if (config) puzzleOpen = true;
+        //    else puzzleOpen = false;
+        //}
     }
 }

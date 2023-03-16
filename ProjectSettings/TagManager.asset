@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - Trash
   - UI-Elements
+  - LayerSorting
   layers:
   - Default
   - TransparentFX
@@ -45,4 +46,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 577750111
+    locked: 0
+  - name: Interactables
+    uniqueID: 1323441487
     locked: 0

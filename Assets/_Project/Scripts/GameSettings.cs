@@ -4,6 +4,9 @@ using UnityEngine.Events;
 using DialogueSystem;
 using TMPro;
 using UnityEngine.Tilemaps;
+using System.Collections.Generic;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class GameSettings : MonoBehaviour
 {
@@ -57,6 +60,11 @@ public class GameSettings : MonoBehaviour
 
     bool config;
 
+    [Space]
+
+    [Header("Controlls")]
+    [SerializeField] Button puzzleExitButton;
+
     void Awake()
     {
         DialogueManager dialogueManager = GetComponent<DialogueManager>();
@@ -88,23 +96,26 @@ public class GameSettings : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            PrintMouseHit();
+            PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
+            pointerEventData.position = Input.mousePosition;
+
+            List<RaycastResult> raycastResults = new List<RaycastResult>();
+            EventSystem.current.RaycastAll(pointerEventData, raycastResults);
+
+            if (raycastResults.Count > 0)
+            {
+                Debug.Log("CLICKED " + raycastResults[0].gameObject.name);
+            }
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            puzzleExitButton.onClick.Invoke();
+        }
         _DebugWindow();
         CompareSolution();
     }
 
-    void PrintMouseHit()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            Debug.Log("Mouse is currently hitting: " + hit.collider.gameObject.name);
-        }
-    }
 
 
     private void _DebugWindow()
@@ -187,7 +198,7 @@ public class GameSettings : MonoBehaviour
         else return;
     }
 
-    public void _AllDialogue(bool state)
+    public void _DialoguesActive(bool state)
     {
         foreach (DialogueTrigger dialogue in FindObjectsOfType<DialogueTrigger>())
         { 
@@ -203,7 +214,7 @@ public class GameSettings : MonoBehaviour
         Debug.Log("Updated trashUI");
     }
 
-    public void _AllObjects(bool state)
+    public void _AllObjectsActive(bool state)
     {
         foreach (ObjectTriggerScript trash in FindObjectsOfType<ObjectTriggerScript>())
         {
@@ -214,7 +225,7 @@ public class GameSettings : MonoBehaviour
         }
     }
 
-    public void _AllItems(bool state)
+    public void _AllItemsActive(bool state)
     {
         foreach (Item item in FindObjectsOfType<Item>())
         {

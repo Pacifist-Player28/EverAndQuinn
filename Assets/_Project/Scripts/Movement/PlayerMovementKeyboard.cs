@@ -1,5 +1,7 @@
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class PlayerMovementKeyboard : MonoBehaviour
 {
@@ -15,6 +17,10 @@ public class PlayerMovementKeyboard : MonoBehaviour
     [SerializeField] KeyCode Shift;
     [Space]
     [SerializeField] KeyCode Escape;
+    [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject audioSettings;
+    [SerializeField] GameObject pauseBG;
+    bool pauseActive;
 
     public float speed;
     //Default = 3.25
@@ -94,7 +100,19 @@ public class PlayerMovementKeyboard : MonoBehaviour
         timePassed = timePassed + Time.deltaTime;
         //playerRenderer.sortingOrder = (int)transform.position.y;
 
-        if (Input.GetKeyDown(Escape)) clickedEscape.Invoke();
+        if (Input.GetKeyDown(Escape)) 
+        {
+            _Movement();
+            clickedEscape.Invoke();
+
+            pauseActive = !pauseActive;
+            pauseMenu.SetActive(pauseActive);
+
+            pauseActive = !pauseActive;
+            pauseBG.SetActive(pauseActive);
+
+            audioSettings.SetActive(false);
+        }
 
         // delete both if statements on build!!!
         if (Input.GetKeyDown(Shift)) speed = 10;
@@ -123,5 +141,12 @@ public class PlayerMovementKeyboard : MonoBehaviour
             else if (vectorAnimation.y < 0) animator.Play(walkDown);
             else if (vectorAnimation.y > 0) animator.Play(walkUp);
         }
+    }
+
+    public void _Movement()
+    {
+        Debug.Log("Movement");
+        if (isActiveAndEnabled) enabled = false;
+        else enabled = true;
     }
 }

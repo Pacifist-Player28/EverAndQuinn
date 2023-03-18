@@ -51,15 +51,15 @@ namespace DialogueSystem
             //Debug.Log("SpriteCount: " + spriteCount);
             dialogueText.text = ChangeWordColor(dialogueText.text, "Ever", HexCodeEver);
 
-            if (Input.anyKeyDown && !Input.GetMouseButton(0) && !Input.GetMouseButton(1) && !Input.GetMouseButton(2) && dialogueUi.activeSelf && !IsMovementKey())
+            if (Input.anyKeyDown && !Input.GetMouseButton(0) && !Input.GetMouseButton(1) && !Input.GetMouseButton(2) && dialogueUi.activeSelf)
             {
                 DisplayNextSentence();
             }
 
-            bool IsMovementKey()
-            {
-                return Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D);
-            }
+            //bool IsMovementKey()
+            //{
+            //    return Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D);
+            //}
         }
 
         public void StartDialogue(Dialogue dialogue)

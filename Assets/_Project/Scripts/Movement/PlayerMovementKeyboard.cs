@@ -1,51 +1,39 @@
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class PlayerMovementKeyboard : MonoBehaviour
 {
-    [HideInInspector]
     public static PlayerMovementKeyboard instance;
+    [SerializeField] private KeyCode w;
+    [SerializeField] private KeyCode a;
+    [SerializeField] private KeyCode s;
+    [SerializeField] private KeyCode d;
 
-    [Header("Controls")]
-    [SerializeField] KeyCode W;
-    [SerializeField] KeyCode A;
-    [SerializeField] KeyCode S;
-    [SerializeField] KeyCode D;
-    [Space]
-    [SerializeField] KeyCode Shift;
-    [Space]
-    [SerializeField] KeyCode Escape;
-    [SerializeField] GameObject pauseMenu;
-    [SerializeField] GameObject audioSettings;
-    [SerializeField] GameObject pauseBG;
-    bool pauseActive;
+    [SerializeField] private KeyCode shift;
 
-    public float speed;
-    //Default = 3.25
+    [SerializeField] private KeyCode escape;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject pauseBG;
+    [SerializeField] private GameObject audioSettings;
 
-    [Header("Open Inventory")]
+    [SerializeField] private float speed = 3.25f;
+
     public KeyCode open;
-    [SerializeField] UnityEvent openInventory;
-    [SerializeField] UnityEvent closeInventory;
-    [SerializeField] UnityEvent clickedEscape;
+    [SerializeField] private UnityEvent openInventory;
+    [SerializeField] private UnityEvent closeInventory;
+    [SerializeField] private UnityEvent clickedEscape;
 
-    [Header("Animations")]
-    [SerializeField] string walkLeft;
-    [SerializeField] string walkRight;
-    [SerializeField] string walkUp;
-    [SerializeField] string walkDown;
-    [Space]
+    [SerializeField] private string walkLeft;
+    [SerializeField] private string walkRight;
+    [SerializeField] private string walkUp;
+    [SerializeField] private string walkDown;
     public string idleFront;
-    [HideInInspector]
-    public Animator animator;
+
+    [HideInInspector] public Animator animator;
+    private Rigidbody2D rb;
     private Vector2 vectorAnimation;
-
-    float timePassed;
-    //SpriteRenderer playerRenderer;
-
-    //
+    private bool pauseActive;
+    private bool movementEnabled = true;
 
     private void Awake()
     {
@@ -62,72 +50,62 @@ public class PlayerMovementKeyboard : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        //playerRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    public void FixedUpdate()
+    private void FixedUpdate()
     {
-        Vector3 dir = new Vector3(0, 0, 0);
-
-        if (Input.GetKey(W)) 
+        if (movementEnabled)
         {
-            dir.y += 1;
-            timePassed = 0;
-        }
-        if (Input.GetKey(A))
-        {
-            dir.x += -1;
-            timePassed = 0;
-        }
-        if (Input.GetKey(S))
-        {
-            dir.y += -1;
-            timePassed = 0;
-        }
-        if (Input.GetKey(D)) 
-        { 
-            dir.x += 1;
-            timePassed = 0;
-        }
+            Vector3 dir = new Vector3(0, 0, 0);
 
-        transform.position += dir.normalized * speed * Time.deltaTime;
+            if (Input.GetKey(w))
+            {
+                dir.y += 1;
+            }
+            if (Input.GetKey(a))
+            {
+                dir.x += -1;
+            }
+            if (Input.GetKey(s))
+            {
+                dir.y += -1;
+            }
+            if (Input.GetKey(d))
+            {
+                dir.x += 1;
+            }
 
-        vectorAnimation = dir;
+            transform.position += dir.normalized * speed * Time.deltaTime;
+
+            vectorAnimation = dir;
+        }
     }
 
-    public void Update()
+    private void Update()
     {
-        timePassed = timePassed + Time.deltaTime;
-        //playerRenderer.sortingOrder = (int)transform.position.y;
-
-        if (Input.GetKeyDown(Escape)) 
+        if (Input.GetKeyDown(escape))
         {
-            _Movement();
+            _TogglePause();
             clickedEscape.Invoke();
-
-            pauseActive = !pauseActive;
-            pauseMenu.SetActive(pauseActive);
-
-            pauseActive = !pauseActive;
-            pauseBG.SetActive(pauseActive);
-
-            audioSettings.SetActive(false);
         }
 
-        // delete both if statements on build!!!
-        if (Input.GetKeyDown(Shift)) speed = 10;
-        if (Input.GetKeyUp(Shift)) speed = 5;
+        if (Input.GetKeyDown(shift))
+        {
+            speed = 10;
+        }
+        if (Input.GetKeyUp(shift))
+        {
+            speed = 5;
+        }
 
         if (Input.GetKeyDown(open))
         {
             openInventory.Invoke();
-            //Debug.Log("Open Inventory");
         }
-
         if (Input.GetKeyUp(open))
         {
             closeInventory.Invoke();
-            //Debug.Log("Close Inventory");
         }
 
         if (vectorAnimation.x == 0f && vectorAnimation.y == 0f)
@@ -143,10 +121,25 @@ public class PlayerMovementKeyboard : MonoBehaviour
         }
     }
 
-    public void _Movement()
+    public void _TogglePause()
     {
-        Debug.Log("Movement");
-        if (isActiveAndEnabled) enabled = false;
-        else enabled = true;
+        pauseActive = !pauseActive;
+        pauseMenu.SetActive(pauseActive);
+        pauseBG.SetActive(pauseActive);
+        audioSettings.SetActive(false);
+
+        movementEnabled = !pauseActive;
+        if (!movementEnabled)
+        {
+            //GameSettings.instance._DialoguesActive(false);
+            rb.velocity = Vector2.zero;
+        }
+        else
+        {
+            //GameSettings.instance._DialoguesActive(true);
+            rb.velocity = vectorAnimation.normalized * speed;
+        }
+
+        Debug.Log("movement = " + movementEnabled);
     }
 }

@@ -94,19 +94,7 @@ public class GameSettings : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            PointerEventData pointerEventData = new PointerEventData(EventSystem.current);
-            pointerEventData.position = Input.mousePosition;
-
-            List<RaycastResult> raycastResults = new List<RaycastResult>();
-            EventSystem.current.RaycastAll(pointerEventData, raycastResults);
-
-            if (raycastResults.Count > 0)
-            {
-                Debug.Log("CLICKED " + raycastResults[0].gameObject.name);
-            }
-        }
+        CheckMouseClick();
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -201,8 +189,9 @@ public class GameSettings : MonoBehaviour
     public void _DialoguesActive(bool state)
     {
         foreach (DialogueTrigger dialogue in FindObjectsOfType<DialogueTrigger>())
-        { 
+        {
             dialogue.enabled = state;
+            dialogue.GetComponent<Collider2D>().enabled = state;
         }
     }
 
@@ -253,4 +242,37 @@ public class GameSettings : MonoBehaviour
             renderer.sortingOrder = (int)renderer.transform.position.y;
         }
     }
+
+    private void CheckMouseClick()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+
+            if (hit.collider != null)
+            {
+                // Do something with the object hit
+                Debug.Log("Object " + hit.collider.gameObject.name + " was clicked!");
+            }
+            else
+            {
+                // Check for UI hits
+                PointerEventData eventData = new PointerEventData(EventSystem.current);
+                eventData.position = Input.mousePosition;
+                List<RaycastResult> results = new List<RaycastResult>();
+                EventSystem.current.RaycastAll(eventData, results);
+
+                Debug.Log("Number of UI hits: " + results.Count);
+
+                if (results.Count > 0)
+                {
+                    // Do something with the UI element hit
+                    Debug.Log("UI element " + results[0].gameObject.name + " was clicked!");
+                }
+            }
+        }
+    }
+
+
 }

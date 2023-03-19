@@ -1,45 +1,25 @@
 <h1 align="center">Ever and Quinn</h1>
 
-[Download Ever and Quinn](https://wikipedia.com)
-
 <p align="center">
-  First of all: Thank you for being here! Ever and Quinn is a short puzzle RPG-game made by 3 HTL-students. You can download the game by clicking on "Download Ever and Quinn" 
+  <a href="https://wikipedia.com" style="font-size: 24px;">Download Ever and Quinn</a>
 </p>
 
 <p align="center">
-  Brief description of your project goes here.
+  First of all: Thank you for being here! Ever and Quinn is a short puzzle RPG-game made by 3 HTL-students. You can download the game by clicking on "Download Ever and Quinn" and you'll have a "zip"-file you can extract on your PC. But we would also like to know you thoughts on our game! With that we could improve "Ever and Quinn" in a much faster way! After playing our game you can click on the survey link below and participate in our developement!
+Thank you and have fun playing!
 </p>
 
-## Features
+<p align="center">
+  <a href="https://wikipedia.com" style="font-size: 20px;">Link to survey</a>
+</p>
 
-- Feature 1
-- Feature 2
-- Feature 3
+## How do I install the game on Windows?
+- Click on the link above which says: "Download Ever and Quinn". You will be transfered to another website. Just click the zip file and it should download the game.
+![Tutorial_1](https://user-images.githubusercontent.com/72389349/226191281-68cf76fa-a558-4467-8037-7f5fc38925fa.png)
+- Further for unzipping the file
 
-## Installation
-
-1. Clone the repository: `git clone https://github.com/your-username/your-project.git`
-2. Install the dependencies: `npm install`
-3. Start the server: `npm start`
-
-## Contributing
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b my-new-branch`
-3. Make changes and commit: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-branch`
-5. Submit a pull request.
-
-## Credits
-
-- Credit 1
-- Credit 2
-- Credit 3
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
+## How do I install the game on Mac?
+- Explain how to unzip a file on a mac computer
 ---
 
 <footer>

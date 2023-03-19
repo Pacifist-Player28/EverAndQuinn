@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="style.css">
-
 <h1 align="center">Ever and Quinn</h1>
 
 [Download Ever and Quinn](https://wikipedia.com)

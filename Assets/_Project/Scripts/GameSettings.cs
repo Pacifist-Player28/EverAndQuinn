@@ -28,8 +28,6 @@ public class GameSettings : MonoBehaviour
     [Space]
 
     [Header("Puzzles")]
-    [SerializeField] AudioClip solvedPuzzleClip;
-    [Space]
     public int solvedSlots_1;
     public int solvedMax_1;
     [Space]
@@ -230,6 +228,21 @@ public class GameSettings : MonoBehaviour
             trashCollected.Invoke();
             trashCheck = true;
         }
+    }
+
+    public void _ExitButton(GameObject button)
+    {
+        //this is a method on order to invoke the "onclick" method in the button, instead of manually clicking on it.
+        var pressing = button.GetComponent<Button>();
+        pressing.onClick.Invoke();
+    }
+
+    public void _playSolutionClip(AudioClip clip)
+    {
+        bool config = false;
+        AudioSource source = GetComponent<AudioSource>();
+        if (!config) { source.PlayOneShot(clip); config = true; }
+        
     }
 
     public void SortSprites()

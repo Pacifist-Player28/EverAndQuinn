@@ -139,7 +139,6 @@ public class PlayerMovementKeyboard : MonoBehaviour
             //GameSettings.instance._DialoguesActive(true);
             rb.velocity = vectorAnimation.normalized * speed;
         }
-
         Debug.Log("movement = " + movementEnabled);
     }
 }

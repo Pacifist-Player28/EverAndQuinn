@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1369099509447198738}
   - component: {fileID: 1369099509447198739}
   - component: {fileID: 1369099509447198741}
+  - component: {fileID: 4584441586110153720}
   m_Layer: 0
   m_Name: Item
   m_TagString: Interactable
@@ -30,8 +31,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1369099510969233254}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -103,21 +103,9 @@ MonoBehaviour:
   collect:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1369099510969233273}
-        m_TargetAssemblyTypeName: DialogueSystem.DialogueTrigger, CustomScripts
-        m_MethodName: MakeThisActive
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1369099510969233273}
-        m_TargetAssemblyTypeName: DialogueSystem.DialogueTrigger, CustomScripts
-        m_MethodName: TriggerDialogeOverTime
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DialogueSystem.DialogueTrigger, Assembly-CSharp
+        m_MethodName: _StartDialogeOverTime
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -131,6 +119,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4584441586110153720}
+        m_TargetAssemblyTypeName: DialogueSystem.DialogueTrigger, Assembly-CSharp
+        m_MethodName: _StartDialogeOverTime
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -165,64 +165,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1369099510969233255
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1369099510969233254}
-  - component: {fileID: 1369099510969233273}
-  m_Layer: 0
-  m_Name: Dialogue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1369099510969233254
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369099510969233255}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1369099509447198736}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1369099510969233273
+--- !u!114 &4584441586110153720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1369099510969233255}
+  m_GameObject: {fileID: 1369099509447198737}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ddf4175bbfe60c843b9efcda6501d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  instance: {fileID: 0}
+  dialogueTag: 0
   triggerDistance: 0
-  transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
-  clicked:
-    m_PersistentCalls:
-      m_Calls: []
+  interactOnlyOnce: 0
   emotionRight: []
   emotionLeft: []
   dialogue:
     sentences:
-    - You picked up a book!
-  endOfDialogue:
+    - '*You picked up a book!*'
+  clicked:
     m_PersistentCalls:
       m_Calls: []
   startOfDialogue:
     m_PersistentCalls:
       m_Calls: []
-  instance: {fileID: 0}
+  endOfDialogue:
+    m_PersistentCalls:
+      m_Calls: []

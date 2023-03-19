@@ -15,6 +15,7 @@ namespace DialogueSystem
         public string string_QuinnConfused = "QuinnConfused";
         public string string_QuinnNervous = "QuinnNervous";
         public string string_QuinnSurprised = "QuinnSurprised";
+        public string string_QuinnSad = "QuinnSad";
         [Space]
         public Sprite transparentSprite;
         [Space]
@@ -24,13 +25,16 @@ namespace DialogueSystem
         public Sprite[] sprite_QuinnConfused = new Sprite[2];
         public Sprite[] sprite_QuinnNervous = new Sprite[2];
         public Sprite[] sprite_Quinnsurprised = new Sprite[2];
+        public Sprite[] sprite_QuinnSad = new Sprite[2];
         [Space]
         [Header("Carolyn")]
         public string string_CarolynStop = "CarolynStop";
         public string string_CarolynNeutral = "CarolynNeutral";
+        public string string_CarolynSad = "CarolynSad";
         [Space]
         public Sprite[] sprite_CarolynStop;
         public Sprite[] sprite_CarolynNeutral = new Sprite[2];
+        public Sprite[] sprite_CarolynSad = new Sprite[2];
 
         public Dictionary<string, Sprite[]> spriteDictionary = new Dictionary<string, Sprite[]>();
 
@@ -43,8 +47,11 @@ namespace DialogueSystem
             spriteDictionary.Add(string_QuinnConfused, sprite_QuinnConfused);
             spriteDictionary.Add(string_QuinnNervous, sprite_QuinnNervous);
             spriteDictionary.Add(string_QuinnSurprised, sprite_Quinnsurprised);
+            spriteDictionary.Add(string_QuinnSad, sprite_QuinnSad);
+
             spriteDictionary.Add(string_CarolynStop, sprite_CarolynStop);
             spriteDictionary.Add(string_CarolynNeutral, sprite_CarolynNeutral);
+            spriteDictionary.Add(string_CarolynSad, sprite_CarolynSad);
         }
     }
 }

@@ -189,8 +189,15 @@ public class GameSettings : MonoBehaviour
         foreach (DialogueTrigger dialogue in FindObjectsOfType<DialogueTrigger>())
         {
             dialogue.enabled = state;
-            dialogue.GetComponent<Collider2D>().enabled = state;
+            //dialogue.GetComponent<Collider2D>().enabled = state;
         }
+    }
+
+    public void _ActivatePhone(GameObject phone)
+    {
+        phone.SetActive(true);
+        phone.GetComponent<DialogueTrigger>().enabled = true;
+        phone.GetComponent<Collider2D>().enabled = true;
     }
 
     public void _UpdateTrashUI()
@@ -255,6 +262,11 @@ public class GameSettings : MonoBehaviour
             renderer.sortingOrder = (int)renderer.transform.position.y;
         }
     }
+
+    //void OnMouseDown()
+    //{
+    //    ScreenCapture.CaptureScreenshot("SomeLevel.png");
+    //}
 
     private void CheckMouseClick()
     {

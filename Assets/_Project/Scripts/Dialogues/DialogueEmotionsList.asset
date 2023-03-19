@@ -19,30 +19,38 @@ MonoBehaviour:
   string_QuinnConfused: QuinnConfused
   string_QuinnNervous: QuinnNervous
   string_QuinnSurprised: QuinnSurprised
+  string_QuinnSad: QuinnSad
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   sprite_QuinnStop:
   - {fileID: 21300000, guid: f589cfe03011da342aacac3fcef32c8b, type: 3}
   - {fileID: 21300000, guid: f589cfe03011da342aacac3fcef32c8b, type: 3}
   sprite_QuinnNeutral:
-  - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
-  - {fileID: 21300000, guid: c2779d4fecad0784895654a57991aa3d, type: 3}
+  - {fileID: 21300000, guid: 459ea6aff9de4a74b9ba41b181f31229, type: 3}
+  - {fileID: 21300000, guid: 867faacfc22be584b8d652b3c68909e5, type: 3}
   sprite_QuinnAngry:
-  - {fileID: 21300000, guid: 215521fc933f46f4b8c88c2facdbd2f8, type: 3}
-  - {fileID: 21300000, guid: e5150f81a9b918e419b4a8ec72042e92, type: 3}
+  - {fileID: 21300000, guid: ba87e4ffae67435428eb0b230c5c647c, type: 3}
+  - {fileID: 21300000, guid: 7fc7f3c9d43103646963829b73880781, type: 3}
   sprite_QuinnConfused:
-  - {fileID: 21300000, guid: b8de6b6a11509174994c173fc9abbcf3, type: 3}
-  - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
+  - {fileID: 21300000, guid: 2bd7559298d4ed045ace8da563cbf573, type: 3}
+  - {fileID: 21300000, guid: 7048f58f74ad9064c8290899aad2ed35, type: 3}
   sprite_QuinnNervous:
-  - {fileID: 21300000, guid: d07a86481b875de4faeae3b4c8e72761, type: 3}
-  - {fileID: 21300000, guid: 8f971bb82e2e99f4dab9d5ffb8a2a7de, type: 3}
+  - {fileID: 21300000, guid: 551ac79902902a74894d59e46354c707, type: 3}
+  - {fileID: 21300000, guid: c35c73719d2550d4899ef10b6a6c3d0a, type: 3}
   sprite_Quinnsurprised:
-  - {fileID: 21300000, guid: 91204cabb76e8bd48b46d29b33b7c666, type: 3}
-  - {fileID: 21300000, guid: 47f9d0970970bde4cb35ab1fe1963143, type: 3}
+  - {fileID: 21300000, guid: 867faacfc22be584b8d652b3c68909e5, type: 3}
+  - {fileID: 21300000, guid: 459ea6aff9de4a74b9ba41b181f31229, type: 3}
+  sprite_QuinnSad:
+  - {fileID: 21300000, guid: 2750f2ff12e3f274babf300ca178b73d, type: 3}
+  - {fileID: 21300000, guid: d0c287467daa976498e5400f3cdcf02e, type: 3}
   string_CarolynStop: CarolynStop
   string_CarolynNeutral: CarolynNeutral
+  string_CarolynSad: CarolynSad
   sprite_CarolynStop:
   - {fileID: 21300000, guid: 690eb4f9e0bfd2747bdb03412c6559dd, type: 3}
   - {fileID: 21300000, guid: 690eb4f9e0bfd2747bdb03412c6559dd, type: 3}
   sprite_CarolynNeutral:
   - {fileID: 21300000, guid: c1e757ec162f8b241b74c47ba4761557, type: 3}
   - {fileID: 21300000, guid: d45d98f2027cd7645844e6552c80efe4, type: 3}
+  sprite_CarolynSad:
+  - {fileID: 21300000, guid: d150d12505927b548be7cc0ae7f71ff3, type: 3}
+  - {fileID: 21300000, guid: 0816e818d39173a4a9e80e60aaa29941, type: 3}

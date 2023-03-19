@@ -90,6 +90,18 @@ namespace DialogueSystem
             }
         }
 
+        public void _ActivateNextDialogue(string dialogueTag)
+        {
+            Transform parent = transform.parent;
+            foreach (Transform child in parent)
+            {
+                DialogueTrigger dt = child.GetComponent<DialogueTrigger>();
+                if (dt != null && dt.dialogueTag.ToString() == dialogueTag) child.gameObject.SetActive(true);
+                else child.gameObject.SetActive(false);
+            }
+        }
+
+
         IEnumerator StartDialogueCouroutine(float time)
         {
             TriggerActive();

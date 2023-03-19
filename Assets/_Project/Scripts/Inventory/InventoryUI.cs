@@ -102,36 +102,43 @@ namespace Inventory
         public void _ActivateInventory(int layerNumber)
         {
             puzzleOpen = true;
+
             for (int i = 0; i < itemCounter; i++)
             {
-                if (slots[i].transform.childCount > 0 && layerNumber == slots[i].layer)
+                if (slots[i].transform.childCount == 0 && slots[i].layer == layerNumber) // skip slots without child objects
                 {
-                    var image = slots[i].transform.GetChild(0)?.GetComponent<Image>();
-                    var parentImage = slots[i].transform.GetComponent<Image>();
-
-                    if (image != null)
-                    {
-                        image.raycastTarget = true;
-                        image.enabled = true;
-                        image.gameObject.SetActive(true);
-                    }
-
-                    if (parentImage != null)
-                    {
-                        parentImage.raycastTarget = true;
-                        parentImage.enabled = true;
-                        parentImage.gameObject.SetActive(true);
-                    }
+                    slots[i].GetComponent<Image>().enabled = true;
+                    slots[i].GetComponent<Image>().raycastTarget = true;
+                    slots[i].SetActive(true);
+                    continue;
                 }
+                else if (slots[i].transform.childCount == 0 && slots[i].layer != layerNumber) slots[i].gameObject.SetActive(false);
                 else
                 {
-                    var parentImage = slots[i].transform.GetComponent<Image>();
+                    Debug.Log("Slot: " + slots[i].name + i + " layer: " + slots[i].layer.ToString());
+                    //Debug.Log("Itemcounter: " + itemCounter);
+                    var slotImage = slots[i].transform.GetComponent<Image>();
+                    var itemImage = slots[i].transform.GetChild(0)?.GetComponent<Image>();
 
-                    if (parentImage != null)
+                    if (layerNumber == slots[i].layer)
                     {
-                        parentImage.raycastTarget = false;
-                        parentImage.enabled = false;
-                        parentImage.gameObject.SetActive(false);
+                        slotImage.raycastTarget = true;
+                        slotImage.enabled = true;
+                        slotImage.gameObject.SetActive(true);
+
+                        itemImage.raycastTarget = true;
+                        itemImage.enabled = true;
+                        itemImage.gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        itemImage.raycastTarget = false;
+                        itemImage.enabled = false;
+                        itemImage.gameObject.SetActive(false);
+
+                        slotImage.raycastTarget = false;
+                        slotImage.enabled = false;
+                        slotImage.gameObject.SetActive(false);
                     }
                 }
             }

@@ -266,7 +266,7 @@ public class GameSettings : MonoBehaviour
             if (hit.collider != null)
             {
                 // Do something with the object hit
-                Debug.Log("Object " + hit.collider.gameObject.name + " was clicked!");
+                //Debug.Log("Object " + hit.collider.gameObject.name + " was clicked!");
             }
             else
             {
@@ -276,12 +276,12 @@ public class GameSettings : MonoBehaviour
                 List<RaycastResult> results = new List<RaycastResult>();
                 EventSystem.current.RaycastAll(eventData, results);
 
-                Debug.Log("Number of UI hits: " + results.Count);
+                //Debug.Log("Number of UI hits: " + results.Count);
 
                 if (results.Count > 0)
                 {
                     // Do something with the UI element hit
-                    Debug.Log("UI element " + results[0].gameObject.name + " was clicked!");
+                    //Debug.Log("UI element " + results[0].gameObject.name + " was clicked!");
                 }
             }
         }

@@ -13,6 +13,7 @@ public class GameSettings : MonoBehaviour
     [HideInInspector] public static GameSettings instance;
     //[SerializeField] Texture2D cursorTexture;
     [Header("Debugging")]
+    [SerializeField] Texture2D crosshair;
     [SerializeField] bool skipFirstDialogue;
     [SerializeField] bool skipPhone;
     [SerializeField] bool activateDebugWindow;
@@ -78,6 +79,9 @@ public class GameSettings : MonoBehaviour
 
     private void Start()
     {
+        Vector2 cursorOffset = new Vector2(crosshair.width / 2, crosshair.height / 2);
+
+        Cursor.SetCursor(crosshair, cursorOffset, CursorMode.Auto);
         SortSprites();
 
         if (!skipFirstDialogue)

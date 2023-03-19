@@ -1,7 +1,5 @@
-<h1 align="center">Ever and Quinn</h1>
-
 <p align="center">
-  <a href="https://wikipedia.com" style="font-size: 24px;">Download Ever and Quinn</a>
+  <a href="https://github.com/Pacifist-Player28/EverAndQuinn/releases/tag/v0.5.1-beta" style="font-size: 30px;">Download Ever and Quinn</a>
 </p>
 
 <p align="center">
@@ -9,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://wikipedia.com" style="font-size: 20px;">Click here to participate in our survey</a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVvjWFpIorPovUmTtO_hHalHIcfQE3zrtTPQt79MCpfhQOjg/viewform?usp=sf_link" style="font-size: 23px;">Click here to participate in our survey</a>
 </p>
 
 ## How to Install Ever and Quinn
@@ -22,10 +20,7 @@
 4. Navigate to the extracted folder and run the EverAndQuinn.exe file to start playing the game.
 
 ### Mac:
-1. Click on the "Download Ever and Quinn" link above.
-2. You will be directed to another website. Click on the zip file to begin downloading the game.
-3. After the download is complete, extract the files from the zip folder to a location of your choice.
-4. Navigate to the extracted folder and run the EverAndQuinn.exe file to start playing the game.
+Upcoming...
 
 ---
 

@@ -13362,17 +13362,11 @@ MonoBehaviour:
   interactOnlyOnce: 0
   emotionRight:
   - QuinnNervous
-  - QuinnNervous
-  - QuinnNeutral
   emotionLeft:
-  - transparent
-  - transparent
   - transparent
   dialogue:
     sentences:
-    - Damn! This house is such a mess. I'll never find the record like this.
-    - ... (thinking)
-    - Maybe tyding up would help.
+    - If I want to find this record, I better get this house together.
   clicked:
     m_PersistentCalls:
       m_Calls: []

@@ -8,12 +8,14 @@ public class InventorySlot : MonoBehaviour, IDropHandler, IPointerEnterHandler, 
     [SerializeField] bool changeSprites;
     [Space]
     [SerializeField] Sprite hoverSprite, exitSprite;
+    [SerializeField] Sprite[] spriteToChange;
     RectTransform children;
     Image thisImage;
     bool taken;
 
     private void Start()
     {
+        if(spriteToChange.Length != 0) GetComponent<Image>().sprite = spriteToChange[Random.Range(0, spriteToChange.Length)];
         thisImage = GetComponent<Image>();
         children = GetComponentInChildren<RectTransform>();
     }

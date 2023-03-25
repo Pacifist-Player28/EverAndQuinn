@@ -7188,25 +7188,29 @@ PrefabInstance:
       propertyPath: triggerDistance
       value: 2.92
       objectReference: {fileID: 0}
+    - target: {fileID: 99266311877920584, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 715677898885974030, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: triggerDistance
       value: 2.92
       objectReference: {fileID: 0}
     - target: {fileID: 1011228950652715569, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Size.x
-      value: 4.9164486
+      value: 1.2365069
       objectReference: {fileID: 0}
     - target: {fileID: 1011228950652715569, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Size.y
-      value: 3.6635346
+      value: 0.93390846
       objectReference: {fileID: 0}
     - target: {fileID: 1011228950652715569, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Offset.x
-      value: -0.07555914
+      value: -1.1370796
       objectReference: {fileID: 0}
     - target: {fileID: 1011228950652715569, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Offset.y
-      value: -0.14656967
+      value: 0.9654999
       objectReference: {fileID: 0}
     - target: {fileID: 1451922846942491024, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Size.x
@@ -7292,41 +7296,49 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 4036560165906083800, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6688698954052680580, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Size.x
-      value: 4.9164486
+      value: 1.2365069
       objectReference: {fileID: 0}
     - target: {fileID: 6688698954052680580, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Size.y
-      value: 3.6635346
+      value: 0.93390846
       objectReference: {fileID: 0}
     - target: {fileID: 6688698954052680580, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Offset.x
-      value: -0.07555914
+      value: -1.1370796
       objectReference: {fileID: 0}
     - target: {fileID: 6688698954052680580, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Offset.y
-      value: -0.14656967
+      value: 0.9654999
       objectReference: {fileID: 0}
     - target: {fileID: 7868578527813330958, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Size.x
-      value: 4.9164486
+      value: 1.2365069
       objectReference: {fileID: 0}
     - target: {fileID: 7868578527813330958, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Size.y
-      value: 3.6635346
+      value: 0.93390846
       objectReference: {fileID: 0}
     - target: {fileID: 7868578527813330958, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Offset.x
-      value: -0.07555914
+      value: -1.1370796
       objectReference: {fileID: 0}
     - target: {fileID: 7868578527813330958, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Offset.y
-      value: -0.14656967
+      value: 0.9654999
       objectReference: {fileID: 0}
     - target: {fileID: 8217643301016222149, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: triggerDistance
       value: 2.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764647867029395808, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
@@ -7335,6 +7347,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1451922846942491025, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
   m_PrefabInstance: {fileID: 538244270}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &538244272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1451922846942491031, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+  m_PrefabInstance: {fileID: 538244270}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &538244273
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538244272}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.08044958, y: -0.22654802}
+  m_SpriteTilingProperty:
+    border: {x: 1.8553847, y: 0.3600586, z: 0.9123077, w: 0.5477814}
+    pivot: {x: 0.5711307, y: 0.5408798}
+    oldSize: {x: 7.692308, y: 4.616136}
+    newSize: {x: 7.692308, y: 4.616136}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.8416004, y: 3.4640803}
+  m_EdgeRadius: 0
 --- !u!1 &543708902
 GameObject:
   m_ObjectHideFlags: 0
@@ -12598,7 +12641,7 @@ MonoBehaviour:
   emotionLeft: []
   dialogue:
     sentences:
-    - Oh no, you poor thing... I must have forgooten to water you.
+    - Oh no, you poor thing... I must have forgoten to water you.
   clicked:
     m_PersistentCalls:
       m_Calls: []
@@ -30005,7 +30048,7 @@ MonoBehaviour:
   crosshair: {fileID: 2800000, guid: 442bfca97b0d6cf4fa6dd2b8e1d09b3b, type: 3}
   skipFirstDialogue: 0
   skipPhone: 0
-  activateDebugWindow: 1
+  activateDebugWindow: 0
   debugWindow: {fileID: 100791600}
   sentenceCount_text: {fileID: 781044268}
   activeDialogue_text: {fileID: 686296374}

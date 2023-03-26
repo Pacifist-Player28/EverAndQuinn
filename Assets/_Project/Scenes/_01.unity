@@ -396,6 +396,7 @@ MonoBehaviour:
   changeSprites: 1
   hoverSprite: {fileID: -1293997639, guid: 3e7e7f968a5dfef41814985078491084, type: 3}
   exitSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  spriteToChange: []
 --- !u!114 &16351385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3604,6 +3605,7 @@ MonoBehaviour:
   changeSprites: 1
   hoverSprite: {fileID: -1293997639, guid: 3e7e7f968a5dfef41814985078491084, type: 3}
   exitSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  spriteToChange: []
 --- !u!114 &246623393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6334,6 +6336,7 @@ MonoBehaviour:
   changeSprites: 0
   hoverSprite: {fileID: 0}
   exitSprite: {fileID: 0}
+  spriteToChange: []
 --- !u!114 &417665505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7554,6 +7557,7 @@ MonoBehaviour:
   changeSprites: 1
   hoverSprite: {fileID: -1293997639, guid: 3e7e7f968a5dfef41814985078491084, type: 3}
   exitSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  spriteToChange: []
 --- !u!114 &511104266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14343,6 +14347,7 @@ MonoBehaviour:
   changeSprites: 1
   hoverSprite: {fileID: -1293997639, guid: 3e7e7f968a5dfef41814985078491084, type: 3}
   exitSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  spriteToChange: []
 --- !u!114 &1005696378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16311,6 +16316,7 @@ MonoBehaviour:
   changeSprites: 0
   hoverSprite: {fileID: 0}
   exitSprite: {fileID: 0}
+  spriteToChange: []
 --- !u!114 &1192863694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17040,6 +17046,7 @@ MonoBehaviour:
   changeSprites: 1
   hoverSprite: {fileID: -1293997639, guid: 3e7e7f968a5dfef41814985078491084, type: 3}
   exitSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  spriteToChange: []
 --- !u!114 &1238556293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18727,6 +18734,7 @@ MonoBehaviour:
   changeSprites: 1
   hoverSprite: {fileID: -1293997639, guid: 3e7e7f968a5dfef41814985078491084, type: 3}
   exitSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  spriteToChange: []
 --- !u!114 &1418775652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19702,6 +19710,7 @@ GameObject:
   - component: {fileID: 1552901873}
   - component: {fileID: 1552901875}
   - component: {fileID: 1552901876}
+  - component: {fileID: 1552901877}
   m_Layer: 0
   m_Name: Shelf03
   m_TagString: Interactable
@@ -19836,6 +19845,19 @@ MonoBehaviour:
   endOfDialogue:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1552901877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552901872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e3b768b0a8659c41b457373f7777965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorToAdd: 0.5
 --- !u!1 &1561039099
 GameObject:
   m_ObjectHideFlags: 0
@@ -22223,6 +22245,7 @@ MonoBehaviour:
   changeSprites: 0
   hoverSprite: {fileID: 0}
   exitSprite: {fileID: 0}
+  spriteToChange: []
 --- !u!114 &1757973261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22441,6 +22464,7 @@ MonoBehaviour:
   changeSprites: 1
   hoverSprite: {fileID: -1293997639, guid: 3e7e7f968a5dfef41814985078491084, type: 3}
   exitSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  spriteToChange: []
 --- !u!114 &1763755482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22945,6 +22969,7 @@ MonoBehaviour:
   changeSprites: 0
   hoverSprite: {fileID: 0}
   exitSprite: {fileID: 0}
+  spriteToChange: []
 --- !u!114 &1797645550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23589,6 +23614,7 @@ MonoBehaviour:
   changeSprites: 1
   hoverSprite: {fileID: -1293997639, guid: 3e7e7f968a5dfef41814985078491084, type: 3}
   exitSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  spriteToChange: []
 --- !u!114 &1894811879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26318,6 +26344,7 @@ MonoBehaviour:
   changeSprites: 1
   hoverSprite: {fileID: -1293997639, guid: 3e7e7f968a5dfef41814985078491084, type: 3}
   exitSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
+  spriteToChange: []
 --- !u!114 &2043326646
 MonoBehaviour:
   m_ObjectHideFlags: 0

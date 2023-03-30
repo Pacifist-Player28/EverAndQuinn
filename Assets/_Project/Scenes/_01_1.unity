@@ -7310,6 +7310,18 @@ PrefabInstance:
       propertyPath: triggerDistance
       value: 2.92
       objectReference: {fileID: 0}
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.data[0]
+      value: QuinnNervous
+      objectReference: {fileID: 0}
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Just an empty sink.
+      objectReference: {fileID: 0}
     - target: {fileID: 99266311877920584, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
@@ -9213,6 +9225,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851511536}
     m_Modifications:
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.data[0]
+      value: QuinnNeutral
+      objectReference: {fileID: 0}
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: I sometimes run in those. I should clean them sometime.
+      objectReference: {fileID: 0}
     - target: {fileID: 1011228950652715569, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Size.x
       value: 0.6393198
@@ -11890,6 +11914,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851511536}
     m_Modifications:
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.data[0]
+      value: QuinnConfused
+      objectReference: {fileID: 0}
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Someones shoes?
+      objectReference: {fileID: 0}
     - target: {fileID: 1011228950652715569, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Size.x
       value: 0.6393198
@@ -17208,6 +17244,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851511536}
     m_Modifications:
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.data[0]
+      value: QuinnSurprised
+      objectReference: {fileID: 0}
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: My favourites!
+      objectReference: {fileID: 0}
     - target: {fileID: 1011228950652715569, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Size.x
       value: 0.6393198
@@ -22833,8 +22881,28 @@ PrefabInstance:
       value: 2.52
       objectReference: {fileID: 0}
     - target: {fileID: 715677898885974030, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 715677898885974030, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.data[0]
+      value: QuinnConfused
+      objectReference: {fileID: 0}
+    - target: {fileID: 715677898885974030, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.data[1]
+      value: QuinnSurprised
+      objectReference: {fileID: 0}
+    - target: {fileID: 715677898885974030, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 715677898885974030, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: '*Missing dialogue _2*'
+      value: There is something between the books...
+      objectReference: {fileID: 0}
+    - target: {fileID: 715677898885974030, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: Lamps!
       objectReference: {fileID: 0}
     - target: {fileID: 1011228950652715569, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Size.x
@@ -22981,8 +23049,16 @@ PrefabInstance:
       value: 2.52
       objectReference: {fileID: 0}
     - target: {fileID: 8217643301016222149, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217643301016222149, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.data[0]
+      value: QuinnNeutral
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217643301016222149, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: '*Missing dialogue _3*'
+      value: Nothing but dusty books here.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
@@ -23128,6 +23204,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851511536}
     m_Modifications:
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.data[0]
+      value: QuinnNervous
+      objectReference: {fileID: 0}
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: ...again not my shoes.
+      objectReference: {fileID: 0}
     - target: {fileID: 1011228950652715569, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: m_Size.x
       value: 0.6393198
@@ -23947,6 +24035,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 117717805}
     m_Modifications:
+    - target: {fileID: 8242208534197387142, guid: 1602d28c4f954de4d9f97957e0b50688, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8242208534982985012, guid: 1602d28c4f954de4d9f97957e0b50688, type: 3}
       propertyPath: m_Name
       value: StandLampOff (2)
@@ -27869,6 +27961,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 48893623251515223}
+        m_TargetAssemblyTypeName: DialogueSystem.DialogueTrigger, Assembly-CSharp
+        m_MethodName: _DestroyTriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &48893623689549044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27888,8 +27992,7 @@ MonoBehaviour:
   emotionRight: []
   emotionLeft: []
   dialogue:
-    sentences:
-    - '*Missing dialogue _1*'
+    sentences: []
   clicked:
     m_PersistentCalls:
       m_Calls: []

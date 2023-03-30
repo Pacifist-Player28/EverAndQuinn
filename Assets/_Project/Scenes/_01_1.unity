@@ -14915,19 +14915,7 @@ MonoBehaviour:
       m_Calls: []
   endOfDialogue:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1170366242}
-        m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
-        m_MethodName: StopAllCoroutines
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!61 &1170366243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15787,7 +15775,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 715677898885974030, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: endOfDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: _Menu
+      value: _End
       objectReference: {fileID: 0}
     - target: {fileID: 715677898885974030, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: endOfDialogue.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -23630,12 +23618,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 399172293}
     m_Modifications:
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
+      propertyPath: clicked.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
+      propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 8209732979590414071}
     - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
+      propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 8209732979590414066}
+    - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
+      propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: _UpdateTrashUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3774823455300535692, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
+      propertyPath: clicked.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: GameSettings, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3774823455300535694, guid: 80428f2c8834a1241b85f6dfec9c0fbe, type: 3}
       propertyPath: m_RootOrder
@@ -30434,7 +30442,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 3
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

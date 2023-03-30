@@ -16,13 +16,15 @@ public class FlashbackLogic : MonoBehaviour
 
     private void Update()
     {
-        if (DialogueManager.instance.sentenceCount == sentenceFlashback)
+        if(sentenceFlashback == 0)
         {
-            Debug.Log("Playing");
-            animator.Play("FlashBack_01");
+            if (collision) animator.Play("FlashBack_02");
         }
-        else if (collision) animator.Play("FlashBack_02");
-        else return;
+        else
+        {
+            if (DialogueManager.instance.sentenceCount == sentenceFlashback) animator.Play("FlashBack_01");
+            else return;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

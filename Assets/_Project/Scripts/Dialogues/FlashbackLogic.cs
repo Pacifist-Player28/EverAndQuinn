@@ -7,6 +7,8 @@ public class FlashbackLogic : MonoBehaviour
     [SerializeField] int sentenceFlashback;
     [SerializeField] Animator animator;
 
+    bool collision = false;
+
     private void Start()
     {
         trigger = GetComponent<DialogueTrigger>();
@@ -14,10 +16,21 @@ public class FlashbackLogic : MonoBehaviour
 
     private void Update()
     {
-        if(DialogueManager.instance.sentenceCount == sentenceFlashback)
+        if (DialogueManager.instance.sentenceCount == sentenceFlashback)
         {
             Debug.Log("Playing");
             animator.Play("FlashBack_01");
         }
+        else if (collision) animator.Play("FlashBack_02");
+        else return;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (gameObject.GetComponent<Collider2D>() != null)
+        {
+            if (other.CompareTag("Player")) collision = true;
+        }
+        else return;
     }
 }

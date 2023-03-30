@@ -3,7 +3,7 @@ using Inventory;
 using UnityEngine.Events;
 using DialogueSystem;
 using TMPro;
-using UnityEngine.Tilemaps;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -302,6 +302,4 @@ public class GameSettings : MonoBehaviour
             }
         }
     }
-
-
 }

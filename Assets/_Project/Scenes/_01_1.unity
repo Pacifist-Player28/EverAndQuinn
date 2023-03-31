@@ -5301,6 +5301,10 @@ PrefabInstance:
       propertyPath: triggerDistance
       value: 1.52
       objectReference: {fileID: 0}
+    - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Hats!
+      objectReference: {fileID: 0}
     - target: {fileID: 715677898885974030, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: triggerDistance
       value: 1.52
@@ -5642,6 +5646,18 @@ PrefabInstance:
     - target: {fileID: 8217643301016222149, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: dialogueTag
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217643301016222149, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217643301016222149, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: emotionRight.Array.data[0]
+      value: QuinnConfused
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217643301016222149, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: Nothing else here.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
@@ -22874,7 +22890,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: dialogueTag
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 48893623173434258, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: myStringOption
@@ -22898,7 +22914,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 715677898885974030, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: dialogueTag
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 715677898885974030, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: triggerDistance
@@ -23066,7 +23082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8217643301016222149, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: dialogueTag
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8217643301016222149, guid: 494b3604b9cbf9a4592120fcd9f34ff1, type: 3}
       propertyPath: triggerDistance
@@ -28033,6 +28049,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2225087207400356450}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &48893623689549044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28274,11 +28302,28 @@ MonoBehaviour:
   dialogueTag: 0
   triggerDistance: 2
   interactOnlyOnce: 0
-  emotionRight: []
-  emotionLeft: []
+  emotionRight:
+  - QuinnStop
+  - QuinnNervous
+  - QuinnStop
+  - QuinnNervous
+  - QuinnNervous
+  - QuinnStop
+  emotionLeft:
+  - CarolynNeutral
+  - CarolynStop
+  - CarolynSad
+  - CarolynStop
+  - CarolynStop
+  - CarolynNeutral
   dialogue:
     sentences:
-    - '*Missing dialogue _2*'
+    - Quinn? Why are you calling back?
+    - Hi! Uhm... I forgot what did you tell me to do?
+    - To find my record. Quinn did you really forget?
+    - ...
+    - Maybe?
+    - Sure! Cya!
   clicked:
     m_PersistentCalls:
       m_Calls: []
@@ -30428,6 +30473,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 934800217}
+        m_TargetAssemblyTypeName: DialogueSystem.DialogueTrigger, Assembly-CSharp
+        m_MethodName: _StartDialogeOverTime
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2

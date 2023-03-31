@@ -56,10 +56,10 @@ namespace DialogueSystem
                 DisplayNextSentence();
             }
 
-            //bool IsMovementKey()
-            //{
-            //    return Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D);
-            //}
+            bool IsMovementKey()
+            {
+                return Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D);
+            }
         }
 
         public void StartDialogue(Dialogue dialogue)

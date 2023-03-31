@@ -97,6 +97,7 @@ public class GameSettings : MonoBehaviour
     void Update()
     {
         CheckMouseClick();
+        _CollectedAllTrash();
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {

@@ -22,8 +22,8 @@ MonoBehaviour:
   string_QuinnSad: QuinnSad
   transparentSprite: {fileID: 21300000, guid: 208bae26dfde19d4abc0ef34b52de0f3, type: 3}
   sprite_QuinnStop:
-  - {fileID: 21300000, guid: f589cfe03011da342aacac3fcef32c8b, type: 3}
-  - {fileID: 21300000, guid: f589cfe03011da342aacac3fcef32c8b, type: 3}
+  - {fileID: 21300000, guid: b208bdc28d2283c478901502ec7011ca, type: 3}
+  - {fileID: 21300000, guid: b208bdc28d2283c478901502ec7011ca, type: 3}
   sprite_QuinnNeutral:
   - {fileID: 21300000, guid: 459ea6aff9de4a74b9ba41b181f31229, type: 3}
   - {fileID: 21300000, guid: 867faacfc22be584b8d652b3c68909e5, type: 3}
@@ -46,8 +46,8 @@ MonoBehaviour:
   string_CarolynNeutral: CarolynNeutral
   string_CarolynSad: CarolynSad
   sprite_CarolynStop:
-  - {fileID: 21300000, guid: 690eb4f9e0bfd2747bdb03412c6559dd, type: 3}
-  - {fileID: 21300000, guid: 690eb4f9e0bfd2747bdb03412c6559dd, type: 3}
+  - {fileID: 21300000, guid: 3475413f2e6ff6244ab56f6df1a592a3, type: 3}
+  - {fileID: 21300000, guid: 3475413f2e6ff6244ab56f6df1a592a3, type: 3}
   sprite_CarolynNeutral:
   - {fileID: 21300000, guid: c1e757ec162f8b241b74c47ba4761557, type: 3}
   - {fileID: 21300000, guid: d45d98f2027cd7645844e6552c80efe4, type: 3}

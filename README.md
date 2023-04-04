@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://github.com/Pacifist-Player28/EverAndQuinn/releases/tag/v0.5.7-DEMO" style="font-size: 30px;">Download Ever and Quinn</a>
+  <a href="https://github.com/Pacifist-Player28/EverAndQuinn/releases/tag/v1.0.0" style="font-size: 30px;">Download Ever and Quinn</a>
 </p>
 
 <p align="center">
